@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0
+}
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+.content {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.top {
+    width: 95%;
+    height: 70px;
+    background-color: aquamarine;
+    margin-left: 30px;
+}
+.left-box {
+    width: 20%;
+    height: 82%;
+    background-color: bisque;
+    margin: 15px 0 0 30px;
+    float: left;
+}
+.right-box {
+    width: 73%;
+    height: 82%;
+    background-color: cornflowerblue;
+    margin-top: 15px;
+    margin-left: 30px;
+    float: left;
+}
+.title {
+    margin: 0;
+    padding: 10px 0 0 30px;
+    font-size: 30px;
+}
+.top ul li {
+    list-style:none; /* 将默认的列表符号去掉 */
+    padding:0; /* 将默认的内边距去掉 */
+    margin:0; /* 将默认的外边距去掉 */
+    float: left; /* 往左浮动 */
+    display: block;
+}
+.wenhao-icon {
+    margin: 20px 0 0 680px;
+    display: block;
+    font-size: 25px;
+    border: 2px solid #222222;
+    border-radius: 30px;
+}
+.user-icon {
+    margin: 20px 0 0 50px;
+    display: block;
+    font-size: 25px;
+    border: 2px solid #222222;
+    border-radius: 30px;
+}
+.back-to {
+    margin: 15px 0 0 50px;
+}
+.left-box-top {
+    height: 12%;
+    background-color: blue;
+}
+.left-title {
+    font-size: 40px;
+    margin: 12px 0 0 60px;
+    display: inline-block;
+    color:#fff;
+}
+.left-info {
+    margin: 20px 50px 0 50px;
+}
+.left-info p {
+    font-size: 17px;
+}
+.left-info ul li {
+    list-style-type: disc;
+}
+.right-box-top {
+    height: 12%;
+    border-bottom: 1px solid #000;
+}
+.right-box-top p {
+    font-size: 25px;
+    margin: 13px 0 0 20px;
+    display: inline-block;
+}
+.right-box-top li {
+    float: left;
+}
+.right-box-top input {
+    width: 100px;
+    height: 28px;
+    margin: 16px 0 0 20px;
+    font-size: 20px;
+}
+.run-code {
+    margin: 15px 0 0 750px;
+    width: 100px;
+}
