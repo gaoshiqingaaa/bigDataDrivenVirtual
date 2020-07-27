@@ -1,0 +1,23 @@
+.right-box-content {
+    font-size: 20px;
+}
+.right-box-content div {
+    width: 450px;
+    height: 210px;
+    background-color: lightcyan;
+}
+.layui-table td {
+    font-size: 20px;
+}
+.layui-input {
+    margin-left: 50px;
+    width: 600px;
+    height: 45px;
+    font-size: 20px;
+}
+.btn {
+    margin: -63px 0 0 550px;
+    height: 45px;
+    width: 250px;
+    font-size: 20px;
+}
