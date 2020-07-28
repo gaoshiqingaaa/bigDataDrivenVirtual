@@ -21,7 +21,7 @@
             </div>
             <!-- 第一题 -->
             <div class="content" style="display: block;">
-                <h1>您目前家庭年收入？</h1>
+                <h1>1您目前家庭年收入？</h1>
                 <div id="ti">
                     <input type="radio" name="t1" value="t1_1" id="t1_1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>5万元一下</b>
                 </div>
@@ -44,7 +44,7 @@
             </div>
             <!-- 第二题 -->
             <div class="content" style="display: none;">
-                <h1>您目前所处的年龄阶段是？</h1>
+                <h1>2您目前所处的年龄阶段是？</h1>
                 <div id="ti">
                     <input type="radio" name="t2" value="t2_1" id="t2_1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>55岁以上</b>
                 </div>
@@ -67,7 +67,7 @@
             </div>
             <!-- 第三题 -->
             <div class="content" style="display: none;">
-                <h1>您目前所处的年龄阶段是？</h1>
+                <h1>3您目前所处的年龄阶段是？</h1>
                 <div id="ti">
                     <input type="radio" name="t2" value="t2_1" id="t2_1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>55岁以上</b>
                 </div>
@@ -90,7 +90,7 @@
             </div>
             <!-- 第四题 -->
             <div class="content" style="display: none;">
-                <h1>当您进行投资时，您的首要目标是（    ）。</h1>
+                <h1>4当您进行投资时，您的首要目标是（    ）。</h1>
                 <div id="ti">
                     <input type="radio" name="t2" value="t2_1" id="t2_1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>资产保值，我不愿意承担任何投资风险</b>
                 </div>
@@ -113,7 +113,7 @@
             </div>
             <!-- 第五题 -->
             <div class="content" style="display: none;">
-                <h1>进行一项重大投资后，您通常会觉得（    ）。</h1>
+                <h1>5进行一项重大投资后，您通常会觉得（    ）。</h1>
                 <div id="ti">
                     <input type="radio" name="t2" value="t2_1" id="t2_1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>很高兴，对自己的决定很有信心</b>
                 </div>
@@ -136,7 +136,7 @@
             </div>
             <!-- 第六题 -->
             <div class="content" style="display: none;">
-                <h1>您用于证券投资的资金不会用作其它用途的时间段为（    ）。</h1>
+                <h1>6您用于证券投资的资金不会用作其它用途的时间段为（    ）。</h1>
                 <div id="ti">
                     <input type="radio" name="t2" value="t2_1" id="t2_1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>短期：0-1年</b>
                 </div>
@@ -179,112 +179,138 @@
             var cont = document.getElementsByClassName("content");
             var index = 0;
             $('button:button[id="next"]').click(function() {
-                if (index == 0) {
-                    cont[0].style.display = 'block';
-                    cont[1].style.display = 'none';
-                    cont[2].style.display = 'none';
-                    cont[3].style.display = 'none';
-                    cont[4].style.display = 'none';
-                    cont[5].style.display = 'none'; 
-                }
-                if (index == 1) {
-                    cont[0].style.display = 'none';
-                    cont[1].style.display = 'block';
-                    cont[2].style.display = 'none';
-                    cont[3].style.display = 'none';
-                    cont[4].style.display = 'none';
-                    cont[5].style.display = 'none';
-                }
-                if (index == 2) {
-                    cont[0].style.display = 'none';
-                    cont[1].style.display = 'none';
-                    cont[2].style.display = 'block';
-                    cont[3].style.display = 'none';
-                    cont[4].style.display = 'none';
-                    cont[5].style.display = 'none';
-                }
-                if (index == 3) {
-                    cont[0].style.display = 'none';
-                    cont[1].style.display = 'none';
-                    cont[2].style.display = 'none';
-                    cont[3].style.display = 'block';
-                    cont[4].style.display = 'none';
-                    cont[5].style.display = 'none';
-                }
-                if (index == 4) {
-                    cont[0].style.display = 'none';
-                    cont[1].style.display = 'none';
-                    cont[2].style.display = 'none';
-                    cont[3].style.display = 'none';
-                    cont[4].style.display = 'block';
-                    cont[5].style.display = 'none';
-                }
-                if (index == 5) {
-                    cont[0].style.display = 'none';
-                    cont[1].style.display = 'none';
-                    cont[2].style.display = 'none';
-                    cont[3].style.display = 'none';
-                    cont[4].style.display = 'none';
-                    cont[5].style.display = 'block';
+                for(var i = 0; i < 6; i++){
+                    if (i == index){
+                        cont[i].style.display = 'block';
+                    }else {
+                        cont[i].style.display = 'none';
+                    }
+                    
+                    if(index == 6){
+                        index = 0;
+                        cont[0].style.display = 'block';
+                    }
                 }
                 index++;
-                if(index == 6){
-                    index = 0;
-                }
+                // if (index == 0) {
+                //     cont[0].style.display = 'block';
+                //     cont[1].style.display = 'none';
+                //     cont[2].style.display = 'none';
+                //     cont[3].style.display = 'none';
+                //     cont[4].style.display = 'none';
+                //     cont[5].style.display = 'none'; 
+                // }
+                // if (index == 1) {
+                //     cont[0].style.display = 'none';
+                //     cont[1].style.display = 'block';
+                //     cont[2].style.display = 'none';
+                //     cont[3].style.display = 'none';
+                //     cont[4].style.display = 'none';
+                //     cont[5].style.display = 'none';
+                // }
+                // if (index == 2) {
+                //     cont[0].style.display = 'none';
+                //     cont[1].style.display = 'none';
+                //     cont[2].style.display = 'block';
+                //     cont[3].style.display = 'none';
+                //     cont[4].style.display = 'none';
+                //     cont[5].style.display = 'none';
+                // }
+                // if (index == 3) {
+                //     cont[0].style.display = 'none';
+                //     cont[1].style.display = 'none';
+                //     cont[2].style.display = 'none';
+                //     cont[3].style.display = 'block';
+                //     cont[4].style.display = 'none';
+                //     cont[5].style.display = 'none';
+                // }
+                // if (index == 4) {
+                //     cont[0].style.display = 'none';
+                //     cont[1].style.display = 'none';
+                //     cont[2].style.display = 'none';
+                //     cont[3].style.display = 'none';
+                //     cont[4].style.display = 'block';
+                //     cont[5].style.display = 'none';
+                // }
+                // if (index == 5) {
+                //     cont[0].style.display = 'none';
+                //     cont[1].style.display = 'none';
+                //     cont[2].style.display = 'none';
+                //     cont[3].style.display = 'none';
+                //     cont[4].style.display = 'none';
+                //     cont[5].style.display = 'block';
+                // }
+                // index++;
+                // if(index == 6){
+                //     index = 0;
+                // }
             })
             $('button:button[id="back"]').click(function() {
-                if (index == 0) {
-                    cont[0].style.display = 'block';
-                    cont[1].style.display = 'none';
-                    cont[2].style.display = 'none';
-                    cont[3].style.display = 'none';
-                    cont[4].style.display = 'none';
-                    cont[5].style.display = 'none'; 
-                }
-                if (index == 1) {
-                    cont[0].style.display = 'none';
-                    cont[1].style.display = 'block';
-                    cont[2].style.display = 'none';
-                    cont[3].style.display = 'none';
-                    cont[4].style.display = 'none';
-                    cont[5].style.display = 'none';
-                }
-                if (index == 2) {
-                    cont[0].style.display = 'none';
-                    cont[1].style.display = 'none';
-                    cont[2].style.display = 'block';
-                    cont[3].style.display = 'none';
-                    cont[4].style.display = 'none';
-                    cont[5].style.display = 'none';
-                }
-                if (index == 3) {
-                    cont[0].style.display = 'none';
-                    cont[1].style.display = 'none';
-                    cont[2].style.display = 'none';
-                    cont[3].style.display = 'block';
-                    cont[4].style.display = 'none';
-                    cont[5].style.display = 'none';
-                }
-                if (index == 4) {
-                    cont[0].style.display = 'none';
-                    cont[1].style.display = 'none';
-                    cont[2].style.display = 'none';
-                    cont[3].style.display = 'none';
-                    cont[4].style.display = 'block';
-                    cont[5].style.display = 'none';
-                }
-                if (index == 5) {
-                    cont[0].style.display = 'none';
-                    cont[1].style.display = 'none';
-                    cont[2].style.display = 'none';
-                    cont[3].style.display = 'none';
-                    cont[4].style.display = 'none';
-                    cont[5].style.display = 'block';
+                for(var i = 5; i >= 0; i--){
+                    if (i == index){
+                        cont[i].style.display = 'block';
+                    }else {
+                        cont[i].style.display = 'none';
+                    }
+                    
+                    if(index == -1){
+                        index = 5;
+                        cont[5].style.display = 'block';
+                    }
                 }
                 index--;
-                if(index == 0){
-                    index = 5;
-                }
+                // if (index == 0) {
+                //     cont[0].style.display = 'block';
+                //     cont[1].style.display = 'none';
+                //     cont[2].style.display = 'none';
+                //     cont[3].style.display = 'none';
+                //     cont[4].style.display = 'none';
+                //     cont[5].style.display = 'none'; 
+                // }
+                // if (index == 1) {
+                //     cont[0].style.display = 'none';
+                //     cont[1].style.display = 'block';
+                //     cont[2].style.display = 'none';
+                //     cont[3].style.display = 'none';
+                //     cont[4].style.display = 'none';
+                //     cont[5].style.display = 'none';
+                // }
+                // if (index == 2) {
+                //     cont[0].style.display = 'none';
+                //     cont[1].style.display = 'none';
+                //     cont[2].style.display = 'block';
+                //     cont[3].style.display = 'none';
+                //     cont[4].style.display = 'none';
+                //     cont[5].style.display = 'none';
+                // }
+                // if (index == 3) {
+                //     cont[0].style.display = 'none';
+                //     cont[1].style.display = 'none';
+                //     cont[2].style.display = 'none';
+                //     cont[3].style.display = 'block';
+                //     cont[4].style.display = 'none';
+                //     cont[5].style.display = 'none';
+                // }
+                // if (index == 4) {
+                //     cont[0].style.display = 'none';
+                //     cont[1].style.display = 'none';
+                //     cont[2].style.display = 'none';
+                //     cont[3].style.display = 'none';
+                //     cont[4].style.display = 'block';
+                //     cont[5].style.display = 'none';
+                // }
+                // if (index == 5) {
+                //     cont[0].style.display = 'none';
+                //     cont[1].style.display = 'none';
+                //     cont[2].style.display = 'none';
+                //     cont[3].style.display = 'none';
+                //     cont[4].style.display = 'none';
+                //     cont[5].style.display = 'block';
+                // }
+                // index--;
+                // if(index == 0){
+                //     index = 5;
+                // }
             })
         </script>
     </body>
