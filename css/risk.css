@@ -49,14 +49,14 @@ body{
     margin-top: 4%;
 }
 
-#content{
+.content{
     margin-top: 8%;
     margin-left: 12%;
     padding-top: 6%;
     padding-left: 12%;
 }
 
-#content h1{
+.content h1{
     margin-bottom: 5%;
 }
 
@@ -82,6 +82,7 @@ body{
 }
 
 #next{
+    color: white;
     width: 200px;
     height: 40px;
     border: none;
@@ -93,6 +94,7 @@ body{
 }
 
 #back{
+    color: white;
     width: 200px;
     height: 40px;
     border: none;
