@@ -1,5 +1,5 @@
 .box1{
-    background-image: url(../lib/images/1_slices/8-output-right@2x.png);
+    background-image: url(../img/8-output-right@2x.png);
     background-repeat: no-repeat; 
     background-size: 100% 100%; 
     width: 100%;
@@ -33,7 +33,7 @@
     position: absolute;
 }
 .login{
-    background: url(../lib/images/1_slices/login-btn@2x.png);
+    background: url(../img/login-btn@2x.png);
     border-radius: 8px;
     position: absolute;
 }
