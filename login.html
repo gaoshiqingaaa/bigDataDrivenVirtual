@@ -7,11 +7,41 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="./lib/css/layui.css">
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/public.css">
 </head>
 <body>
-    <div class="">
+<div class="box1">
+    <div class="box2">
+        <div class="layui-form-item">
+            <p style="margin-top: 8%; float: left;">用户信息</p>
+            <p style="margin-top: 8%; float: right; font-size: 12px;"><a href="#" style="color: #A9A9A9;">跳过</a></p>
+            
+            <div class="layui-input-inline shadow" style="position: relative; margin-top: 20%; left: 13%;">
+                <div class="usernameimg"><img src="./img/name@2x.png" class="imgsize"><div class="Verticalline"></div></div>
+                <input type="text" name="title" required lay-verify="required" placeholder="姓名" autocomplete="off" class="layui-input input1">
+            </div>
+            
+            <div class="layui-input-inline shadow" style="position: relative; margin-top: 2%; left: 13%;">
+                <div class="usernameimg"><img src="./img/class@2x.png" class="imgsize"><div class="Verticalline"></div></div>
+                <input type="text" name="title" required lay-verify="required" placeholder="班级" autocomplete="off" class="layui-input input1">
+            </div>
+            
+            <div class="layui-input-inline shadow" style="position: relative; margin-top: 2%; left: 13%;">
+                <div class="usernameimg"><img src="./img/profession@2x.png" class="imgsize"><div class="Verticalline"></div></div>
+                <input type="text" name="title" required lay-verify="required" placeholder="专业" autocomplete="off" class="layui-input input1">
+            </div>
+            
+            <div class="layui-input-inline shadow" style="position: relative; margin-top: 2%; left: 13%;">
+                <div class="usernameimg"><img src="./img/school@2x.png" class="imgsize"><div class="Verticalline"></div></div>
+                <input type="text" name="title" required lay-verify="required" placeholder="学校/单位名称" autocomplete="off" class="layui-input input1">
+            </div>
 
+            <div class=""  style="position: absolute; top: 86%; left: 11%;">
+                <button style=" width: 205px; height: 25px;" type="button" class="layui-btn layui-btn-xs layui-btn-normal login">登录</button>
+            </div>
+        </div>
     </div>
+</div>
 
 </body>
 <script src="js/jquery-2.1.4.js"></script>

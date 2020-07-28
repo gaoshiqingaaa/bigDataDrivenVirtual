@@ -1,0 +1,69 @@
+.box1{
+    background-image: url(../lib/images/1_slices/8-output-right@2x.png);
+    background-repeat: no-repeat; 
+    background-size: 100% 100%; 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.box2{
+    width: 21%;
+    height: 45%;
+    right: 21%;
+    top: 26%;
+    position: absolute;
+}
+.shadow{
+    -moz-box-shadow:0 0 5px 5px rgb(238, 238, 238);
+    -webkit-box-shadow:0 0 5px 5px rgb(238, 238, 238);
+    box-shadow:0 0 5px 5px rgb(238, 238, 238);
+}
+.usernameimg{
+    position: absolute;
+    width: 45px;
+    height: 27px;
+    top: 3px;
+    left: 3px;
+    background-size: 2px;
+}
+.imgsize{
+    width: 18px;
+    top: 4px;
+    left: 5px;
+    position: absolute;
+}
+.login{
+    background: url(../lib/images/1_slices/login-btn@2x.png);
+    border-radius: 8px;
+    position: absolute;
+}
+.Verticalline{
+    position: absolute;
+    width: 1px;
+    height: 15px;
+    border-radius: 10px;
+    background-color: black;
+    top: 5px;
+    right: 11px;
+}
+.input1{
+    margin-left: 35px;
+    height: 30px;
+    width: 155px;
+    border:0px;
+}
+
+.Button{
+    position: absolute;
+    margin-top: 7%;
+    width: 29%;
+    height: 63%;
+    border-radius: 17px;
+}
+.divButton1{
+    top: 34%;
+    left: 12%;
+    width: 70%;
+    height: 50%;
+    position: absolute;
+}
