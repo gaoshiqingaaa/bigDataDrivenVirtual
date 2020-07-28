@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>风险承受能力评估问卷</title>
+    <link rel="stylesheet" href="../lib/css/layui.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/risk.css"/>
+</head>
+<body>
+    <div id="nav">
+        <button type="button" class="layui-btn layui-btn-radius layui-btn-primary" id="but1"><a href="#">返回</a></button>
+        <button type="button" class="layui-icon layui-icon-friends" id="friends"></button>
+        <button type="button" class="layui-icon layui-icon-help" id="help"></button>
+    </div>
+    <br>
+    <div class="layui-card-body" id="mainWin">
+       <div id="mainWin-nav">
+           <img src="../imgs/5-point@2x.png">
+       </div>
+       <div id="content">
+           <h1>您目前家庭年收入？</h1>
+           <div id="ti">
+              <input type="radio" name="t1" value="t1_1" id="t1_1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>5万元一下</b> 
+           </div>
+           <div id="ti">
+               <input type="radio" name="t1" value="t1_2" id="t1_2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>5-20万元</b>
+           </div>
+           <br>
+           <div id="ti">
+               <input type="radio" name="t1" value="t1_3" id="t1_3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>20-50万元</b>
+           </div>
+           <div id="ti">
+               <input type="radio" name="t1" value="t1_4" id="t1_4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>50万元以上</b>
+           </div>
+           <div id="butt">
+               <button type="button" id="next">下一步</button>
+           </div>
+           <div id="butt">
+               <button type="button" id="back">上一步</button>
+           </div>
+       </div>
+    </div>
+    
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="./lib/layui.all.js"></script>
+    <script>
+        $('input:radio[name="t1"]').change(function () {
+                    if($("#t1_1").is(":checked")){
+                        alert("选中第一个！")
+                    }
+                    if($("#t1_2").is(":checked")){
+                        alert("选中第二个！")
+                    }
+                })
+    </script>
+</body>
+
+</html>
