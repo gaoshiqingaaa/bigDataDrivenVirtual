@@ -7,7 +7,8 @@ html, body {
     margin: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(204, 204, 204, 1);
+    background: url("../img/3-bg@2x.png") no-repeat center top;
+    background-size: cover;
 }
 .content {
     overflow: hidden;
@@ -21,18 +22,18 @@ html, body {
 }
 .left-box {
     width: 20%;
-    height: 82%;
-    background-color: white;
-    margin: 15px 0 0 30px;
+    height: 83.5%;
+    margin: 28px 0 -5px 30px;
     float: left;
 }
 .right-box {
-    width: 73%;
-    height: 82%;
-    background-color: white;
-    margin-top: 15px;
+    width: 74.7%;
+    height: 86%;
+    background-color: rgba(68, 97, 181, 0.6);
+    margin-top: 28px;
     margin-left: 30px;
     float: left;
+    border-radius: 3px;
 }
 .title {
     margin: 0;
@@ -47,25 +48,29 @@ html, body {
     display: block;
 }
 .wenhao-icon {
-    margin: 20px 0 0 680px;
+    margin: 40px 0 0 1250px;
     display: block;
     font-size: 25px;
-    border: 2px solid #222222;
+    color: white;
+    border: 2px solid #fff;
     border-radius: 30px;
 }
 .user-icon {
-    margin: 20px 0 0 50px;
+    margin: 40px 0 0 50px;
     display: block;
     font-size: 25px;
-    border: 2px solid #222222;
+    color: #fff;
+    border: 2px solid #fff;
     border-radius: 30px;
 }
 .back-to {
-    margin: 15px 0 0 50px;
+    margin: 40px 0 0 50px;
 }
 .left-box-top {
     height: 12%;
-    background-color: rgba(51, 51, 102, 1);
+    margin: 15px;
+    background-color: rgba(46, 94, 175, 1);
+    border-radius: 3px;
 }
 .left-title {
     font-size: 30px;
@@ -78,13 +83,14 @@ html, body {
 }
 .left-info p {
     font-size: 17px;
+    color: white;
 }
 .left-info ul li {
     list-style-type: disc;
+    color: white;
 }
 .right-box-top {
-    height: 12%;
-    border-bottom: 1px solid #000;
+    height: 9%;
 }
 .right-box-top p {
     font-size: 25px;
@@ -101,8 +107,13 @@ html, body {
     font-size: 20px;
 }
 .run-code {
-    margin: 15px 0 0 750px;
+    margin: 15px 0 0 850px;
     width: 100px;
+    height: 30px;
+    color: white;
+    background-color: rgb(62,159,247);
+    border: 0;
+    border-radius: 4px;
 }
 .right-box-left {
     width: 45%;
@@ -114,8 +125,40 @@ html, body {
 }
 .right-box-bottom li{
     float: left;
+    height: 570px;
 }
-.right-box-bottom button {
-    width: 150px;
-    margin: 20px 0 0 90px;
+.right-box-bottom span {
+    font-size: 25px;color:dodgerblue;
+    position:relative;
+    top: -10px;
+    float: left;
 }
+.bottom-btn {
+    width: 273px;
+    height: 40px;
+    margin-top: 20px;
+    color: white;
+    background-color: rgb(62,159,247);
+    border: 0;
+    border-radius: 4px;
+}
+/* 定义滚动条样式 */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: rgba(240, 240, 240, 1);
+  }
+   
+  /*定义滚动条轨道 内阴影+圆角*/
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0px rgba(240, 240, 240, .5);
+    border-radius: 10px;
+    background-color: rgba(240, 240, 240, .5);
+  }
+   
+  /*定义滑块 内阴影+圆角*/
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 0px rgba(240, 240, 240, .5);
+    background-color: rgba(240, 240, 240, .5);
+  }

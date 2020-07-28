@@ -11,7 +11,7 @@ var code_in = CodeMirror.fromTextArea(document.getElementById("code-in"), {
     //readOnly: true,        //只读
 });
 
-code_in.setSize('500px','500px');
+code_in.setSize('550px','570px'); //宽 高
 
 var code_out = CodeMirror.fromTextArea(document.getElementById("code-out"), {
     mode: {
@@ -26,4 +26,4 @@ var code_out = CodeMirror.fromTextArea(document.getElementById("code-out"), {
     //readOnly: true,        //只读
 });
 
-code_out.setSize('500px','430px');
+code_out.setSize('550px','510px');

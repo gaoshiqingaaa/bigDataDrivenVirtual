@@ -15,7 +15,6 @@
     <div class="content">
         <div class="top">
             <ul >
-                <li><p class="title">大数据驱动的智能投顾虚拟仿真实验</p></li>
                 <li><i class="layui-icon layui-icon-help wenhao-icon"></i></li>
                 <li><i class="layui-icon layui-icon-friends user-icon"></i></li>
                 <li><button class="layui-btn layui-btn-radius layui-btn-primary back-to">返回首页</button></li>
@@ -26,7 +25,7 @@
                 <p class="left-title">任务描述</p>
             </div>
             <div class="left-info">
-                <h2><strong>5、构建投资组合的Efficient frontier</strong></h2>
+                <h2 style="color: white;"><strong>5、构建投资组合的Efficient frontier</strong></h2>
                 <p style="margin-top: 20px;">说明：</p>
                 <p><strong>构建两个投资组合作为对比。</strong></p>
                 <ul>
@@ -40,18 +39,30 @@
         <div class="right-box">
             <div class="right-box-top">
                 <ul>
-                    <li><p>开发语言</p></li>
-                    <li><input type="text" name="" id="" value="python"></li>
-                    <li><button class="layui-btn layui-btn-radius layui-btn-primary run-code">运行</button></li>
+                    <li><p style="color: white;">开发语言:Python</p></li>
+                    <li><button class="run-code">运行</button></li>
                 </ul>
             </div>
-            <!-- <div class="right-box-left">
-                in:
-                <textarea class="code" id="code" name="code"></textarea>
-            </div> -->
             <div class="right-box-bottom">
                 <ul>
-                    <li style="font-size: 25px;margin-right: 5px;color:dodgerblue;">In:</li>
+                    <li style="margin-left: 20px;">
+                        <!-- <span>In:</span> -->
+                        <textarea class="code" id="code-in" name="code-in"></textarea>
+                        <!-- <div style="width: 550px;">
+                            
+                        </div> -->
+                    </li>
+                    <li style="margin-left: 25px;">
+                        <!-- <span>Out:</span> -->
+                        <div style="width: 550px;">
+                            <textarea class="code" id="code-out" name="code-out"></textarea>
+                        </div>
+                        <button class="bottom-btn">上一步</button>
+                        <button class="bottom-btn">下一步</button>
+                    </li>
+                </ul>
+                <!-- <ul>
+                    <li style="font-size: 25px;margin-left: -20px;color:dodgerblue;">In:</li>
                     <li style="border: 1px solid black;"><textarea class="code" id="code-in" name="code-in"></textarea></li>
                     <li style="font-size: 25px;margin: 0 5px 0 10px;color: red;">Out:</li>
                     <li>
@@ -62,7 +73,7 @@
                         <button class="layui-btn layui-btn-radius layui-btn-primary">上一步</button>
                         <button class="layui-btn layui-btn-radius layui-btn-primary">下一步</button>
                     </li>
-                </ul>
+                </ul> -->
             </div>
         </div>
     </div>

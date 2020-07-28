@@ -4,19 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../lib/css/layui.css">
-    <link rel="stylesheet" href="../lib/codemirror-5.56.0/lib/codemirror.css">
-    <link rel="stylesheet" href="../lib/codemirror-5.56.0/theme/idea.css">
     <link rel="stylesheet" href="../css/teacher_public.css">
     <link rel="stylesheet" href="../css/8.css">
-    <script src="../lib/codemirror-5.56.0/lib/codemirror.js"></script>
-    <script src="../lib/codemirror-5.56.0/mode/python/python.js"></script>
     <title>Document</title>
 </head>
 <body>
     <div class="content">
         <div class="top">
             <ul >
-                <li><p class="title">大数据驱动的智能投顾虚拟仿真实验</p></li>
                 <li><i class="layui-icon layui-icon-help wenhao-icon"></i></li>
                 <li><i class="layui-icon layui-icon-friends user-icon"></i></li>
                 <li><button class="layui-btn layui-btn-radius layui-btn-primary back-to">返回首页</button></li>
@@ -27,36 +22,34 @@
                 <p class="left-title">任务描述</p>
             </div>
             <div class="left-info">
-                <h2><strong>8、可视化结果分析。</strong></h2>
+                <h2 style="color: white;"><strong>8、可视化结果分析。</strong></h2>
                 <p style="margin-top: 20px;">说明：</p>
                 <p>点击调试可以返回前几步对代码进行调试，重新生成结果。</p>
                 <p>点击申购，进行购买。</p>
             </div>
         </div>
         <div class="right-box">
-            <table class="layui-table" lay-skin="nob" lay-size="lg">
-                <tbody class="right-box-content">
+            <table class="right-table">
                     <tr>
                         <td>
-                            <strong>六类资产的相关性系数：</strong>
-                            <div></div>
+                            <div style='background: url("../img/10-left-top-panel@2x.png") no-repeat center top;background-size: contain;'>
+                            </div>
                         </td>
                         <td>
-                            <strong>本次实验得出的最优为组合：</strong>
-                            <div></div>
+                            <div style='background: url("../img/10-right-top-panel@2x.png") no-repeat center top;background-size: contain;'>
+                            </div>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <strong>该组合的Efficient frontier曲线为：</strong>
-                            <div></div>
+                            <div style='background: url("../img/10-left-bottom-panel@2x.png") no-repeat center top;background-size: contain;'>
+                            </div>
                         </td>
                         <td>
-                            <strong>根据您的风险承受能力，最优配置权重为：</strong>
-                            <div></div>
+                            <div style='background: url("../img/10-right-bottom-panel@2x.png") no-repeat center top;background-size: contain;'>
+                            </div>
                         </td>
                     </tr>
-                </tbody>
             </table>
             <div style="display: inline-block;">
                 <input type="text" name="title" placeholder="资产总额：100000元" autocomplete="off" class="layui-input">    
@@ -66,5 +59,43 @@
         </div>
     </div>
 </body>
-<script src="../js/teacher_public.js"></script>
 </html>
+
+<style>
+    .right-box-content {
+    font-size: 20px;
+    }
+    .right-box-content div {
+        width: 450px;
+        height: 210px;
+        background-color: lightcyan;
+    }
+    .layui-table td {
+        font-size: 20px;
+    }
+    .layui-input {
+        margin-left: 16px;
+        width: 650px;
+        height: 45px;
+        font-size: 20px;
+    }
+    .btn {
+        margin: -63px 0 0 620px;
+        height: 45px;
+        width: 250px;
+        font-size: 20px;
+    }
+    .right-table {
+        border-collapse: separate;
+        border-spacing: 20px 20px; /* 水平间距 垂直间距 */
+        margin: -5px 0 0 25px;
+    }
+    .right-table div {
+        width: 500px;
+        height: 270px;
+        border-radius: 10px;
+    }
+    .right-table td {
+        border-radius: 5px;
+    }
+</style>
