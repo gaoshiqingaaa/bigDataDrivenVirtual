@@ -3,6 +3,8 @@
     padding: 0
 }
 html, body {
+    min-width: 1920px;
+    min-width: 1080px;
     padding: 0;
     margin: 0;
     width: 100%;
@@ -68,19 +70,19 @@ html, body {
     margin: 40px 0 0 50px;
 }
 .left-box-top {
-    height: 12%;
+    height: 75px;
     margin: 15px;
     background-color: rgba(46, 94, 175, 1);
     border-radius: 3px;
 }
 .left-title {
     font-size: 30px;
-    margin: 15px 0 0 85px;
+    margin: 15px 0 0 28%;
     display: inline-block;
     color:#fff;
 }
 .left-info {
-    margin: 20px 50px 0 50px;
+    margin: 20px 50px 0 18%;
 }
 .left-info p {
     font-size: 17px;
@@ -91,7 +93,7 @@ html, body {
     color: white;
 }
 .right-box-top {
-    height: 9%;
+    height: 55px;
 }
 .right-box-top p {
     font-size: 25px;
