@@ -1,60 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>风险承受能力评估问卷</title>
-    <link rel="stylesheet" href="../lib/css/layui.css">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/risk.css"/>
-</head>
-<body>
-    <div id="nav">
-        <button type="button" class="layui-btn layui-btn-radius layui-btn-primary" id="but1"><a href="#">返回</a></button>
-        <button type="button" class="layui-icon layui-icon-friends" id="friends"></button>
-        <button type="button" class="layui-icon layui-icon-help" id="help"></button>
-    </div>
-    <br>
-    <div class="layui-card-body" id="mainWin">
-       <div id="mainWin-nav">
-           <img src="../imgs/5-point@2x.png">
-       </div>
-       <div id="content">
-           <h1>您目前家庭年收入？</h1>
-           <div id="ti">
-              <input type="radio" name="t1" value="t1_1" id="t1_1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>5万元一下</b> 
-           </div>
-           <div id="ti">
-               <input type="radio" name="t1" value="t1_2" id="t1_2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>5-20万元</b>
-           </div>
-           <br>
-           <div id="ti">
-               <input type="radio" name="t1" value="t1_3" id="t1_3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>20-50万元</b>
-           </div>
-           <div id="ti">
-               <input type="radio" name="t1" value="t1_4" id="t1_4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>50万元以上</b>
-           </div>
-           <div id="butt">
-               <button type="button" id="next">下一步</button>
-           </div>
-           <div id="butt">
-               <button type="button" id="back">上一步</button>
-           </div>
-       </div>
-    </div>
-    
-    <script src="js/jquery-2.1.4.js"></script>
-    <script src="./lib/layui.all.js"></script>
-    <script>
-        $('input:radio[name="t1"]').change(function () {
-                    if($("#t1_1").is(":checked")){
-                        alert("选中第一个！")
-                    }
-                    if($("#t1_2").is(":checked")){
-                        alert("选中第二个！")
-                    }
-                })
-    </script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>风险承受能力评估问卷</title>
+        <link rel="stylesheet" href="../lib/css/layui.css">
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/risk.css" />
+    </head>
+    <body>
+        <div id="nav">
+            <button type="button" class="layui-btn layui-btn-radius layui-btn-primary" id="but1"><a href="#">返回</a></button>
+            <button type="button" class="layui-icon layui-icon-friends" id="friends"></button>
+            <button type="button" class="layui-icon layui-icon-help" id="help"></button>
+        </div>
+        <br>
+        <div class="layui-card-body" id="mainWin">
+            <div id="mainWin-nav">
+                <img src="../imgs/5-point@2x.png">
+            </div>
+            <!-- 第一题 -->
+            <div class="content" style="display: block;">
+                <h1>您目前家庭年收入？</h1>
+                <div id="ti">
+                    <input type="radio" name="t1" value="t1_1" id="t1_1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>5万元一下</b>
+                </div>
+                <div id="ti">
+                    <input type="radio" name="t1" value="t1_2" id="t1_2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>5-20万元</b>
+                </div>
+                <br>
+                <div id="ti">
+                    <input type="radio" name="t1" value="t1_3" id="t1_3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>20-50万元</b>
+                </div>
+                <div id="ti">
+                    <input type="radio" name="t1" value="t1_4" id="t1_4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>50万元以上</b>
+                </div>
+                <div id="butt">
+                    <button type="button" id="next">下一步</button>
+                </div>
+                <div id="butt">
+                    <button type="button" id="back">上一步</button>
+                </div>
+            </div>
+            <!-- 第二题 -->
+            <div class="content" style="display: none;">
+                <h1>您目前所处的年龄阶段是？</h1>
+                <div id="ti">
+                    <input type="radio" name="t2" value="t2_1" id="t2_1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>55岁以上</b>
+                </div>
+                <div id="ti">
+                    <input type="radio" name="t2" value="t2_2" id="t2_2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>40-55岁</b>
+                </div>
+                <br>
+                <div id="ti">
+                    <input type="radio" name="t2" value="t2_3" id="t2_3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>30-40岁</b>
+                </div>
+                <div id="ti">
+                    <input type="radio" name="t2" value="t2_4" id="t2_4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>30岁以下</b>
+                </div>
+                <div id="butt">
+                    <button type="button" id="next">下一步</button>
+                </div>
+                <div id="butt">
+                    <button type="button" id="back">上一步</button>
+                </div>
+            </div>
+            <!-- 第三题 -->
+            <div class="content" style="display: none;">
+                <h1>您目前所处的年龄阶段是？</h1>
+                <div id="ti">
+                    <input type="radio" name="t2" value="t2_1" id="t2_1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>55岁以上</b>
+                </div>
+                <div id="ti">
+                    <input type="radio" name="t2" value="t2_2" id="t2_2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>40-55岁</b>
+                </div>
+                <br>
+                <div id="ti">
+                    <input type="radio" name="t2" value="t2_3" id="t2_3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>30-40岁</b>
+                </div>
+                <div id="ti">
+                    <input type="radio" name="t2" value="t2_4" id="t2_4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>30岁以下</b>
+                </div>
+                <div id="butt">
+                    <button type="button" id="next">下一步</button>
+                </div>
+                <div id="butt">
+                    <button type="button" id="back">上一步</button>
+                </div>
+            </div>
+            <!-- 第四题 -->
+            <div class="content" style="display: none;">
+                <h1>当您进行投资时，您的首要目标是（    ）。</h1>
+                <div id="ti">
+                    <input type="radio" name="t2" value="t2_1" id="t2_1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>资产保值，我不愿意承担任何投资风险</b>
+                </div>
+                <div id="ti">
+                    <input type="radio" name="t2" value="t2_2" id="t2_2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>尽可能保证本金安全，不在乎收益率比较低</b>
+                </div>
+                <br>
+                <div id="ti">
+                    <input type="radio" name="t2" value="t2_3" id="t2_3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>产生较多的收益， 可以承担一定的投资风险</b>
+                </div>
+                <div id="ti">
+                    <input type="radio" name="t2" value="t2_4" id="t2_4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>实现资产大幅增长，愿意承担很大的投资风险</b>
+                </div>
+                <div id="butt">
+                    <button type="button" id="next">下一步</button>
+                </div>
+                <div id="butt">
+                    <button type="button" id="back">上一步</button>
+                </div>
+            </div>
+            <!-- 第五题 -->
+            <div class="content" style="display: none;">
+                <h1>进行一项重大投资后，您通常会觉得（    ）。</h1>
+                <div id="ti">
+                    <input type="radio" name="t2" value="t2_1" id="t2_1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>很高兴，对自己的决定很有信心</b>
+                </div>
+                <div id="ti">
+                    <input type="radio" name="t2" value="t2_2" id="t2_2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>轻松，基本持乐观态度</b>
+                </div>
+                <br>
+                <div id="ti">
+                    <input type="radio" name="t2" value="t2_3" id="t2_3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>比较担心投资结果</b>
+                </div>
+                <div id="ti">
+                    <input type="radio" name="t2" value="t2_4" id="t2_4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>非常担心投资结果</b>
+                </div>
+                <div id="butt">
+                    <button type="button" id="next">下一步</button>
+                </div>
+                <div id="butt">
+                    <button type="button" id="back">上一步</button>
+                </div>
+            </div>
+            <!-- 第六题 -->
+            <div class="content" style="display: none;">
+                <h1>您用于证券投资的资金不会用作其它用途的时间段为（    ）。</h1>
+                <div id="ti">
+                    <input type="radio" name="t2" value="t2_1" id="t2_1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>短期：0-1年</b>
+                </div>
+                <div id="ti">
+                    <input type="radio" name="t2" value="t2_2" id="t2_2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>中期：1-5年</b>
+                </div>
+                <br>
+                <div id="ti">
+                    <input type="radio" name="t2" value="t2_3" id="t2_3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>长期：5年以上</b>
+                </div>
+                <div id="ti">
+                    <input type="radio" name="t2" value="t2_4" id="t2_4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b></b>
+                </div>
+                <div id="butt">
+                    <button type="button" id="next">下一步</button>
+                </div>
+                <div id="butt">
+                    <button type="button" id="back">上一步</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="../js/jquery-2.1.4.js"></script>
+        <script src="../lib/layui.all.js"></script>
+        <script>
+            $('input:radio[name="t1"]').click(function() {
+                if ($("#t1_1").is(":checked")) {
+                    alert("选中第一个！")
+                }
+                if ($("#t1_2").is(":checked")) {
+                    alert("选中第二个！")
+                }
+            })
+            $('button:button[id="help"]').click(function() {
+                alert("这是一个帮助！")
+            })
+            $('button:button[id="friends"]').click(function() {
+                alert("您的评估！")
+            })
+            var cont = document.getElementsByClassName("content");
+            var index = 0;
+            $('button:button[id="next"]').click(function() {
+                if (index == 0) {
+                    cont[0].style.display = 'block';
+                    cont[1].style.display = 'none';
+                    cont[2].style.display = 'none';
+                    cont[3].style.display = 'none';
+                    cont[4].style.display = 'none';
+                    cont[5].style.display = 'none'; 
+                }
+                if (index == 1) {
+                    cont[0].style.display = 'none';
+                    cont[1].style.display = 'block';
+                    cont[2].style.display = 'none';
+                    cont[3].style.display = 'none';
+                    cont[4].style.display = 'none';
+                    cont[5].style.display = 'none';
+                }
+                if (index == 2) {
+                    cont[0].style.display = 'none';
+                    cont[1].style.display = 'none';
+                    cont[2].style.display = 'block';
+                    cont[3].style.display = 'none';
+                    cont[4].style.display = 'none';
+                    cont[5].style.display = 'none';
+                }
+                if (index == 3) {
+                    cont[0].style.display = 'none';
+                    cont[1].style.display = 'none';
+                    cont[2].style.display = 'none';
+                    cont[3].style.display = 'block';
+                    cont[4].style.display = 'none';
+                    cont[5].style.display = 'none';
+                }
+                if (index == 4) {
+                    cont[0].style.display = 'none';
+                    cont[1].style.display = 'none';
+                    cont[2].style.display = 'none';
+                    cont[3].style.display = 'none';
+                    cont[4].style.display = 'block';
+                    cont[5].style.display = 'none';
+                }
+                if (index == 5) {
+                    cont[0].style.display = 'none';
+                    cont[1].style.display = 'none';
+                    cont[2].style.display = 'none';
+                    cont[3].style.display = 'none';
+                    cont[4].style.display = 'none';
+                    cont[5].style.display = 'block';
+                }
+                index++;
+                if(index == 6){
+                    index = 0;
+                }
+            })
+            $('button:button[id="back"]').click(function() {
+                if (index == 0) {
+                    cont[0].style.display = 'block';
+                    cont[1].style.display = 'none';
+                    cont[2].style.display = 'none';
+                    cont[3].style.display = 'none';
+                    cont[4].style.display = 'none';
+                    cont[5].style.display = 'none'; 
+                }
+                if (index == 1) {
+                    cont[0].style.display = 'none';
+                    cont[1].style.display = 'block';
+                    cont[2].style.display = 'none';
+                    cont[3].style.display = 'none';
+                    cont[4].style.display = 'none';
+                    cont[5].style.display = 'none';
+                }
+                if (index == 2) {
+                    cont[0].style.display = 'none';
+                    cont[1].style.display = 'none';
+                    cont[2].style.display = 'block';
+                    cont[3].style.display = 'none';
+                    cont[4].style.display = 'none';
+                    cont[5].style.display = 'none';
+                }
+                if (index == 3) {
+                    cont[0].style.display = 'none';
+                    cont[1].style.display = 'none';
+                    cont[2].style.display = 'none';
+                    cont[3].style.display = 'block';
+                    cont[4].style.display = 'none';
+                    cont[5].style.display = 'none';
+                }
+                if (index == 4) {
+                    cont[0].style.display = 'none';
+                    cont[1].style.display = 'none';
+                    cont[2].style.display = 'none';
+                    cont[3].style.display = 'none';
+                    cont[4].style.display = 'block';
+                    cont[5].style.display = 'none';
+                }
+                if (index == 5) {
+                    cont[0].style.display = 'none';
+                    cont[1].style.display = 'none';
+                    cont[2].style.display = 'none';
+                    cont[3].style.display = 'none';
+                    cont[4].style.display = 'none';
+                    cont[5].style.display = 'block';
+                }
+                index--;
+                if(index == 0){
+                    index = 5;
+                }
+            })
+        </script>
+    </body>
 
 </html>
