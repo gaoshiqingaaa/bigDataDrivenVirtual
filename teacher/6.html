@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/teacher_public.css">
     <script src="../lib/codemirror-5.56.0/lib/codemirror.js"></script>
     <script src="../lib/codemirror-5.56.0/mode/python/python.js"></script>
+    <script src="../js/jquery-2.1.4.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -56,26 +57,22 @@
                         <div style="width: 550px;">
                             <textarea class="code" id="code-out" name="code-out"></textarea>
                         </div>
-                        <button class="bottom-btn">上一步</button>
-                        <button class="bottom-btn">下一步</button>
+                        <button class="bottom-btn" id="pre">上一步</button>
+                        <button class="bottom-btn" id="next">下一步</button>
                     </li>
                 </ul>
-                <!-- <ul>
-                    <li style="font-size: 25px;margin-left: -20px;color:dodgerblue;">In:</li>
-                    <li style="border: 1px solid black;"><textarea class="code" id="code-in" name="code-in"></textarea></li>
-                    <li style="font-size: 25px;margin: 0 5px 0 10px;color: red;">Out:</li>
-                    <li>
-                        <div style="border: 1px solid black;">
-                            <textarea class="code" id="code-out" name="code-out"></textarea>
-                        </div>
-                        
-                        <button class="layui-btn layui-btn-radius layui-btn-primary">上一步</button>
-                        <button class="layui-btn layui-btn-radius layui-btn-primary">下一步</button>
-                    </li>
-                </ul> -->
             </div>
         </div>
     </div>
 </body>
-<script src="../js/teacher_public.js"></script>
+
 </html>
+<script src="../js/teacher_public.js"></script>
+<script>
+    $('#next').click(function(){
+        window.location.href = '7.html'
+    })
+    $('#pre').click(function(){
+        window.location.href = '5.html'
+    })
+</script>

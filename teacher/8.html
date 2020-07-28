@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="../lib/css/layui.css">
     <link rel="stylesheet" href="../css/teacher_public.css">
     <link rel="stylesheet" href="../css/8.css">
+    <script src="../js/jquery-2.1.4.js"></script>
+    <script src="../lib/layui.all.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -53,8 +55,8 @@
             </table>
             <div style="display: inline-block;">
                 <input type="text" name="title" placeholder="资产总额：100000元" autocomplete="off" class="layui-input">    
-                <button type="button" class="layui-btn layui-btn-normal btn">买入</button>
-                <button type="button" class="layui-btn layui-btn-normal btn">调整</button>
+                <button type="button" class="layui-btn layui-btn-normal btn" id="buy">买入</button>
+                <button type="button" class="layui-btn layui-btn-normal btn" id="adjust">调整</button>
             </div>
         </div>
     </div>
@@ -99,3 +101,20 @@
         border-radius: 5px;
     }
 </style>
+
+<script>
+    $('#adjust').click(function(){
+        layer.alert('将返回第五步重新构建组合', {
+            closeBtn: 1
+        }, function(){
+            window.location.href = '5.html'
+        })
+    })
+    $('#buy').click(function(){
+        layer.alert('将投入100000元购买该投资组合', {
+            closeBtn: 1
+        }, function(){
+            layer.msg('购买成功！', {icon: 6});
+        })
+    })
+</script>

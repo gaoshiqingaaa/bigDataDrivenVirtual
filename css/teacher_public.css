@@ -19,6 +19,7 @@ html, body {
     width: 95%;
     height: 70px;
     margin-left: 30px;
+    -webkit-writing-mode: vertical-lr
 }
 .left-box {
     width: 20%;
@@ -30,7 +31,7 @@ html, body {
     width: 74.7%;
     height: 86%;
     background-color: rgba(68, 97, 181, 0.6);
-    margin-top: 28px;
+    margin-top: 35px;
     margin-left: 30px;
     float: left;
     border-radius: 3px;
@@ -48,7 +49,7 @@ html, body {
     display: block;
 }
 .wenhao-icon {
-    margin: 40px 0 0 1250px;
+    margin: 40px 0 0 1800%;
     display: block;
     font-size: 25px;
     color: white;
@@ -107,7 +108,7 @@ html, body {
     font-size: 20px;
 }
 .run-code {
-    margin: 15px 0 0 850px;
+    margin: 15px 0 0 800%;
     width: 100px;
     height: 30px;
     color: white;
@@ -126,6 +127,10 @@ html, body {
 .right-box-bottom li{
     float: left;
     height: 570px;
+    border-radius: 5px;
+}
+.CodeMirror {
+    border-radius: 5px;
 }
 .right-box-bottom span {
     font-size: 25px;color:dodgerblue;

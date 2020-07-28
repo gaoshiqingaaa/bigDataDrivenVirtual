@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../lib/css/layui.css">
     <link rel="stylesheet" href="../css/teacher_public.css">
-    <link rel="stylesheet" href="../css/9.css">
+    <script src="../js/jquery-2.1.4.js"></script>
+    <script src="../lib/layui.all.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -45,8 +46,8 @@
                 </tbody>
             </table>
             <div style="display: inline-block;">   
-                <button type="button" class="layui-btn layui-btn-normal btn">上一步</button>
-                <button type="button" class="layui-btn layui-btn-normal btn">下一步</button>
+                <button type="button" class="layui-btn layui-btn-normal btn" id="pre">上一步</button>
+                <button type="button" class="layui-btn layui-btn-normal btn" id="next">下一步</button>
             </div>
         </div>
     </div>
@@ -86,4 +87,37 @@
         border-radius: 4px;
         margin: 5px 0 0 390px;
     }
+    .advise-alert {
+        background-color: white;
+        padding: 0;
+    }
+    #layui-layer1 {
+        border-radius: 30px;
+    }
+    .layui-layer-content {
+        border-radius: 30px;
+    }
+    iframe {
+        border-radius: 30px;
+    }
 </style>
+
+<script>
+    $('.advise-btn').click(function(){
+        layer.open({
+            type: 2,
+            area: ['700px', '550px'],
+            title: false,
+            closeBtn: 0,
+            shadeClose: true,
+            skin: 'advise-alert',
+            content: '9-advise.html',
+        });
+    })
+    $('#next').click(function(){
+        window.location.href = '8.html'
+    })
+    $('#pre').click(function(){
+        window.location.href = '8.html'
+    })
+</script>

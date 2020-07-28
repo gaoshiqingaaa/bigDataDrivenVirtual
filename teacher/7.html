@@ -59,8 +59,8 @@
                         <div style="width: 550px;">
                             <textarea class="code" id="code-out" name="code-out"></textarea>
                         </div>
-                        <button class="bottom-btn">上一步</button>
-                        <button class="bottom-btn">下一步</button>
+                        <button class="bottom-btn" id="pre">上一步</button>
+                        <button class="bottom-btn" id="next">下一步</button>
                     </li>
                 </ul>
             </div>
@@ -82,4 +82,12 @@
             btn: ['知道了']
         });
     }
+
+    $('#next').click(function(){
+        window.location.href = '8.html'
+    })
+    $('#pre').click(function(){
+        window.location.href = '6.html'
+    })
+    
 </script>
