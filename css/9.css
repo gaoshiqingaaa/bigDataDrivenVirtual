@@ -29,20 +29,22 @@
     border: 0;
     border-radius: 4px;
     margin: 5px 0 0 390px;
-    display: none;
+    /* display: none; */
 }
 .advise-alert {
-    background-color: white;
+    background: url("../img/13-bg@2x.png") no-repeat center top;
+    background-size: contain;
+    border-radius: 10px;
     padding: 0;
 }
 #layui-layer1 {
-    /* border-radius: 30px; */
+    border-radius: 30px;
 }
 .layui-layer-content {
-    /* border-radius: 30px; */
+    border-radius: 30px;
 }
 iframe {
-    /* border-radius: 30px; */
+    border-radius: 30px;
 }
 .panel-size {
     width: 493px;
