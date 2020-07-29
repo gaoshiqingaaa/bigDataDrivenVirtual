@@ -21,47 +21,49 @@
                 <li><button class="layui-btn layui-btn-radius layui-btn-primary back-to">返回首页</button></li>
             </ul>
         </div>
-        <div class="left-box">
-            <div class="left-box-top">
-                <p class="left-title">任务描述</p>
+        <div class="bottom">
+            <div class="left-box">
+                <div class="left-box-top">
+                    <p class="left-title">任务描述</p>
+                </div>
+                <div class="left-box-bottom">
+                    <h2><strong>5、构建投资组合的Efficient frontier</strong></h2>
+                    <p>说明：</p>
+                    <p><strong>构建两个投资组合作为对比。</strong></p>
+                    <ul>
+                        <li><p><strong>组合一</strong>包含沪深 300、中证 500、创业板、国债；</p></li>
+                        <li><p><strong>组合二</strong>包含组合一，标普 500 及企业债。</p></li>
+                        <li><p>绘制effiecient frontier用到了凸优化包cvxopt.</p></li>
+                        <li><p>在构建efficient frontier中，预期收益采取市场中性原则，用过去三年的平均收益.</p></li>
+                    </ul>
+                </div>
             </div>
-            <div class="left-info">
-                <h2 style="color: white;"><strong>5、构建投资组合的Efficient frontier</strong></h2>
-                <p style="margin-top: 20px;">说明：</p>
-                <p><strong>构建两个投资组合作为对比。</strong></p>
-                <ul>
-                    <li><p><strong>组合一</strong>包含沪深 300、中证 500、创业板、国债；</p></li>
-                    <li><p><strong>组合二</strong>包含组合一，标普 500 及企业债。</p></li>
-                    <li><p>绘制effiecient frontier用到了凸优化包cvxopt.</p></li>
-                    <li><p>在构建efficient frontier中，预期收益采取市场中性原则，用过去三年的平均收益.</p></li>
-                </ul>
-            </div>
-        </div>
-        <div class="right-box">
-            <div class="right-box-top">
-                <ul>
-                    <li><p style="color: white;">开发语言:Python</p></li>
-                    <li><button class="run-code">运行</button></li>
-                </ul>
-            </div>
-            <div class="right-box-bottom">
-                <ul>
-                    <li style="margin-left: 20px;">
-                        <!-- <span>In:</span> -->
-                        <textarea class="code" id="code-in" name="code-in"></textarea>
-                        <!-- <div style="width: 550px;">
-                            
-                        </div> -->
-                    </li>
-                    <li style="margin-left: 5%;">
-                        <!-- <span>Out:</span> -->
-                        <div style="width: 550px;">
-                            <textarea class="code" id="code-out" name="code-out"></textarea>
-                        </div>
-                        <button class="bottom-btn" id="pre">上一步</button>
-                        <button class="bottom-btn" id="next">下一步</button>
-                    </li>
-                </ul>
+            <div class="right-box">
+                <div class="right-box-top">
+                    <ul>
+                        <li><p>开发语言:Python</p></li>
+                        <li><button class="run-code">运行</button></li>
+                    </ul>
+                </div>
+                <div class="right-box-bottom">
+                    <ul>
+                        <li class="code-input">
+                            <!-- <span>In:</span> -->
+                            <textarea class="code" id="code-in" name="code-in"></textarea>
+                            <!-- <div style="width: 550px;">
+                                
+                            </div> -->
+                        </li>
+                        <li class="code-output">
+                            <!-- <span>Out:</span> -->
+                            <div>
+                                <textarea class="code" id="code-out" name="code-out"></textarea>
+                            </div>
+                            <button class="bottom-btn" id="pre">上一步</button>
+                            <button class="bottom-btn" id="next">下一步</button>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

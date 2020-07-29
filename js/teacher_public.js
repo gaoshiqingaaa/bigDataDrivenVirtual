@@ -26,4 +26,4 @@ var code_out = CodeMirror.fromTextArea(document.getElementById("code-out"), {
     //readOnly: true,        //只读
 });
 
-code_out.setSize('550px','510px');
+code_out.setSize('500px','510px');
