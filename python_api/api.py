@@ -9,6 +9,7 @@ import flask as f
 import os
 import sys
 
+
 app = f.Flask(__name__)
 if 'static' not in os.listdir(app.root_path):
     os.system('mkdir static')
