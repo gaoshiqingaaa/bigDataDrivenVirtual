@@ -61,7 +61,7 @@
     $('.advise-btn').click(function(){
         layer.open({
             type: 2,
-            area: ['700px', '550px'],
+            area: ['800px', '546px'],
             title: false,
             closeBtn: 0,
             shadeClose: true,
@@ -70,6 +70,14 @@
         });
     })
     $('#next').click(function(){
+        if ($('.advise-btn').css('display') == 'none'){
+            layer.alert('2个月以后，由于资本市场的变化，产生了新的投资策略，请点击“调仓”按钮查看详情。', {
+            closeBtn: 1
+            },function(){
+                $('.advise-btn').show()
+                layer.close(layer.alert())
+            })
+        }
         
     })
     $('#pre').click(function(){
