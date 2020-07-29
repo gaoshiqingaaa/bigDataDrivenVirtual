@@ -57,9 +57,14 @@ body{
 }
 
 .content h1{
-    margin-top: 4%;
-    margin-bottom: 4%;
+   /* margin-top: 4%;
+    margin-bottom: 4%; */
     line-height: 110%;
+}
+
+#bt{
+    margin-top: 4%;
+    margin-bottom: 3%;
 }
 
 #ti{
@@ -78,9 +83,10 @@ body{
 
 #butt{
     width: 20%;
-    padding: 4%;
+    padding: 3%;
     font-size: 15px;
     float: right;
+    margin-left:100px
 }
 
 #next{
@@ -105,6 +111,7 @@ body{
     background-repeat:no-repeat;
     overflow: hidden;
     background-size:100% 100%;
+   
 }
 
 #apple{
