@@ -54,11 +54,10 @@
     margin-left: 600px;
 }
 .divButton{
-    top: 34%;
-    left: 16%;
+    margin: 0 auto;
+    margin-top: 227px;
     width: 70%;
     height: 50%;
-    position: absolute;
 }
 .demo-class{
     background-image: url(../img/4-bg@2x.png) ;
