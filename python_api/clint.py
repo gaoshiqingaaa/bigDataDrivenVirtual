@@ -16,6 +16,7 @@ user_info = {'code': "print('a')\nprint('b')\nprint(a)"}
 r = requests.post("http://127.0.0.1:5000?id=100", data=user_info)
 # 错误返回报错信息，正确返回输出结果，可同时输出
 # 如果有上传的文件或者生成的图片会在files返回文件列表
+#如果代码存在危险词如cd ls remove等返回安全状态false否则返回true
 
 '''
 #上传文件
