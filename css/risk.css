@@ -1,5 +1,5 @@
 body{
-    background-image: url(../imgs/3-bg@2x.png);
+    background-image: url(../img/3-bg@2x.png);
     background-size: cover;
     background-repeat:no-repeat;
     overflow: hidden;
@@ -36,7 +36,7 @@ body{
 
 #mainWin{
     margin: 3% 1.5% 0% 1.5%;
-    background-image: url(../imgs/5-bg@2x.png);
+    background-image: url(../img/5-bg@2x.png);
     background-repeat:no-repeat;
     background-size: cover;
     overflow: hidden;
@@ -57,7 +57,8 @@ body{
 }
 
 .content h1{
-    margin-bottom: 5%;
+    margin-bottom: 4%;
+    line-height: 110%;
 }
 
 #ti{
@@ -65,7 +66,7 @@ body{
     height: 20px;
     line-height: 20px;
     padding: 4%;
-    background-image: url(../imgs/5-panel-nor@2x.png);
+    background-image: url(../img/5-panel-nor@2x.png);
     background-size: cover;
     background-repeat:no-repeat;
     overflow: hidden;
@@ -86,7 +87,7 @@ body{
     width: 200px;
     height: 40px;
     border: none;
-    background-image: url(../imgs/5-btn-next@2x.png);
+    background-image: url(../img/5-btn-next@2x.png);
     background-size: cover;
     background-repeat:no-repeat;
     overflow: hidden;
@@ -98,7 +99,7 @@ body{
     width: 200px;
     height: 40px;
     border: none;
-    background-image: url(../imgs/5-btn-back@2x.png);
+    background-image: url(../img/5-btn-back@2x.png);
     background-size: cover;
     background-repeat:no-repeat;
     overflow: hidden;
