@@ -1,133 +1,206 @@
-body{
+body {
     background-image: url(../img/3-bg@2x.png);
     background-size: cover;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     overflow: hidden;
     width: 100%;
     height: 100%;
 }
 
-#nav{
+#nav {
     width: 100%;
     margin-top: 2.5%;
 }
 
-#help, #friends{
+#help,
+#friends {
     width: 25px;
     height: 25px;
     border: none;
     color: #6969EF;
-    background-color:white;
-    border-radius:15px;
+    background-color: white;
+    border-radius: 15px;
     float: right;
     margin-right: 2%;
     margin-top: 0.5%;
 }
 
-#but1{
+#but1 {
     width: 10%;
     float: right;
     margin-right: 2%;
 }
 
-#but1 a{
+#but1 a {
     color: #6969EF;
 }
 
-#mainWin{
+#mainWin {
     margin: 3% 1.5% 0% 1.5%;
     background-image: url(../img/5-bg@2x.png);
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
-    background-size:100% 100%;
+    background-size: 100% 100%;
 }
 
-#mainWin-nav{
-    float: left; 
+#mainWin-nav {
+    float: left;
     margin-left: 2%;
     margin-top: 4%;
 }
 
-.content{
+.content {
     margin-top: 8%;
     margin-left: 12%;
     padding-top: 2%;
     padding-left: 2%;
 }
 
-.content h1{
-   /* margin-top: 4%;
+.content h1 {
+    /* margin-top: 4%;
     margin-bottom: 4%; */
     line-height: 110%;
 }
 
-#bt{
+#bt {
     margin-top: 4%;
     margin-bottom: 3%;
 }
 
-#ti{
+#ti {
     width: 30%;
     height: 20px;
     line-height: 20px;
     padding: 4%;
     background-image: url(../img/5-panel-nor@2x.png);
     background-size: cover;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     overflow: hidden;
-    background-size:100% 100%;
+    background-size: 100% 100%;
     font-size: 15px;
     float: left;
 }
 
-#butt{
+#butt {
     width: 20%;
     padding: 3%;
     font-size: 15px;
     float: right;
-    margin-left:100px
+    margin-left: 100px
 }
 
-#next{
+#next {
     color: white;
     width: 200px;
     height: 40px;
     border: none;
     background-image: url(../img/5-btn-next@2x.png);
     background-size: cover;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     overflow: hidden;
-    background-size:100% 100%;
+    background-size: 100% 100%;
 }
 
-#back{
+#back {
     color: white;
     width: 200px;
     height: 40px;
     border: none;
     background-image: url(../img/5-btn-back@2x.png);
     background-size: cover;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     overflow: hidden;
-    background-size:100% 100%;
-   
+    background-size: 100% 100%;
+
 }
 
-#apple{
+#apple {
     background-image: url(../img/15-icon-1@2x.png);
     background-size: cover;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     overflow: hidden;
-    background-size:100% 100%;
+    background-size: 100% 100%;
     width: 10.6%;
     float: left;
     margin-bottom: 30%;
 }
 
-#apple h1{
+#apple h1 {
     text-align: center;
     line-height: 478%;
     color: white;
 }
 
+ol.steps::-webkit-scrollbar {
+    /* chrome 隐藏滚动条*/
+    display: none;
+}
+
+ol.steps {
+    list-style: none;
+
+}
+
+ol.steps:after, 
+ol.steps li:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+ol.steps li {
+
+    width: 49px;
+    height: 50px;
+    position: relative;
+
+}
+
+ol.steps li .step-line {
+    height: 25px;
+    position: absolute;
+    background-color: #e0e0e0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .2);
+
+    width: 3px;
+    top: 33px;
+    left: 0;
+}
+
+ol.steps li.step-active .step-line {
+    background-color: #449BF9FF;
+    box-shadow: inset 0 1px 1px#449BF9FF;
+}
+
+ol.steps .step-content {
+    position: absolute;
+    top: 0;
+    left: -15px;
+    text-align: center;
+}
+
+ol.steps li .step-content .step-num {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    color: #fff;
+    background-color: #b9b9b9;
+    line-height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    border: 1px solid rgba(224, 224, 224, 1);
+}
+
+ol.steps li.step-active .step-content .step-num {
+    background-color: #449BF9FF;
+}
+
+ol.steps li.step-end {
+    width: 120px !important;
+    flex: inherit;
+}
+
+ol.steps li.step-end .step-line {
+    display: none;
+}
