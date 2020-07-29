@@ -10,6 +10,7 @@ import os
 import sys
 import re
 
+
 app = f.Flask(__name__)
 if 'static' not in os.listdir(app.root_path):
     os.system('mkdir static')
