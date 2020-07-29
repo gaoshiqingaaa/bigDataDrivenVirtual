@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大数据驱动的智能投顾虚拟仿真实验</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="./lib/css/layui.css"  media="all">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/public.css">
+</head>
+<body>
+    <div class="box1" style="background-image: url(./img/2-bg@2x.png);">
+        <div class="divButton">
+            
+            <div class="divButton1 site-demo-button"  id="layerDemo" >
+                <a href="#1">
+                    <button type="button" class="layui-btn layui-btn-primary Button shadow1 Buttonbackground1">
+                        <div class="buttonimagelocation1">
+                            <img src="./img/2-icon-study@2x.png" class="buttonimagelocation2">
+                        </div>
+                </button>
+            </a>
+            </div>
+            
+            <div class="divButton2 site-demo-button" id="layerDemo" >
+                    <button type="button" data-method="offset" data-type="auto"  class="layui-btn layui-btn-primary Button shadow1 Buttonbackground2">
+                        <div class="buttonimagelocation1">
+                            <img src="./img/2-icon-begin@2x.png" class="buttonimagelocation2 ">
+                        </div>
+                    </button>
+                </div>
+            
+            <div class="divButton3">
+                <a href="#3">
+                    <button type="button" class="layui-btn layui-btn-primary Button shadow1 Buttonbackground3">
+                        <div class="buttonimagelocation1">
+                            <img src="./img/2-icon-result@2x.png" class="buttonimagelocation2">
+                        </div>
+                    </button>
+                </a>
+            </div>
+        
+        </div>
+    </div>
+</body>
+<script src="js/jquery-2.1.4.js"></script>
+<script src="./lib/layui.all.js"></script>
+<script src="./lib/layui.js" charset="utf-8"></script>
+<script>
+
+layui.use('layer', function(){ //独立版的layer无需执行这一句
+  var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
+  
+  //触发事件
+  var active = {
+   offset: function(othis){
+      var type = othis.data('type')
+      ,text = othis.text();
+      
+      layer.open({
+        type: 1
+        ,closeBtn: 2
+        ,title: false
+        ,skin: 'demo-class'
+        ,area: ['700px', '300px']
+        ,resize: false
+        ,offset: '250px' //具体配置参考：http://www.layui.com/doc/modules/layer.html#offset
+        ,id: 'layerDemo'+type //防止重复弹出
+        ,shade:  [0.4, '#000'] //不显示遮罩
+        ,yes: function(){
+          layer.closeAll();
+        }
+      });
+    }
+  };
+  
+  $('#layerDemo .layui-btn').on('click', function(){
+    var othis = $(this), method = othis.data('method');
+    active[method] ? active[method].call(this, othis) : '';
+  });
+  
+});
+</script>
+</html>

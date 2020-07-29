@@ -1,0 +1,55 @@
+.right-box-content {
+    font-size: 20px;
+}
+.right-box-content div {
+    width: 450px;
+    height: 210px;
+    background-color: lightcyan;
+}
+.layui-table td {
+    font-size: 20px;
+}
+.layui-input {
+    margin-left: 56px;
+    width: 550px;
+    height: 45px;
+    font-size: 20px;
+}
+.btn {
+    margin: -63px 0 0 545px;
+    height: 45px;
+    width: 250px;
+    font-size: 20px;
+}
+.right-table {
+    border-collapse: separate;
+    border-spacing: 20px 20px; /* 水平间距 垂直间距 */
+    margin: -5px 0 0 25px;
+}
+.right-table div {
+    width: 500px;
+    height: 270px;
+    border-radius: 10px;
+}
+.right-table td {
+    border-radius: 5px;
+}
+.bg-size {
+    
+}
+.left-top {
+    background: url("../img/10-left-top-panel@2x.png") no-repeat center top;
+    background-size: contain;
+}
+.right-top {
+    background: url("../img/10-right-top-panel@2x.png") no-repeat center top;
+    background-size: contain;
+}
+.left-bottom {
+    background: url("../img/10-left-bottom-panel@2x.png") no-repeat center top;
+    background-size: contain;
+}
+.right-bottom {
+    background: url("../img/10-right-bottom-panel@2x.png") no-repeat center top;
+    background-size: contain;
+}
