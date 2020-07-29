@@ -94,11 +94,11 @@ html, body {
     margin: 5% 0 0 25%;
 }
 
-.pages {
+.left-pages {
     height: 100%;
 }
 
-.pages div {
+.left-pages div {
     display: none;
 }
 
@@ -213,13 +213,102 @@ html, body {
     width: 88%;
 }
 
-.bottom-btn {
-    height: 40px;
-    flex-grow: 0.5;
-    color: white;
+.my-btn {
     background-color: rgb(62,159,247);
     border: 0;
     border-radius: 4px;
     margin-left: 3%;
     margin-right: 3%;
+}
+
+.bottom-btn {
+    height: 40px;
+    flex-grow: 0.5;
+    color: white;
+
+}
+
+.right-content {
+    height: 93%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-content-top {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+}
+
+.right-content-top-left {
+    height: 100%;
+    flex-grow: 1;
+    background: url("../img/10-left-top-panel@2x.png") no-repeat center top;
+    background-size: contain;
+}
+
+.right-content-top-right {
+    height: 100%;
+    flex-grow: 1;
+    background: url("../img/10-right-top-panel@2x.png") no-repeat center top;
+    background-size: contain;
+}
+
+.right-content-bottom {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+}
+
+.right-content-bottom-left {
+    height: 100%;
+    flex-grow: 1;
+    background: url("../img/10-left-bottom-panel@2x.png") no-repeat center top;
+    background-size: contain;
+}
+
+.right-content-bottom-right {
+    height: 100%;
+    flex-grow: 1;
+    background: url("../img/10-right-bottom-panel@2x.png") no-repeat center top;
+    background-size: contain;
+}
+
+.right-bottom {
+    width: 100%;
+    height: 7%;
+}
+
+.layui-input {
+    position: relative;
+    left: 1.6%;
+    height: 100%;
+    width: 55%;
+}
+
+.right-bottom-btn-div {
+    position: relative;
+    top: -100%;
+    left: 50%;
+    height: 100%;
+    width: 50%;
+    display: flex;
+}
+
+.right-bottom-btn {
+    height: 100%;
+    flex-grow: 1;
+    color: white;
+}
+
+.right-page {
+    width: 100%;
+    height: 100%;
+}
+
+.right-page-content {
+    width: 100%;
+    height: 100%;   
+    display: none;
 }

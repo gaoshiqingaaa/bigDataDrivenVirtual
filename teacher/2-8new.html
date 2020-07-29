@@ -26,7 +26,7 @@
                 <div class="left-box-top">
                     <p class="left-title">任务描述</p>
                 </div>
-                <div class="pages">
+                <div class="left-pages">
                     <div class="left-box-bottom" id="page-two">
                         <h2><strong>2、计算标的资产的年化收益率</strong></h2>
                         <p>说明：</p>
@@ -63,25 +63,57 @@
                         <p>说明：</p>
                         <p>给定预期收益，得到最优权重。</p>
                     </div>
+                    <div class="left-box-bottom" id="page-eight">
+                        <h2><strong>8、可视化结果分析。</strong></h2>
+                        <p>说明：</p>
+                        <p>点击调试可以返回前几步对代码进行调试，重新生成结果。</p>
+                        <p>点击申购，进行购买。</p>
+                    </div>
+                    <div class="left-box-bottom" id="page-nine">
+                        <h2><strong>9、持仓情况</strong></h2>
+                    </div>
                 </div>
             </div>
             <div class="layui-col-md10 right-box">
-                <div class="right-box-top">
-                    <ul class="right-box-nav">
-                        <li class="lang-intro"><p>开发语言:Python</p></li>
-                        <li class="run-code-li"><button class="run-code">运行</button></li>
-                    </ul>
-                </div>
-                <div class="right-box-bottom">
-                    <div class="code-input">
-                        <textarea id="code-in"></textarea>
-                    </div>
-                    <div class="code-output">
-                        <div class="result">
+                <div class="right-page">
+                    <div class="right-page-content" id="right-page-other">
+                        <div class="right-box-top">
+                            <ul class="right-box-nav">
+                                <li class="lang-intro"><p>开发语言:Python</p></li>
+                                <li class="run-code-li"><button class="run-code">运行</button></li>
+                            </ul>
                         </div>
-                        <div class="btn-box">
-                            <button class="bottom-btn" id="pre">上一步</button>
-                            <button class="bottom-btn" id="next">下一步</button>
+                        <div class="right-box-bottom">
+                            <div class="code-input">
+                                <textarea id="code-in"></textarea>
+                            </div>
+                            <div class="code-output">
+                                <div class="result">
+                                </div>
+                                <div class="btn-box">
+                                    <button class="bottom-btn my-btn" id="pre">上一步</button>
+                                    <button class="bottom-btn my-btn" id="next">下一步</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-page-content" id="right-page-eight">
+                        <div class="right-content">
+                            <div class="right-content-top">
+                                <div class="right-content-top-left"></div>
+                                <div class="right-content-top-right"></div>
+                            </div>
+                            <div class="right-content-bottom">
+                                <div class="right-content-bottom-left"></div>
+                                <div class="right-content-bottom-right"></div>
+                            </div>
+                        </div>
+                        <div class="right-bottom">
+                            <input type="text" name="title" placeholder="资产总额：100000元" autocomplete="off" class="layui-input">    
+                            <div class="right-bottom-btn-div">
+                                <button class="right-bottom-btn my-btn" id="pre">上一步</button>
+                                <button class="right-bottom-btn my-btn" id="next">下一步</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -93,23 +125,37 @@
 </html>
 
 <script>
-    window.onload = function(){
-        $($('.pages>div')[0]).show()
-    }
     var current_page = 0
+    window.onload = function(){
+        switch (current_page){
+            case 0:
+                $($('.left-pages>div')[0]).show()
+                $('#right-page-other').show()
+                break
+        }
+    }
     $('#next').click(function(){
-        if (current_page < 5) {
+        if (current_page < 7) {
             current_page ++
-            $('.pages>div').hide()
-            $($('.pages>div')[current_page]).show()
+            showPage(current_page)
         }
     })
+
+    
 
     $('#pre').click(function(){
         if (current_page > 0){
             current_page --
-            $('.pages>div').hide()
-            $($('.pages>div')[current_page]).show()
+            showPage(current_page)
         }
     })
+
+    function showPage(current_page) {
+        $('.left-pages>div').hide()
+            $($('.left-pages>div')[current_page]).show()
+            if (current_page == 6) {
+                $('.right-page-content').hide()
+                $('#right-page-eight').show()
+            }
+    }
 </script>
