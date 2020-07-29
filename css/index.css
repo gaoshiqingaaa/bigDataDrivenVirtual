@@ -1,0 +1,68 @@
+.Button{
+    position: absolute;
+    margin-top: 7%;
+    width: 242px;
+    height: 207px;
+    border-radius: 17px;
+    border: 0px;
+}
+.Buttonbackground1{
+    background-image: url(../img/2-btn-study@2x.png);
+    background-position: top;
+    background-size: 286px;
+    background-repeat: no-repeat;
+    
+}
+.Buttonbackground2{
+    background-image: url(../img/2-btn-begin@2x.png);
+    background-position: top;
+    background-size: 286px;
+    background-repeat: no-repeat;
+    
+}
+.Buttonbackground3{
+    background-image: url(../img/2-btn-result@2x.png);
+    background-position: top;
+    background-size: 286px;
+    background-repeat: no-repeat;
+    
+}
+.shadow1{
+    -webkit-box-shadow:0 0 4px 0px rgb(224, 224, 224);
+    box-shadow:1 0 0px 0px rgb(214, 214, 214);
+}
+.buttonimagelocation1{
+    position: relative;
+    width: 101px;
+    height: 101px;
+    top: -14px;
+    left: 52px;
+}
+.buttonimagelocation2{
+    border: none;
+    top: 2px;
+    position: relative;
+    width: 55px;
+}
+.divButton1{
+    margin-left: 0px;
+}
+.divButton2{
+    margin-left: 300px;
+}
+.divButton3{
+    margin-left: 600px;
+}
+.divButton{
+    top: 34%;
+    left: 16%;
+    width: 70%;
+    height: 50%;
+    position: absolute;
+}
+.demo-class{
+    background-image: url(../img/4-bg@2x.png) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 800px;
+}
