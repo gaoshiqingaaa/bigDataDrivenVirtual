@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../lib/css/layui.css">
+    <link rel="stylesheet" href="../lib/codemirror-5.56.0/lib/codemirror.css">
+    <link rel="stylesheet" href="../lib/codemirror-5.56.0/theme/idea.css">
+    <link rel="stylesheet" href="../css/teacher_public.css">
+    <script src="../lib/codemirror-5.56.0/lib/codemirror.js"></script>
+    <script src="../lib/codemirror-5.56.0/mode/python/python.js"></script>
+    <script src="../js/jquery-2.1.4.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+        <div class="top">
+            <ul >
+                <li><i class="layui-icon layui-icon-help wenhao-icon"></i></li>
+                <li><i class="layui-icon layui-icon-friends user-icon"></i></li>
+                <li><button class="layui-btn layui-btn-radius layui-btn-primary back-to">返回首页</button></li>
+            </ul>
+        </div>
+        <div class="bottom">
+            <div class="left-box">
+                <div class="left-box-top">
+                    <p class="left-title">任务描述</p>
+                </div>
+                <div class="left-box-bottom">
+                    <h2><strong>5、构建投资组合的Efficient frontier</strong></h2>
+                    <p>说明：</p>
+                    <p><strong>构建两个投资组合作为对比。</strong></p>
+                    <ul>
+                        <li><p><strong>组合一</strong>包含沪深 300、中证 500、创业板、国债；</p></li>
+                        <li><p><strong>组合二</strong>包含组合一，标普 500 及企业债。</p></li>
+                        <li><p>绘制effiecient frontier用到了凸优化包cvxopt.</p></li>
+                        <li><p>在构建efficient frontier中，预期收益采取市场中性原则，用过去三年的平均收益.</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right-box">
+                <div class="right-box-top">
+                    <ul>
+                        <li><p>开发语言:Python</p></li>
+                        <li><button class="run-code">运行</button></li>
+                    </ul>
+                </div>
+                <div class="right-box-bottom">
+                    <div class="code-input">
+                        <textarea id="code-in"></textarea>
+                    </div>
+                    <div class="code-output">
+                        <div class="result">
+                            
+                        </div>
+                        <div>
+                            <button class="bottom-btn" id="pre">上一步</button>
+                            <button class="bottom-btn" id="next">下一步</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/teacher_public.js"></script>
+</html>
+
+<script>
+    $('#next').click(function(){
+        window.location.href = '6.html'
+    })
+</script>

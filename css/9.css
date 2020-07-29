@@ -1,0 +1,70 @@
+.right-table {
+    border-collapse: separate;
+    border-spacing: 20px 30px; /* 水平间距 垂直间距 */
+    margin: -15px 0 0 60px;
+}
+
+/* .right-table div {
+    width: 493px;
+    height: 270px;
+    background-color: #fff;
+} */
+.btn {
+    margin: -19px 0 0 557px;
+    height: 45px;
+    width: 250px;
+    font-size: 20px;
+}
+.right-table strong {
+    font-size: 18px;
+    margin: 10px;
+    color: rgb(84,102,122);
+}
+.advise-btn {
+    height: 30px;
+    width: 80px;
+    font-size: 15px;
+    color: white;
+    background-color: rgb(62,159,247);
+    border: 0;
+    border-radius: 4px;
+    margin: 5px 0 0 390px;
+    /* display: none; */
+}
+.advise-alert {
+    background: url("../img/13-bg@2x.png") no-repeat center top;
+    background-size: contain;
+    border-radius: 10px;
+    padding: 0;
+}
+#layui-layer1 {
+    border-radius: 30px;
+}
+.layui-layer-content {
+    border-radius: 30px;
+}
+iframe {
+    border-radius: 30px;
+}
+.panel-size {
+    width: 493px;
+    height: 270px;
+}
+.left-top {
+    background: url("../img/12-left-top-panle@2x.png") no-repeat center top;
+    background-size: contain;
+}
+.right-top {
+    background: url("../img/12-right-top-panle@2x.png") no-repeat center top;
+    background-size: contain;
+}
+.bottom-panel {
+    width: 1000px;
+    height: 271px;
+    background: url("../img/12-bottom-panle@2x.png") no-repeat center top;
+    background-size: contain;
+}
+.button-div {
+    display: inline-block;
+    width: 1920px;
+}

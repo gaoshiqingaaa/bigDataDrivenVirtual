@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0
+}
+html, body {
+    min-width: 1920px;
+    min-width: 922px;
+    padding: 0;
+    margin: 0;
+    background: url("../img/3-bg@2x.png") no-repeat center top;
+    background-size: cover;
+    overflow-y:auto; 
+    overflow-x:auto;
+}
+.content {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.top {
+    width: 95%;
+    height: 70px;
+    margin-left: 30px;
+    -webkit-writing-mode: vertical-lr;
+    display: flex;
+}
+.bottom {
+    width: 98.5%;
+    height: 100%;
+    display: flex;
+}
+.left-box {
+    width: 20%;
+    order: 1;
+    height: 83.5%;
+    margin: 28px 0 -5px 30px;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.right-box {
+    width: 80%;
+    order: 2;
+    height: 100%;
+    background-color: rgba(68, 97, 181, 0.6);
+    margin-top: 35px;
+    margin-left: 30px;
+    float: left;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 3;
+}
+.title {
+    margin: 0;
+    padding: 10px 0 0 30px;
+    font-size: 30px;
+}
+.top ul {
+    flex-grow: 1;
+}
+.top ul li {
+    list-style:none; /* 将默认的列表符号去掉 */
+    padding:0; /* 将默认的内边距去掉 */
+    margin:0; /* 将默认的外边距去掉 */
+    float: left; /* 往左浮动 */
+    display: block;
+}
+.wenhao-icon {
+    margin: 40px 0 0 1800%;
+    display: block;
+    font-size: 25px;
+    color: white;
+    border: 2px solid #fff;
+    border-radius: 30px;
+}
+.user-icon {
+    margin: 40px 0 0 50px;
+    display: block;
+    font-size: 25px;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 30px;
+}
+.back-to {
+    margin: 40px 0 0 50px;
+}
+.left-box-top {
+    height: 75px;
+    margin: 15px;
+    background-color: rgba(46, 94, 175, 1);
+    border-radius: 3px;
+    flex-grow: 1;
+}
+.left-title {
+    font-size: 30px;
+    margin: 15px 0 0 28%;
+    display: inline-block;
+    color:#fff;
+}
+.left-box-bottom {
+    margin: 20px 50px 0 18%;
+    flex-grow: 4;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+}
+.left-box-bottom h2 {
+    flex-grow: 2;
+}
+.left-box-bottom p {
+    font-size: 17px;
+    color: white;
+    flex-grow: 1;
+}
+.left-box-bottom ul {
+    flex-grow: 1;
+}
+.left-box-bottom ul li {
+    list-style-type: disc;
+    color: white;
+}
+.right-box-top {
+    height: 55px;
+    flex-grow: 1;
+}
+.right-box-top p {
+    font-size: 25px;
+    margin: 13px 0 0 20px;
+    display: inline-block;
+}
+.right-box-top li {
+    float: left;
+    color: white;
+}
+.right-box-top input {
+    width: 100px;
+    height: 28px;
+    margin: 16px 0 0 20px;
+    font-size: 20px;
+}
+.run-code {
+    position: relative;
+    top: 15px;
+    left: 800%;
+    width: 100px;
+    height: 30px;
+    color: white;
+    background-color: rgb(62,159,247);
+    border: 0;
+    border-radius: 4px;
+}
+.right-box-left {
+    width: 45%;
+    height: 80%;
+    margin: 10px 0 0 10px;
+}
+.right-box-bottom{
+    padding: 10px;
+    flex-grow: 7;
+    height: 100%;
+    display: flex;
+}
+.CodeMirror {
+    border-radius: 5px;
+}
+/* .CodeMirror-sizer {
+    min-height: 192px;
+} */
+.code-input {
+    flex-grow: 1;
+    margin-left: 30px;
+    width: 500px;
+    height: 570px;
+}
+.code-output {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    position: relative;
+    bottom: 00px;
+    border-radius: 5px;
+}
+.result {
+    flex-grow: 5;
+    border-radius: 5px;
+    background-color: white;
+}
+.code-output div {
+    width: 550px;
+}
+/* .right-box-bottom span {
+    font-size: 25px;color:dodgerblue;
+    position:relative;
+    top: -10px;
+    float: left;
+} */
+.bottom-btn {
+    width: 270px;
+    height: 40px;
+    flex-grow: 1;
+    margin-top: 20px;
+    color: white;
+    background-color: rgb(62,159,247);
+    border: 0;
+    border-radius: 4px;
+}
+/* 定义滚动条样式 */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: rgba(240, 240, 240, 1);
+  }
+   
+  /*定义滚动条轨道 内阴影+圆角*/
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0px rgba(240, 240, 240, .5);
+    border-radius: 10px;
+    background-color: rgba(240, 240, 240, .5);
+  }
+   
+  /*定义滑块 内阴影+圆角*/
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 0px rgba(240, 240, 240, .5);
+    background-color: rgba(240, 240, 240, .5);
+  }
+  .left-box-bottom h2 {
+      color: white;
+      margin-bottom: 20px;
+  }

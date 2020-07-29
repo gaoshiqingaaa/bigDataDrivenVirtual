@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="../lib/css/layui.css">
+<script src="../js/jquery-2.1.4.js"></script>
+<script src="../lib/layui.all.js"></script>
+<div style="width: 650px;height: 400px;">
+    <div class="close-div"><i class="layui-icon layui-icon-close close-icon"></i></div>
+    <div class="top">
+        <img src="../img/13-form@2x.png" alt="">
+    </div>
+    <div class="button-box">
+        <button id="yes">调仓</button>
+        <button>不调仓</button>
+    </div>
+</div>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    .top {
+        position: absolute;
+        top: 60px;
+        left: 38px;
+    }
+    img {
+        margin: 30px 0 0 50px;
+    }
+    button {
+        width: 296px;
+        height: 60px;
+        margin-top: 20px;
+        color: white;
+        background-color: rgb(62,159,247);
+        border: 0;
+        border-radius: 4px;
+    }
+    .button-box {
+        margin-left: 50px;
+        position: absolute;
+        left: 38px;
+        top: 440px;
+    }
+    .close-div {
+        position: absolute;
+        top: 15px;
+        left: 700px;
+    }
+    .close-icon {
+        color: white;
+        font-size: 40px;
+    }
+</style>
+
+<script>
+    $('#yes').click(function(){
+        console.log(window.name);
+        var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+        parent.layer.close(index); //再执行关闭   
+    })
+    
+</script>
