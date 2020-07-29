@@ -14,9 +14,14 @@
     position: absolute;
 }
 .shadow{
-    -moz-box-shadow:0 0 5px 5px rgb(238, 238, 238);
-    -webkit-box-shadow:0 0 5px 5px rgb(238, 238, 238);
-    box-shadow:0 0 5px 5px rgb(238, 238, 238);
+    -moz-box-shadow:0 0 5px 5px rgb(179, 179, 179);
+    -webkit-box-shadow:0 0 5px 5px rgb(179, 179, 179);
+    box-shadow:0 0 5px 0px rgb(218, 217, 217);
+}
+.shadow1{
+    -moz-box-shadow:0 0 5px 5px rgb(235, 235, 235);
+    -webkit-box-shadow:0 0 5px 5px rgb(224, 224, 224);
+    box-shadow:1 0 0px 0px rgb(214, 214, 214);
 }
 .usernameimg{
     position: absolute;
@@ -56,13 +61,27 @@
 .Button{
     position: absolute;
     margin-top: 7%;
-    width: 29%;
-    height: 63%;
+    width: 242px;
+    height: 207px;
     border-radius: 17px;
+    border: 0px;
+}
+.buttonimagelocation1{
+    position: relative;
+    width: 101px;
+    height: 101px;
+    top: -14px;
+    left: 52px;
+}
+.buttonimagelocation2{
+    border: none;
+    top: 13px;
+    position: relative;
+    width: 76px;
 }
 .divButton1{
     top: 34%;
-    left: 12%;
+    left: 17%;
     width: 70%;
     height: 50%;
     position: absolute;
