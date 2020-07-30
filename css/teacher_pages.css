@@ -1,73 +1,5 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-html, body {
-    height: 756px;
-    width: 100%;
-    background: url("../img/3-bg@2x.png") no-repeat center top;
-    background-size: cover;
-    min-width: 100%;
-}
-
-.layui-container {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.layui-row {
-    width: 100%;
-}
-
-.top {
-    height: 13%;
-}
-
 .bottom {
     height: 83%;
-}
-
-.nav {
-    height: 100%;
-}
-
-.nav li {
-    float: left;
-}
-
-.wenhao {
-    position: relative;
-    top: 34%;
-    left: 80%;
-}
-
-.wenhao-icon {
-    font-size: 30px;
-    color: white;
-    border: 2px solid #fff;
-    border-radius: 30px;
-}
-
-.user {
-    position: relative;
-    top: 34%;
-    left: 82%;
-}
-
-.user-icon {
-    font-size: 30px;
-    color: #fff;
-    border: 2px solid #fff;
-    border-radius: 30px;
-}
-
-.back-to {
-    position: relative;
-    top: 33%;
-    left: 84%;
 }
 
 .left-box {
@@ -106,7 +38,7 @@ html, body {
     position: relative;
     top: 8%;
     left: 18%;
-    width: 60%;
+    width: 68%;
 }
 
 .left-box-bottom h2 {
@@ -117,6 +49,7 @@ html, body {
 .left-box-bottom p {
     font-size: 17px;
     color: white;
+    margin-bottom: 3%;
 }
 
 .left-box-bottom ul li {
@@ -186,11 +119,10 @@ html, body {
     position: relative;
     left: 3%;
     height: 100%;
-
 }
 
 .code-output {
-    flex-grow: 4;
+    flex-grow: 1;
     position: relative;
     height: 100%;
     display: flex;
@@ -203,6 +135,11 @@ html, body {
     border-radius: 5px;
     background-color: white;
     flex-grow: 15;
+    padding: 2%;
+}
+
+.result p {
+    font-size: 20px;    
 }
 
 .btn-box {
@@ -211,14 +148,6 @@ html, body {
     flex-grow: 1;
     display: flex;
     width: 88%;
-}
-
-.my-btn {
-    background-color: rgb(62,159,247);
-    border: 0;
-    border-radius: 4px;
-    margin-left: 3%;
-    margin-right: 3%;
 }
 
 .bottom-btn {
@@ -310,5 +239,64 @@ html, body {
 .right-page-content {
     width: 100%;
     height: 100%;   
+    /* display: none; */
+}
+
+.right-content-top-left-nine {
+    height: 100%;
+    flex-grow: 1;
+    background: url("../img/12-left-top-panle@2x.png") no-repeat center top;
+    background-size: contain;
+}
+
+.right-content-top-right-nine {
+    height: 100%;
+    flex-grow: 1;
+    background: url("../img/12-right-top-panle@2x.png") no-repeat center top;
+    background-size: contain;   
+}
+
+.right-content-bottom-all-nine {
+    height: 100%;
+    flex-grow: 1;
+    background: url("../img/12-bottom-panle@2x.png") no-repeat center top;
+    background-size: contain; 
+}
+
+.nine {
+    position: relative;
+    top: -5%;
+}
+
+.advise-btn {
+    position: relative;
+    top: 3%;
+    left: 75%;
+    color: white;
+    width: 13%;
+    height: 10%;
+    font-size: 15px;
+    display: none;
+}
+
+.advise-alert {
+    background: url("../img/13-bg@2x.png") no-repeat center top;
+    background-size: cover;
+    padding: 0;
+}
+
+.data-pre-table {
+    width: 100%;
+}
+
+.data-pre-table tr {
+    width: 100%;
+}
+
+.data-pre-table td {
+    margin-right: 5%;
+}
+
+.none {
     display: none;
 }

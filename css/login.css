@@ -1,46 +1,56 @@
 .box2{
-    width: 21%;
-    height: 45%;
-    right: 21%;
-    top: 26%;
+    width: 20.970394736842106vw;
+    height: 25.904605263157897vw;
+    right: 20.970394736842106vw;
+    top: 15.213815789473685vw;
     position: absolute;
 }
 .shadow{
     -moz-box-shadow:0 0 5px 5px rgb(179, 179, 179);
     -webkit-box-shadow:0 0 5px 5px rgb(179, 179, 179);
     box-shadow:0 0 5px 0px rgb(218, 217, 217);
+    position: relative;
+    margin-top: 0.4111842105263158vw;
+    left: 2.7138157894736845vw;
 }
 .usernameimg{
     position: absolute;
-    width: 45px;
-    height: 27px;
-    top: 3px;
-    left: 3px;
+    width: 3.7006578947368425vw;
+    height: 2.2203947368421053vw;
+    top: 0.2467105263157895vw;
+    left: 0.2467105263157895vw;
     background-size: 2px;
 }
 .imgsize{
-    width: 18px;
-    top: 4px;
-    left: 5px;
+    width: 1.480263157894737vw;
+    top: 0.32894736842105265vw;
+    left: 0.4111842105263158vw;
     position: absolute;
+}
+.logindiv{
+    position: absolute;
+    top: 22.86184210526316vw;
+    left: 2.2203947368421053vw;
 }
 .login{
     background: url(../img/login-btn@2x.png);
-    border-radius: 8px;
+    border-radius: 0.6578947368421053vw;
     position: absolute;
+    width: 16.85855263157895vw; 
+    height: 2.055921052631579vw;
 }
 .Verticalline{
     position: absolute;
-    width: 1px;
-    height: 15px;
-    border-radius: 10px;
+    width: 0.08223684210526316vw;
+    height: 1.2335526315789473vw;
+    border-radius: 0.8223684210526316vw;
     background-color: black;
-    top: 5px;
-    right: 11px;
+    top: 0.4111842105263158vw;
+    right: 0.9046052631578948vw;
 }
 .input1{
-    margin-left: 35px;
-    height: 30px;
-    width: 155px;
+    margin-left: 2.8782894736842106vw;
+    height: 2.4671052631578947vw;
+    width: 12.746710526315791vw;
     border:0px;
 }
