@@ -4,8 +4,159 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>基础知识学习</title>
+    <link rel="stylesheet" href="../lib/css/layui.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/sys-index.css">
 </head>
 <body>
+    <div class="layui-card">
+      <div class="layui-card-header">
+        <div id="jichu">&nbsp;</div>
+        <div id="kuaiwen">&nbsp;</div>
+        <button type="button" class="layui-btn layui-btn-radius layui-btn-primary" id="but1"><a href="../index.html">返回</a></button>
+      </div>
+      <div class="layui-card-body">
+          <!-- 第一题 -->
+        <div id="ti" style="display: block;">
+            <h1>【多选题】1.系统性风险包括（BCD）。</h1>
+            <p><input type="checkbox" name="t1" value="t1_1" id="t1_1"><b>A.人事变动风险</b></p>
+            <p><input type="checkbox" name="t1" value="t1_2" id="t1_2"><b>B.经济周期波动风险</b></p>
+            <p><input type="checkbox" name="t1" value="t1_3" id="t1_3"><b>C.利率风险 </b></p>
+            <p><input type="checkbox" name="t1" value="t1_4" id="t1_4"><b>D.购买力风险</b></p>
+            <p><button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal">确定</button></p>
+        </div>
+        <!-- 第二题 -->
+        <div id="ti" style="display: none;">
+            <h1>【多选题】2.非系统性风险包括（ABCD）。</h1>
+            <p><input type="checkbox" name="t2" value="t2_1" id="t2_1"><b>A.信用风险</b></p>
+            <p><input type="checkbox" name="t2" value="t2_2" id="t2_2"><b>B.经营风险</b></p>
+            <p><input type="checkbox" name="t2" value="t2_3" id="t2_3"><b>C.财务风险</b></p>
+            <p><input type="checkbox" name="t2" value="t2_4" id="t2_4"><b>D.道德风险</b></p>
+            <p><button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal">确定</button></p>
+        </div>
+        <!-- 第三题 -->
+        <div id="ti" style="display: none;">
+            <h1>【多选题】3.影响用户风险偏好的因素有（ABCD）。</h1>
+            <p><input type="checkbox" name="t3" value="t3_1" id="t3_1"><b>A.家庭结构</b></p>
+            <p><input type="checkbox" name="t3" value="t3_2" id="t3_2"><b>B.收入情况</b></p>
+            <p><input type="checkbox" name="t3" value="t3_3" id="t3_3"><b>C.可投资资产状况</b></p>
+            <p><input type="checkbox" name="t3" value="t3_4" id="t3_4"><b>D.对投资年限的认知</b></p>
+            <p><button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal">确定</button></p>
+        </div>
+        <!-- 第四题 -->
+        <div id="ti" style="display: none;">
+            <h1>【多选题】4.确定大类资产的选择范围需要考虑以下哪些因素（ABCD）。</h1>
+            <p><input type="checkbox" name="t4" value="t4_1" id="t4_1"><b>A.大类资产未来一段时间的走势</b></p>
+            <p><input type="checkbox" name="t4" value="t4_2" id="t4_2"><b>B.大类资产的手续费</b></p>
+            <p><input type="checkbox" name="t4" value="t4_3" id="t4_3"><b>C.大类资产的收益及波动率 </b></p>
+            <p><input type="checkbox" name="t4" value="t4_4" id="t4_4"><b>D.大类资产之间的相关性</b></p>
+            <p><button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal">确定</button></p>
+        </div>
+        <!-- 第五题 -->
+        <div id="ti" style="display: none;">
+            <h1>【多选题】5.以下资产具有增值性，能产生高额回报的是（ABC）。</h1>
+            <p><input type="checkbox" name="t5" value="t5_1" id="t5_1"><b>A.大盘股</b></p>
+            <p><input type="checkbox" name="t5" value="t5_2" id="t5_2"><b>B.中盘股</b></p>
+            <p><input type="checkbox" name="t5" value="t5_3" id="t5_3"><b>C.美股</b></p>
+            <p><input type="checkbox" name="t5" value="t5_4" id="t5_4"><b>D.货币基金</b></p>
+            <p><button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal">确定</button></p>
+        </div>
+        <!-- 第六题 -->
+        <div id="ti" style="display: none;">
+            <h1>【判断题】6.一般地，投资者风险偏好值越大，表明其对于风险的承受能力更强，在投资时可能更加激进。（对）</h1>
+            <p>&nbsp;</p>
+            <p><input type="radio" name="t6" value="t6_2" id="t6_2"><b>A.对</b></p>
+            <p>&nbsp;</p>
+            <p><input type="radio" name="t6" value="t6_4" id="t6_4"><b>B.错</b></p>
+            <p><button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal">确定</button></p>
+        </div>
+        <!-- 第七题 -->
+        <div id="ti" style="display: none;">
+            <h1>【判断题】7.行为金融学的相关研究表明，用户往往会夸大自己的风险偏好，尤其适用于那些受过良好教育的，过于自信的男性投资者。（对）</h1>
+            <p>&nbsp;</p>
+            <p><input type="radio" name="t7" value="t7_2" id="t7_2"><b>A.对</b></p>
+            <p>&nbsp;</p>
+            <p><input type="radio" name="t7" value="t7_4" id="t7_4"><b>B.错</b></p>
+            <p><button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal">确定</button></p>
+        </div>
+        <!-- 第八题 -->
+        <div id="ti" style="display: none;">
+            <h1>【判断题】8.降低投资风险的最佳方式就是进行分散投资，而不是单独投资于某一资产，即“不要把所有的鸡蛋放进一个篮子里”。（对）</h1>
+            <p>&nbsp;</p>
+            <p><input type="radio" name="t8" value="t8_2" id="t8_2"><b>A.对</b></p>
+            <p>&nbsp;</p>
+            <p><input type="radio" name="t8" value="t8_4" id="t8_4"><b>B.错</b></p>
+            <p><button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal">确定</button></p>
+        </div>
+        <!-- 第九题 -->
+        <div id="ti" style="display: none;">
+            <h1>【判断题】9.如果用户的风险偏好较高，即更加注重收益，那么投资组合处于有效前沿末端部分；如果风险偏好较低，即更加注重风险，那么投资组合处于有效前沿的前端部分。（对）</h1>
+            <p>&nbsp;</p>
+            <p><input type="radio" name="t9" value="t9_2" id="t9_2"><b>A.对</b></p>
+            <p>&nbsp;</p>
+            <p><input type="radio" name="t9" value="t9_4" id="t9_4"><b>B.错</b></p>
+            <p><button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal">确定</button></p>
+        </div>
+        <!-- 第十题 -->
+        <div id="ti" style="display: none;">
+            <h1>【判断题】10.资产配置时，对相关性较高的资产进行组合，能够有效对冲风险。（错）</h1>
+            <p>&nbsp;</p>
+            <p><input type="radio" name="t10" value="t10_2" id="t10_2"><b>A.对</b></p>
+            <p>&nbsp;</p>
+            <p><input type="radio" name="t10" value="t10_4" id="t10_4"><b>B.错</b></p>
+            <p><button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal">确定</button></p>
+        </div>
+        <!-- 第十一题 -->
+        <div id="ti" style="display: none;">
+            <h1>【判断题】11.随着证券数量的增加，虽然组合的平均收益不会有所影响，但是组合标准差会随证券数量的增多而降低。（对）</h1>
+            <p>&nbsp;</p>
+            <p><input type="radio" name="t11" value="t11_2" id="t11_2"><b>A.对</b></p>
+            <p>&nbsp;</p>
+            <p><input type="radio" name="t11" value="t11_4" id="t11_4"><b>B.错</b></p>
+            <p><button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal">确定</button></p>
+        </div>
+        <!-- 第十二题 -->
+        <div id="ti" style="display: none;">
+            <h1>【判断题】12.对于风险承受能力较低的投资者，往往投资权益类资产的权重相对较大。（错）</h1>
+            <p>&nbsp;</p>
+            <p><input type="radio" name="t12" value="t12_2" id="t12_2"><b>A.对</b></p>
+            <p>&nbsp;</p>
+            <p><input type="radio" name="t12" value="t12_4" id="t12_4"><b>B.错</b></p>
+            <p><button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal">确定</button></p>
+        </div>
+        <!-- 第十三题 -->
+        <div id="ti" style="display: none;">
+            <h1>【判断题】13.风险较大的投资，其要求的收益率相对较高；反之，预期收益率较低的投资，风险也相对较小。（对）</h1>
+            <p>&nbsp;</p>
+            <p><input type="radio" name="t13" value="t13_2" id="t13_2"><b>A.对</b></p>
+            <p>&nbsp;</p>
+            <p><input type="radio" name="t13" value="t13_4" id="t13_4"><b>B.错</b></p>
+            <p><button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal">确定</button></p>
+        </div>
+        <!-- 第十四题 -->
+        <div id="ti" style="display: none;">
+            <h1>【判断题】14.非系统性风险也叫不可分散风险，不能通过投资组合进行分散。（错）</h1>
+            <p>&nbsp;</p>
+            <p><input type="radio" name="t14" value="t14_2" id="t14_2"><b>A.对</b></p>
+            <p>&nbsp;</p>
+            <p><input type="radio" name="t14" value="t14_4" id="t14_4"><b>B.错</b></p>
+            <p><button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal">确定</button></p>
+        </div>
+        <!-- 第十五题 -->
+        <div id="ti" style="display: none;">
+            <h1>【判断题】15.系统性风险也被称为可分散风险，可以通过投资组合进行分散。（错）</h1>
+            <p>&nbsp;</p>
+            <p><input type="radio" name="t15" value="t15_2" id="t15_2"><b>A.对</b></p>
+            <p>&nbsp;</p>
+            <p><input type="radio" name="t15" value="t15_4" id="t15_4"><b>B.错</b></p>
+            <p><button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal">确定</button></p>
+        </div>
+      </div>
+    </div>
     
+    
+    
+    <script src="../js/jquery-2.1.4.js"></script>
+    <script src="../lib/layui.all.js"></script>
 </body>
 </html>
