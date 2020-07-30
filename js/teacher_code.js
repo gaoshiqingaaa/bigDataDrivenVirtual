@@ -30,9 +30,10 @@ code_out.setSize('500px','570px'); //宽 高
 $('.run-code').click(function(){
     $.ajax({
         type: 'POST',
-        url: 'http://47.97.205.240:8800',
+        url: 'http://47.97.205.240:8800/code',
         data: {
-            id: '123',
+            user: '123',
+            step: '1',
             code: code_in.getValue()
         },
         success: function(data){

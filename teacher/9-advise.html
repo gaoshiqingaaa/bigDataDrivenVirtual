@@ -1,25 +1,28 @@
 <link rel="stylesheet" href="../lib/css/layui.css">
 <script src="../js/jquery-2.1.4.js"></script>
 <script src="../lib/layui.all.js"></script>
-<div style="width: 100%;height: 100%;">
-    <div class="close-div"><i class="layui-icon layui-icon-close close-icon"></i></div>
-    <div class="top">
-        <img src="../img/13-form@2x.png" alt="">
-    </div>
-    <div class="button-box">
-        <button id="yes">调仓</button>
-        <button>不调仓</button>
-    </div>
-</div>
+<html>
+    <body>
+        <div style="width: 100%;height: 100%;">
+            <div class="top">
+                <img src="../img/13-form@2x.png" alt="">
+            </div>
+        </div>
+    </body>
+</html>
 
 <style>
     * {
         padding: 0;
         margin: 0;
     }
+    html, body {
+        height: 100%;
+        width: 100%;
+    }
     .top {
         position: absolute;
-        top: 10%;
+        top: 15%;
         left: 0;
         height: 70%;
         width: 80%;
@@ -31,43 +34,5 @@
         left: 12%;
         display: block;
     }
-    button {
-        height: 60px;
-        margin-top: 20px;
-        color: white;
-        background-color: rgb(62,159,247);
-        border: 0;
-        border-radius: 4px;
-        flex-grow: 1;
-        margin: 2%;
-        font-size: 25px;
-    }
-    .button-box {
-        position: absolute;
-        left: 10%;
-        top: 85%;
-        width: 80%;
-        height: 12%;
-        display: flex
-    }
-    .close-div {
-        position: absolute;
-        top: 4%;
-        left: 88%;
-        width: 12%;
-        height: 10%;
-    }
-    .close-icon {
-        color: white;
-        font-size: 40px;
-    }
 </style>
 
-<script>
-    $('#yes').click(function(){
-        console.log(window.name);
-        var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
-        parent.layer.close(index); //再执行关闭   
-    })
-    
-</script>

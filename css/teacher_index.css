@@ -12,19 +12,22 @@
 .content-bottom {
     position: relative;
     top: 2%;
-    width: 100%;
+    left: 2.5%;
+    width: 95%;
     flex-grow: 5;
     display: flex;
     flex-direction: column;
+    background: url("../img/3-right-place@2x.png") no-repeat center top;
+    background-size: cover;
+    border-radius: 10px;
 }
 
 .introduce {
     position: relative;
     top: 25%;
-    left: 5%;
+    left: 1%;
     width: 15%;
     height: 80%;
-    background-color: rgba(46, 94, 175, 1);
 }
 
 .introduce p {
@@ -37,51 +40,44 @@
 
 .content-bottom-text {
     position: relative;
-    left: 17%;
-    width: 70%;
+    top: 2%;
+    left: 4%;
+    width: 90%;
     flex-grow: 0.2;
 }
 
 .content-bottom-text p {
     font-size: 20px;
-    margin-bottom: 1%;
-    color: white;
+    margin-bottom: 2%;
+    color: #000;
 }
 
 .content-bottom-text strong {
     font-size: 25px;
-} 
+}
+
+.table {
+    width: 80%;
+    flex-grow: 1;
+}
 
 .content-bottom-table {
     flex-grow: 2;
     position: relative;
-    left: 23%;
-    width: 50%;
-}
-
-.content-bottom-table th p {
-    font-size: 20px;
-    font-weight: bolder;
-}
-
-.content-bottom-table td p {
-    font-size: 17px;
-}
-
-.text-center {
-    text-align: center
+    left: 3%;
+    width: 80%;
 }
 
 .content-bottom-btn {
     flex-grow: 1;
-    width: 50%;
+    width: 100%;
 }
 
 .btn {
     position: relative;
     left: 80%;
-    bottom: 80%;
+    bottom: 70%;
     color: white;
-    height: 70%;
-    width: 22%;
+    height: 100%;
+    width: 12%;
 }
