@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="nav">
-        <button type="button" class="layui-btn layui-btn-radius layui-btn-primary" id="but1"><a href="#">返回</a></button>
+        <button type="button" class="layui-btn layui-btn-radius layui-btn-primary" id="but1"><a href="../index.html">返回</a></button>
         <button type="button" class="layui-icon layui-icon-friends" id="friends"></button>
         <button type="button" class="layui-icon layui-icon-help" id="help"></button>
     </div>
@@ -21,42 +21,39 @@
                         <li class="step-active">
                             <div class="step-line"></div>
                             <div class="step-content">
-                                <span class="step-num"></span>
+                                <span class="step-num">1</span>
             
                             </div>
-            
-            
-            
                         </li>
-                        <li class="step-active">
+                        <li >
                             <div class="step-line"></div>
                             <div class="step-content">
                                 <span class="step-num">2</span>
             
                             </div>
                         </li>
-                        <li class="step-active">
+                        <li >
                             <div class="step-line"></div>
                             <div class="step-content">
                                 <span class="step-num">3</span>
             
                             </div>
                         </li>
-                        <li class="step-active">
+                        <li >
                             <div class="step-line"></div>
                             <div class="step-content">
                                 <span class="step-num">4</span>
             
                             </div>
                         </li>
-                        <li class="step-active">
+                        <li >
                             <div class="step-line"></div>
                             <div class="step-content">
                                 <span class="step-num">5</span>
             
                             </div>
                         </li>
-                        <li class="step-active">
+                        <li >
                             <div class="step-line"></div>
                             <div class="step-content">
                                 <span class="step-num">6</span>
@@ -257,7 +254,7 @@
             </div>
 
             <div id="ti">
-                <input type="radio" name="t4" value="t5_5" id="t5_5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>E.全部投资于B</b>
+                <input type="radio" name="t5" value="t5_5" id="t5_5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>E.全部投资于B</b>
             </div>
             <br>
             <div style="position:absolute;bottom:10%;right:15%;">
@@ -414,10 +411,55 @@
             </div>
             <div style="position:absolute;bottom:10%;right:15%;">
                 <div id="butt">
-                    <button type="button" id="next">提交</button>
+                    <button type="button" id="tijiao">提交</button>
                 </div>
                 <div id="butt">
                     <button type="button" id="back">上一步</button>
+                </div>
+            </div>
+        </div>
+        <div id="content" style="display: none">
+            <div id="apple">
+                <h1>&nbsp;</h1>
+            </div>
+            <div id="wenzi">
+                <h1>根据您的情况，您的风险承受能力为</h1>
+                <pre id="baoshou" style="display: none;">
+    此类投资者对于投资产品的任何下跌都不愿意接受，甚至不能承受极小的资
+产波动。属于风险厌恶型的投资者， 首要目的是保持投资的稳定性与资产的保
+值，这类投资者需要注意为达到上述目标回报率可能很低，以换取本金免于受
+损和较高的流动性。
+                </pre>
+                <pre id="xiangbaoshou" style="display: none;">
+   此类投资者不愿意接受暂时的投资损失。关注本金的安全，往往是稍微有些
+风险厌恶型的投资者，首要投资目标是资产一定程度的增值，为了获得一定的
+收益能承受少许本金损失和波动，此类投资者可以承受少许的资产波动和本金
+损失风险。 
+                </pre>
+                <pre id="wenjian" style="display: none;">
+    此类投资者愿意承担一定程度的风险，主要强调投资风险和资产增值之间的
+平衡，为了获得一定收益可以承受投资产品价格的波动，甚至可以承受一段时
+间内投资产品价格的下跌，此类投资者可以承受一定程度的资产波动风险和本
+金亏损风险。
+                </pre>
+                <pre id="xiangjiji" style="display: none;">
+    此类投资者为了获得高回报的投资收益，能够承受投资产品价格的显著波动
+，主要投资目标是实现资产增值，为实现目标往往愿意承担相当程度的风险此
+类投资者可以承受相当大的资产波动风险和本金亏损风险
+                </pre>
+                <pre id="jiji" style="display: none;">
+    此类投资者能够承受投资产品价格的剧烈波动，也可以承担这种波动所带
+来的结果，投资目标主要是取得超额收益，为实现投资目标愿意官更大的风险
+。此类投资者能够承担相当大的投资风险和更大的本金亏损风险
+                </pre>
+            </div>
+            <div id="tupian">
+                <div id="tu">
+                    <img src="../img/6-card@2x.png" >
+                    <button type="button" id="queren"><a href="../teacher/2-8new.html">确认风险结果</a></button>
+                    <br>
+                    <br>
+                    <a href="">重新测试</a>
                 </div>
             </div>
         </div>
@@ -426,33 +468,255 @@
     <script src="../js/jquery-2.1.4.js"></script>
     <script src="../lib/layui.all.js"></script>
     <script>
+        var index = 0;
         layer.confirm('尊敬的用户：以下问题可协助评估您对投资产品和服务的风险承受能力，请您根据自身情况认真选择。评估结果仅供参考， 不构成投资建议。为了及时了解您的风险承受能力，我们建议您持续做好动态评估。我们承诺对您的所有个人资料保密。', {
             btn: ['确定'] //按钮
         }, function () {
             layer.msg('开始风险承受能力评估问卷问答', { icon: 1 });
         });
-        $('input:radio[name="t1"]').click(function () {
-            if ($("#t1_1").is(":checked")) {
-                alert("选中第一个！")
+        for (var j = 1; j < 11; j++){
+            var tt = ('t'+j);
+            var timuy = document.getElementsByName(tt);
+            for (var k = 0; k < timuy.length; k++){
+                if(timuy[k].checked){
+                    timuy[k].style.backgroundImage = "url(../img/5-panel-select@2x.png)"
+                }
             }
-            if ($("#t1_2").is(":checked")) {
-                alert("选中第二个！")
+        };
+        var num = 0
+        $('button:button[id="tijiao"]').click(function(){ 
+            for (var i = 1; i < 11; i++){
+                var t = ('t'+i);
+                var timu = document.getElementsByName(t);
+                if (i == 1){
+                    if(timu[0].checked){
+                       num = num + 3;
+                    }else if(timu[1].checked){
+                        num = num + 7;
+                    }else if(timu[2].checked){                    
+                        num = num + 9;
+                    }else if(timu[3].checked){
+                    
+                        num = num + 5;
+                    }else if(timu[4].checked){
+                    
+                        num = num + 1;
+                    }else{
+                        layer.msg('第一题选择有误！',{time: 20000,btn: ['知道了']})
+                    }
+                }
+                if (i == 2){
+                    if(timu[0].checked){
+                       num = num + 1;
+                    }else if(timu[1].checked){
+                    
+                        num = num + 3;
+                    }else if(timu[2].checked){
+                    
+                        num = num + 5;
+                    }else if(timu[3].checked){
+                    
+                        num = num + 7;
+                    }else if(timu[4].checked){
+                    
+                        num = num + 9;
+                    }else{
+                        layer.msg('第二题选择有误！',{time: 20000,btn: ['知道了']})
+                    }
+                }
+                if (i == 3){
+                    if(timu[0].checked){
+                       num = num + 1;
+                    }else if(timu[1].checked){
+                    
+                        num = num + 5;
+                    }else if(timu[2].checked){
+                    
+                        num = num + 7;
+                    }else if(timu[3].checked){
+                    
+                        num = num + 9;
+                    }else{
+                        layer.msg('第三题选择有误！',{time: 20000,btn: ['知道了']})
+                    }
+                }
+                if (i == 4){
+                    if(timu[0].checked){
+                       num = num + 9;
+                    }else if(timu[1].checked){
+                    
+                        num = num + 7;
+                    }else if(timu[2].checked){
+                    
+                        num = num + 5;
+                    }else if(timu[3].checked){
+                    
+                        num = num + 3;
+                    }else if(timu[4].checked){
+                    
+                        num = num + 1;
+                    }else{
+                        layer.msg('第四题选择有误！',{time: 20000,btn: ['知道了']})
+                    }
+                }
+                if (i == 5){
+                    if(timu[0].checked){
+                       num = num + 0;
+                    }else if(timu[1].checked){
+                    
+                        num = num + 3;
+                    }else if(timu[2].checked){
+                    
+                        num = num + 5;
+                    }else if(timu[3].checked){
+                    
+                        num = num + 7;
+                    }else if(timu[4].checked){
+                    
+                        num = num + 9;
+                    }else{
+                        layer.msg('第五题选择有误！',{time: 20000,btn: ['知道了']})
+                    }
+                }
+                if (i == 6){
+                    if(timu[0].checked){
+                       num = num + 0;
+                    }else if(timu[1].checked){
+                    
+                        num = num + 3;
+                    }else if(timu[2].checked){
+                    
+                        num = num + 5;
+                    }else if(timu[3].checked){
+                    
+                        num = num + 7;
+                    }else{
+                        layer.msg('第六题选择有误！',{time: 20000,btn: ['知道了']})
+                    }
+                }
+                if (i == 7){
+                    if(timu[0].checked){
+                       num = num + 0;
+                    }else if(timu[1].checked){
+                    
+                        num = num + 3;
+                    }else if(timu[2].checked){
+                    
+                        num = num + 5;
+                    }else if(timu[3].checked){
+                    
+                        num = num + 7;
+                    }else{
+                        layer.msg('第七题选择有误！',{time: 20000,btn: ['知道了']})
+                    }
+                }
+                if (i == 8){
+                    if(timu[0].checked){
+                       num = num + 1;
+                    }else if(timu[1].checked){
+                    
+                        num = num + 5;
+                    }else if(timu[2].checked){
+                    
+                        num = num + 7;
+                    }else{
+                        layer.msg('第八题选择有误！',{time: 20000,btn: ['知道了']})
+                    }
+                }
+                if (i == 9){
+                    if(timu[0].checked){
+                       num = num + 1;
+                    }else if(timu[1].checked){
+                    
+                        num = num + 3;
+                    }else if(timu[2].checked){
+                    
+                        num = num + 7;
+                    }else if(timu[3].checked){
+                    
+                        num = num + 9;
+                    }else{
+                        layer.msg('第九题选择有误！',{time: 20000,btn: ['知道了']})
+                    }
+                }
+                if (i == 10){
+                    if(timu[0].checked){
+                       num = num + 1;
+                    }else if(timu[1].checked){
+                    
+                        num = num + 3;
+                    }else if(timu[2].checked){
+                    
+                        num = num + 7;
+                    }else if(timu[3].checked){
+                    
+                        num = num + 9;
+                    }else{
+                        layer.msg('第十题选择有误！',{time: 20000,btn: ['知道了']})
+                    }
+                }
             }
+            if (num >= 73){
+                var cont = document.getElementsByClassName("content");
+                for (var i = 0; i < cont.length; i++){
+                    cont[i].style.display = 'none';
+                };
+                document.getElementById('content').style.display = 'block';
+                document.getElementById('jiji').style.display = 'block';
+                layer.alert('您的得分是：'+num+'积极型！');
+            }else if(num >= 65){
+                var cont = document.getElementsByClassName("content");
+                for (var i = 0; i < cont.length; i++){
+                    cont[i].style.display = 'none';
+                };
+                document.getElementById('content').style.display = 'block';
+                document.getElementById('xiangjiji').style.display = 'block';
+                layer.alert('您的得分是：'+num+'相对积极型！');
+            }else if(num >= 31){
+                var cont = document.getElementsByClassName("content");
+                for (var i = 0; i < cont.length; i++){
+                    cont[i].style.display = 'none';
+                };
+                document.getElementById('content').style.display = 'block';
+                document.getElementById('wenjian').style.display = 'block';
+                layer.alert('您的得分是：'+num+'稳健型！');
+            }else if(num >= 21){
+                var cont = document.getElementsByClassName("content");
+                for (var i = 0; i < cont.length; i++){
+                    cont[i].style.display = 'none';
+                };
+                document.getElementById('content').style.display = 'block';
+                document.getElementById('xiangbaoshou').style.display = 'block';
+                layer.alert('您的得分是：'+num+'相对保守型！');
+            }else if(num >= 7){
+                var cont = document.getElementsByClassName("content");
+                for (var i = 0; i < cont.length; i++){
+                    cont[i].style.display = 'none';
+                };
+                document.getElementById('content').style.display = 'block';
+                document.getElementById('baoshou').style.display = 'block';
+                layer.alert('您的得分是：'+num+'保守型！');
+            };
+            
+            num = 0
         })
+        
         $('button:button[id="help"]').click(function () {
-            alert("这是一个帮助！")
+            layer.alert('尊敬的用户：以下问题可协助评估您对投资产品和服务的风险承受能力，请您根据自身情况认真选择。评估结果仅供参考， 不构成投资建议。为了及时了解您的风险承受能力，我们建议您持续做好动态评估。我们承诺对您的所有个人资料保密。')
         })
         $('button:button[id="friends"]').click(function () {
             alert("您的评估！")
         })
         var cont = document.getElementsByClassName("content");
-        var index = 0;
+        var jd = document.getElementsByTagName('li')
+        
         $('button:button[id="next"]').click(function () {
             index++;
             for (var i = 0; i < 10; i++) {
 
                 if (i == index) {
                     cont[i].style.display = 'block';
+                    jd[i].className = 'step-active' 
                 } else {
                     cont[i].style.display = 'none';
                 }
@@ -469,6 +733,7 @@
 
                 if (i == index) {
                     cont[i].style.display = 'block';
+                    jd[i+1].classList.remove('step-active'); 
                 } else {
                     cont[i].style.display = 'none';
                 }

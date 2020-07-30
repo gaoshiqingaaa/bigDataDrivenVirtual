@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 756px;
+    width: 100%;
+    background: url("../img/3-bg@2x.png") no-repeat center top;
+    background-size: cover;
+    min-width: 100%;
+}
+
+.layui-container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.layui-row {
+    width: 100%;
+}
+
+.top {
+    height: 13%;
+}
+
+.bottom {
+    height: 83%;
+}
+
+.nav {
+    height: 100%;
+}
+
+.nav li {
+    float: left;
+}
+
+.wenhao {
+    position: relative;
+    top: 34%;
+    left: 80%;
+}
+
+.wenhao-icon {
+    font-size: 30px;
+    color: white;
+    border: 2px solid #fff;
+    border-radius: 30px;
+}
+
+.user {
+    position: relative;
+    top: 34%;
+    left: 82%;
+}
+
+.user-icon {
+    font-size: 30px;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 30px;
+}
+
+.back-to {
+    position: relative;
+    top: 33%;
+    left: 84%;
+}
+
+.left-box {
+    position: relative;
+    left: 2.5%;
+    height: 100%;
+    width: 21%;
+}
+
+.left-box-top {
+    position: relative;
+    top: 3%;
+    left: 8%;
+    width: 80%;
+    height: 12%;
+    background-color: rgba(46, 94, 175, 1);
+    border-radius: 3px;
+}
+
+.left-title {
+    font-size: 30px;
+    display: inline-block;
+    color:#fff;
+    margin: 5% 0 0 25%;
+}
+
+.left-pages {
+    height: 100%;
+}
+
+.left-pages div {
+    display: none;
+}
+
+.left-box-bottom {
+    position: relative;
+    top: 8%;
+    left: 18%;
+    width: 60%;
+}
+
+.left-box-bottom h2 {
+    color: white;
+    margin-bottom: 5%;
+}
+
+.left-box-bottom p {
+    font-size: 17px;
+    color: white;
+}
+
+.left-box-bottom ul li {
+    list-style-type: disc;
+    color: white;
+}
+
+.right-box {
+    position: relative;
+    left: 3%;
+    top: 2.7%;
+    width: 75%;
+    height: 104%;
+    background-color: rgba(68, 97, 181, 0.6);
+}
+
+.right-box-top {
+    height: 9%;
+    width: 100%;
+}
+
+.right-box-nav {
+    height: 100%;
+    width: 100%;
+}
+
+.right-box-top li {
+    float: left;
+    color: white;
+}
+
+.lang-intro {
+    position: relative;
+    top: 5%;
+    left: 2%;
+}
+
+.lang-intro p {
+    font-size: 25px;
+}
+
+.run-code-li {
+    position: relative;
+    top: 6%;
+    left: 70%;
+    height: 60%;
+    width: 8%;
+}
+
+.run-code {
+    height: 100%;
+    width: 100%;
+    color: white;
+    background-color: rgb(62,159,247);
+    border: 0;
+    border-radius: 4px;
+}
+
+.right-box-bottom {
+    display: flex;
+    height: 90%;
+    width: 100%;
+}
+
+.code-input {
+    flex-grow: 1;
+    position: relative;
+    left: 3%;
+    height: 100%;
+
+}
+
+.code-output {
+    flex-grow: 4;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.result {
+    width: 88%;
+    /* height: 85%; */
+    border-radius: 5px;
+    background-color: white;
+    flex-grow: 15;
+}
+
+.btn-box {
+    position: relative;
+    top: 6%;
+    flex-grow: 1;
+    display: flex;
+    width: 88%;
+}
+
+.my-btn {
+    background-color: rgb(62,159,247);
+    border: 0;
+    border-radius: 4px;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.bottom-btn {
+    height: 40px;
+    flex-grow: 0.5;
+    color: white;
+
+}
+
+.right-content {
+    height: 93%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-content-top {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+}
+
+.right-content-top-left {
+    height: 100%;
+    flex-grow: 1;
+    background: url("../img/10-left-top-panel@2x.png") no-repeat center top;
+    background-size: contain;
+}
+
+.right-content-top-right {
+    height: 100%;
+    flex-grow: 1;
+    background: url("../img/10-right-top-panel@2x.png") no-repeat center top;
+    background-size: contain;
+}
+
+.right-content-bottom {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+}
+
+.right-content-bottom-left {
+    height: 100%;
+    flex-grow: 1;
+    background: url("../img/10-left-bottom-panel@2x.png") no-repeat center top;
+    background-size: contain;
+}
+
+.right-content-bottom-right {
+    height: 100%;
+    flex-grow: 1;
+    background: url("../img/10-right-bottom-panel@2x.png") no-repeat center top;
+    background-size: contain;
+}
+
+.right-bottom {
+    width: 100%;
+    height: 7%;
+}
+
+.layui-input {
+    position: relative;
+    left: 1.6%;
+    height: 100%;
+    width: 55%;
+}
+
+.right-bottom-btn-div {
+    position: relative;
+    top: -100%;
+    left: 50%;
+    height: 100%;
+    width: 50%;
+    display: flex;
+}
+
+.right-bottom-btn {
+    height: 100%;
+    flex-grow: 1;
+    color: white;
+}
+
+.right-page {
+    width: 100%;
+    height: 100%;
+}
+
+.right-page-content {
+    width: 100%;
+    height: 100%;   
+    display: none;
+}
