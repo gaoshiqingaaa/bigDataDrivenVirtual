@@ -1,73 +1,5 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-html, body {
-    height: 756px;
-    width: 100%;
-    background: url("../img/3-bg@2x.png") no-repeat center top;
-    background-size: cover;
-    min-width: 100%;
-}
-
-.layui-container {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.layui-row {
-    width: 100%;
-}
-
-.top {
-    height: 13%;
-}
-
 .bottom {
     height: 83%;
-}
-
-.nav {
-    height: 100%;
-}
-
-.nav li {
-    float: left;
-}
-
-.wenhao {
-    position: relative;
-    top: 34%;
-    left: 80%;
-}
-
-.wenhao-icon {
-    font-size: 30px;
-    color: white;
-    border: 2px solid #fff;
-    border-radius: 30px;
-}
-
-.user {
-    position: relative;
-    top: 34%;
-    left: 82%;
-}
-
-.user-icon {
-    font-size: 30px;
-    color: #fff;
-    border: 2px solid #fff;
-    border-radius: 30px;
-}
-
-.back-to {
-    position: relative;
-    top: 33%;
-    left: 84%;
 }
 
 .left-box {
@@ -187,11 +119,10 @@ html, body {
     position: relative;
     left: 3%;
     height: 100%;
-
 }
 
 .code-output {
-    flex-grow: 4;
+    flex-grow: 1;
     position: relative;
     height: 100%;
     display: flex;
@@ -217,14 +148,6 @@ html, body {
     flex-grow: 1;
     display: flex;
     width: 88%;
-}
-
-.my-btn {
-    background-color: rgb(62,159,247);
-    border: 0;
-    border-radius: 4px;
-    margin-left: 3%;
-    margin-right: 3%;
 }
 
 .bottom-btn {
@@ -316,7 +239,7 @@ html, body {
 .right-page-content {
     width: 100%;
     height: 100%;   
-    display: none;
+    /* display: none; */
 }
 
 .right-content-top-left-nine {
@@ -374,3 +297,6 @@ html, body {
     margin-right: 5%;
 }
 
+.none {
+    display: none;
+}

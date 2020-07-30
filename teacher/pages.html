@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../lib/codemirror-5.56.0/lib/codemirror.css">
     <link rel="stylesheet" href="../lib/codemirror-5.56.0/theme/idea.css">
     <link rel="stylesheet" href="../css/teacher_pages.css">
+    <link rel="stylesheet" href="../css/teacher_public.css">
     <script src="../lib/codemirror-5.56.0/lib/codemirror.js"></script>
     <script src="../lib/codemirror-5.56.0/mode/python/python.js"></script>
     <script src="../js/jquery-2.1.4.js"></script>
@@ -41,7 +42,6 @@
                             <tr><td><p><strong>上证国债</strong></p></td><td><p>000012.ZICN</p></td></tr>
                             <tr><td><p><strong>上证企业债</strong></p></td><td><p>000013.ZICN</p></td></tr>
                         </table>
-
                     </div>
                     <div class="left-box-bottom" id="page-two">
                         <h2><strong>2、计算标的资产的年化收益率</strong></h2>
@@ -104,8 +104,9 @@
                                 <textarea id="code-in"></textarea>
                             </div>
                             <div class="code-output">
-                                <div class="result">
-                                </div>
+                                <textarea id="code-out"></textarea>
+                                <!-- <div class="result">
+                                </div> -->
                                 <div class="btn-box">
                                     <button class="bottom-btn my-btn pre" id="pre">上一步</button>
                                     <button class="bottom-btn my-btn next" id="next">下一步</button>
@@ -113,7 +114,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="right-page-content" id="right-page-eight">
+                    <div class="right-page-content none" id="right-page-eight">
                         <div class="right-content">
                             <div class="right-content-top">
                                 <div class="right-content-top-left"></div>
@@ -132,7 +133,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="right-page-content" id="right-page-nine">
+                    <div class="right-page-content none" id="right-page-nine">
                         <div class="right-content">
                             <div class="right-content-top">
                                 <div class="right-content-top-left-nine"></div>

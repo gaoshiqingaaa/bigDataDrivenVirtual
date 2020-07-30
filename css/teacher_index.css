@@ -1,0 +1,87 @@
+.bottom {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-top {
+    width: 100%;
+    flex-grow: 1;
+}
+
+.content-bottom {
+    position: relative;
+    top: 2%;
+    width: 100%;
+    flex-grow: 5;
+    display: flex;
+    flex-direction: column;
+}
+
+.introduce {
+    position: relative;
+    top: 25%;
+    left: 5%;
+    width: 15%;
+    height: 80%;
+    background-color: rgba(46, 94, 175, 1);
+}
+
+.introduce p {
+    position: relative;
+    top: 15%;
+    left: 35%;
+    font-size: 30px;
+    color: white;   
+}
+
+.content-bottom-text {
+    position: relative;
+    left: 17%;
+    width: 70%;
+    flex-grow: 0.2;
+}
+
+.content-bottom-text p {
+    font-size: 20px;
+    margin-bottom: 1%;
+    color: white;
+}
+
+.content-bottom-text strong {
+    font-size: 25px;
+} 
+
+.content-bottom-table {
+    flex-grow: 2;
+    position: relative;
+    left: 23%;
+    width: 50%;
+}
+
+.content-bottom-table th p {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.content-bottom-table td p {
+    font-size: 17px;
+}
+
+.text-center {
+    text-align: center
+}
+
+.content-bottom-btn {
+    flex-grow: 1;
+    width: 50%;
+}
+
+.btn {
+    position: relative;
+    left: 80%;
+    bottom: 80%;
+    color: white;
+    height: 70%;
+    width: 22%;
+}

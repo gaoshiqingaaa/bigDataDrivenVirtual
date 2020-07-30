@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../lib/css/layui.css">
+    <link rel="stylesheet" href="../lib/codemirror-5.56.0/lib/codemirror.css">
+    <link rel="stylesheet" href="../lib/codemirror-5.56.0/theme/idea.css">
+    <link rel="stylesheet" href="../css/teacher_index.css">
+    <link rel="stylesheet" href="../css/teacher_public.css">
+    <script src="../js/jquery-2.1.4.js"></script>
+    <script src="../lib/layui.all.js"></script>
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="content layui-container">
+        <div class="layui-row top">
+            <ul class="nav">
+                <li class="wenhao"><i class="layui-icon layui-icon-help wenhao-icon"></i></li>
+                <li class="user"><i class="layui-icon layui-icon-friends user-icon"></i></li>
+                <li class="back-to"><button class="layui-btn layui-btn-radius layui-btn-primary">返回首页</button></li>
+            </ul>
+        </div>
+        <div class="layui-row bottom">
+            <div class="content-top">
+                <div class="introduce">
+                    <p>说明</p>
+                </div>
+            </div>
+            <div class="content-bottom">
+                <div class="content-bottom-text">
+                    <p>根据我国资本市场实际情况，本实验项目设定可选取的资产大类有六类：国内股市（大盘股、中盘股、小盘股）、</p>
+                    <p>国外股市（美股）、国内债券（国债、企业债）、货币基金。由于是被动投资，考虑历史数据长短问题，上述资产</p>
+                    <p>分别以<strong>沪深300、中证500、创业板、标普500、上证国债、上证企业债</strong>为代表。</p>
+                </div>
+                <div class="content-bottom-table">
+                    <div class="layui-form">
+                        <table class="layui-table" lay-size="sm">
+                          <colgroup>
+                            <col width="150">
+                            <col width="150">
+                            <col width="200">
+                            <col>
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th style="text-align: center"><p>市场分类</p></th>
+                              <th style="text-align: center"><p>代表</p></th>
+                              <th style="text-align: center"><p>优势</p></th>
+                              <th style="text-align: center"><p>劣势</p></th>
+                            </tr> 
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="text-center"><p>大盘股</p></td>
+                              <td class="text-center"><p>沪深300</p></td>
+                              <td rowspan="2"><p>资产增值，高频回报，国内市场</p></td>
+                              <td rowspan="2"><p>市场风险较高</p></td>
+                            </tr>
+                            <tr>
+                              <td class="text-center"><p>中盘股</p></td>
+                              <td class="text-center"><p>中证500</p></td>
+                            </tr>
+                            <tr>
+                              <td class="text-center"><p>小盘股</p></td>
+                              <td class="text-center"><p>创业板</p></td>
+                              <td><p>资产增值，高频回报，高成长性</p></td>
+                              <td><p>高市盈率，高风险市场</p></td>
+                            </tr>
+                            <tr>
+                              <td class="text-center"><p>美股</p></td>
+                              <td class="text-center"><p>标普500</p></td>
+                              <td><p>资产增值，高频回报，成熟市场</p></td>
+                              <td><p>投资门槛高，高风险市场，交易通道风险，汇差风险</p></td>
+                            </tr>
+                            <tr>
+                              <td class="text-center"><p>国债</p></td>
+                              <td class="text-center"><p>上证国债</p></td>
+                              <td rowspan="2"><p>资产增值，稳定回报，防御性</p></td>
+                              <td rowspan="2"><p>利率风险，抗通货膨胀能力较差</p></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><p>企业债</p></td>
+                                <td class="text-center"><p>上证企业债</p></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="text-center"><p>货币基金</p></td>
+                                <td><p>资产保值，稳定回报，灵活性</p></td>
+                                <td><p>收益低</p></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                </div>
+                <div class="content-bottom-btn">
+                    <button class="my-btn btn">开始分析</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    $('.btn').click(function(){
+        window.location.href = 'pages.html'
+    })
+</script>
