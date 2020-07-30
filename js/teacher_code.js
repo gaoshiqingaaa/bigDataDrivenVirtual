@@ -2,7 +2,7 @@ var code_in = CodeMirror.fromTextArea(document.getElementById("code-in"), {
     mode: {
         name: 'python'
     },
-    lineNumbers: true,
+    // lineNumbers: true,
     theme: "idea",	//设置主题
     lineWrapping: true,	//代码折叠
     foldGutter: true,
@@ -23,12 +23,12 @@ $('.run-code').click(function(){
         success: function(data){
             $('.result').empty()
             if (data.result != ''){
-                $('.result').append("<p>" + data.result + "</p>")
+                html = data.result.split('\n').map(a=>'<p>' + a + '</p>').join('\n')
+                
             } else if (data.error != '') {
-                $('.result').append("<p>" + data.error + "</p>")
+                html = data.error.split('\n').map(a=>'<p>' + a + '</p>').join('\n')
             }
-           
-            
-        }
+            $('.result').append(html)
+        }   
     })
 })
