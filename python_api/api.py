@@ -66,7 +66,7 @@ def code():
     step = f.request.form.get('step')
     code = f.request.form.get('code')
     if re.findall('cd|remove|rm -rf|pwd|kill|mkdir|system|popen', code, re.I) != []:
-        print(re.findall('cd|remove|rm -rf|pwd|kill|mkdir|system|popen|!', code, re.I))
+        #print(re.findall('cd|remove|rm -rf|pwd|kill|mkdir|system|popen|!', code, re.I))
         res['error'] = 'No permission!!!'
         res['safe'] = 'false'
         return res
@@ -93,7 +93,7 @@ def code():
         res['result'] = rest.read()
     os.remove('%sresult.txt' % code_path)
     os.remove('%serr.log' % code_path)
-    #os.remove('%scode.py' % code_path)
+    os.remove('%scode.py' % code_path)
     if os.listdir(code_path[:-1]) != []:
         for k in os.listdir(code_path[:-1]):
             res['files'].append(f.url_for('static', filename=log_id + '/' + k))
