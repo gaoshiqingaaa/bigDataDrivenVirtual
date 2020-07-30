@@ -12,6 +12,21 @@ var code_in = CodeMirror.fromTextArea(document.getElementById("code-in"), {
 });
 code_in.setSize('500px','570px'); //宽 高
 
+var code_out = CodeMirror.fromTextArea(document.getElementById("code-out"), {
+    mode: {
+        name: 'python'
+    },
+    // lineNumbers: true,
+    theme: "idea",	//设置主题
+    lineWrapping: true,	//代码折叠
+    foldGutter: true,
+    gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+    matchBrackets: true,	//括号匹配
+    readOnly: true,        //只读
+});
+code_out.setSize('500px','570px'); //宽 高
+
+
 $('.run-code').click(function(){
     $.ajax({
         type: 'POST',
@@ -22,13 +37,8 @@ $('.run-code').click(function(){
         },
         success: function(data){
             $('.result').empty()
-            if (data.result != ''){
-                $('.result').append("<p>" + data.result + "</p>")
-            } else if (data.error != '') {
-                $('.result').append("<p>" + data.error + "</p>")
-            }
-           
-            
-        }
+            result = data.error == ''? data.result: data.error
+            code_out.setValue(result)
+        }   
     })
 })
