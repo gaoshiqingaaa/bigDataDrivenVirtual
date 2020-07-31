@@ -1,21 +1,29 @@
+var initValue = code_in.getValue()
+var page_codes = {}
+for (i=0;i<7;i++)
+    page_codes[i] = ''
 var current_page = 0
 window.onload = function(){
     $($('.left-pages>div')[current_page]).show()
     $('#right-page-code').show()
-    // $('#right-page-nine').show()
-    
 }
 $('.next').click(function(){
     if (current_page < 9) {
+        page_codes[current_page] = code_in.getValue()
         current_page ++
+        code_in.setOption('value', '')
+        code = page_codes[current_page].trim()
+        if (code == '')
+            code = codes[current_page]
+        code_in.setOption('value', code)
         showPage(current_page)
-        console.log(current_page);
     }
 })
 $('.pre').click(function(){
     if (current_page > 0){
         current_page --
         showPage(current_page)
+        code_in.setOption('value', page_codes[current_page])
     }
 })
 function eightAlertButton() {
@@ -72,6 +80,8 @@ function eightShowAlert(btnName) {
 }
 $('#adjust').click(function(){
     eightShowAlert('adjust')
+    for (i=4;i<7;i++)
+        page_codes[i] = ''
 })
 $('#buy').click(function(){
     eightShowAlert('buy')
@@ -144,10 +154,48 @@ $('.advise-btn').click(function(){
     });
     advise_btn_click_count ++
 })
+function showIntroduceAlert(num) {
+    switch (num) {
+        case 1:
+            content = ['2-intro.html', 'no']
+            btn = ['知道了']
+            break
+        case 6:
+            content = ['7-intro.html', 'no']
+            btn = ['知道了']
+            break
+    }
+    layer.open({
+        type: 2,
+        area: ['500px', '270px'], 
+        title: false,
+        closeBtn: 1,
+        shadeClose: true,
+        skin: 'introduce-alert',
+        content: content,
+        btn: btn,
+        success: function(elem) {
+            $(".layui-layer-setwin .layui-layer-close2").css({
+                'right': '3px',
+                'top': '-8px',
+                'background-position': '30px -32px'
+            })
+            $('.layui-layer-setwin a').append('X')
+            $('.layui-layer-setwin a').css({
+                'font-size': '27px',
+                'color': 'white'
+            })
+            $('.layui-layer-btn').css({'padding-right': '202px'})
+        }
+    });
+}
 function showPage(current_page) {
     $('.left-pages>div').hide()
     $($('.left-pages>div')[current_page]).show()
     switch (current_page) {
+        case 1:
+            showIntroduceAlert(1)
+            break
         case 6:
             layer.open({
                 type: 2,
@@ -183,3 +231,89 @@ function showPage(current_page) {
             break
     }
 }
+function showWenhaoAlert(num) {
+    confirm_a_css = {
+        'font-size': '27px',
+        'color': 'white'
+    }
+    switch (num) {
+        case 0:
+            area = ['900px', '570px']
+            content = ['1-wenhao.html']
+            close_btn_css = {
+                'right': '3px',
+                'top': '1px',
+                'background-position': '30px -32px'
+            }
+            confirm_btn_css = {'padding-right': '46%'}
+            break
+        case 1:
+            area = ['700px', '470px']
+            content = ['2-user.html']
+            close_btn_css = {
+                'right': '3px',
+                'top': '1px',
+                'background-position': '30px -32px'
+            }
+            confirm_btn_css = {'padding-right': '46%'}
+            break
+        case 2:
+            break
+        case 3:
+            break
+        case 4:
+            break
+        case 5:
+            break
+        case 6:
+            break
+        case 7:
+            break
+    }
+    layer.open({
+        type: 2,
+        area: area, 
+        title: false,
+        closeBtn: 1,
+        shadeClose: true,
+        skin: [],
+        content: content,
+        btn: ['知道了'],
+        success: function(elem) {
+            $(".layui-layer-setwin .layui-layer-close2").css(close_btn_css)
+            $('.layui-layer-setwin a').append('X')
+            $('.layui-layer-setwin a').css(confirm_a_css)
+            $('.layui-layer-btn').css(confirm_btn_css)
+        }
+    });
+}
+function showUserAlert(num) {
+    confirm_a_css = {
+        'font-size': '27px',
+        'color': 'white'
+    }
+    switch (num) {
+        case 0:
+            break
+        case 1:
+            break
+        case 2:
+            break
+        case 3:
+            break
+        case 4:
+            break
+        case 5:
+            break
+        case 6:
+            break
+        case 7:
+            break
+    }
+}
+$('.wenhao').click(function(){
+    showWenhaoAlert(current_page)
+})
+$('.user').click(function(){
+    showUserAlert(current_page)
+})

@@ -1,0 +1,91 @@
+<body>
+    <div class="content">
+        <div class="top"></div>
+        <div class="text">
+            <div class="text-div">
+                <h2>年化收益率和年化标准差的计算</h2>
+                <p>按照马科维茨的均值-方差组合理论，有效前沿的计算需要用到每个
+                    成份资产的预期收益、标准差以及相关系数.</p>
+                <p>对于资产标准差（即波动性）的计算，从数学算法上是一个比较容易
+                    解决的问题，但难点在于历史数据时间长度的选择。如果时间过短的
+                    话，那么对近期市场走势的依赖性就高，模型的鲁棒性差；如果时间
+                    过长的话，那么又会过度降低对市场的敏感性，导致组合的配置对市
+                    场走势不敏感。因此，系统综合考虑每个资产的短期标准差和长期标
+                    准差，进而确定终值。资产配置时，对相关性较低的资产进行组合，
+                    能够有效对冲风险。</p>
+                <p>因此，这几种大类资产的选择，具备较弱的协同性甚至是反协同性，能够
+                    有效的降低投资组合的非系统性风险，实现投资利益最大化。</p>
+                <p> 预期收益采取市场中性原则，用过去三年的平均收益。</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    html, body {
+        height: 100%;
+        width: 100%;
+    }
+    .content {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .top {
+        flex-grow: 1;
+        width: 100%;
+        background: url("../img/9-bg@2x.png") no-repeat center top;
+    background-size: cover;
+    }
+    .text {
+        position: relative;
+        flex-grow: 1;
+        width: 100%;
+    }
+    .text-div {
+        position: relative;
+        top: 3%;
+        left: 10%;
+        width: 80%;
+    }
+    .text-div h2 {
+        margin: 0 0 2% 22%;
+    }
+    .text-div p {
+        text-indent:2em;
+        line-height: 1.5em;
+    }
+    .table {
+        flex-grow: 1;
+        width: 100%;
+    }
+    img {
+        height: 500%;
+        width: 100%;
+    }
+    /* 定义滚动条样式 */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: rgba(240, 240, 240, 1);
+  }
+   
+  /*定义滚动条轨道 内阴影+圆角*/
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0px rgba(240, 240, 240, .5);
+    border-radius: 10px;
+    background-color: rgba(240, 240, 240, .5);
+  }
+   
+  /*定义滑块 内阴影+圆角*/
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 0px rgba(240, 240, 240, .5);
+    background-color: rgba(240, 240, 240, .5);
+  }
+</style>
