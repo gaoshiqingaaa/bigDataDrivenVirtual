@@ -1,29 +1,51 @@
 .Button{
     position: absolute;
-    margin-top: 7%;
-    width: 242px;
-    height: 207px;
-    border-radius: 17px;
+    margin-top: 3.7006578947368425vw;
+    width: 19.901315789473685vw;
+    height: 17.023026315789476vw;
+    border-radius: 1.398026315789474vw;
     border: 0px;
+}
+.popButton{
+    position: absolute;
+    margin-top: 3.2894736842105265vw;
+    width: 19.901315789473685vw;
+    height: 13.404605263157896vw;
+    border-radius: 1.398026315789474vw;
+    border: 0vw;
 }
 .Buttonbackground1{
     background-image: url(../img/2-btn-study@2x.png);
     background-position: top;
-    background-size: 286px;
+    background-size: 23.519736842105264vw;
     background-repeat: no-repeat;
     
 }
 .Buttonbackground2{
     background-image: url(../img/2-btn-begin@2x.png);
     background-position: top;
-    background-size: 286px;
+    background-size: 23.519736842105264vw;
     background-repeat: no-repeat;
     
 }
 .Buttonbackground3{
     background-image: url(../img/2-btn-result@2x.png);
     background-position: top;
-    background-size: 286px;
+    background-size: 23.519736842105264vw;
+    background-repeat: no-repeat;
+    
+}
+.Buttonbackground4{
+    background-image: url(../img/4-btn-study@2x.png);
+    background-position: top;
+    background-size: 23.519736842105264vw;
+    background-repeat: no-repeat;
+    
+}
+.Buttonbackground5{
+    background-image: url(../img/4-btn-exam@2x.png);
+    background-position: top;
+    background-size: 23.519736842105264vw;
     background-repeat: no-repeat;
     
 }
@@ -31,37 +53,52 @@
     -webkit-box-shadow:0 0 4px 0px rgb(224, 224, 224);
     box-shadow:1 0 0px 0px rgb(214, 214, 214);
 }
+.popbuttonimagelocation1{
+    position: relative;
+    width: 8.305921052631579vw;
+    height: 8.305921052631579vw;
+    top: -0.32894736842105265vw;
+    left: 4.32894736842105265vw;
+}
 .buttonimagelocation1{
     position: relative;
-    width: 101px;
-    height: 101px;
-    top: -14px;
-    left: 52px;
+    width: 8.305921052631579vw;
+    height: 8.305921052631579vw;
+    top: -1.1513157894736843vw;
+    left: 4.276315789473685vw;
 }
 .buttonimagelocation2{
     border: none;
-    top: 2px;
+    top: 0.16447368421052633vw;
     position: relative;
-    width: 55px;
+    width: 4.523026315789474vw;
 }
 .divButton1{
-    margin-left: 0px;
+    margin-left: 0vw;
 }
 .divButton2{
-    margin-left: 300px;
+    margin-left: 24.67105263157895vw;
 }
 .divButton3{
-    margin-left: 600px;
+    margin-left: 49.3421052631579vw;
 }
 .divButton{
-    margin: 0 auto;
-    margin-top: 227px;
-    width: 70%;
-    height: 50%;
+    margin-top: 23.667763vw;
+    width: 62.17105263157895vw;
+    height: 24.67105263157895vw;
+    margin-left: 15.255263vw;
 }
-.demo-class{
+body .demo-class{
     background-image: url(../img/4-bg@2x.png) ;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 800px;
+    background-size: 65.78947368421053vw;
+    border-radius: 1.6447368421052633vw;
+}
+body .demo-btn .layui-layer-close{
+    top: -0.08223684210526316vw;
+    right: -0.2467105263157895vw;
+    background-image: url(../img/9-btn-exit@2x.png);
+    background-position: center;
+    background-size: 1.2335526315789473vw 1.2335526315789473vw;
 }

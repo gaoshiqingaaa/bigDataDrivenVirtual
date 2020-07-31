@@ -16,14 +16,12 @@
             <div class="divButton1 site-demo-button"  id="layerDemo" >
                 <a href="#1">
                     <button type="button" class="layui-btn layui-btn-primary Button shadow1 Buttonbackground1">
-                        <div class="buttonimagelocation1">
-                            <img src="./img/2-icon-study@2x.png" class="buttonimagelocation2">
-                        </div>
+                        <div class="buttonimagelocation1"><img src="./img/2-icon-study@2x.png" class="buttonimagelocation2"></div>
                 </button>
             </a>
             </div>
             
-            <div class="divButton2 site-demo-button" id="layerDemo" >
+            <div class="divButton2" id="layerDemo" >
                     <button type="button" data-method="offset" data-type="auto"  class="layui-btn layui-btn-primary Button shadow1 Buttonbackground2">
                         <div class="buttonimagelocation1">
                             <img src="./img/2-icon-begin@2x.png" class="buttonimagelocation2 ">
@@ -60,12 +58,14 @@ layui.use('layer', function(){ //独立版的layer无需执行这一句
       
       layer.open({
         type: 1
-        ,closeBtn: 2
+        ,content: '<div style="width: 44.57236842105264vw; height: 18.914473684210527vw; margin: 3.8651315789473686vw; margin-top: 2.6315789473684212vw;"><div class="divButton1" id="layerDemo"> <button type="button" data-method="offset" data-type="auto"  class="layui-btn layui-btn-primary popButton shadow1 Buttonbackground4"> <div class="popbuttonimagelocation1"><img src="./img/4-icon-study@2x.png" class="buttonimagelocation2"></div></button></div> <div class="divButton2" id="layerDemo"><button type="button" data-method="offset" data-type="auto"  class="layui-btn layui-btn-primary popButton shadow1 Buttonbackground5"> <div class="popbuttonimagelocation1"><img src="./img/4-icon-exam@2x.png" class="buttonimagelocation2"></div></button></div>'
+        ,closeBtn: 1
+        ,scrollbar: false
         ,title: false
-        ,skin: 'demo-class'
-        ,area: ['700px', '300px']
+        ,skin: 'demo-class demo-btn'
+        ,area: ['52.22039473684211vw', '26.315789473684212vw']
         ,resize: false
-        ,offset: '250px' //具体配置参考：http://www.layui.com/doc/modules/layer.html#offset
+        ,offset: '17.269736842105264vw' //具体配置参考：http://www.layui.com/doc/modules/layer.html#offset
         ,id: 'layerDemo'+type //防止重复弹出
         ,shade:  [0.4, '#000'] //不显示遮罩
         ,yes: function(){
