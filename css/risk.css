@@ -130,7 +130,12 @@ body {
     margin-left: 100px
 }
 
-#next {
+#n{
+    margin-top: 1%;
+    margin-left: 6%;
+}
+
+#next, #n {
     color: white;
     width: 200px;
     height: 40px;
@@ -270,3 +275,44 @@ ol.steps li.step-end .step-line {
     display: none;
 }
 
+.layui-card{
+    margin-top: 2.8%;
+    margin-left: 1.7%;
+    margin-right: 1.7%;
+}
+
+.layui-card-header{
+    padding-bottom: 2%;
+}
+
+.layui-card-body{
+    font-size: 20px;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 5%;
+    padding-bottom: 20%;
+}
+
+.layui-card-body p{
+    line-height: 200%;
+}
+
+#biaoti{
+    margin-bottom: 5%;
+}
+
+#start{
+    color: white;
+    width: 200px;
+    height: 40px;
+    border: none;
+    background-image: url(../img/5-btn-next@2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: 100% 100%;
+    position: absolute;
+    float: right;
+    left: 80%;
+    top: 80%
+}
