@@ -1,0 +1,98 @@
+<body>
+    <div class="content">
+        <div class="top"></div>
+        <div class="text">
+            <div class="text-div">
+                <h2>资产大类的选取</h2>
+                <p>    持续性的研究表明，降低投资风险的最佳方式就是进行分散投资，
+                    而不是单独投资于某一资产。在建立投资组合之前，我们首先要
+                    做的是确定大类资产的选择范围。宏观层面，需要综合考虑在不
+                    同的经济周期环境下每一类资产的历史行为特征、风险-收益关系
+                    、以及在当前的宏观经济形势下所预测的未来一段时间的大类资产
+                    的走势；个体层面，需要综合考虑每个大类资产的收益能力、波动
+                    率、与其他资产间的相关性、抗通胀属性、手续费等特性。再通过
+                    宏观与个体层面的结合，确定最后的大类资产选择范围。</p>
+                <p> 资产大类大致可以分为：权益类，债券类和货币类等，对于每一大
+                    类资产，结合我国实情又可以细分很多小类，小类数量不在于多，
+                    在于彼此间能够有效地分散掉非系统性风险，使efficient frontier
+                    最优。系统选取出来七类资产作为研究对象，分别为：国内股市
+                    （大盘股、中盘股、小盘股）、国外股市（美股）、国内债券
+                    （国债、企业债）、货币基金。由于是被动投资，考虑历史数据长
+                    短问题，上述七类资产分别以沪深300、中证500、创业板、标普500、
+                    上证国债、上证企业债为代表。</p>
+            </div>
+        </div>
+        <div class="table">
+            <img src="../img/7-form@2x.png" alt="">
+        </div>
+    </div>
+</body>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    html, body {
+        height: 100%;
+        width: 100%;
+    }
+    .content {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .top {
+        flex-grow: 1;
+        width: 100%;
+        background: url("../img/9-bg@2x.png") no-repeat center top;
+    background-size: cover;
+    }
+    .text {
+        position: relative;
+        flex-grow: 1;
+        width: 100%;
+    }
+    .text-div {
+        position: relative;
+        top: 3%;
+        left: 10%;
+        width: 80%;
+    }
+    .text-div h2 {
+        margin: 0 0 1% 37%;
+    }
+    .text-div p {
+        text-indent:2em;
+        line-height: 1.5em;
+    }
+    .table {
+        flex-grow: 1;
+        width: 100%;
+    }
+    img {
+        height: 500%;
+        width: 100%;
+    }
+    /* 定义滚动条样式 */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: rgba(240, 240, 240, 1);
+  }
+   
+  /*定义滚动条轨道 内阴影+圆角*/
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0px rgba(240, 240, 240, .5);
+    border-radius: 10px;
+    background-color: rgba(240, 240, 240, .5);
+  }
+   
+  /*定义滑块 内阴影+圆角*/
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 0px rgba(240, 240, 240, .5);
+    background-color: rgba(240, 240, 240, .5);
+  }
+</style>

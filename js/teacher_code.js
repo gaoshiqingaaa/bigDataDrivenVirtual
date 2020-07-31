@@ -6,8 +6,9 @@ var codeTip = "'''\nThis function is the entry of this program\n'''\n"
 var code = 'def solution():\n\tpass'
 var initValue = version + codeAreaTip + codeStart + codeEnd + codeTip + code
 
-codes = {
-    0: `import csv
+if (window.location.href.indexOf('teacher') != -1){
+    codes = {
+        0: `import csv
 import numpy as np
 import pandas as pd
 from pandas import DataFrame, Series
@@ -87,8 +88,47 @@ solvers.options['show_progress'] = False
 sol = solvers.qp(P,q,G,h,A,b)
 DataFrame(index=exp_rtn.index, data=np.round(sol['x'],2),columns=['weight'])    
     `
+    }
+} else if (window.location.href.indexOf('assets') != -1) {
+    codes = {
+        0: `import csv
+import numpy as np
+import pandas as pd
+from pandas import DataFrame, Series
+from matplotlib import pyplot as plt
 
+# 这里改成自己本地数据包的位置
+PERFIX = './fin_data/'
+
+def get_return(ticker):
+    tmp_lst = []
+    fname = PERFIX + 'data_'+ticker+'.csv'
+# please edit your code here:
+# code start
+
+# code end
+
+rtn_table.head(10)
+    `,
+        1: '',
+        2: '',
+        3: 'rtn_table.corr()',
+        4: '',
+        5: '#绘出efficient frontier',
+        6: `risk_aversion = 3
+P = risk_aversion * matrix(cov_mat.values)
+q = -1 * matrix(exp_rtn.values)
+G = matrix(np.vstack((np.diag(np.ones(len(exp_rtn))),np.diag(-np.ones(len(exp_rtn))))))
+h = matrix(np.array([np.ones(len(exp_rtn)), np.zeros(len(exp_rtn))].reshape(len(exp_rtn)*2,1)))
+A = matrix(np.ones(len(exp_rtn)),(1,len(exp_rtn)))
+b = martix([1.0])
+solvers.options['show_progress'] = False
+sol = solvers.qp(P,q,G,h,A,b)
+DataFrame(index=exp_rtn.index, data=np.round(sol['x'],2),columns=['weight'])    
+    `
+    }
 }
+
 
 
 var code_in = CodeMirror.fromTextArea(document.getElementById("code-in"), {

@@ -1,0 +1,188 @@
+<link rel="stylesheet" href="../lib/css/layui.css">
+<body>
+    <div class="content">
+        <div class="top"></div>
+        <div class="table">
+            <div class="layui-form">
+                <table class="layui-table">
+                  <colgroup>
+                    <col width="14.28%">
+                    <col width="14.28%">
+                    <col width="14.28%">
+                    <col width="14.28%">
+                    <col width="14.28%">
+                    <col width="14.28%">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr class="head">
+                        <th><p></p></th>
+                        <th><p>沪深300</p></th>
+                        <th><p>创业扳指</p></th>
+                        <th><p>标普500</p></th>
+                        <th><p>企债指数</p></th>
+                        <th><p>中证500</p></th>
+                        <th><p>国债指数</p></th>
+                    </tr> 
+                    <tr>
+                        <th><p><b>沪深300</b></p></th>
+                        <th><p>1</p></th>
+                        <th><p>0.570628</p></th>
+                        <th><p>0.063094</p></th>
+                        <th><p>0.074392</p></th>
+                        <th><p>0.835496</p></th>
+                        <th><p>-0.024434</p></th>
+                    </tr> 
+                    <tr>
+                        <th><p><b>创业扳指</b></p></th>
+                        <th><p>0.570628</p></th>
+                        <th><p>1</p></th>
+                        <th><p>0.022396</p></th>
+                        <th><p>0.118028</p></th>
+                        <th><p>0.834778</p></th>
+                        <th><p>-0.046782</p></th>
+                    </tr> 
+                    <tr>
+                        <th><p><b>标普500</b></p></th>
+                        <th><p>0.063094</p></th>
+                        <th><p>0.022396</p></th>
+                        <th><p>1</p></th>
+                        <th><p>0.03572</p></th>
+                        <th><p>0.043377</p></th>
+                        <th><p>0.001724</p></th>
+                    </tr> 
+                    <tr>
+                        <th><p><b>企债指数</b></p></th>
+                        <th><p>0.074392</p></th>
+                        <th><p>0.118028</p></th>
+                        <th><p>0.03572</p></th>
+                        <th><p>1</p></th>
+                        <th><p>0.129318</p></th>
+                        <th><p>0.209755</p></th>
+                    </tr> 
+                    <tr>
+                        <th><p><b>中证500</b></p></th>
+                        <th><p>0.835496</p></th>
+                        <th><p>0.834778</p></th>
+                        <th><p>0.043377</p></th>
+                        <th><p>0.129318</p></th>
+                        <th><p>1</p></th>
+                        <th><p>-0.007354</p></th>
+                    </tr> 
+                    <tr>
+                        <th><p><b>国债指数</b></p></th>
+                        <th><p>-0.024434</p></th>
+                        <th><p>-0.046782</p></th>
+                        <th><p>0.001724</p></th>
+                        <th><p>0.209755</p></th>
+                        <th><p>-0.007354</p></th>
+                        <th><p>1</p></th>
+                    </tr> 
+                    
+                  </tbody>
+                </table>
+              </div>
+        </div>
+        <div class="text">
+            <div class="text-div">
+                <h2>由计算结果可以看出：</h2>
+                <ul>
+                    <li><p>收益相对稳定的债券与其他类的资产相关性都比较低，
+                        一方面通过配置可以分散非系统性风险，另一方面在市场
+                        不好时可以提供相对稳健的收益。</p></li>
+                    <li><p>标普500和其他五类相关性较弱，这在进行权益类配置
+                        时可以有效地分散风险。</p></li>
+                    <li><p>从图中可以看出国债与沪深300、国债与创业板、国债
+                        与中证500相关性最弱。故选这四类作为一个投资组合。作
+                        为对比，选择组合一、标普500及企业债作为组合二。</p></li>
+                </ul>
+            </div>
+        </div>
+        <!-- <div class="table">
+            <img src="../img/7-form@2x.png" alt="">
+        </div> -->
+    </div>
+</body>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    html, body {
+        height: 100%;
+        width: 100%;
+    }
+    .content {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .top {
+        position: relative;
+        flex-grow: 15;
+        width: 100%;
+        background: url("../img/9-bg@2x.png") no-repeat center top;
+        background-size: cover;
+        background-attachment:fixed
+    }
+    .text {
+        position: relative;
+        flex-grow: 1;
+        width: 100%;
+    }
+    .text-div {
+        position: relative;
+        top: 3%;
+        left: 10%;
+        width: 80%;
+    }
+    .text-div h2 {
+        margin: 0 0 1% 0;
+        font-weight: bold;
+    }
+    .text-div p {
+        line-height: 1.5em;
+    }
+    .table {
+        position: relative;
+        top: 1%;
+        left: 10%;
+        flex-grow: 1;
+        width: 80%;
+    }
+    img {
+        height: 120%;
+        width: 90%;
+    }
+    .head p {
+        font-weight: bold;
+    }
+    .layui-table td, .layui-table th {
+        text-align:center;
+    }
+    ul li {
+        list-style: disc
+    }
+    /* 定义滚动条样式 */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: rgba(240, 240, 240, 1);
+  }
+   
+  /*定义滚动条轨道 内阴影+圆角*/
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0px rgba(240, 240, 240, .5);
+    border-radius: 10px;
+    background-color: rgba(240, 240, 240, .5);
+  }
+   
+  /*定义滑块 内阴影+圆角*/
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 0px rgba(240, 240, 240, .5);
+    background-color: rgba(240, 240, 240, .5);
+  }
+</style>
