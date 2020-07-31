@@ -8,9 +8,10 @@ Created on Thu Jul 30 15:04:57 2020
 import os
 import re
 import sys
+import matplotlib
 import flask as f
 from flask_cors import CORS
-import matplotlib
+
 matplotlib.use('Agg')
 
 # from shutil import copyfile
@@ -45,7 +46,6 @@ CORS(app, supports_credentials=True)
 @app.route('/', methods=['get'])
 def user_id():
     log_id = f.request.args.get('user')
-    print(log_id)
     user = 'admin'
     if log_id in ['', 'vister', None]:
         log_id = str(current_request_id())
@@ -64,33 +64,40 @@ def code():
     code_path = 'static/' + log_id + '/'
     res = {'user': log_id, 'safe': '', 'result': '', 'error': '', 'files': []}
     step = f.request.form.get('step')
-    code = f.request.form.get('code')
-    if re.findall('cd|remove|rm -rf|pwd|kill|mkdir|system|popen', code, re.I) != []:
-        #print(re.findall('cd|remove|rm -rf|pwd|kill|mkdir|system|popen|!', code, re.I))
+    codes = f.request.form.get('code')
+    if re.findall('cd|remove|rm -rf|pwd|kill|mkdir|system|popen', codes, re.I) != []:
         res['error'] = 'No permission!!!'
         res['safe'] = 'false'
         return res
     res['safe'] = 'true'
     with open(stp_path + step + '.txt', 'w', encoding='utf-8') as stp:
-        stp.write(code)
+        stp.write(codes)
     all_code = ''
     for i in range(int(step) + 1):
         with open(stp_path + str(i) + '.txt', 'r', encoding='utf-8') as stp:
             stp_cod = stp.read()
             if re.findall('\.plot', stp_cod, re.S) != []:
                 stp_cod += "\nplt.savefig('static/%s/%d.png')" % (log_id, i)
-            all_code += stp_cod + '\n'
+            if i == int(step):
+                stp_cod = "\nprint('000-000-000-000-000')\n" + stp_cod + "\nprint('000-000-000-000-000')\n"
+            all_code += stp_cod
     with open(code_path + 'code.py', 'w', encoding='utf-8') as cod:
         cod.write(all_code)
     temp = sys.stderr
     with open('%serr.log' % code_path, 'w', encoding='utf-8') as err:
         sys.stderr = err
         os.system("python %scode.py >> %sresult.txt" % (code_path, code_path))
-    sys.stderr = temp
+        sys.stderr = temp
     with open('%serr.log' % code_path, 'r', encoding='utf-8') as err:
         res['error'] = err.read()
-    with open('%sresult.txt' % code_path, 'r', encoding='gbk') as rest:
-        res['result'] = rest.read()
+    with open('%sresult.txt' % code_path, 'r', encoding='utf-8') as rest:
+        result = rest.read()
+        resul = re.findall("000-000-000-000-000\n(.*?)000-000-000-000-000", result, re.S)
+        if resul == []:
+            result = ''
+        else:
+            result = resul.pop()
+        res['result'] = result
     os.remove('%sresult.txt' % code_path)
     os.remove('%serr.log' % code_path)
     os.remove('%scode.py' % code_path)
@@ -100,5 +107,6 @@ def code():
     return f.jsonify(res)
 
 
-#app.run(port=5000, debug=True)#debug模式
+# app.run(port=5000, debug=True)  # debug模式
 app.run(port=5000)
+
