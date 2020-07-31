@@ -285,6 +285,12 @@
     padding: 0;
 }
 
+.introduce-alert {
+    background: url("../img/9-bg@2x.png") no-repeat center top;
+    background-size: cover;
+    padding: 0;
+}
+
 .data-pre-table {
     width: 100%;
 }
@@ -299,4 +305,18 @@
 
 .none {
     display: none;
+}
+
+.layui-layer-setwin .layui-layer-close2 {
+    position: absolute;
+    right: -6px;
+    top: -11px;
+    width: 31px;
+    height: 30px;
+    margin-left: 0;
+    background-position: 17px -32px;
+}
+
+.adjust-alert {
+    padding: 0;
 }
