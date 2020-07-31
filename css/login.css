@@ -13,6 +13,11 @@
     margin-top: 0.4111842105263158vw;
     left: 2.7138157894736845vw;
 }
+.layui-form-item .layui-input-inline {
+    float: left;
+    width: 15.713816vw;
+    margin-right: 10px;
+}
 .usernameimg{
     position: absolute;
     width: 3.7006578947368425vw;
