@@ -7,7 +7,25 @@ var code = 'def solution():\n\tpass'
 var initValue = version + codeAreaTip + codeStart + codeEnd + codeTip + code
 
 codes = {
-    0: "import csv\nimport numpy as np\nimport pandas as pd\nfrom pandas import DataFrame, Series\nfrom matplotlib import pyplot as plt\n\nPERFIX = './fin_data/'\n\ndef get_return(ticker):\n\ttmp_lst = []\n\tfname = PERFIX + 'data_'+ticker+'.csv'\n\t" + codeAreaTip + "\t"  + codeStart + "\t" + codeEnd + "rtn_table.head(10)",
+    0: `import csv
+import numpy as np
+import pandas as pd
+from pandas import DataFrame, Series
+from matplotlib import pyplot as plt
+
+# 这里改成自己本地数据包的位置
+PERFIX = './fin_data/'
+
+def get_return(ticker):
+    tmp_lst = []
+    fname = PERFIX + 'data_'+ticker+'.csv'
+# please edit your code here:
+# code start
+
+# code end
+
+rtn_table.head(10)
+    `,
     1: "rtn_table.mean() * 250 #关于代码的注释\n",
     2: "rtn_table.std() * np.sqrt(250)\n",
     3: "rtn_table.corr()\n",
@@ -108,22 +126,31 @@ var code_out = CodeMirror.fromTextArea(document.getElementById("code-out"), {
     matchBrackets: true,	//括号匹配
     readOnly: true,        //只读
 });
-code_out.setSize('500px','570px'); //宽 高
-
-
+code_out.setSize('500px','570px'); //宽 高 570
+var tt
 $('.run-code').click(function(){
     $.ajax({
         type: 'POST',
-        url: 'http://47.97.205.240:8800/code',
+        // url: 'http://47.97.205.240:8800/code',
+        url: 'http://localhost:5000/code',
         data: {
-            user: '123',
-            step: '0',
-            code: code_in.getValue()
+            user: user,
+            step: current_page,
+            code: code_in.getValue().trim() + '\n'
         },
         success: function(data){
-            $('.result').empty()
-            result = data.error == ''? data.result: data.error
-            code_out.setValue(result)
+            tt = data
+            code_out.setValue(data.result)
+            if (current_page == 5) {
+                for (i = 0; i < data.files.length; i++) {
+                    if (data.files[i] == '/static/' + user + '/5.png') {
+                        $('.img_box').css({                            
+                            'background': 'url("http://localhost:5000/static/123/0.png") no-repeat center top',
+                            'background-size': 'cover'
+                        })
+                    }
+                }
+            }
             if (current_page == 3) {
                 layer.open({
                     type: 2,
