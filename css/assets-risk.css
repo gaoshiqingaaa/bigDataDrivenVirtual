@@ -1,0 +1,448 @@
+body {
+    background-image: url(../img/3-bg@2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+#nav {
+    width: 100%;
+    margin-top: 2.5%;
+
+}
+
+
+
+#help,
+#friends {
+    width: 25px;
+    height: 25px;
+    border: none;
+    color: #6969EF;
+    background-color: white;
+    border-radius: 15px;
+    float: right;
+    margin-right: 2%;
+}
+
+#but1 {
+    width: 10%;
+    float: right;
+    margin-right: 2%;
+    margin-top: -7px;
+}
+
+#but1 a {
+    color: #6969EF;
+}
+
+#mainWin {
+    margin: 3% 1.5% 0% 1.5%;
+    background-image: url(../img/5-bg@2x.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    background-size: 100% 100%;
+}
+
+#mainWin-nav {
+    float: left;
+    margin-left: 2%;
+    margin-top: 4%;
+}
+
+.content {
+    margin-top: 8%;
+    margin-left: 12%;
+    padding-top: 2%;
+    padding-left: 2%;
+}
+
+.content h1 {
+    /* margin-top: 4%;
+    margin-bottom: 4%; */
+    line-height: 110%;
+}
+
+#content {
+    margin: 3% 1.5% 0% 1.5%;
+    background-image: url(../img/5-bg@2x.png);
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    overflow: hidden;
+    background-size: 100% 100%;
+    padding-bottom: 50%;
+    text-align: center;
+}
+
+#neicont {
+    width: 92%;
+    height: 60%;
+    background-color: #E8E8E8;
+    border-radius: 15px;
+    position: absolute;
+    left: 4%;
+    bottom: 0%;
+    /* margin: 0 auto; */
+    padding-top: 5%;
+}
+
+#neicont span {
+    
+}
+
+#tupian {
+    float: right;
+    width: 45%;
+}
+
+#tu {
+    margin-top: 10%;
+    text-align: center;
+}
+
+#tu img {
+    width: 70%;
+    margin-bottom: 15%;
+}
+
+#bt {
+    margin-top: 4%;
+    margin-bottom: 3%;
+}
+
+#ti {
+    width: 30%;
+    height: 20px;
+    line-height: 20px;
+    padding: 4%;
+    background-image: url(../img/5-panel-nor@2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: 100% 100%;
+    font-size: 15px;
+    float: left;
+}
+
+#butt {
+    width: 20%;
+    padding: 3%;
+    font-size: 15px;
+    float: right;
+    margin-left: 100px
+}
+
+#n {
+    margin-top: 1%;
+    margin-left: 6%;
+}
+
+#next,
+#n {
+    color: white;
+    width: 200px;
+    height: 40px;
+    border: none;
+    background-image: url(../img/5-btn-next@2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: 100% 100%;
+}
+
+#queren {
+    color: white;
+    width: 200px;
+    height: 40px;
+    border: none;
+    background-image: url(../img/5-btn-next@2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 43%;
+    bottom: 8%;
+}
+
+#back {
+    color: white;
+    width: 200px;
+    height: 40px;
+    border: none;
+    background-image: url(../img/5-btn-back@2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: 100% 100%;
+
+}
+
+#apple {
+    background-image: url(../img/15-icon-1@2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: 100% 100%;
+    width: 10.6%;
+    float: left;
+    margin-bottom: 30%;
+}
+
+#apple h1 {
+    text-align: center;
+    line-height: 900%;
+    color: white;
+}
+
+#tijiao {
+    color: white;
+    width: 200px;
+    height: 40px;
+    border: none;
+    background-image: url(../img/5-btn-next@2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: 100% 100%;
+}
+
+ol.steps::-webkit-scrollbar {
+    /* chrome 隐藏滚动条*/
+    display: none;
+}
+
+ol.steps {
+    list-style: none;
+
+}
+
+ol.steps:after,
+ol.steps li:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+ol.steps li {
+
+    width: 49px;
+    height: 50px;
+    position: relative;
+
+}
+
+ol.steps li .step-line {
+    height: 25px;
+    position: absolute;
+    background-color: #e0e0e0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .2);
+
+    width: 3px;
+    top: 33px;
+    left: 0;
+}
+
+ol.steps li.step-active .step-line {
+    background-color: #449BF9FF;
+    box-shadow: inset 0 1px 1px#449BF9FF;
+}
+
+ol.steps .step-content {
+    position: absolute;
+    top: 0;
+    left: -15px;
+    text-align: center;
+}
+
+ol.steps li .step-content .step-num {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    color: #fff;
+    background-color: #b9b9b9;
+    line-height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    border: 1px solid rgba(224, 224, 224, 1);
+}
+
+ol.steps li.step-active .step-content .step-num {
+    background-color: #449BF9FF;
+}
+
+ol.steps li.step-end {
+    width: 120px !important;
+    flex: inherit;
+}
+
+ol.steps li.step-end .step-line {
+    display: none;
+}
+
+.layui-card {
+    margin-top: 2.8%;
+    margin-left: 1.7%;
+    margin-right: 1.7%;
+}
+
+.layui-card-header {
+    padding-bottom: 2%;
+}
+
+.layui-card-body {
+    font-size: 20px;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 5%;
+    padding-bottom: 20%;
+}
+
+.layui-card-body p {
+    line-height: 200%;
+}
+
+#biaoti {
+    margin-bottom: 5%;
+}
+
+#start {
+    color: white;
+    width: 200px;
+    height: 40px;
+    border: none;
+    background-image: url(../img/5-btn-next@2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: 100% 100%;
+    position: absolute;
+    float: right;
+    left: 80%;
+    top: 80%
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.wrap {
+    width: 100%;
+    height: auto;
+    line-height: 30px;
+    margin: 100px auto 0;
+    text-align: center;
+    padding-left: 8%;
+}
+
+.step-case {
+    height: 40px;
+}
+
+.step-case li {
+    float: left;
+    margin: 0px;
+    width: 8%;
+    position: relative;
+    cursor: pointer;
+}
+
+.step-case li span {
+    display: block;
+    background-color: #ccc;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
+
+.step-case b {
+    position: absolute;
+    font-size: 0px;
+    line-height: 0px;
+    top: 0px;
+}
+
+.step-case .b-l {
+    border-width: 2px 2px 2px 0;
+    border-style: dashed solid dashed dashed;
+    border-color: transparent #ccc transparent transparent;
+    height: 36px;
+    left: -2px;
+}
+
+.step-case .b-r {
+    border-width: 2px 0 2px 2px;
+    border-style: dashed dashed dashed solid;
+    border-color: transparent transparent transparent #ccc;
+    height: 36px;
+    right: -2px;
+}
+
+.step-case .b-1 {
+    border-width: 20px 0 20px 20px;
+    border-style: solid dashed solid solid;
+    border-color: #ccc transparent #ccc #ddd;
+    left: -20px;
+}
+
+.step-case .b-2 {
+    border-width: 20px 0 20px 20px;
+    border-style: dashed dashed dashed solid;
+    border-color: transparent transparent transparent #ccc;
+    left: -21px;
+}
+
+/*当前状态*/
+.step-case .s-cur span {
+    background-color: orange;
+}
+
+.step-case .s-cur .b-l {
+    border-right-color: orange;
+}
+
+.step-case .s-cur .b-r {
+    border-left-color: orange;
+}
+
+.step-case .s-cur .b-1 {
+    border-color: orange orange orange #FABF55;
+}
+
+.step-case .s-cur .b-2 {
+    border-left-color: #FADBA5;
+}
+
+/*当前状态后*/
+.step-case .s-cur-next .b-2 {
+    border-color: transparent transparent transparent orange;
+}
+
+/*完成的状态*/
+.step-case .s-finish span {
+    background-color: #FADBA5;
+    color: #000;
+}
+
+.step-case .s-finish .b-l {
+    border-right-color: #FADBA5;
+}
+
+.step-case .s-finish .b-r {
+    border-left-color: #FADBA5;
+}
+
+.step-case .s-finish .b-1 {
+    border-color: #FADBA5 #FADBA5 #FADBA5 #FABF55;
+}
+
+.step-case .s-finish .b-2 {
+    border-left-color: #FADBA5;
+}
