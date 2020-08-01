@@ -18,7 +18,7 @@
     <script src="../js/jquery-2.1.4.js"></script>
     <script src="../lib/layui.all.js"></script>
     
-    <title>Document</title>
+    <title>大数据驱动的智能投顾虚拟仿真实验</title>
 </head>
 <body>
     <div class="content layui-container">
@@ -148,11 +148,14 @@
                             <div class="right-content-top">
                                 <div class="right-content-top-left-nine"></div>
                                 <div class="right-content-top-right-nine">
+                                    <div id="pie" style="width: 571px;height:302px;padding: 0;"></div>
                                     <button class="advise-btn my-btn">调仓建议</button>
                                 </div>
                             </div>
                             <div class="right-content-bottom">
-                                <div class="right-content-bottom-all-nine"></div>
+                                <div class="right-content-bottom-all-nine">
+                                    <div id="line-smooth" style="width: 1065px;height:294px;padding: 0;"></div>
+                                </div>
                             </div>
                         </div>
                         <div class="right-bottom">
@@ -169,4 +172,6 @@
 </body>
 <script src="../js/teacher_code.js"></script>
 <script src="../js/teacher_pages.js"></script>
+<script src="../lib/echarts.min.js"></script>
+<script src="../js/showEcharts.js"></script>
 </html>
