@@ -5,5 +5,12 @@
     width: 100vw;
     height: 58.38815789473685vw;
     position: absolute;
-    display: flex;
+}
+.box2 {
+    background-image: url(../img/3-bg@2x.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 58.38815789473685vw;
+    width: 100vw;
+    height: 58.38815789473685vw;
+    position: absolute;
 }
