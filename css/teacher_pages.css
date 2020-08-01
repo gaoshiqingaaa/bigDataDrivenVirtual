@@ -319,3 +319,22 @@
 .adjust-alert {
     padding: 0;
 }
+
+.right-content-top-left .top-left {
+    position: relative;
+    top: 14%;
+    left: 7%;
+    width: 84%;
+    height: 77%;
+    background: url("../img/1.jpg") no-repeat center top;
+    background-size: contain;
+}
+
+.right-content-bottom-left .bottom-left {
+    position: relative;
+    top: 14%;
+    left: 7%;
+    width: 84%;
+    height: 77%;
+    
+}
