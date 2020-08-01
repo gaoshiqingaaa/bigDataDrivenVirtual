@@ -84,4 +84,22 @@ body {
     margin-top: 5%;
 }
 
+#inend{
+    position: absolute;
+    left: 80%;
+    top: 60%;
+}
 
+#tijiao{
+    position: absolute;
+    left: 80%;
+    top: 60%;
+}
+
+#zhengque,#abc,#abcd,#bcd,#dui,#cuo{
+    font-size: 30px;
+    width: 30%;
+    position: absolute;
+    left: 40%;
+    top: 80%;
+}
