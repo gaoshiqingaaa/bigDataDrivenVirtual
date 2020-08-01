@@ -1,0 +1,186 @@
+body{
+    background-image: url(../img/3-bg@2x.png);
+    background-size: 100vw 58.38815789473685vw;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+#nav {
+    width: 100vw;
+    margin-top: 2.4671052631578947vw;
+    
+}
+#help,
+#friends {
+    width: 2.055921052631579vw;
+    height: 2.055921052631579vw;
+    border: none;
+    color: #6969EF;
+    background-color: white;
+    border-radius: 1.2335526315789473vw;
+    float: right;
+    margin-right: 1.973684210526316vw;
+}
+
+#but1 {
+    float: right;
+    margin-right: 2.055921052631579vw;
+}
+
+#but1 a {
+    color: #6969EF;
+}
+
+.div1{
+    width: 96.62828947368422vw;
+    height: 49.83552631578948vw;
+    background-image: url(../img/15-bg@2x.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100vw 58.38815789473685vw;
+    position: absolute;
+    top: 6.8256578947368425vw;
+    left: 1.6447368421052633vw;
+    border-radius: 0.4111842105263158vw;
+}
+
+.div1imgdownload{
+    position: absolute;
+    width: 4.934210526315789vw;
+    height: 4.194078947368421vw;
+    background-repeat: no-repeat;
+    background-image: url(../img/15-btn-download@2x.png);
+    background-position: center;
+    background-size: 2.8782894736842106vw;
+    left: 82.23684210526316vw;
+    top: 5.345394736842105vw;
+}
+
+.div11{
+    position: absolute;
+    width: 57.56578947368421vw;
+    height: 4.934210526315789vw;
+    top: 14.80263157894737vw;
+    left: 8.223684210526317vw;
+}
+.div12{
+    position: absolute;
+    width: 57.56578947368421vw;
+    height: 4.934210526315789vw;
+    top: 21.79276315789474vw;
+    left: 8.223684210526317vw;
+}
+.div13{
+    position: absolute;
+    width: 57.56578947368421vw;
+    height: 4.934210526315789vw;
+    top: 28.782894736842106vw;
+    left: 8.223684210526317vw;
+}
+.div14{
+    position: absolute;
+    width: 57.56578947368421vw;
+    height: 4.934210526315789vw;
+    top: 35.77302631578948vw;
+    left: 8.223684210526317vw;
+}
+
+.div11img1{
+    width: 6.74342105263158vw;
+    height: 6.74342105263158vw;
+    position: absolute;
+    background-image: url(../img/15-icon-1@2x.png);
+    background-size: 4.769736842105264vw;
+    background-repeat: no-repeat;
+    top: -2.796052631578948vw;
+    left: 1.2335526315789473vw;
+}
+.div11img2{
+    width: 4.111842105263158vw;
+    height: 4.111842105263158vw;
+    position: absolute;
+    background-image: url(../img/15-icon-2@2x.png);
+    background-size: 3.2894736842105265vw;
+    background-repeat: no-repeat;
+    top: -2.3026315789473686vw;
+    left: 1.6447368421052633vw;
+}
+.div11img3{
+    width: 4.111842105263158vw;
+    height: 4.111842105263158vw;
+    position: absolute;
+    background-image: url(../img/15-icon-3@2x.png);
+    background-size: 3.2894736842105265vw;
+    background-repeat: no-repeat;
+    top: -2.3026315789473686vw;
+    left: 1.6447368421052633vw;
+}
+.div11img4{
+    width: 4.111842105263158vw;
+    height: 4.111842105263158vw;
+    position: absolute;
+    background-image: url(../img/15-icon-4@2x.png);
+    background-size: 3.2894736842105265vw;
+    background-repeat: no-repeat;
+    top: -2.3026315789473686vw;
+    left: 1.6447368421052633vw;
+}
+
+.div11font{
+    font-size: 1.6447368421052633vw;
+    position: absolute;
+    top: -2.1381578947368425vw;
+    left: 5.921052631578948vw;
+}
+.div12font{
+    font-size: 1.6447368421052633vw;
+    position: absolute;
+    top: -2.1381578947368425vw;
+    left: 5.921052631578948vw;
+}
+.div21font{
+    font-size: 0.8223684210526316vw;
+    position: absolute;
+    left: 7.9769736842105265vw;
+    top: 0.8223684210526316vw;
+    white-space: nowrap;
+}
+.div2win{
+    position: absolute;
+    left: -0.986842105263158vw;
+    top: 0.8223684210526316vw;
+}
+.layui-textarea{
+    resize:none;
+    }
+.layui-textarea{
+    width: 59.21052631578948vw;
+}
+
+.div1btn{
+    position: absolute;
+    top: 10.279605263157896vw;
+    left: 31.250000000000004vw;
+}
+.layui-btn1 {
+    height: 2.7138157894736845vw;
+    line-height: 2.3026315789473686vw;
+    width: 16.447368421052634vw;
+    background-image: url(../img/15-btn-submit@2x.png);
+    background-position: center;
+}
+.layui-btn2 {
+    height: 2.055921052631579vw;
+    line-height: 0vw;
+    width: 8.223684210526317vw;
+    background-color: #ffffff;
+    background-position: center;
+    border-radius: 0.493421052631579vw;
+}
+.navfont{
+    font-size: 1.0690789473684212vw;
+    color: #6969EF;
+}
+.font{
+    color: #ffffff;
+}

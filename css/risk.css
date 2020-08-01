@@ -10,6 +10,7 @@ body {
 #nav {
     width: 100%;
     margin-top: 2.5%;
+    
 }
 
 
@@ -24,13 +25,13 @@ body {
     border-radius: 15px;
     float: right;
     margin-right: 2%;
-    margin-top: 0.5%;
 }
 
 #but1 {
     width: 10%;
     float: right;
     margin-right: 2%;
+    margin-top: -7px;
 }
 
 #but1 a {
