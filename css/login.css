@@ -1,9 +1,10 @@
-.box2{
+.loginbox2{
     width: 20.970394736842106vw;
     height: 25.904605263157897vw;
     right: 20.970394736842106vw;
     top: 15.213815789473685vw;
     position: absolute;
+    display: flex;
 }
 .shadow{
     -moz-box-shadow:0 0 5px 5px rgb(179, 179, 179);
