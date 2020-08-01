@@ -103,3 +103,40 @@ body {
     left: 40%;
     top: 80%;
 }
+
+.zhishi{
+    padding-bottom: 50%;
+}
+
+#shitu{
+    width: 50%;
+    background-color: #E8E8E8;
+    padding: 1% 4% 1% 4%;
+    float: right;
+    margin-right: 10%;
+    position: absolute;
+    left: 32%;
+    top: 25%;
+}
+
+#shitu img{
+    width: 100%;
+}
+
+.tupian{
+    width: 20%;
+    height: 75%;
+    overflow:auto;
+    position: absolute;
+    left: 5%;
+    top: 26%;
+    background-color: #E8E8E8;
+}
+
+.tupian img{
+    width: 95%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+}

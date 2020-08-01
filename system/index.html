@@ -9,14 +9,64 @@
         <link rel="stylesheet" href="../css/sys-index.css">
     </head>
     <body>
-
+        
         <div class="layui-card">
             <div class="layui-card-header">
                 <div id="jichu">&nbsp;</div>
                 <div id="kuaiwen">&nbsp;</div>
                 <button type="button" class="layui-btn layui-btn-radius layui-btn-primary" id="but1"><a href="../index.html">返回</a></button>
             </div>
-            <div class="layui-card-body">
+            <div class="zhishi">
+                <div id="gongdong">
+                    <div class="tupian">
+                        <img src="../img/basis1.png" alt="图片加载失败" id="1" onclick="huantu(1)">
+                        <img src="../img/basis2.png" alt="图片加载失败" id="2" onclick="huantu(2)">
+                        <img src="../img/basis3.png" alt="图片加载失败" id="3" onclick="huantu(3)">
+                        <img src="../img/basis4.png" alt="图片加载失败" id="4" onclick="huantu(4)">
+                        <img src="../img/basis5.png" alt="图片加载失败" id="5" onclick="huantu(5)">
+                        <img src="../img/basis6.png" alt="图片加载失败" id="6" onclick="huantu(6)">
+                        <img src="../img/basis7.png" alt="图片加载失败" id="7" onclick="huantu(7)">
+                        <img src="../img/basis8.png" alt="图片加载失败" id="8" onclick="huantu(8)">
+                        <img src="../img/basis9.png" alt="图片加载失败" id="9" onclick="huantu(9)">
+                        <img src="../img/basis10.png" alt="图片加载失败" id="10" onclick="huantu(10)">
+                        <img src="../img/basis11.png" alt="图片加载失败" id="11" onclick="huantu(11)">
+                        <img src="../img/basis12.png" alt="图片加载失败" id="12" onclick="huantu(12)">
+                        <img src="../img/basis13.png" alt="图片加载失败" id="13" onclick="huantu(13)">
+                        <img src="../img/basis14.png" alt="图片加载失败" id="14" onclick="huantu(14)">
+                        <img src="../img/basis15.png" alt="图片加载失败" id="15" onclick="huantu(15)">
+                        <img src="../img/basis16.png" alt="图片加载失败" id="16" onclick="huantu(16)">
+                        <img src="../img/basis17.png" alt="图片加载失败" id="17" onclick="huantu(17)">
+                        <img src="../img/basis18.png" alt="图片加载失败" id="18" onclick="huantu(18)">
+                        <img src="../img/basis19.png" alt="图片加载失败" id="19" onclick="huantu(19)">
+                        <img src="../img/basis20.png" alt="图片加载失败" id="20" onclick="huantu(20)">
+                        <img src="../img/basis21.png" alt="图片加载失败" id="21" onclick="huantu(21)">
+                        <img src="../img/basis22.png" alt="图片加载失败" id="22" onclick="huantu(22)">
+                        <img src="../img/basis23.png" alt="图片加载失败" id="23" onclick="huantu(23)">
+                        <img src="../img/basis24.png" alt="图片加载失败" id="24" onclick="huantu(24)">
+                        <img src="../img/basis25.png" alt="图片加载失败" id="25" onclick="huantu(25)">
+                        <img src="../img/basis26.png" alt="图片加载失败" id="26" onclick="huantu(26)">
+                        <img src="../img/basis27.png" alt="图片加载失败" id="27" onclick="huantu(27)">
+                        <img src="../img/basis28.png" alt="图片加载失败" id="28" onclick="huantu(28)">
+                        <img src="../img/basis29.png" alt="图片加载失败" id="29" onclick="huantu(29)">
+                        <img src="../img/basis30.png" alt="图片加载失败" id="30" onclick="huantu(30)">
+                        <img src="../img/basis31.png" alt="图片加载失败" id="31" onclick="huantu(31)">
+                        <img src="../img/basis32.png" alt="图片加载失败" id="32" onclick="huantu(32)">
+                        <img src="../img/basis33.png" alt="图片加载失败" id="33" onclick="huantu(33)">
+                        <img src="../img/basis34.png" alt="图片加载失败" id="34" onclick="huantu(34)">
+                        <img src="../img/basis35.png" alt="图片加载失败" id="35" onclick="huantu(35)">
+                        <img src="../img/basis36.png" alt="图片加载失败" id="36" onclick="huantu(36)">
+                        <img src="../img/basis37.png" alt="图片加载失败" id="37" onclick="huantu(37)">
+                        <img src="../img/basis38.png" alt="图片加载失败" id="38" onclick="huantu(38)">
+                        <img src="../img/basis39.png" alt="图片加载失败" id="39" onclick="huantu(39)">
+                        <img src="../img/basis40.png" alt="图片加载失败" id="40" onclick="huantu(40)">
+                    </div>
+
+                </div>
+                <div id="shitu">
+                    <img src="../img/basis1.png" id="xiaoguo">
+                </div>
+            </div>
+            <div class="layui-card-body" style="display: none;">
                 <!-- 第一题 -->
                 <div class="ti" style="display: block;">
                     <h1>【多选题】1.系统性风险包括（BCD）。</h1>
@@ -221,7 +271,7 @@
 
                     document.getElementById("abc").style.display = "none";
                 };
-                if (index == 11 || index == 13 || index == 15 || index == 17 || index == 21 || index == 25 ) {
+                if (index == 11 || index == 13 || index == 15 || index == 17 || index == 21 || index == 25) {
                     var t = ('t' + ((index + 1) / 2))
                     var timu = document.getElementsByName(t);
                     if (timu[0].checked) {
@@ -296,7 +346,38 @@
                 }, function() {
                     window.open('../index.html')
                 });
-            })
+            });
+
+            document.getElementById('jichu').onclick = function() {
+                document.getElementById('jichu').style.backgroundImage = "url(../img/3-tab-study-nor@2x.png)";
+                document.getElementById('kuaiwen').style.backgroundImage = "url(../img/3-tab-answer-select@2x.png)";
+                document.getElementsByClassName('zhishi')[0].style.display = "block";
+                document.getElementsByClassName('layui-card-body')[0].style.display = 'none';
+            };
+            document.getElementById('kuaiwen').onclick = function() {
+                document.getElementById('kuaiwen').style.backgroundImage = "url(../img/3-tab-answer-nor@2x.png)";
+                document.getElementById('jichu').style.backgroundImage = "url(../img/3-tab-study-select@2x.png)";
+                document.getElementsByClassName('zhishi')[0].style.display = "none";
+                document.getElementsByClassName('layui-card-body')[0].style.display = 'block';
+            };
+            function huantu(id){
+                var URL = ("../img/basis"+id+".png");
+                document.getElementById("xiaoguo").src = URL;
+            }
+           
+           
+           
+           
+            // for(var i = 1; i <= 40; i++){
+            //     if(document.getElementById(i).onclick){
+            //         var URL = ("../img/basis"+i+".png");
+            //         document.getElementById("xiaoguo").src = URL;
+            //     }
+            //     // document.getElementById(i).onclick = function(){
+            //     //     var URL = ("../img/basis"+i+".png");
+            //     //     document.getElementById("xiaoguo").src = URL;
+            //     // };
+            // }
         </script>
     </body>
 </html>

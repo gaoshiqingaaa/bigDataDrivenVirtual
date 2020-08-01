@@ -6,11 +6,13 @@ for (i=0;i<7;i++)
 var current_page = 0
 window.onload = function(){
     $($('.left-pages>div')[current_page]).show()
+    // $('#right-page-code').hide()
     $('#right-page-code').show()
+    // $('#right-page-eight').show()
     $.ajax({
         type: 'get',
-        // url: 'http://47.97.205.240:8800/code',
-        url: 'http://localhost:5000/',
+        url: 'http://47.97.205.240:8800/',
+        // url: 'http://localhost:5000/',
         success: function(data){
             user = data.user
         }
@@ -20,7 +22,7 @@ function showImgDiv() {
     $('.img_box').css({
         'display': 'block',
         
-        // 'background': 'url("http://localhost:5000/static/123/0.png") no-repeat center top',
+        // 'background': 'url("http://47.97.205.240:8800/static/' + user + '/5.png") no-repeat center top',
         // 'background-size': 'cover'
     })
     $('.btn-box').css({'top': '6%'})
@@ -43,6 +45,11 @@ $('.next').click(function(){
             showImgDiv()
         else
             hideImgDiv()
+        if (current_page == 6)
+            $('.right-content-bottom-left .bottom-left').css({
+                'background': 'url("http://47.97.205.240:8800/static/' + user + '/5.png") no-repeat center top',
+                'background-size': 'contain'
+            })
         code_in.setValue('')
         if (current_page < 7)
         code = page_codes[current_page].trim()
@@ -98,7 +105,6 @@ function eightShowAlert(btnName) {
             eightAlertButton()
         },
         btn1: function () {
-            console.log(btnName)
             if (btnName == 'adjust'){
                 current_page = 4
                 $('.left-pages>div').hide()

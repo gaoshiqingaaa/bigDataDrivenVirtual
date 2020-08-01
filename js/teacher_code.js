@@ -27,9 +27,9 @@ def get_return(ticker):
 
 rtn_table.head(10)
     `,
-    1: "rtn_table.mean() * 250 #关于代码的注释\n",
-    2: "rtn_table.std() * np.sqrt(250)\n",
-    3: "rtn_table.corr()\n",
+    1: "print(rtn_table.mean() * 250) #关于代码的注释\n",
+    2: "print(rtn_table.std() * np.sqrt(250))\n",
+    3: "print(rtn_table.corr())\n",
     4: `from cvxopt import matrix,solvers
 
 portfolio1 = [0,1,2,4,5] 
@@ -81,12 +81,12 @@ ax1.legend(['portfolio1','portfolio2'], loc = 'best', fontsize = 14)
 P = risk_aversion * matrix(cov_mat.values)
 q = -1 * matrix(exp_rtn.values)
 G = matrix(np.vstack((np.diag(np.ones(len(exp_rtn))),np.diag(-np.ones(len(exp_rtn))))))
-h = matrix(np.array([np.ones(len(exp_rtn)), np.zeros(len(exp_rtn))].reshape(len(exp_rtn)*2,1)))
+h = matrix(np.array([np.ones(len(exp_rtn)),np.zeros(len(exp_rtn))]).reshape(len(exp_rtn)*2,1))
 A = matrix(np.ones(len(exp_rtn)),(1,len(exp_rtn)))
-b = martix([1.0])
+b = matrix([1.0])
 solvers.options['show_progress'] = False
-sol = solvers.qp(P,q,G,h,A,b)
-DataFrame(index=exp_rtn.index, data=np.round(sol['x'],2),columns=['weight'])    
+sol = solvers.qp(P,q, G, h, A, b)
+print(DataFrame(index=exp_rtn.index,data = np.round(sol['x'],2), columns = ['weight']))  # 权重精确到小数点后两位    
     `
     }
 } else if (window.location.href.indexOf('assets') != -1) {
@@ -112,35 +112,34 @@ rtn_table.head(10)
     `,
         1: '',
         2: '',
-        3: 'rtn_table.corr()',
+        3: 'print(rtn_table.corr())',
         4: '',
         5: '#绘出efficient frontier',
         6: `risk_aversion = 3
 P = risk_aversion * matrix(cov_mat.values)
 q = -1 * matrix(exp_rtn.values)
 G = matrix(np.vstack((np.diag(np.ones(len(exp_rtn))),np.diag(-np.ones(len(exp_rtn))))))
-h = matrix(np.array([np.ones(len(exp_rtn)), np.zeros(len(exp_rtn))].reshape(len(exp_rtn)*2,1)))
+h = matrix(np.array([np.ones(len(exp_rtn)),np.zeros(len(exp_rtn))]).reshape(len(exp_rtn)*2,1))
 A = matrix(np.ones(len(exp_rtn)),(1,len(exp_rtn)))
-b = martix([1.0])
+b = matrix([1.0])
 solvers.options['show_progress'] = False
-sol = solvers.qp(P,q,G,h,A,b)
-DataFrame(index=exp_rtn.index, data=np.round(sol['x'],2),columns=['weight'])    
+sol = solvers.qp(P,q, G, h, A, b)
+print(DataFrame(index=exp_rtn.index,data = np.round(sol['x'],2), columns = ['weight']))  # 权重精确到小数点后两位    
     `
     }
 }
-
-
 
 var code_in = CodeMirror.fromTextArea(document.getElementById("code-in"), {
     mode: {
         name: 'python'
     },
+    scrollbarStyle: 'simple',
     lineNumbers: true,
     theme: "idea",	//设置主题
     // keyMap: "sublime",
     smartIndent: true,
     indentUnit: 4,
-    lineWrapping: true,	//代码折叠
+    // lineWrapping: true,	//代码折叠
     foldGutter: true,
     gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
     autofocus: true,
@@ -158,24 +157,26 @@ var code_out = CodeMirror.fromTextArea(document.getElementById("code-out"), {
     mode: {
         name: 'python'
     },
-    // lineNumbers: true,
+    lineNumbers: true,
     theme: "idea",	//设置主题
-    lineWrapping: true,	//代码折叠
+    // lineWrapping: true,	//代码折叠
     foldGutter: true,
     gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
     matchBrackets: true,	//括号匹配
     readOnly: true,        //只读
+    scrollbarStyle: 'simple',
 });
 code_out.setSize('500px','570px'); //宽 高 570
 var tt
 $('.run-code').click(function(){
     $.ajax({
         type: 'POST',
-        // url: 'http://47.97.205.240:8800/code',
-        url: 'http://localhost:5000/code',
+        url: 'http://47.97.205.240:8800/code',
+        // url: 'http://localhost:5000/code',
         data: {
             user: user,
-            step: current_page,
+            // step: current_page,
+            step: 0, //测试用
             code: code_in.getValue().trim() + '\n'
         },
         success: function(data){
@@ -185,13 +186,12 @@ $('.run-code').click(function(){
                 for (i = 0; i < data.files.length; i++) {
                     if (data.files[i] == '/static/' + user + '/5.png') {
                         $('.img_box').css({                            
-                            'background': 'url("http://localhost:5000/static/123/0.png") no-repeat center top',
+                            'background': 'url("http://47.97.205.240:8800/static/' + user + '/5.png") no-repeat center top',
                             'background-size': 'cover'
                         })
                     }
                 }
-            }
-            if (current_page == 3) {
+            }else if (current_page == 3) {
                 layer.open({
                     type: 2,
                     area: ['900px', '570px'], 
@@ -213,6 +213,30 @@ $('.run-code').click(function(){
                             'color': 'white'
                         })
                         $('.layui-layer-btn').css({'padding-right': '46%'})
+                    }
+                });
+            } else if (current_page == 6) {
+                layer.open({
+                    type: 2,
+                    area: ['400px', '250px'], 
+                    title: false,
+                    closeBtn: 1,
+                    shadeClose: true,
+                    skin: '',
+                    content: ['6-run-code.html','no'],
+                    btn: ['知道了'],
+                    success: function(elem) {
+                        $(".layui-layer-setwin .layui-layer-close2").css({
+                            'right': '3px',
+                            'top': '-7px',
+                            'background-position': '30px -32px'
+                        })
+                        $('.layui-layer-setwin a').append('X')
+                        $('.layui-layer-setwin a').css({
+                            'font-size': '27px',
+                            'color': 'white'
+                        })
+                        $('.layui-layer-btn').css({'padding-right': '39%'})
                     }
                 });
             }
