@@ -189,6 +189,29 @@ $('.run-code').click(function(){
                             'background': 'url("http://47.97.205.240:8800/static/' + user + '/5.png") no-repeat center top',
                             'background-size': 'cover'
                         })
+                        layer.open({
+                            type: 2,
+                            area: ['600px', '370px'], 
+                            title: false,
+                            closeBtn: 1,
+                            shadeClose: true,
+                            skin: '',
+                            content: '5-run-code.html',
+                            btn: ['知道了'],
+                            success: function(elem) {
+                                $(".layui-layer-setwin .layui-layer-close2").css({
+                                    'right': '3px',
+                                    'top': '1px',
+                                    'background-position': '30px -32px'
+                                })
+                                $('.layui-layer-setwin a').append('X')
+                                $('.layui-layer-setwin a').css({
+                                    'font-size': '27px',
+                                    'color': 'white'
+                                })
+                                $('.layui-layer-btn').css({'padding-right': '46%'})
+                            }
+                        });
                     }
                 }
             }else if (current_page == 3) {
