@@ -61,5 +61,15 @@
         </div>
     </div>
 </body>
-
+<script src="./lib/layui.js"></script>
+<script src="../js/jquery-2.1.4.js"></script>
+<script src="../lib/layui.all.js"></script>
+<script>
+    $('button:button[id="help"]').click(function () {
+            layer.alert('尊敬的用户：以下问题可协助评估您对投资产品和服务的风险承受能力，请您根据自身情况认真选择。评估结果仅供参考， 不构成投资建议。为了及时了解您的风险承受能力，我们建议您持续做好动态评估。我们承诺对您的所有个人资料保密。')
+        })
+    $('button:button[id="friends"]').click(function () {
+            layer.alert('请先完成风险评估问卷！',{icon:5})
+        })
+</script>
 </html>
