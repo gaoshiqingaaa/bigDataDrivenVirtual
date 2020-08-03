@@ -8,7 +8,7 @@ window.onload = function(){
     $($('.left-pages>div')[current_page]).show()
     $('#right-page-code').show()
     // $('#right-page-code').hide()
-    // $('#right-page-nine').show()
+    // $('#right-page-eight').show()
     $.ajax({
         type: 'get',
         url: 'http://47.97.205.240:8800/',
@@ -26,7 +26,7 @@ function showImgDiv() {
         // 'background-size': 'cover'
     })
     $('.btn-box').css({'top': '6%'})
-    code_out.setSize('500px','170px')
+    code_out.setSize('100%','170px')
 }
 function hideImgDiv() {
     $('.img_box').css({
@@ -34,10 +34,18 @@ function hideImgDiv() {
         'background': ''
     })
     $('.btn-box').css({'top': '1%'})
-    code_out.setSize('500px','570px')
+    code_out.setSize('100%','570px')
 }
+// function showPreBtn() {
+//     $('#pre').show()
+//     $('#next').css({
+//         'position': '',
+//         'left': '0',
+//     })
+// }
 $('.next').click(function(){
     if (current_page < 9) {
+        // showPreBtn()
         code_out.setValue('')
         page_codes[current_page] = code_in.getValue()
         current_page ++
@@ -45,11 +53,10 @@ $('.next').click(function(){
             showImgDiv()
         else
             hideImgDiv()
-        if (current_page == 6)
-            $('.right-content-bottom-left .bottom-left').css({
-                'background': 'url("http://47.97.205.240:8800/static/' + user + '/5.png") no-repeat center top',
-                'background-size': 'contain'
-            })
+        if (current_page == 7){
+            $('.bottom-left img').attr('src', 'http://47.97.205.240:8800/static/' + user + '/5.png')
+            pie1.setOption(pie_option);
+        }
         code_in.setValue('')
         if (current_page < 7)
         code = page_codes[current_page].trim()
@@ -63,6 +70,12 @@ $('.pre').click(function(){
     if (current_page > 0){
         code_out.setValue('')
         current_page --
+        // if (current_page == 0){
+        //     $('#pre').hide()
+        //     $('#next').css({
+        //         'left': '47%',
+        //     })
+        // }
         if (current_page == 5)
             showImgDiv()
         else

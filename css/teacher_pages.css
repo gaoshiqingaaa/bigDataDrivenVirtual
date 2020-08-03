@@ -94,9 +94,9 @@
 .run-code-li {
     position: relative;
     top: 6%;
-    left: 70%;
-    height: 60%;
-    width: 8%;
+    left: 73%;
+    height: 56%;
+    width: 9%;
 }
 
 .run-code {
@@ -115,16 +115,18 @@
 }
 
 .code-input {
-    flex-grow: 1;
+    /* flex-grow: 1; */
+    width: 48%;
     position: relative;
-    left: 3%;
+    left: 1%;
     height: 100%;
 }
 
 .code-output {
-    flex-grow: 1;
+    /* flex-grow: 1; */
+    width: 48%;
     position: relative;
-    /* left: 10%; */
+    left: 3%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -135,7 +137,7 @@
     position: relative;
     top: 5%;
     flex-grow: 12;
-    width: 85%;
+    width: 100%;
     background-color: #fff;
     /* background: url("http://localhost:5000/static/123/0.png") no-repeat center top;
     background-size: cover; */
@@ -146,7 +148,7 @@
     top: 1%;
     flex-grow: 1;
     display: flex;
-    width: 88%;
+    width: 100%;
 }
 
 .bottom-btn {
@@ -159,61 +161,95 @@
 .right-content {
     height: 93%;
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
 }
 
 .right-content-top {
-    flex-grow: 1;
-    width: 100%;
+    /* flex-grow: 1; */
     display: flex;
+    width: 100%;
+    height: 48%;
+    /* display: flex; */
+    overflow: hidden;
 }
 
 .right-content-top-left {
+    position: relative;
     height: 100%;
-    flex-grow: 1;
-    background: url("../img/10-left-top-panel@2x.png") no-repeat center top;
-    background-size: contain;
+    width: 49%;
+    float: left;
+    background-color: #fff;
+    border-radius: 7px;
+    /* background: url("../img/10-left-top-panel@2x.png") no-repeat center top;
+    background-size: contain; */
 }
 
 .top-left {
     position: relative;
-    top: 18%;
+    top: 15%;
     left: 6%;
     width: 88%;
     height: 88%;
-    background: url(../img/1.jpg) no-repeat center top;
-    background-size: contain;
+    /* background: url(../img/1.jpg) no-repeat center top;
+    background-size: contain; */
 }
 
 .right-content-top-right {
+    position: relative;
+    left: 1%;
     height: 100%;
-    flex-grow: 1;
-    background: url("../img/10-right-top-panel@2x.png") no-repeat center top;
-    background-size: contain;
+    width: 49%;
+    background-color: #fff;
+    float: left;
+    border-radius: 7px;
+    /* background: url("../img/10-right-top-panel@2x.png") no-repeat center top;
+    background-size: contain; */
 }
 
 .right-content-bottom {
-    flex-grow: 1;
+    position: relative;
+    top: 2%;
+    /* display: flex; */
     width: 100%;
-    display: flex;
+    height: 48%;
+    border-radius: 7px;
 }
 
 .right-content-bottom-left {
-    height: 100%;
-    flex-grow: 1;
-    background: url("../img/10-left-bottom-panel@2x.png") no-repeat center top;
-    background-size: contain;
+    position: relative;
+    top: 0%;
+    /* left: 0.5%; */
+    height: 101%;
+    width: 49%;
+    float: left;
+    background-color: #fff;
+    border-radius: 7px;
+    /* background: url("../img/10-left-bottom-panel@2x.png") no-repeat center top;
+    background-size: contain; */
+}
+
+.bottom-left {
+    height: 93%;
+    width: 97%;
 }
 
 .right-content-bottom-right {
-    height: 100%;
-    flex-grow: 1;
-    background: url("../img/10-right-bottom-panel@2x.png") no-repeat center top;
-    background-size: contain;
+    position: relative;
+    left: 1%;
+    top: 0%;
+    height: 101%;
+    width: 49%;
+    float: left;
+    border-radius: 7px;
+    background-color: #fff;
+    /* background: url("../img/10-right-bottom-panel@2x.png") no-repeat center top;
+    background-size: contain; */
 }
 
 .right-bottom {
+    position: relative;
+    left: -1.5%;
     width: 100%;
     height: 7%;
 }
@@ -228,7 +264,7 @@
 .right-bottom-btn-div {
     position: relative;
     top: -100%;
-    left: 50%;
+    left: 52%;
     height: 100%;
     width: 50%;
     display: flex;
@@ -253,18 +289,20 @@
 
 .right-content-top-left-nine {
     position: relative;
-    height: 47%;
-    width: 50%;
+    height: 93%;
+    width: 49%;
     float: left;
-    background: url("../img/12-left-top-panle@2x.png") no-repeat center top;
-    background-size: contain;
-}
+    border-radius: 7px;
+    background-color: #fff;
+    /* background: url("../img/12-left-top-panle@2x.png") no-repeat center top;
+    background-size: contain;*/
+} 
 
 .right-content-top-right-nine {
     position: relative;
     left: 1%;
-    height: 45%;
-    width: 44%;
+    height: 93%;
+    width: 49%;
     background-color: #fff;
     float: left;
     border-radius: 7px;
@@ -277,6 +315,7 @@
 .nine {
     position: relative;
     top: -5%;
+    left: 52%;
 }
 
 .advise-btn {
@@ -341,10 +380,38 @@
 
 #right-page-nine .right-content-bottom {
     position: absolute;
-    top: 44%;
-    left: 5%;
-    width: 89%;
+    top: 45%;
+    left: 1%;
+    width: 97%;
     height: 45%;
     background-color: #fff;
     border-radius: 7px;
+}
+
+/* #pre {
+    display: none;
+}*/
+
+#next {
+    position: relative;
+    left: 3%;
+}
+
+#right-page-eight h4 {
+    position: relative;
+    top: 1%;
+    left: 2%;
+    font-size: 18px;
+}
+
+#right-page-nine h4 {
+    position: relative;
+    top: 1%;
+    left: 2%;
+    font-size: 18px;
+}
+
+.bottom-left img {
+    width: 100%;
+    height: 97%;
 }

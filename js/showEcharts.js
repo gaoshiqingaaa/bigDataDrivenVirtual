@@ -1,5 +1,19 @@
 var pie = echarts.init(document.getElementById('pie'));
+var pie1 = echarts.init(document.getElementById('pie1'));
 var line_smooth = echarts.init(document.getElementById('line-smooth'));
+
+var pie_legend_data = [], pie_series_data = []
+function init_pie() {
+    for (key in six_best_weight){
+        console.log(six_best_weight);
+        pie_legend_data.push(key)
+        pie_series_data.push({
+            'value': six_best_weight[key],
+            'name': key
+        })
+    }
+}
+
 var pie_option = {
     tooltip: {
         trigger: 'item',
@@ -8,11 +22,10 @@ var pie_option = {
     legend: {
         orient: 'vertical',
         left: 10,
-        data: ['创业板', '中证500', '标普500']
+        data: pie_legend_data
     },
     series: [
         {
-            name: '访问来源',
             type: 'pie',
             radius: ['50%', '70%'],
             avoidLabelOverlap: false,
@@ -23,18 +36,14 @@ var pie_option = {
             emphasis: {
                 label: {
                     show: true,
-                    fontSize: '30',
+                    fontSize: '15',
                     fontWeight: 'bold'
                 }
             },
             labelLine: {
                 show: false
             },
-            data: [
-                {value: 0.65, name: '创业板'},
-                {value: 0.25, name: '中证500'},
-                {value: 0.13, name: '标普500'},
-            ]
+            data: pie_series_data
         }
     ]
 };
@@ -82,7 +91,7 @@ var line_smooth_option = {
 };
 
     // 使用刚指定的配置项和数据显示图表。
-pie.setOption(pie_option);
+
 line_smooth.setOption(line_smooth_option)
 
    

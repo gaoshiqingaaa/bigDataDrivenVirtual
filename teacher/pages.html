@@ -16,9 +16,7 @@
     <script src="../lib/codemirror-5.56.0/addon/hint/anyword-hint.js"></script>
     <script src="../lib/codemirror-5.56.0/addon/scroll/simplescrollbars.js"></script>
     <script src="../js/jquery-2.1.4.js"></script>
-    <script src="../lib/layui.all.js"></script>
-
-    
+    <script src="../lib/layui.all.js"></script>    
     <title>大数据驱动的智能投顾虚拟仿真实验</title>
 </head>
 <body>
@@ -123,19 +121,103 @@
                         <div class="right-content">
                             <div class="right-content-top">
                                 <div class="right-content-top-left">
-                                    <div class="top-left">
-                                        
+                                    <h4>六类资产的相关性系数：</h4>
+                                    <div class="layui-form">
+                                        <table class="layui-table" lay-size="sm" id="xishu">
+                                          <colgroup>
+                                            <col width="14.28%">
+                                            <col width="14.28%">
+                                            <col width="14.28%">
+                                            <col width="14.28%">
+                                            <col width="14.28%">
+                                            <col width="14.28%">
+                                            <col>
+                                          </colgroup>
+                                          <tbody>
+                                            <tr class="head">
+                                                <th><p></p></th>
+                                                <th><p>沪深300</p></th>
+                                                <th><p>创业扳指</p></th>
+                                                <th><p>标普500</p></th>
+                                                <th><p>企债指数</p></th>
+                                                <th><p>中证500</p></th>
+                                                <th><p>国债指数</p></th>
+                                            </tr> 
+                                            <tr>
+                                                <th><p><b>沪深300</b></p></th>
+                                                <th><p>1</p></th>
+                                                <th><p>0.570628</p></th>
+                                                <th><p>0.063094</p></th>
+                                                <th><p>0.074392</p></th>
+                                                <th><p>0.835496</p></th>
+                                                <th><p>-0.024434</p></th>
+                                            </tr> 
+                                            <tr>
+                                                <th><p><b>创业扳指</b></p></th>
+                                                <th><p>0.570628</p></th>
+                                                <th><p>1</p></th>
+                                                <th><p>0.022396</p></th>
+                                                <th><p>0.118028</p></th>
+                                                <th><p>0.834778</p></th>
+                                                <th><p>-0.046782</p></th>
+                                            </tr> 
+                                            <tr>
+                                                <th><p><b>标普500</b></p></th>
+                                                <th><p>0.063094</p></th>
+                                                <th><p>0.022396</p></th>
+                                                <th><p>1</p></th>
+                                                <th><p>0.03572</p></th>
+                                                <th><p>0.043377</p></th>
+                                                <th><p>0.001724</p></th>
+                                            </tr> 
+                                            <tr>
+                                                <th><p><b>企债指数</b></p></th>
+                                                <th><p>0.074392</p></th>
+                                                <th><p>0.118028</p></th>
+                                                <th><p>0.03572</p></th>
+                                                <th><p>1</p></th>
+                                                <th><p>0.129318</p></th>
+                                                <th><p>0.209755</p></th>
+                                            </tr> 
+                                            <tr>
+                                                <th><p><b>中证500</b></p></th>
+                                                <th><p>0.835496</p></th>
+                                                <th><p>0.834778</p></th>
+                                                <th><p>0.043377</p></th>
+                                                <th><p>0.129318</p></th>
+                                                <th><p>1</p></th>
+                                                <th><p>-0.007354</p></th>
+                                            </tr> 
+                                            <tr>
+                                                <th><p><b>国债指数</b></p></th>
+                                                <th><p>-0.024434</p></th>
+                                                <th><p>-0.046782</p></th>
+                                                <th><p>0.001724</p></th>
+                                                <th><p>0.209755</p></th>
+                                                <th><p>-0.007354</p></th>
+                                                <th><p>1</p></th>
+                                            </tr> 
+                                          </tbody>
+                                        </table>
                                     </div>
                                 </div>
                                 <div class="right-content-top-right">
-                                    <div class="top-right"></div>
+                                    <div class="top-right">
+                                        <h4>本次实验得出的最优为组合：</h4>
+                                    </div>
                                 </div>
                             </div>
                             <div class="right-content-bottom">
                                 <div class="right-content-bottom-left">
-                                    <div class="bottom-left"></div>
+                                    <div class="bottom-left">
+                                        <h4>该组合的Effcient frontier曲线为：</h4>
+                                        <img src="" alt="">
+                                    </div>
                                 </div>
-                                <div class="right-content-bottom-right"></div>
+                                <div class="right-content-bottom-right">
+                                    <h4>根据您的风险承受能力，最优配置权重为：</h4>
+                                    <div id="pie1" style="width: 571px;height:302px;padding: 0;"></div>
+                                </div>
                             </div>
                         </div>
                         <div class="right-bottom">
@@ -151,13 +233,15 @@
                             <div class="right-content-top">
                                 <div class="right-content-top-left-nine"></div>
                                 <div class="right-content-top-right-nine">
-                                    <div id="pie" style="width: 571px;height:302px;padding: 0;"></div>
+                                    <h4>持仓情况</h4>
+                                    <div id="pie" style="width: 571px;height:290px;padding: 0;"></div>
                                     <button class="advise-btn my-btn">调仓建议</button>
                                 </div>
                             </div>
                             <div class="right-content-bottom">
                                 <div class="right-content-bottom-all-nine">
-                                    <div id="line-smooth" style="width: 1065px;height:294px;padding: 0;"></div>
+                                    <h4>收益走势</h4>
+                                    <div id="line-smooth" style="width: 1284px;height:328px;padding: 0;position: relative; top: -15%;left: -6%;"></div>
                                 </div>
                             </div>
                         </div>
