@@ -1,8 +1,8 @@
-.loginbox2{
-    width: 20.970394736842106vw;
-    height: 25.904605263157897vw;
-    right: 20.970394736842106vw;
-    top: 15.213815789473685vw;
+.loginbox2 {
+    width: 21%;
+    height: 53%;
+    right: 21%;
+    top: 26%;
     position: absolute;
     display: flex;
 }
@@ -33,11 +33,12 @@
     left: 0.4111842105263158vw;
     position: absolute;
 }
-.logindiv{
+.logindiv {
     position: absolute;
-    top: 22.86184210526316vw;
+    top: 76%;
     left: 2.2203947368421053vw;
 }
+
 .login{
     background: url(../img/login-btn@2x.png);
     border-radius: 0.6578947368421053vw;

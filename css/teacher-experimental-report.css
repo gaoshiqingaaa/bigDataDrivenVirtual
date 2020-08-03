@@ -15,8 +15,8 @@
 }
 
 .div1{
-    width: 96.62828947368422vw;
-    height: 49.83552631578948vw;
+    width: 96.5%;
+    height: 85.5%;
     background-image: url(../img/15-bg@2x.png);
     background-position: top;
     background-repeat: no-repeat;
@@ -151,6 +151,8 @@
     width: 16.447368421052634vw;
     background-image: url(../img/15-btn-submit@2x.png);
     background-position: center;
+    background-size: 150% 150%;
+    background-repeat: no-repeat;
 }
 .layui-btn2 {
     height: 2.055921052631579vw;
