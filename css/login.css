@@ -1,6 +1,6 @@
 .loginbox2 {
     width: 21%;
-    height: 53%;
+    height: 45%;
     right: 21%;
     top: 26%;
     position: absolute;
@@ -19,6 +19,13 @@
     width: 15.713816vw;
     margin-right: 10px;
 }
+.cnter {
+    margin: auto;
+    width: 100%;
+    height: 40%;
+    position: relative;
+    top: 30%;
+}
 .usernameimg{
     position: absolute;
     width: 3.7006578947368425vw;
@@ -35,7 +42,7 @@
 }
 .logindiv {
     position: absolute;
-    top: 76%;
+    top: 150%;
     left: 2.2203947368421053vw;
 }
 

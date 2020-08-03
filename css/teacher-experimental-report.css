@@ -14,13 +14,13 @@
     color: #6969EF;
 }
 
-.div1{
+.div1 {
     width: 96.5%;
     height: 85.5%;
     background-image: url(../img/15-bg@2x.png);
     background-position: top;
     background-repeat: no-repeat;
-    background-size: 100vw 58.38815789473685vw;
+    background-size: 100% 100%;
     position: absolute;
     top: 6.8256578947368425vw;
     left: 1.6447368421052633vw;
@@ -41,9 +41,9 @@
 
 .div11{
     position: absolute;
-    width: 57.56578947368421vw;
-    height: 4.934210526315789vw;
-    top: 14.80263157894737vw;
+    width: 71%;
+    height: 16%;
+    top: 31%;
     left: 8.223684210526317vw;
 }
 .div12{
