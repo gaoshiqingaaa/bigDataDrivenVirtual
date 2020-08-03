@@ -9,11 +9,10 @@
     <link rel="stylesheet" href="../css/teacher-experimental-report.css" />
     <link rel="stylesheet" href="../css/public.css" />
 </head>
-<body class="box2">
+<body>
+<div class="box2">
     <div id="nav">
         <a href="../index.html"><button type="button" class="layui-btn2  layui-btn-primary" id="but1"><p class="navfont">返回</p></button></a>
-        <button type="button" class="layui-icon layui-icon-friends" id="friends"></button>
-        <button type="button" class="layui-icon layui-icon-help" id="help"></button>
     </div>
     <div class="div1">
         <a href="#111"><div class="div1imgdownload"></div></a>
@@ -56,10 +55,18 @@
             </div>
 
             <div class="div1btn">
-                <button type="button" class="layui-btn1 layui-btn-primary"><p class="font">提交</p></button>
+                <button type="button" class="layui-btn1 layui-btn-primary" id="tijiao"><p class="font">提交</p></button>
             </div>
         </div>
     </div>
+</div>
 </body>
-
+<script src="./lib/layui.js"></script>
+<script src="../js/jquery-2.1.4.js"></script>
+<script src="../lib/layui.all.js"></script>
+<script>
+    $('button:button[id="tijiao"]').click(function(){ 
+        layer.alert('您已成功提交')
+    });
+</script>
 </html>

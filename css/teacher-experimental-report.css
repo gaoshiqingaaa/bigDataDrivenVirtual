@@ -4,17 +4,6 @@
     margin-top: 2.4671052631578947vw;
     
 }
-#help,
-#friends {
-    width: 2.055921052631579vw;
-    height: 2.055921052631579vw;
-    border: none;
-    color: #6969EF;
-    background-color: white;
-    border-radius: 1.2335526315789473vw;
-    float: right;
-    margin-right: 1.973684210526316vw;
-}
 
 #but1 {
     float: right;
@@ -25,13 +14,13 @@
     color: #6969EF;
 }
 
-.div1{
-    width: 96.62828947368422vw;
-    height: 49.83552631578948vw;
+.div1 {
+    width: 96.5%;
+    height: 85.5%;
     background-image: url(../img/15-bg@2x.png);
     background-position: top;
     background-repeat: no-repeat;
-    background-size: 100vw 58.38815789473685vw;
+    background-size: 100% 100%;
     position: absolute;
     top: 6.8256578947368425vw;
     left: 1.6447368421052633vw;
@@ -52,9 +41,9 @@
 
 .div11{
     position: absolute;
-    width: 57.56578947368421vw;
-    height: 4.934210526315789vw;
-    top: 14.80263157894737vw;
+    width: 71%;
+    height: 16%;
+    top: 31%;
     left: 8.223684210526317vw;
 }
 .div12{
@@ -162,6 +151,8 @@
     width: 16.447368421052634vw;
     background-image: url(../img/15-btn-submit@2x.png);
     background-position: center;
+    background-size: 150% 150%;
+    background-repeat: no-repeat;
 }
 .layui-btn2 {
     height: 2.055921052631579vw;

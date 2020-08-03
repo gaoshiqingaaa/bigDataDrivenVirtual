@@ -1,8 +1,8 @@
 .Button{
     position: absolute;
-    margin-top: 3.7006578947368425vw;
-    width: 19.901315789473685vw;
-    height: 17.023026315789476vw;
+    margin-top: 4%;
+    width: 30%;
+    height: 15vw;
     border-radius: 1.398026315789474vw;
     border: 0px;
 }
@@ -83,7 +83,8 @@
     margin-left: 49.3421052631579vw;
 }
 .divButton{
-    margin-top: 23.667763vw;
+    top: 45%;
+    position: relative;
     width: 62.17105263157895vw;
     height: 24.67105263157895vw;
     margin-left: 15.255263vw;

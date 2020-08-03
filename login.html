@@ -16,7 +16,9 @@
             <p style="margin-top: 1.480263157894737vw; float: left;">用户信息</p>
             <p style="margin-top: 1.6447368421052633vw; float: right; font-size: 12px;"><a href="./index.html" style="color: #A9A9A9;">跳过</a></p>
             
-            <div class="layui-input-inline shadow" style="position: relative; margin-top: 4.700658vw; left: 2.7138157894736845vw;">
+            <div class="cnter">
+            <form class="layui-form" action="">
+            <div class="layui-input-inline shadow" style="position: relative; margin-left: -56px;">
                 <div class="usernameimg"><img src="./img/name@2x.png" class="imgsize"><div class="Verticalline"></div></div>
                 <input type="text" name="name" required lay-verify="required" placeholder="姓名" autocomplete="off" class="layui-input input1">
             </div>
@@ -37,16 +39,29 @@
             </div>
 
             <div class="logindiv">
-                <a href="#"><button type="button" class="layui-btn layui-btn-xs layui-btn-normal login">登录</button></a>
+                <button type="submit" lay-submit="" lay-verify="login" lay-filter="formDemo" class="layui-btn layui-btn-xs layui-btn-normal login">登录</button>
             </div>
-        </div>
+          </form>
+            </div>
+          </div>
     </div>
 </div>
 
 </body>
 <script src="js/jquery-2.1.4.js"></script>
 <script src="./lib/layui.all.js"></script>
+<script src="./lib/layui.js"></script>
 <script>
+layui.use('form', function(){
+  var form = layui.form;
+  
+  //监听提交
+  form.on('submit(formDemo)', function(data){
+    console.log(JSON.stringify(data.field))
+    window.location.href = "./index.html"
+    return false;
+  });
+});
 
 </script>
 </html>
