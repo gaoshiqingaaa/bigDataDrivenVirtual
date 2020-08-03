@@ -45,6 +45,8 @@
     position: absolute;
     width: 16.85855263157895vw; 
     height: 2.055921052631579vw;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .Verticalline{
     position: absolute;
