@@ -299,40 +299,35 @@ function showWenhaoAlert(num) {
         'font-size': '27px',
         'color': 'white'
     }
-    switch (num) {
-        case 0:
-            area = ['900px', '570px']
-            content = ['1-wenhao.html']
-            close_btn_css = {
-                'right': '3px',
-                'top': '1px',
-                'background-position': '30px -32px'
-            }
-            confirm_btn_css = {'padding-right': '46%'}
-            break
-        case 1:
-            area = ['700px', '470px']
-            content = ['2-user.html']
-            close_btn_css = {
-                'right': '3px',
-                'top': '1px',
-                'background-position': '30px -32px'
-            }
-            confirm_btn_css = {'padding-right': '46%'}
-            break
-        case 2:
-            break
-        case 3:
-            break
-        case 4:
-            break
-        case 5:
-            break
-        case 6:
-            break
-        case 7:
-            break
+    // switch (num) {
+    //     case 0:
+    //         area = ['900px', '570px']
+    //         content = ['1-wenhao.html']
+    //         close_btn_css = {
+    //             'right': '3px',
+    //             'top': '1px',
+    //             'background-position': '30px -32px'
+    //         }
+    //         confirm_btn_css = {'padding-right': '46%'}
+    //         break
+    //     case 1:
+    //         area = ['700px', '470px']
+    //         content = ['2-user.html']
+    //         close_btn_css = {
+    //             'right': '3px',
+    //             'top': '1px',
+    //             'background-position': '30px -32px'
+    //         }
+    //         confirm_btn_css = {'padding-right': '46%'}
+    // }
+    area = ['700px', '470px']
+    content = ['2-user.html']
+    close_btn_css = {
+        'right': '3px',
+        'top': '1px',
+        'background-position': '30px -32px'
     }
+    confirm_btn_css = {'padding-right': '46%'}
     layer.open({
         type: 2,
         area: area, 
@@ -381,24 +376,6 @@ function showUserAlert(num) {
             window.location.href = 'risk.html'
         }
     });
-    // switch (num) {
-    //     case 0:
-    //         break
-    //     case 1:
-    //         break
-    //     case 2:
-    //         break
-    //     case 3:
-    //         break
-    //     case 4:
-    //         break
-    //     case 5:
-    //         break
-    //     case 6:
-    //         break
-    //     case 7:
-    //         break
-    // }
 }
 $('.wenhao').click(function(){
     showWenhaoAlert(current_page)
