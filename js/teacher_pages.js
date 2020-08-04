@@ -355,24 +355,50 @@ function showUserAlert(num) {
         'font-size': '27px',
         'color': 'white'
     }
-    switch (num) {
-        case 0:
-            break
-        case 1:
-            break
-        case 2:
-            break
-        case 3:
-            break
-        case 4:
-            break
-        case 5:
-            break
-        case 6:
-            break
-        case 7:
-            break
-    }
+    layer.open({
+        type: 2,
+        area: ['400px', '250px'], 
+        title: false,
+        closeBtn: 1,
+        shadeClose: true,
+        skin: '',
+        content: ['risk_result_alert.html', 'no'],
+        btn: ['确认', '重新测试'],
+        success: function(elem) {
+            $(".layui-layer-setwin .layui-layer-close2").css({
+                'right': '-13px',
+                'top': '-11px',
+                'background-position': '30px -32px'
+            })
+            $('.layui-layer-setwin a').append('X')
+            $('.layui-layer-setwin a').css({
+                'font-size': '27px',
+                'color': 'white'
+            })
+            $('.layui-layer-btn').css({'padding-right': '116px'})
+        },
+        btn2: function () {
+            window.location.href = 'risk.html'
+        }
+    });
+    // switch (num) {
+    //     case 0:
+    //         break
+    //     case 1:
+    //         break
+    //     case 2:
+    //         break
+    //     case 3:
+    //         break
+    //     case 4:
+    //         break
+    //     case 5:
+    //         break
+    //     case 6:
+    //         break
+    //     case 7:
+    //         break
+    // }
 }
 $('.wenhao').click(function(){
     showWenhaoAlert(current_page)
