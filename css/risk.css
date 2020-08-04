@@ -99,10 +99,24 @@ body {
     text-align: center;
 }
 
-#tu img{
+#tu #leixing{
     width: 70%;
     margin-bottom: 15%;
+    background-image: url(../img/62-card@2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: 100% 100%;
 }
+
+#leixing{
+    font-size: 40px;
+    color: white;
+    margin-left: 15%;
+    line-height: 420%;
+}
+
+
 
 #bt {
     margin-top: 4%;
