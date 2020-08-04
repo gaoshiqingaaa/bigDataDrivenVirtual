@@ -43,28 +43,28 @@
     position: absolute;
     width: 71%;
     height: 5%;
-    top: 20%;
+    top: 25%;
     left: 8.223684210526317vw;
 }
 .div12{
     position: absolute;
     width: 71%;
     height: 5%;
-    top: 32%;
+    top: 37%;
     left: 8.223684210526317vw;
 }
 .div13{
     position: absolute;
     width: 71%;
     height: 5%;
-    top: 44%;
+    top: 49%;
     left: 8.223684210526317vw;
 }
 .div14{
     position: absolute;
     width: 71%;
     height: 5%;
-    top: 56%;
+    top: 61%;
     left: 8.223684210526317vw;
 }
 
@@ -142,7 +142,7 @@
 
 .div1btn{
     position: absolute;
-    top: 130px;
+    top: 130%;
     left: 31.250000000000004vw;
 }
 .layui-btn1 {
