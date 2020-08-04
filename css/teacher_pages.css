@@ -132,6 +132,13 @@
     flex-direction: column;
 }
 
+.result {
+    width: 100%;
+    height: 570px;
+    background-color: #fff;
+    overflow-x:scroll;
+}
+
 .img_box {
     display: none;
     position: relative;
@@ -181,6 +188,7 @@
     float: left;
     background-color: #fff;
     border-radius: 7px;
+    overflow-x: scroll;
     /* background: url("../img/10-left-top-panel@2x.png") no-repeat center top;
     background-size: contain; */
 }

@@ -18,6 +18,9 @@ window.onload = function(){
         }
     })
 }
+function toChildValue() {
+    return xishu_html
+}
 function showImgDiv() {
     $('.img_box').css({
         'display': 'block',
@@ -26,7 +29,11 @@ function showImgDiv() {
         // 'background-size': 'cover'
     })
     $('.btn-box').css({'top': '6%'})
-    code_out.setSize('100%','170px')
+    $('.result').css({
+        'width': '100%',
+        'height': '170px'
+    })
+    // code_out.setSize('100%','170px')
 }
 function hideImgDiv() {
     $('.img_box').css({
@@ -34,7 +41,11 @@ function hideImgDiv() {
         'background': ''
     })
     $('.btn-box').css({'top': '1%'})
-    code_out.setSize('100%','570px')
+    $('.result').css({
+        'width': '100%',
+        'height': '570px'
+    })
+    // code_out.setSize('100%','570px')
 }
 // function showPreBtn() {
 //     $('#pre').show()
@@ -46,7 +57,7 @@ function hideImgDiv() {
 $('.next').click(function(){
     if (current_page < 9) {
         // showPreBtn()
-        code_out.setValue('')
+        $('#result-tbody').html('')
         page_codes[current_page] = code_in.getValue()
         current_page ++
         if (current_page == 5)
@@ -56,6 +67,7 @@ $('.next').click(function(){
         if (current_page == 7){
             $('.bottom-left img').attr('src', 'http://47.97.205.240:8800/static/' + user + '/5.png')
             pie1.setOption(pie_option);
+            $('#page-eight-tbody').html(xishu_html)
         }
         code_in.setValue('')
         if (current_page < 7)
@@ -68,14 +80,8 @@ $('.next').click(function(){
 })
 $('.pre').click(function(){
     if (current_page > 0){
-        code_out.setValue('')
+        $('#result-tbody').html('')
         current_page --
-        // if (current_page == 0){
-        //     $('#pre').hide()
-        //     $('#next').css({
-        //         'left': '47%',
-        //     })
-        // }
         if (current_page == 5)
             showImgDiv()
         else

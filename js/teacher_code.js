@@ -153,21 +153,22 @@ code_in.setOption('value', codes[0])
 //     code_in.showHint()
 // })
 
-var code_out = CodeMirror.fromTextArea(document.getElementById("code-out"), {
-    mode: {
-        name: 'python'
-    },
-    lineNumbers: true,
-    theme: "idea",	//设置主题
-    // lineWrapping: true,	//代码折叠
-    foldGutter: true,
-    gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
-    matchBrackets: true,	//括号匹配
-    readOnly: true,        //只读
-    scrollbarStyle: 'simple',
-});
-code_out.setSize('100%','570px'); //宽 高 570
+// var code_out = CodeMirror.fromTextArea(document.getElementById("code-out"), {
+//     mode: {
+//         name: 'python'
+//     },
+//     lineNumbers: true,
+//     theme: "idea",	//设置主题
+//     // lineWrapping: true,	//代码折叠
+//     foldGutter: true,
+//     gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+//     matchBrackets: true,	//括号匹配
+//     readOnly: true,        //只读
+//     scrollbarStyle: 'simple',
+// });
+// code_out.setSize('100%','570px'); //宽 高 570
 var tt
+var xishu_html
 var six_best_weight = {}
 $('.run-code').click(function(){
     $.ajax({
@@ -182,7 +183,24 @@ $('.run-code').click(function(){
         },
         success: function(data){
             tt = data
-            code_out.setValue(data.result)
+            result = data.result
+            html = ''
+            for (i = 0; i < result.length; i++){
+                if (result[i][0].trim() != ''){
+                    html += '<tr>'
+                    if (i==0 && (current_page == 3 || current_page == 6)){
+                        html += '<td></td>'
+                    }
+                    for (j = 0; j <result[i].length; j++){
+                        html += '<td>' + result[i][j] + '</td>'
+                    }
+                    html += '</tr>'
+                }
+            }
+            if (current_page == 3)
+                xishu_html = html
+            html += '<tr><td>运行完成！</td></tr>'
+            $('#result-tbody').html(html)
             if (current_page == 5) {
                 for (i = 0; i < data.files.length; i++) {
                     if (data.files[i] == '/static/' + user + '/5.png') {
@@ -241,12 +259,15 @@ $('.run-code').click(function(){
                     }
                 });
             } else if (current_page == 6) {
-                result = data.result.split('\n')
-                for (i=1;i<7;i++){
-                    temp = result[i].split(' ')
-                    if (temp[temp.length-1] != 0)
-                        six_best_weight[temp[0]] = temp[temp.length-1]
+                for (i=1;i<result.length-2;i++){
+                    if (result[i][1] != 0)
+                        six_best_weight[result[i][0]] = result[i][1]
                 }
+                // for (i=1;i<7;i++){
+                //     temp = result[i].split(' ')
+                //     if (temp[temp.length-1] != 0)
+                //         six_best_weight[temp[0]] = temp[temp.length-1]
+                // }
                 init_pie()
                 pie.setOption(pie_option);
                 layer.open({
