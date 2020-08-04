@@ -1,7 +1,10 @@
 var initValue = code_in.getValue()
 var page_codes = {}
 var user
-for (i=0;i<7;i++)
+var run_code_clicked = []
+for (i = 0; i < 7; i++)
+    run_code_clicked.push(false)
+for (i = 0; i < 7; i++)
     page_codes[i] = ''
 var current_page = 0
 window.onload = function(){
@@ -56,6 +59,12 @@ function hideImgDiv() {
 // }
 $('.next').click(function(){
     if (current_page < 9) {
+        if (current_page < 7) {
+            if (!run_code_clicked[current_page]) {
+                alert('亲，先运行这一步哦~')
+                return
+            }
+        }
         // showPreBtn()
         $('#result-tbody').html('')
         page_codes[current_page] = code_in.getValue()

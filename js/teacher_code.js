@@ -171,6 +171,7 @@ var tt
 var xishu_html
 var six_best_weight = {}
 $('.run-code').click(function(){
+    run_code_clicked[current_page] = true
     $.ajax({
         type: 'POST',
         url: 'http://47.97.205.240:8800/code',
