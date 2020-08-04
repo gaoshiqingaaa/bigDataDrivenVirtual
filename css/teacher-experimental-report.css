@@ -42,29 +42,29 @@
 .div11{
     position: absolute;
     width: 71%;
-    height: 16%;
-    top: 31%;
+    height: 5%;
+    top: 20%;
     left: 8.223684210526317vw;
 }
 .div12{
     position: absolute;
-    width: 57.56578947368421vw;
-    height: 4.934210526315789vw;
-    top: 21.79276315789474vw;
+    width: 71%;
+    height: 5%;
+    top: 32%;
     left: 8.223684210526317vw;
 }
 .div13{
     position: absolute;
-    width: 57.56578947368421vw;
-    height: 4.934210526315789vw;
-    top: 28.782894736842106vw;
+    width: 71%;
+    height: 5%;
+    top: 44%;
     left: 8.223684210526317vw;
 }
 .div14{
     position: absolute;
-    width: 57.56578947368421vw;
-    height: 4.934210526315789vw;
-    top: 35.77302631578948vw;
+    width: 71%;
+    height: 5%;
+    top: 56%;
     left: 8.223684210526317vw;
 }
 
@@ -142,7 +142,7 @@
 
 .div1btn{
     position: absolute;
-    top: 10.279605263157896vw;
+    top: 130px;
     left: 31.250000000000004vw;
 }
 .layui-btn1 {
