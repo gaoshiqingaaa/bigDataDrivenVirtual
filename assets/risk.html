@@ -15,7 +15,7 @@
         <button type="button" class="layui-icon layui-icon-help" id="help"></button>
     </div>
     <br>
-    <div class="layui-card" style="display: block;">
+    <!-- <div class="layui-card" style="display: block;">
         <div class="layui-card-header">
             <button type="button" id="n">说明</button>
         </div>
@@ -24,8 +24,8 @@
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;以下问题可协助评估您对投资产品和服务的风险承受能力，请您根据自身情况认真选择。评估结果仅供参考， 不构成投资建议。为了及时了解您的风险承受能力，我们建议您持续做好动态评估。我们承诺对您的所有个人资料保密。</p>
             <button type="button" id="start">确定</button>
         </div>
-    </div>
-    <div id="mainWin" style="display: none;">
+    </div> -->
+    <div id="mainWin" style="display: block;">
         <div id="mainWin-nav">
                 <ol class="steps">
                         <li class="step-active">
@@ -460,12 +460,12 @@
         var index = 0;
         var cont = document.getElementsByClassName("content");
         var jd = document.getElementsByTagName('li')
-        $('button:button[id="start"]').click(function(){
-            $('.layui-card').hide();
-            $('#mainWin').show();
-            // document.getElementsByClassName('layui-card')[0].style.display = 'none';
-            // document.getElementById('mainWin').style.display = 'block';
-        })
+        // $('button:button[id="start"]').click(function(){
+        //     $('.layui-card').hide();
+        //     $('#mainWin').show();
+        //     // document.getElementsByClassName('layui-card')[0].style.display = 'none';
+        //     // document.getElementById('mainWin').style.display = 'block';
+        // })
         
         for (var j = 1; j < 11; j++){
             var tt = ('t'+j);
