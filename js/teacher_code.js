@@ -25,7 +25,7 @@ def get_return(ticker):
 
 # code end
 
-rtn_table.head(10)
+print(rtn_table.head(10))
     `,
     1: "print(rtn_table.mean() * 250) #关于代码的注释\n",
     2: "print(rtn_table.std() * np.sqrt(250))\n",
@@ -108,7 +108,7 @@ def get_return(ticker):
 
 # code end
 
-rtn_table.head(10)
+print(rtn_table.head(10))
     `,
         1: '',
         2: '',
@@ -147,7 +147,7 @@ var code_in = CodeMirror.fromTextArea(document.getElementById("code-in"), {
     autoCloseBrackedt: true,
     styleActiveLine: true
 });
-code_in.setSize('500px','570px'); //宽 高
+code_in.setSize('100%','570px'); //宽 高
 code_in.setOption('value', codes[0])
 // code_in.on('keypress', function() {
 //     code_in.showHint()
@@ -166,8 +166,9 @@ var code_out = CodeMirror.fromTextArea(document.getElementById("code-out"), {
     readOnly: true,        //只读
     scrollbarStyle: 'simple',
 });
-code_out.setSize('500px','570px'); //宽 高 570
+code_out.setSize('100%','570px'); //宽 高 570
 var tt
+var six_best_weight = {}
 $('.run-code').click(function(){
     $.ajax({
         type: 'POST',
@@ -175,8 +176,8 @@ $('.run-code').click(function(){
         // url: 'http://localhost:5000/code',
         data: {
             user: user,
-            // step: current_page,
-            step: 0, //测试用
+            step: current_page,
+            // step: 0, //测试用
             code: code_in.getValue().trim() + '\n'
         },
         success: function(data){
@@ -215,6 +216,7 @@ $('.run-code').click(function(){
                     }
                 }
             }else if (current_page == 3) {
+                tt = data.result
                 layer.open({
                     type: 2,
                     area: ['900px', '570px'], 
@@ -239,6 +241,14 @@ $('.run-code').click(function(){
                     }
                 });
             } else if (current_page == 6) {
+                result = data.result.split('\n')
+                for (i=1;i<7;i++){
+                    temp = result[i].split(' ')
+                    if (temp[temp.length-1] != 0)
+                        six_best_weight[temp[0]] = temp[temp.length-1]
+                }
+                init_pie()
+                pie.setOption(pie_option);
                 layer.open({
                     type: 2,
                     area: ['400px', '250px'], 

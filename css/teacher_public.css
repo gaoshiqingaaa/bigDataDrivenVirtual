@@ -7,7 +7,7 @@
     background-color: rgb(62,159,247);
     border: 0;
     border-radius: 8px;
-    margin-left: 3%;
+    /* margin-left: 3%; */
     margin-right: 3%;
 }
 
@@ -16,7 +16,7 @@ html, body {
     width: 100%;
     background: url("../img/3-bg@2x.png") no-repeat center top;
     background-size: cover;
-    min-width: 100%;
+    min-width: 1500px;
 }
 
 .layui-container {
