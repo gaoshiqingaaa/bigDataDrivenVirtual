@@ -2,18 +2,11 @@
 <body>
     <div class="content">
         <div class="top"></div>
-        <div class="text">
-            <div class="text-div">
-                <ul>
-                    <li><p>组合一所包含的标的较少，相关性也较高，所以
-                        efficient frontier基本为一条直线，分散风险作用不明显。</p></li>
-                    <li><p>组合二引入了和其他资产相关性都不高的标普500，
-                        使得efficient frontier得到了很大程度的优化。</p></li>
-                    <li><p>由此也可以知晓，当加入某个标的之后能够使得
-                        efficient frontier得到改进的话，那么加入该资
-                        产到组合中是非常有必要的。</p></li>
-                </ul>
-            </div>
+        <div class="bottom">
+           <h2>请对该组曲线进行分析</h2>
+           <textarea name="" id="" cols="30" rows="10"></textarea>
+           <h2>最优组合为</h2>
+           <textarea name="" id="" cols="30" rows="10"></textarea>
         </div>
     </div>
 </body>
@@ -35,33 +28,21 @@
     }
     .top {
         position: relative;
-        flex-grow: 1;
         width: 100%;
+        height: 15%;
         background: url("../img/9-bg@2x.png") no-repeat center top;
         background-size: cover;
         background-attachment:fixed
     }
-    .text {
-        position: relative;
-        flex-grow: 1;
+    .bottom {
         width: 100%;
+        height: 85%;
+        overflow-y: scroll;
     }
-    .text-div {
-        position: relative;
-        top: 11%;
-        left: 10%;
-        width: 80%;
-    }
-    .text-div p {
-        margin-bottom: 3%;
-        line-height: 1.5em;
-        font-size: 15px;
-    }
-    .head p {
-        font-weight: bold;
-    }
-    ul li {
-        list-style: disc
+    textarea {
+        width: 97%;
+        height: 36%;
+        font-size: 20px;
     }
     /* 定义滚动条样式 */
 ::-webkit-scrollbar {

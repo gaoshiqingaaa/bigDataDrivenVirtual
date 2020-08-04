@@ -231,6 +231,7 @@ $('.run-code').click(function(){
                                 $('.layui-layer-btn').css({'padding-right': '46%'})
                             }
                         });
+                        break
                     }
                 }
             }else if (current_page == 3) {
