@@ -31,70 +31,70 @@
                         <li class="step-active">
                             <div class="step-line"></div>
                             <div class="step-content">
-                                <span class="step-num">1</span>
+                                <span class="step-num"></span>
             
                             </div>
                         </li>
                         <li >
                             <div class="step-line"></div>
                             <div class="step-content">
-                                <span class="step-num">2</span>
+                                <span class="step-num"></span>
             
                             </div>
                         </li>
                         <li >
                             <div class="step-line"></div>
                             <div class="step-content">
-                                <span class="step-num">3</span>
+                                <span class="step-num"></span>
             
                             </div>
                         </li>
                         <li >
                             <div class="step-line"></div>
                             <div class="step-content">
-                                <span class="step-num">4</span>
+                                <span class="step-num"></span>
             
                             </div>
                         </li>
                         <li >
                             <div class="step-line"></div>
                             <div class="step-content">
-                                <span class="step-num">5</span>
+                                <span class="step-num"></span>
             
                             </div>
                         </li>
                         <li >
                             <div class="step-line"></div>
                             <div class="step-content">
-                                <span class="step-num">6</span>
+                                <span class="step-num"></span>
             
                             </div>
                         </li>
                         <li>
                             <div class="step-line"></div>
                             <div class="step-content">
-                                <span class="step-num">7</span>
+                                <span class="step-num"></span>
             
                             </div>
                         </li>
                         <li>
                             <div class="step-line"></div>
                             <div class="step-content">
-                                <span class="step-num">8</span>
+                                <span class="step-num"></span>
             
                             </div>
                         </li>
                         <li>
                             <div class="step-line"></div>
                             <div class="step-content">
-                                <span class="step-num">9</span>
+                                <span class="step-num"></span>
             
                             </div>
                         </li>
                         <li class="step-end">
-                            <div class="step-line"></div>
+                            <!-- <div class="step-line"></div> -->
                             <div class="step-content">
-                                <span class="step-num">10</span>
+                                <span class="step-num"></span>
             
                             </div>
                         </li>
@@ -502,7 +502,8 @@
                 }
             }
         };
-        var num = 0
+        var num = 0;
+        var Grades = '';
         $('button:button[id="tijiao"]').click(function(){ 
             for (var i = 1; i < 11; i++){
                 var t = ('t'+i);
@@ -686,6 +687,7 @@
                 // document.getElementById('content').style.display = 'block';
                 // document.getElementById('jiji').style.display = 'block';
                 layer.alert('您的得分是：'+num+'积极型！');
+                Grades = '积极型！';
             }else if(num >= 65){
                 var cont = document.getElementsByClassName("content");
                 for (var i = 0; i < cont.length; i++){
@@ -697,6 +699,7 @@
                 // document.getElementById('content').style.display = 'block';
                 // document.getElementById('xiangjiji').style.display = 'block';
                 layer.alert('您的得分是：'+num+'相对积极型！');
+                Grades = '相对积极型！';
             }else if(num >= 31){
                 var cont = document.getElementsByClassName("content");
                 for (var i = 0; i < cont.length; i++){
@@ -708,6 +711,7 @@
                 // document.getElementById('content').style.display = 'block';
                 // document.getElementById('wenjian').style.display = 'block';
                 layer.alert('您的得分是：'+num+'稳健型！');
+                Grades = '稳健型！';
             }else if(num >= 21){
                 var cont = document.getElementsByClassName("content");
                 for (var i = 0; i < cont.length; i++){
@@ -719,6 +723,7 @@
                 // document.getElementById('content').style.display = 'block';
                 // document.getElementById('xiangbaoshou').style.display = 'block';
                 layer.alert('您的得分是：'+num+'相对保守型！');
+                Grades = '相对保守型！';
             }else if(num >= 7){
                 var cont = document.getElementsByClassName("content");
                 for (var i = 0; i < cont.length; i++){
@@ -730,8 +735,9 @@
                 // document.getElementById('content').style.display = 'block';
                 // document.getElementById('baoshou').style.display = 'block';
                 layer.alert('您的得分是：'+num+'保守型！');
+                Grades = '保守型！';
             };
-            
+            localStorage.setItem("Grades", Grades);
             num = 0
         })
         
