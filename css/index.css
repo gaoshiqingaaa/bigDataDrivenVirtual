@@ -3,49 +3,49 @@
     margin-top: 4%;
     width: 30%;
     height: 15vw;
-    border-radius: 1.398026315789474vw;
+    border-radius: 1.3vw;
     border: 0px;
 }
 .popButton{
     position: absolute;
-    margin-top: 3.2894736842105265vw;
-    width: 19.901315789473685vw;
-    height: 13.404605263157896vw;
-    border-radius: 1.398026315789474vw;
+    margin-top: 3.2vw;
+    width: 19.9vw;
+    height: 13.4vw;
+    border-radius: 1.4vw;
     border: 0vw;
 }
 .Buttonbackground1{
     background-image: url(../img/2-btn-study@2x.png);
     background-position: top;
-    background-size: 23.519736842105264vw;
+    background-size: 23.5vw;
     background-repeat: no-repeat;
     
 }
 .Buttonbackground2{
     background-image: url(../img/2-btn-begin@2x.png);
     background-position: top;
-    background-size: 23.519736842105264vw;
+    background-size: 23.5vw;
     background-repeat: no-repeat;
     
 }
 .Buttonbackground3{
     background-image: url(../img/2-btn-result@2x.png);
     background-position: top;
-    background-size: 23.519736842105264vw;
+    background-size: 23.5vw;
     background-repeat: no-repeat;
     
 }
 .Buttonbackground4{
     background-image: url(../img/4-btn-study@2x.png);
     background-position: top;
-    background-size: 23.519736842105264vw;
+    background-size: 23.5vw;
     background-repeat: no-repeat;
     
 }
 .Buttonbackground5{
     background-image: url(../img/4-btn-exam@2x.png);
     background-position: top;
-    background-size: 23.519736842105264vw;
+    background-size: 23.5vw;
     background-repeat: no-repeat;
     
 }
@@ -55,51 +55,51 @@
 }
 .popbuttonimagelocation1{
     position: relative;
-    width: 8.305921052631579vw;
-    height: 8.305921052631579vw;
-    top: -0.32894736842105265vw;
+    width: 8.3vw;
+    height: 8.3vw;
+    top: -0.32vw;
     margin: 0 auto;
 }
 .buttonimagelocation1{
     position: relative;
-    width: 8.305921052631579vw;
-    height: 8.305921052631579vw;
-    top: -1.1513157894736843vw;
+    width: 8.3vw;
+    height: 8.3vw;
+    top: -1.1vw;
     margin: 0 auto;
 }
 .buttonimagelocation2{
     border: none;
-    top: 0.16447368421052633vw;
+    top: 0.16vw;
     position: relative;
-    width: 4.523026315789474vw;
+    width: 4.5vw;
 }
 .divButton1{
     margin-left: 0vw;
 }
 .divButton2{
-    margin-left: 24.67105263157895vw;
+    margin-left: 24.67vw;
 }
 .divButton3{
-    margin-left: 49.3421052631579vw;
+    margin-left: 49.3vw;
 }
 .divButton{
     top: 45%;
     position: relative;
-    width: 62.17105263157895vw;
-    height: 24.67105263157895vw;
-    margin-left: 15.255263vw;
+    width: 62.17vw;
+    height: 24.67vw;
+    margin-left: 15.25vw;
 }
 body .demo-class{
     background-image: url(../img/4-bg@2x.png) ;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 65.78947368421053vw;
-    border-radius: 1.6447368421052633vw;
+    background-size: 65.79vw;
+    border-radius: 1.6vw;
 }
 body .demo-btn .layui-layer-close{
-    top: -0.08223684210526316vw;
-    right: -0.2467105263157895vw;
+    top: -0.08vw;
+    right: -0.24vw;
     background-image: url(../img/9-btn-exit@2x.png);
     background-position: center;
-    background-size: 1.2335526315789473vw 1.2335526315789473vw;
+    background-size: 1.23vw 1.23vw;
 }
