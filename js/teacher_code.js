@@ -147,7 +147,7 @@ var code_in = CodeMirror.fromTextArea(document.getElementById("code-in"), {
     autoCloseBrackedt: true,
     styleActiveLine: true
 });
-code_in.setSize('100%','570px'); //宽 高
+code_in.setSize('100%','100%'); //宽 高
 code_in.setOption('value', codes[0])
 // code_in.on('keypress', function() {
 //     code_in.showHint()

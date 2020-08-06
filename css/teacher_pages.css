@@ -1,11 +1,11 @@
 .bottom {
-    height: 83%;
+    height: 88%;
 }
 
 .left-box {
     position: relative;
     left: 2.5%;
-    height: 100%;
+    height: 89%;
     width: 21%;
 }
 
@@ -14,7 +14,7 @@
     top: 3%;
     left: 8%;
     width: 80%;
-    height: 12%;
+    height: 8%;
     background-color: rgba(46, 94, 175, 1);
     border-radius: 3px;
 }
@@ -60,9 +60,9 @@
 .right-box {
     position: relative;
     left: 3%;
-    top: 2.7%;
-    width: 75%;
-    height: 104%;
+    /* top: 1.2%; */
+    width: 76%;
+    height: 100%;
     background-color: rgba(68, 97, 181, 0.6);
 }
 
@@ -74,6 +74,7 @@
 .right-box-nav {
     height: 100%;
     width: 100%;
+    padding: 1% 0;
 }
 
 .right-box-top li {
@@ -134,7 +135,7 @@
 
 .result {
     width: 100%;
-    height: 570px;
+    height: 90%;
     background-color: #fff;
     overflow-x:scroll;
 }
@@ -152,7 +153,7 @@
 
 .btn-box {
     position: relative;
-    top: 1%;
+    top: 4%;
     flex-grow: 1;
     display: flex;
     width: 100%;

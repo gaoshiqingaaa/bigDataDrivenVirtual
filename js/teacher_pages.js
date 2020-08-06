@@ -392,3 +392,7 @@ $('.wenhao').click(function(){
 $('.user').click(function(){
     showUserAlert(current_page)
 })
+
+$('.back-to').click(function(){
+    window.location.href = '../index.html'
+})
