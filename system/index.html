@@ -12,8 +12,8 @@
         <!-- 导航栏 -->
         <div id="nav">
             <button type="button" class="layui-btn layui-btn-radius layui-btn-primary" id="but1"><a href="../index.html">返回</a></button>
-            <button type="button" class="layui-icon layui-icon-friends" id="friends"></button>
-            <button type="button" class="layui-icon layui-icon-help" id="help"></button>
+            <!-- <button type="button" class="layui-icon layui-icon-friends" id="friends"></button>
+            <button type="button" class="layui-icon layui-icon-help" id="help"></button> -->
         </div>
         
         <!-- 基础知识/快问快答按钮 -->
@@ -239,22 +239,27 @@
             var num = 0;
             //循环换题、判断对错
             var index = 0;
+            for (var i = 1; i < 16;i++){
+                eval("var t"+i+"="+0);
+            };
             var cont = document.getElementsByClassName("ti");
             $('button:button[id="inend"]').click(function() {
                 index++;
-                 $('#abc').hide();
-                 $('#abcd').hide();
-                 $('#bcd').hide();
-                 $('#dui').hide();
-                 $('#cuo').hide();
-                 $('#zhengque').hide();
+                $('#abc').hide();
+                $('#abcd').hide();
+                $('#bcd').hide();
+                $('#dui').hide();
+                $('#cuo').hide();
+                $('#zhengque').hide();
                 if (index == 1) {
                     var timu = document.getElementsByName('t1');
-                    if (timu[1].checked && timu[2].checked && timu[3].checked) {
+                    if (timu[0].checked == false && timu[1].checked && timu[2].checked && timu[3].checked) {
                         $('#zhengque').show();
                         num = num + 2;
+                        t1 = 2;
                     } else {
                         $('#bcd').show();
+                        t1 = 0;
                     }
                 } else {
                     $('#bcd').hide();
@@ -265,19 +270,23 @@
                     if (timu[0].checked && timu[1].checked && timu[2].checked && timu[3].checked) {
                         $('#zhengque').show();
                         num = num + 2;
+                        eval("t"+((index + 1) / 2)+"="+2);
                     } else {
                         $('#abcd').show();
+                        eval("t"+((index + 1) / 2)+"="+0);
                     }
                 } else {
                     $('#acbd').hide();
                 };
                 if (index == 9) {
                     var timu = document.getElementsByName('t5');
-                    if (timu[0].checked && timu[1].checked && timu[2].checked) {
+                    if (timu[0].checked && timu[1].checked && timu[2].checked && timu[3].checked == false) {
                         $('#zhengque').show();
                         num = num + 2;
+                        t5 = 2;
                     } else {
                         $('#abc').show();
+                        t5 = 0;
                     }
                 } else {
                     $('#abc').hide();
@@ -288,8 +297,10 @@
                     if (timu[0].checked) {
                         $('#zhengque').show();
                         num = num + 2;
+                        eval("t"+((index + 1) / 2)+"="+2);
                     } else {
                         $('#dui').show();
+                        eval("t"+((index + 1) / 2)+"="+0);
                     }
                 } else {
                     $('#dui').hide();
@@ -300,12 +311,15 @@
                     if (timu[1].checked) {
                         $('#zhengque').show();
                         num = num + 2;
+                        eval("t"+((index + 1) / 2)+"="+2);
                     } else {
                         $('#cuo').show();
+                        eval("t"+((index + 1) / 2)+"="+0);
                     }
                 } else {
                     $('#cuo').hide();
                 };
+                
                 if (index % 2 == 0) {
                     for (var i = 0; i < 15; i++) {
 
@@ -326,19 +340,42 @@
 
             });
             
+            
             // 提交按钮点击事件
             $('button:button[id="tijiao"]').click(function() {
+                
                 if (index == 28) {
                     var timu = document.getElementsByName('t15');
                     if (timu[1].checked) {
                         $('#zhengque').show();
                         num = num + 2;
+                        t15 = 2;
                     } else {
                         $('#cuo').show();
+                        t15 = 0;
                     }
                 } else {
                     $('#cuo').hide();
                 };
+                //保存成绩
+                let test_grade = {
+                    ti1: eval(t1),
+                    ti2: eval(t2),
+                    ti3: eval(t3),
+                    ti4: eval(t4),
+                    ti5: eval(t5),
+                    ti6: eval(t6),
+                    ti7: eval(t7),
+                    ti8: eval(t8),
+                    ti9: eval(t9),
+                    ti10: eval(t10),
+                    ti11: eval(t11),
+                    ti12: eval(t12),
+                    ti13: eval(t13),
+                    ti14: eval(t14),
+                    ti15: eval(t15),
+                };
+                localStorage.setItem("test_value", JSON.stringify(test_grade));
                 layer.confirm('共15题，每题两分。</br>您本次得分为：' + num + '分', {
                     btn: ['再来一次', '退出'] //按钮
                 }, function() {
@@ -379,7 +416,8 @@
             function huantu(id){
                 var URL = ("../img/basis"+id+".png");
                 $('#xiaoguo').attr('src',URL)
-            }
+            };
+            
             
         </script>
     </body>
