@@ -11,12 +11,12 @@
     -webkit-box-shadow:0 0 5px 5px rgb(179, 179, 179);
     box-shadow:0 0 5px 0px rgb(218, 217, 217);
     position: relative;
-    margin-top: 0.4111842105263158vw;
-    left: 2.7138157894736845vw;
+    margin-top: 5px;
+    left: 33px;
 }
 .layui-form-item .layui-input-inline {
     float: left;
-    width: 15.713816vw;
+    width: 70%;
     margin-right: 10px;
 }
 .cnter {
@@ -28,45 +28,45 @@
 }
 .usernameimg{
     position: absolute;
-    width: 3.7006578947368425vw;
-    height: 2.2203947368421053vw;
-    top: 0.2467105263157895vw;
-    left: 0.2467105263157895vw;
-    background-size: 2px;
+    width: 42px;
+    height: 80%;
+    top: 10%;
+    left: 3%;
+    background-size: 5%;
 }
 .imgsize{
-    width: 1.480263157894737vw;
-    top: 0.32894736842105265vw;
-    left: 0.4111842105263158vw;
+    width: 40%;
+    top: 10%;
+    left: 10%;
     position: absolute;
 }
 .logindiv {
     position: absolute;
-    top: 155%;
-    left: 2.2203947368421053vw;
+    top: 15.5vw;
+    left: 27px;
 }
 
 .login{
     background: url(../img/login-btn@2x.png);
-    border-radius: 0.6578947368421053vw;
+    border-radius: 8px;
     position: absolute;
-    width: 16.85855263157895vw; 
-    height: 2.055921052631579vw;
+    width: 16vw; 
+    height: 25px;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .Verticalline{
     position: absolute;
-    width: 0.08223684210526316vw;
-    height: 1.2335526315789473vw;
-    border-radius: 0.8223684210526316vw;
-    background-color: black;
-    top: 0.4111842105263158vw;
-    right: 0.9046052631578948vw;
+    width: 1%;
+    height: 70%;
+    border-radius: 1px;
+    background-color: #000000;
+    top: 3px;
+    right: 23%;
 }
 .input1{
-    margin-left: 2.8782894736842106vw;
-    height: 2.4671052631578947vw;
-    width: 12.746710526315791vw;
+    margin-left: 35px;
+    height: 2.5vw;
+    width: 70%;
     border:0px;
 }

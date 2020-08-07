@@ -1,12 +1,11 @@
 #nav {
-    width: 100vw;
-    margin-top: 2.4671052631578947vw;
+    width: 96vw;
+    margin-top: 2.46vw;
     
 }
 
 #but1 {
     float: right;
-    margin-right: 2.055921052631579vw;
 }
 
 #but1 a {
@@ -15,154 +14,241 @@
 
 .div1 {
     width: 96.5%;
-    height: 85.5%;
+    height: 1385px;
     background-image: url(../img/15-bg@2x.png);
     background-position: top;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 103% 103%;
     position: absolute;
-    top: 6.8256578947368425vw;
-    left: 1.6447368421052633vw;
-    border-radius: 0.4111842105263158vw;
+    top: 6.82vw;
+    left: 1.64vw;
+    border-radius: 1.5vw;
 }
 
 .div1imgdownload{
     position: absolute;
-    width: 4.934210526315789vw;
-    height: 4.194078947368421vw;
+    width: 4.93vw;
+    height: 4.19vw;
     background-repeat: no-repeat;
     background-image: url(../img/15-btn-download@2x.png);
     background-position: center;
-    background-size: 2.8782894736842106vw;
-    left: 82.23684210526316vw;
-    top: 5.345394736842105vw;
+    background-size: 2.87vw;
+    left: 82.23vw;
+    top: 5.34vw;
 }
 
 .div11{
     position: absolute;
     width: 71%;
     height: 5%;
-    top: 25%;
+    top: 9%;
     left: 8.223684210526317vw;
 }
 .div12{
     position: absolute;
     width: 71%;
     height: 5%;
-    top: 40%;
-    left: 8.223684210526317vw;
+    top: 16%;
+    left: 8.22vw;
 }
 .div13{
     position: absolute;
     width: 71%;
-    height: 5%;
-    top: 54%;
-    left: 8.223684210526317vw;
+    height: 65%;
+    top: 23%;
+    left: 8.22vw;
+}
+.div131{
+    position: absolute;
+    top: 60px;
+}
+.div132{
+    position: absolute;
+    top: 220px;
+}
+.div133{
+    position: absolute;
+    top: 340px;
+}
+.div134{
+    position: absolute;
+    top: 770px;
+}
+.div13font1{
+    font-size: 20px;
+    position: absolute;
+    left: -19px;
+    top: 20px;
+}
+.div13font2{
+    font-size: 20px;
+    position: absolute;
+    left: -19px;
+    top: 180px;
+}
+.div13font3{
+    font-size: 20px;
+    position: absolute;
+    left: -19px;
+    top: 300px;
+}
+.div13font4{
+    font-size: 20px;
+    position: absolute;
+    left: -19px;
+    top: 730px;
+}
+.div13tb1{
+    width: 58vw;
+    height: 
+    100px;
+}
+.div13tb2{
+    width: 58vw;
+    height: 
+    60px;
+}
+.div13tb3{
+    width: 58vw;
+    height: 
+    370px;
+}
+.div13tb4{
+    width: 58vw;
+    height: 
+    60px;
+}
+.div13tb1td1{
+    font-size: 12px;
+    border:1px solid black;
+    text-align: left;
+    padding-left: 25px;
+    font-weight: bold
+}
+.div13tb2td1font{
+    width: 1%;
+    font-weight:bold
+}
+.div13tb3td1{
+    width: 1%;
+    height: 6%;
+}
+.div13tb3td2{
+    width: 12%;
+}
+.div13tb3td3{
+    width: 5%;
+}
+tr td,th{
+    text-align: center;
+    font-size: 12px;
+    border:1px solid black;
+    width: 4%;
 }
 .div14{
     position: absolute;
     width: 71%;
     height: 5%;
-    top: 68%;
-    left: 8.223684210526317vw;
+    top: 1195px;
+    left: 8.22vw;
 }
 
 .div11img1{
-    width: 6.74342105263158vw;
-    height: 6.74342105263158vw;
+    width: 6.74vw;
+    height: 6.74vw;
     position: absolute;
     background-image: url(../img/15-icon-1@2x.png);
-    background-size: 4.769736842105264vw;
+    background-size: 4.76vw;
     background-repeat: no-repeat;
-    top: -2.796052631578948vw;
-    left: 1.2335526315789473vw;
+    top: -2.79vw;
+    left: 1.233vw;
 }
 .div11img2{
-    width: 4.111842105263158vw;
-    height: 4.111842105263158vw;
+    width: 4vw;
+    height: 4vw;
     position: absolute;
     background-image: url(../img/15-icon-2@2x.png);
-    background-size: 3.2894736842105265vw;
+    background-size: 3.2vw;
     background-repeat: no-repeat;
-    top: -2.3026315789473686vw;
-    left: 1.6447368421052633vw;
+    top: -2.3vw;
+    left: 1.6vw;
 }
 .div11img3{
-    width: 4.111842105263158vw;
-    height: 4.111842105263158vw;
+    width: 4vw;
+    height: 4vw;
     position: absolute;
     background-image: url(../img/15-icon-3@2x.png);
-    background-size: 3.2894736842105265vw;
+    background-size: 3.2vw;
     background-repeat: no-repeat;
-    top: -2.3026315789473686vw;
-    left: 1.6447368421052633vw;
+    top: -2.3vw;
+    left: 1.6vw;
 }
 .div11img4{
-    width: 4.111842105263158vw;
-    height: 4.111842105263158vw;
+    width: 4vw;
+    height: 4vw;
     position: absolute;
     background-image: url(../img/15-icon-4@2x.png);
-    background-size: 3.2894736842105265vw;
+    background-size: 3.2vw;
     background-repeat: no-repeat;
-    top: -2.3026315789473686vw;
-    left: 1.6447368421052633vw;
+    top: -2.3vw;
+    left: 1.6vw;
 }
 
 .div11font{
-    font-size: 1.6447368421052633vw;
+    font-size: 1.6vw;
     position: absolute;
-    top: -2.1381578947368425vw;
-    left: 5.921052631578948vw;
+    top: -2.13vw;
+    left: 5.92vw;
 }
 .div12font{
-    font-size: 1.6447368421052633vw;
+    font-size: 1.6vw;
     position: absolute;
-    top: -2.1381578947368425vw;
-    left: 5.921052631578948vw;
+    top: -2.13vw;
+    left: 5.92vw;
 }
 .div21font{
-    font-size: 0.8223684210526316vw;
+    font-size: 0.8vw;
     position: absolute;
-    left: 7.9769736842105265vw;
-    top: 0.8223684210526316vw;
+    left: 8vw;
+    top: 0.8vw;
     white-space: nowrap;
 }
 .div2win{
     position: absolute;
-    left: -0.986842105263158vw;
-    top: 0.8223684210526316vw;
+    left: -0.9vw;
+    top: 0.8vw;
 }
 .layui-textarea{
     resize:none;
     }
 .layui-textarea{
-    width: 59.21052631578948vw;
+    width: 59vw;
 }
 
 .div1btn{
     position: absolute;
     top: 130%;
-    left: 31.250000000000004vw;
+    left: 31vw;
 }
 .layui-btn1 {
-    height: 2.7138157894736845vw;
-    line-height: 2.3026315789473686vw;
-    width: 16.447368421052634vw;
+    height: 2.7vw;
+    line-height: 2.3vw;
+    width: 16vw;
     background-image: url(../img/15-btn-submit@2x.png);
     background-position: center;
     background-size: 150% 150%;
     background-repeat: no-repeat;
 }
 .layui-btn2 {
-    height: 2.055921052631579vw;
+    height: 2vw;
     line-height: 0vw;
-    width: 8.223684210526317vw;
+    width: 8vw;
     background-color: #ffffff;
     background-position: center;
-    border-radius: 0.493421052631579vw;
+    border-radius: 0.5vw;
 }
 .navfont{
-    font-size: 1.0690789473684212vw;
+    font-size: 1vw;
     color: #6969EF;
 }
 .font{
