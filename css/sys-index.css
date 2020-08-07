@@ -119,9 +119,12 @@ body {
 }
 
 #tijiao{
+    width: 15%;
+    height: 6%;
     position: absolute;
-    left: 80%;
-    top: 60%;
+    right: 6%;
+    bottom: 10%;
+    border-radius: 5px;
 }
 
 #zhengque,#abc,#abcd,#bcd,#dui,#cuo{
