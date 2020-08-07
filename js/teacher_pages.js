@@ -31,7 +31,7 @@ function showImgDiv() {
         // 'background': 'url("http://47.97.205.240:8800/static/' + user + '/5.png") no-repeat center top',
         // 'background-size': 'cover'
     })
-    $('.btn-box').css({'top': '6%'})
+    $('.btn-box').css({'top': '4%'})
     $('.result').css({
         'width': '100%',
         'height': '170px'
@@ -43,10 +43,10 @@ function hideImgDiv() {
         'display': 'none',
         'background': ''
     })
-    $('.btn-box').css({'top': '1%'})
+    $('.btn-box').css({'top': '4%'})
     $('.result').css({
         'width': '100%',
-        'height': '570px'
+        'height': '90%'
     })
     // code_out.setSize('100%','570px')
 }

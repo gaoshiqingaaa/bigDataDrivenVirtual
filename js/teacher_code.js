@@ -188,11 +188,19 @@ $('.run-code').click(function(){
             html = ''
             for (i = 0; i < result.length; i++){
                 if (result[i][0].trim() != ''){
-                    html += '<tr>'
-                    if (i==0 && (current_page == 3 || current_page == 6)){
+                    html += '<tr  style="text-align: center">'
+                    if (i==0 && (current_page == 3 || current_page == 6 || current_page == 0)){
                         html += '<td></td>'
                     }
                     for (j = 0; j <result[i].length; j++){
+                        if (current_page == 0 && i != 0) {
+                            if (j == 0) {
+                                html += '<td>' + result[i][j] + ' ' + result[i][j+1] + '</td>'
+                                continue
+                            } else if (j == 1){
+                                continue
+                            }
+                        }
                         html += '<td>' + result[i][j] + '</td>'
                     }
                     html += '</tr>'
@@ -200,7 +208,7 @@ $('.run-code').click(function(){
             }
             if (current_page == 3)
                 xishu_html = html
-            html += '<tr><td>运行完成！</td></tr>'
+            html += '<tr style="text-align: center"><td colspan=7>运行完成！</td></tr>'
             $('#result-tbody').html(html)
             if (current_page == 5) {
                 for (i = 0; i < data.files.length; i++) {
