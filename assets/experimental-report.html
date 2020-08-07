@@ -15,7 +15,7 @@
         <a href="../index.html"><button type="button" class="layui-btn2  layui-btn-primary" id="but1"><p class="navfont">返回</p></button></a>
     </div>
     <div class="div1">
-        <a href="#111"><div id="div1imgdownload"></div></a>
+        <a href="#"><div id="div1imgdownload"></div></a>
 
         <div class="div11">
             <div class="div11img1"></div>
@@ -110,7 +110,7 @@
                             <tr>
                                 <td class="div13tb3td1">资产大类数据准备</td>
                                 <td class="div13tb3td2">
-                                    <img src="../img/1.jpg" style="width: 100%;">
+                                    <img id="code1" style="width: 100%;">
                                 </td>
                                 <td class="div13tb3td2"></td>
                                 <td class="div13tb3td3"></td>
@@ -187,10 +187,12 @@
     </div>
 </div>
 </body>
-<script src="./lib/layui.js"></script>
+<script src="../lib/layui.js"></script>
 <script src="../js/jquery-2.1.4.js"></script>
 <script src="../lib/layui.all.js"></script>
 <script src="../js/jquery.min.js"></script>
+
+<!-- 下载为PDF -->
  	<script src="../js/html2canvas.js"></script>
     <script src="../js/jspdf.min.js"></script>
     <script type="text/javascript">
@@ -207,10 +209,35 @@
 	        });
         })
     })
-    </script>
+</script>
+
+<script>
+    $.ajax({
+    /* url 地址可以是 /get-json/ 的方式
+    *  也可以是 http://www.qfedu.com/get-json/ 的方式
+    */
+    url: 'http://127.0.0.1:5000/result',
+    type: 'POST',
+    dataType: 'json',
+    data:{"user":"b1a438cf-85c3-4d04-bec4-02a37ea2588d"},
+    success: function(data){
+        // 成功处理逻辑
+        console.log(data.code[0])
+        
+        $("#code1").attr('src',".."+data.code[0]);
+     },
+    error: function(res){
+        // 错误时处理逻辑
+        }
+            });
+</script>
+
+<!-- 提交 -->
 <script>
     $('button:button[id="tijiao"]').click(function(){ 
         layer.alert('您已成功提交')
     });
 </script>
+
+
 </html>
