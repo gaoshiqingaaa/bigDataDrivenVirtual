@@ -15,7 +15,7 @@
         <a href="../index.html"><button type="button" class="layui-btn2  layui-btn-primary" id="but1"><p class="navfont">返回</p></button></a>
     </div>
     <div class="div1">
-        <a href="#111"><div class="div1imgdownload"></div></a>
+        <a href="#111"><div id="div1imgdownload"></div></a>
 
         <div class="div11">
             <div class="div11img1"></div>
@@ -109,7 +109,9 @@
 
                             <tr>
                                 <td class="div13tb3td1">资产大类数据准备</td>
-                                <td class="div13tb3td2"></td>
+                                <td class="div13tb3td2">
+                                    <img src="../img/1.jpg" style="width: 100%;">
+                                </td>
                                 <td class="div13tb3td2"></td>
                                 <td class="div13tb3td3"></td>
                             </tr>
@@ -188,6 +190,24 @@
 <script src="./lib/layui.js"></script>
 <script src="../js/jquery-2.1.4.js"></script>
 <script src="../lib/layui.all.js"></script>
+<script src="../js/jquery.min.js"></script>
+ 	<script src="../js/html2canvas.js"></script>
+    <script src="../js/jspdf.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+    	$(document).on('click','#div1imgdownload',function(){
+        	var pdf = new jsPDF('p','pt','a4');
+	        pdf.internal.scaleFactor = 1;  //可以调整缩放比例
+	        var options = {
+	            //pagesplit: true //分页
+	            pagesplit: false//不分页
+	        };
+        	pdf.addHTML($('.div1').get(0),0,0,options,function() {
+	            pdf.save($('.header .h1Title').text()+'.pdf');
+	        });
+        })
+    })
+    </script>
 <script>
     $('button:button[id="tijiao"]').click(function(){ 
         layer.alert('您已成功提交')
