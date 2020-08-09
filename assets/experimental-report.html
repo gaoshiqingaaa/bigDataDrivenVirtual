@@ -112,14 +112,20 @@
                                 <td class="div13tb3td2">
                                     <img id="code1" style="width: 100%;">
                                 </td>
-                                <td class="div13tb3td2"></td>
+                                <td class="div13tb3td2">
+                                    <img id="Operation_results1" style="width: 100%;">
+                                </td>
                                 <td class="div13tb3td3"></td>
                             </tr>
                             
                             <tr>
                                 <td class="div13tb3td1">计算年化收益率</td>
-                                <td class="div13tb3td2"></td>
-                                <td class="div13tb3td2"></td>
+                                <td class="div13tb3td2">
+                                    <img id="code2" style="width: 100%;">
+                                </td>
+                                <td class="div13tb3td2">
+                                    <img id="Operation_results2" style="width: 100%;">
+                                </td>
                                 <td class="div13tb3td3"></td>
                             </tr>
                             
@@ -222,9 +228,20 @@
     data:{"user":"b1a438cf-85c3-4d04-bec4-02a37ea2588d"},
     success: function(data){
         // 成功处理逻辑
-        console.log(data.code[0])
+        console.log(data)
         
         $("#code1").attr('src',".."+data.code[0]);
+        $("#Operation_results1").attr('src',".."+data.print[0]);
+        $("#code2").attr('src',".."+data.code[1]);
+        $("#Operation_results2").attr('src',".."+data.print[1]);
+        $("#code3").attr('src',".."+data.code[2]);
+        $("#Operation_results3").attr('src',".."+data.print[2]);
+        $("#code4").attr('src',".."+data.code[3]);
+        $("#Operation_results4").attr('src',".."+data.print[3]);
+        $("#code5").attr('src',".."+data.code[4]);
+        $("#Operation_results5").attr('src',".."+data.print[4]);
+        $("#code6").attr('src',".."+data.code[5]);
+        $("#Operation_results6").attr('src',".."+data.print[5]);
      },
     error: function(res){
         // 错误时处理逻辑
