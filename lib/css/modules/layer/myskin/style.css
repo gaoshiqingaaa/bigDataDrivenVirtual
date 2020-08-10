@@ -1,0 +1,18 @@
+body .layer-bg .layui-layer-title{
+    background-image: url(./bg.png);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: 100% 100%;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+body .layer-bg .layui-layer-ico{
+    background: url(./exit.png) no-repeat;
+    background-size: 100% 100%; 
+}
+
+body .layui-layer{
+    border-radius: 10px;
+}   

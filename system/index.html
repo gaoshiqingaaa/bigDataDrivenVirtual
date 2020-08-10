@@ -237,6 +237,12 @@
         <script src="../lib/layui.all.js"></script>
         <script type="text/javascript">
             var num = 0;
+            
+            //广播皮肤
+            layer.config({
+                extend: 'myskin/style.css'
+            });
+            
             //循环换题、判断对错
             var index = 0;
             for (var i = 1; i < 16;i++){
@@ -377,7 +383,9 @@
                 };
                 localStorage.setItem("test_value", JSON.stringify(test_grade));
                 layer.confirm('共15题，每题两分。</br>您本次得分为：' + num + '分', {
-                    btn: ['再来一次', '退出'] //按钮
+                    move: false,
+                    skin: 'layer-bg',
+                    btn: ['再来一次', '退出'], //按钮
                 }, function() {
                     cont[0].style.display = 'block';
                     cont[14].style.display = 'none';
