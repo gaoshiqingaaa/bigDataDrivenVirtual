@@ -209,6 +209,35 @@
     background-size: contain; */
 }
 
+.top-right {
+    width: 100%;
+    height: 90%;
+}
+
+.top-right-table {
+    width: 96%;
+    height: 95%;
+    border: 1px solid #000;
+    border-radius: 7px;
+    margin: 1% auto;
+}
+
+.top-right-table td {
+    border: 1px solid #000;
+    font-size: 20px;
+    text-align: center;
+}
+
+.top-right-table .head {
+    height: 20%;
+
+}
+
+.top-right-table .content {
+    text-align: left;
+    padding: 2%;
+}
+
 .right-content-top-right {
     position: relative;
     left: 1%;
