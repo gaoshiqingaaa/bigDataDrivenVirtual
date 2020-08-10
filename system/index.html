@@ -18,8 +18,8 @@
         
         <!-- 基础知识/快问快答按钮 -->
         <div class="header-nav">
-            <button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal dian" id="jichu">基础知识</button>
-            <button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal nodian" id="kuaiwen">快问快答</button>
+            <button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal nodian" id="jichu">基础知识</button>
+            <button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal dian" id="kuaiwen">快问快答</button>
         </div>
         
         <!-- 基础知识幻灯片效果 -->
@@ -402,14 +402,14 @@
             document.getElementById('jichu').onclick = function() {
                 $('.zhishi').show();
                 $('.ti-body').hide();
-                $('#jichu').attr('class','layui-btn layui-btn-lg layui-btn-radius layui-btn-normal dian');
-                $('#kuaiwen').attr('class','layui-btn layui-btn-lg layui-btn-radius layui-btn-normal nodian');
+                $('#jichu').attr('class','layui-btn layui-btn-lg layui-btn-radius layui-btn-normal nodian');
+                $('#kuaiwen').attr('class','layui-btn layui-btn-lg layui-btn-radius layui-btn-normal dian');
             };
             document.getElementById('kuaiwen').onclick = function() {
                 $('.zhishi').hide();
                 $('.ti-body').show();
-                $('#jichu').attr('class','layui-btn layui-btn-lg layui-btn-radius layui-btn-normal nodian');
-                $('#kuaiwen').attr('class','layui-btn layui-btn-lg layui-btn-radius layui-btn-normal dian');
+                $('#jichu').attr('class','layui-btn layui-btn-lg layui-btn-radius layui-btn-normal dian');
+                $('#kuaiwen').attr('class','layui-btn layui-btn-lg layui-btn-radius layui-btn-normal nodian');
             };
             
             //幻灯片换图触发函数
