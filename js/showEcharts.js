@@ -22,12 +22,15 @@ var pie_option = {
     legend: {
         orient: 'vertical',
         left: 10,
-        data: pie_legend_data
+        data: pie_legend_data,
+        left: "80%",
+        top: "10%",
     },
     series: [
         {
             type: 'pie',
             radius: ['50%', '70%'],
+            center: ["5%", "35%"], 
             avoidLabelOverlap: false,
             label: {
                 show: false,
@@ -40,6 +43,7 @@ var pie_option = {
                     fontWeight: 'bold'
                 }
             },
+            center: ["50%", "38%"], 
             labelLine: {
                 show: false
             },
@@ -95,3 +99,47 @@ var line_smooth_option = {
 line_smooth.setOption(line_smooth_option)
 
    
+/*var option = { 
+    tooltip: {
+        trigger: 'item',
+        formatter: '{a} <br/>{b}: {c} ({d}%)'
+    },
+    legend: {
+        orient: 'vertical',
+        left: 10,
+        data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎'],
+        left: "60%",
+        top: "10%",
+    },
+    series: [
+        {
+            name: '访问来源',
+            type: 'pie',
+            radius: ['50%', '70%'],
+            center: ["30%", "35%"], 
+            avoidLabelOverlap: false,
+            label: {
+                show: false,
+                position: 'center'
+            },
+            emphasis: {
+                label: {
+                    show: true,
+                    fontSize: '30',
+                    fontWeight: 'bold'
+                }
+            },
+            labelLine: {
+                show: false
+            },
+            data: [
+                {value: 335, name: '直接访问'},
+                {value: 310, name: '邮件营销'},
+                {value: 234, name: '联盟广告'},
+                {value: 135, name: '视频广告'},
+                {value: 1548, name: '搜索引擎'}
+            ]
+        }
+    ]
+};
+pie.setOption(option) */

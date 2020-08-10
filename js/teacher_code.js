@@ -26,7 +26,7 @@ def get_return(ticker):
 # code end
 
 print(rtn_table.head(10))
-    `,
+`,
     1: "print(rtn_table.mean() * 250) #关于代码的注释\n",
     2: "print(rtn_table.std() * np.sqrt(250))\n",
     3: "print(rtn_table.corr())\n",
@@ -76,7 +76,7 @@ ax1.set_xlabel('Standard Deviation', fontsize = 12)
 ax1.set_ylabel('Expected Return', fontsize = 12)
 ax1.tick_params(labelsize = 12)
 ax1.legend(['portfolio1','portfolio2'], loc = 'best', fontsize = 14)
-    `,
+`,
     6: `risk_aversion = 3
 P = risk_aversion * matrix(cov_mat.values)
 q = -1 * matrix(exp_rtn.values)
@@ -87,7 +87,7 @@ b = matrix([1.0])
 solvers.options['show_progress'] = False
 sol = solvers.qp(P,q, G, h, A, b)
 print(DataFrame(index=exp_rtn.index,data = np.round(sol['x'],2), columns = ['weight']))  # 权重精确到小数点后两位    
-    `
+`
     }
 } else if (window.location.href.indexOf('assets') != -1) {
     codes = {
@@ -109,7 +109,7 @@ def get_return(ticker):
 # code end
 
 print(rtn_table.head(10))
-    `,
+`,
         1: '',
         2: '',
         3: 'print(rtn_table.corr())',
@@ -125,7 +125,7 @@ b = matrix([1.0])
 solvers.options['show_progress'] = False
 sol = solvers.qp(P,q, G, h, A, b)
 print(DataFrame(index=exp_rtn.index,data = np.round(sol['x'],2), columns = ['weight']))  # 权重精确到小数点后两位    
-    `
+`
     }
 }
 
@@ -246,6 +246,7 @@ $('.run-code').click(function(){
                                     'color': 'white'
                                 })
                                 $('.layui-layer-btn').css({'padding-right': '46%'})
+                                $('.layui-layer-iframe').css({'border-radius': '16px'})
                             }
                         });
                         break
@@ -273,7 +274,8 @@ $('.run-code').click(function(){
                             'font-size': '27px',
                             'color': 'white'
                         })
-                        $('.layui-layer-btn').css({'padding-right': '46%'})
+                        alertBtnArgs()
+                        $('.layui-layer-iframe').css({'border-radius': '21px'})
                     }
                 });
             } else if (current_page == 6) {
@@ -281,11 +283,6 @@ $('.run-code').click(function(){
                     // if (result[i][1] != 0)
                         six_best_weight[name_code[result[i][0]]] = Math.round(result[i][1] * 100)
                 }
-                // for (i=1;i<7;i++){
-                //     temp = result[i].split(' ')
-                //     if (temp[temp.length-1] != 0)
-                //         six_best_weight[temp[0]] = temp[temp.length-1]
-                // }
                 init_pie()
                 pie.setOption(pie_option);
                 layer.open({
@@ -308,7 +305,8 @@ $('.run-code').click(function(){
                             'font-size': '27px',
                             'color': 'white'
                         })
-                        $('.layui-layer-btn').css({'padding-right': '39%'})
+                        $('.layui-layer-iframe').css({'border-radius': '12px'})
+                        alertBtnArgs()
                     }
                 });
             }

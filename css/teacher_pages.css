@@ -170,7 +170,7 @@
 }
 
 .right-content {
-    margin-top: 2%;
+    /* margin-top: 2%; */
     height: 90%;
     width: 100%;
     /* display: flex;
@@ -207,6 +207,35 @@
     height: 88%;
     /* background: url(../img/1.jpg) no-repeat center top;
     background-size: contain; */
+}
+
+.top-right {
+    width: 100%;
+    height: 90%;
+}
+
+.top-right-table {
+    width: 96%;
+    height: 95%;
+    border: 1px solid #000;
+    border-radius: 7px;
+    margin: 1% auto;
+}
+
+.top-right-table td {
+    border: 1px solid #000;
+    font-size: 20px;
+    text-align: center;
+}
+
+.top-right-table .head {
+    height: 20%;
+
+}
+
+.top-right-table .content {
+    text-align: left;
+    padding: 2%;
 }
 
 .right-content-top-right {
@@ -263,25 +292,25 @@
 
 .right-bottom {
     position: relative;
-    top: 2%;
+    top: 1.7%;
     left: -1.5%;
-    width: 100%;
+    width: 50%;
     height: 40px;
 }
 
 .layui-input {
     position: relative;
-    left: 1.6%;
+    left: 3.1%;
     height: 100%;
-    width: 55%;
+    width: 136%;
 }
 
 .right-bottom-btn-div {
     position: relative;
     top: -100%;
-    left: 52%;
+    left: 104%;
     height: 100%;
-    width: 50%;
+    width: 100%;
     display: flex;
 }
 
@@ -331,7 +360,7 @@
 .nine {
     position: relative;
     top: -5%;
-    left: 52%;
+    /* left: 52%; */
 }
 
 .advise-btn {
@@ -434,9 +463,9 @@
 
 .right-content-top-left-nine .top {
     width: 100%;
-    height: 20%;
+    height: 21%;
     overflow: hidden;
-    margin-top: 8%;
+    margin-top: 5%;
 }
 
 .right-content-top-left-nine .top .img {
@@ -482,14 +511,14 @@
     width: 24%;
     height: 52%;
     float: left;
-    margin: 10% 0 0 5%;
+    margin: 7% 0 0 5%;
 }
 
 .right-content-top-left-nine .bottom .left .text {
     width: auto;
     height: 69%;
     float: left;
-    margin: 9% 0 0 8%;
+    margin: 5% 0 0 8%;
 }
 
 .right-content-top-left-nine .bottom p {
@@ -497,7 +526,7 @@
 }
 
 .right-content-top-left-nine .bottom .left .text h2 {
-    margin-top: 17%;
+    margin-top: 11%;
     color: green;
     text-align: center;
 }
@@ -515,18 +544,18 @@
     width: 24%;
     height: 52%;
     float: left;
-    margin: 10% 0 0 5%;
+    margin: 7% 0 0 5%;
 }
 
 .right-content-top-left-nine .bottom .right .text {
     width: auto;
     height: 69%;
     float: left;
-    margin: 9% 0 0 8%;
+    margin: 5% 0 0 8%;
 }
 
 .right-content-top-left-nine .bottom .right .text h2 {
-    margin-top: 17%;
+    margin-top: 11%;
     color: red;
     text-align: center;
 }
