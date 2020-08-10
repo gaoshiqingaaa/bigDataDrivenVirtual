@@ -363,17 +363,44 @@ ol.steps li.step-end .step-line {
     display: none;
 }
 
-.layui-card{
-    width: 96.7%;
+.card{
+    width: 96.6%;
     height: 85%;
     margin-left: 1.7%;
     margin-top: 0.3%;
+    padding: 0.5%;
 }
 
-.layui-card-header{
-    width: 98%;
-    height: 15%;
-    vertical-align: middle;
+.card p{
+    width: 94%;
+    height: 10%;
+    color: white;
+    line-height: 350%;
+    font-size: 120%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+#neirong{
+    width: 99%;
+    height: 83%;
+    background-image: url(../img/3-right-place@2x.png);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: 100% 100%;
+    border-radius: 5px;
+    padding-top: 2%;
+}
+
+#neirong p{
+    color: #000000;
+    line-height: 150%;
+}
+
+#neirong img{
+    margin-left: 2%;
+    margin-top: 3%;
+    width: 65%;
 }
 
 #n{
@@ -387,26 +414,14 @@ ol.steps li.step-end .step-line {
     margin-top: 2%;
 }
 
-.layui-card-body{
-    font-size: 20px;
-    padding-left: 15%;
-    padding-right: 15%;
-    padding-top: 5%;
-    padding-bottom: 20%;
-}
-
-.layui-card-body p{
-    line-height: 200%;
-}
-
 #biaoti{
     margin-bottom: 5%;
 }
 
 #start{
     color: white;
-    width: 200px;
-    height: 40px;
+    width: 14%;
+    height: 7%;
     border: none;
     background-image: url(../img/5-btn-next@2x.png);
     background-size: cover;
@@ -415,6 +430,6 @@ ol.steps li.step-end .step-line {
     background-size: 100% 100%;
     position: absolute;
     float: right;
-    left: 80%;
-    top: 80%
+    right: 8%;
+    bottom: 10%
 }
