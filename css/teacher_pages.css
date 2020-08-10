@@ -141,6 +141,9 @@
 }
 
 .img_box {
+    position: relative;
+    left: 2%;
+    right: 2%;
     display: none;
     height: 451px;
     width: 100%;
@@ -425,4 +428,103 @@
 .bottom-left img {
     width: 100%;
     height: 97%;
+}
+
+.right-content-top-left-nine .top {
+    width: 100%;
+    height: 20%;
+    overflow: hidden;
+    margin-top: 8%;
+}
+
+.right-content-top-left-nine .top .img {
+    margin-left: 26%;
+    height: 100%;
+    width: 10%;
+    float: left;
+}
+
+.right-content-top-left-nine .top .text {
+    height: 100%;
+    width: 30%;
+    float: left;
+    margin-left: 7%;
+}
+
+.right-content-top-left-nine .top .text p {
+    font-size: 15px;
+}
+
+.right-content-top-left-nine .top .text h1 {
+    font-size: 35px;
+    font-weight: bolder;
+}
+
+.right-content-top-left-nine .bottom {
+    width: 100%;
+    height: 32%;
+    margin: 8% 0 0 3%;
+}
+
+.right-content-top-left-nine .bottom .left {
+    width: 45%;
+    height: 100%;
+    float: left;
+    margin-right: 4%;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.right-content-top-left-nine .bottom .left .img {
+    width: 24%;
+    height: 52%;
+    float: left;
+    margin: 10% 0 0 5%;
+}
+
+.right-content-top-left-nine .bottom .left .text {
+    width: auto;
+    height: 69%;
+    float: left;
+    margin: 9% 0 0 8%;
+}
+
+.right-content-top-left-nine .bottom p {
+    font-size: 15px;
+}
+
+.right-content-top-left-nine .bottom .left .text h2 {
+    margin-top: 17%;
+    color: green;
+    text-align: center;
+}
+
+.right-content-top-left-nine .bottom .right {
+    width: 45%;
+    height: 100%;
+    float: left;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.right-content-top-left-nine .bottom .right .img {
+    width: 24%;
+    height: 52%;
+    float: left;
+    margin: 10% 0 0 5%;
+}
+
+.right-content-top-left-nine .bottom .right .text {
+    width: auto;
+    height: 69%;
+    float: left;
+    margin: 9% 0 0 8%;
+}
+
+.right-content-top-left-nine .bottom .right .text h2 {
+    margin-top: 17%;
+    color: red;
+    text-align: center;
 }

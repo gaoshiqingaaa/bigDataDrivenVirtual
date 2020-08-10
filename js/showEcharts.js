@@ -6,10 +6,10 @@ var pie_legend_data = [], pie_series_data = []
 function init_pie() {
     for (key in six_best_weight){
         console.log(six_best_weight);
-        pie_legend_data.push(key)
+        pie_legend_data.push(key + '\t' + six_best_weight[key] + '%')
         pie_series_data.push({
             'value': six_best_weight[key],
-            'name': key
+            'name': key + '\t' + six_best_weight[key] + '%'
         })
     }
 }
@@ -17,7 +17,7 @@ function init_pie() {
 var pie_option = {
     tooltip: {
         trigger: 'item',
-        formatter: '{a} <br/>{b}: {c} ({d}%)'
+        formatter: '{b}'
     },
     legend: {
         orient: 'vertical',

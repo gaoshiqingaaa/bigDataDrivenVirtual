@@ -170,6 +170,14 @@ code_in.setOption('value', codes[0])
 var tt
 var xishu_html
 var six_best_weight = {}
+const name_code = {
+    '000300.ZICN': '沪深300',
+    '000905.ZICN': '中证500',
+    '399006.ZICN': '创业板',
+    'SPX.ZIUS': '标普500',
+    '000012.ZICN': '上证国债',
+    '000013.ZICN': '上证企业债',
+}
 $('.run-code').click(function(){
     run_code_clicked[current_page] = true
     $.ajax({
@@ -215,7 +223,7 @@ $('.run-code').click(function(){
                     if (data.files[i] == '/static/' + user + '/5.png') {
                         $('.img_box').css({                            
                             'background': 'url("http://47.97.205.240:8800/static/' + user + '/5.png") no-repeat center top',
-                            'background-size': 'cover'
+                            'background-size': '614px 451px'
                         })
                         layer.open({
                             type: 2,
@@ -270,8 +278,8 @@ $('.run-code').click(function(){
                 });
             } else if (current_page == 6) {
                 for (i=1;i<result.length-2;i++){
-                    if (result[i][1] != 0)
-                        six_best_weight[result[i][0]] = result[i][1]
+                    // if (result[i][1] != 0)
+                        six_best_weight[name_code[result[i][0]]] = Math.round(result[i][1] * 100)
                 }
                 // for (i=1;i<7;i++){
                 //     temp = result[i].split(' ')

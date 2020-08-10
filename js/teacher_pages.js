@@ -9,9 +9,9 @@ for (i = 0; i < 7; i++)
 var current_page = 0
 window.onload = function(){
     $($('.left-pages>div')[current_page]).show()
-    $('#right-page-code').show()
-    // $('#right-page-code').hide()
-    // $('#right-page-eight').show()
+    // $('#right-page-code').show()
+    $('#right-page-code').hide()
+    $('#right-page-nine').show()
     $.ajax({
         type: 'get',
         url: 'http://47.97.205.240:8800/',
@@ -70,9 +70,9 @@ $('.next').click(function(){
         page_codes[current_page] = code_in.getValue()
         current_page ++
         if (current_page == 5)
-            showImgDiv()
+            $('.img_box').show()
         else
-            hideImgDiv()
+            $('.img_box').hide()
         if (current_page == 7){
             $('.bottom-left img').attr('src', 'http://47.97.205.240:8800/static/' + user + '/5.png')
             pie1.setOption(pie_option);
@@ -92,9 +92,9 @@ $('.pre').click(function(){
         $('#result-tbody').html('')
         current_page --
         if (current_page == 5)
-            showImgDiv()
+            $('.img_box').show()
         else
-            hideImgDiv()
+            $('.img_box').hide()
         showPage(current_page)
         code_in.setValue(page_codes[current_page])
     }
