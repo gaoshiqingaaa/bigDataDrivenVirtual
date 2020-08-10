@@ -386,10 +386,10 @@ function showUserAlert(num) {
         }
     });
 }
-$('.wenhao').click(function(){
+$('#help').click(function(){
     showWenhaoAlert(current_page)
 })
-$('.user').click(function(){
+$('#friends').click(function(){
     showUserAlert(current_page)
 })
 

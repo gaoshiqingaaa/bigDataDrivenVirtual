@@ -4,7 +4,7 @@
 
 .left-box {
     position: relative;
-    left: 2.5%;
+    /* left: 2.5%; */
     height: 89%;
     width: 21%;
 }
@@ -14,7 +14,7 @@
     top: 3%;
     left: 8%;
     width: 80%;
-    height: 8%;
+    height: 12%;
     background-color: rgba(46, 94, 175, 1);
     border-radius: 3px;
 }
@@ -59,9 +59,9 @@
 
 .right-box {
     position: relative;
-    left: 3%;
+    /* left: 3%; */
     /* top: 1.2%; */
-    width: 76%;
+    width: 79%;
     height: 100%;
     background-color: rgba(68, 97, 181, 0.6);
 }
@@ -74,7 +74,7 @@
 .right-box-nav {
     height: 100%;
     width: 100%;
-    padding: 1% 0;
+    /* padding: 1% 0; */
 }
 
 .right-box-top li {
@@ -110,6 +110,8 @@
 }
 
 .right-box-bottom {
+    position: relative;
+    top: -1%;
     display: flex;
     height: 90%;
     width: 100%;
@@ -154,7 +156,7 @@
 
 .btn-box {
     position: relative;
-    top: 4%;
+    top: 3%;
     flex-grow: 1;
     display: flex;
     width: 100%;
