@@ -24,48 +24,16 @@ window.onload = function(){
 function toChildValue() {
     return xishu_html
 }
-function showImgDiv() {
-    $('.img_box').css({
-        'display': 'block',
-        
-        // 'background': 'url("http://47.97.205.240:8800/static/' + user + '/5.png") no-repeat center top',
-        // 'background-size': 'cover'
-    })
-    $('.btn-box').css({'top': '4%'})
-    $('.result').css({
-        'width': '100%',
-        'height': '170px'
-    })
-    // code_out.setSize('100%','170px')
-}
-function hideImgDiv() {
-    $('.img_box').css({
-        'display': 'none',
-        'background': ''
-    })
-    $('.btn-box').css({'top': '4%'})
-    $('.result').css({
-        'width': '100%',
-        'height': '90%'
-    })
-    // code_out.setSize('100%','570px')
-}
-// function showPreBtn() {
-//     $('#pre').show()
-//     $('#next').css({
-//         'position': '',
-//         'left': '0',
-//     })
-// }
 $('.next').click(function(){
+    html = ''
     if (current_page < 9) {
         if (current_page < 7) {
             if (!run_code_clicked[current_page]) {
-                alert('亲，先运行这一步哦~')
+                html += '<tr style="text-align: center"><td colspan=7 style="color: red">亲，先运行这一步哦~</td></tr>'
+                $('#result-tbody').html(html)
                 return
             }
         }
-        // showPreBtn()
         $('#result-tbody').html('')
         page_codes[current_page] = code_in.getValue()
         current_page ++
@@ -177,10 +145,11 @@ function showNineAlert(status) {
         btn: btn,
         success: function(elem) {
             eightAlertButton()
+            $('.layui-layer-iframe').css({'border-radius': '12px'})
         },
         btn1: function () {
             if (status != 'showAdviseBtn') 
-                window.location.href = 'index.html'
+                window.location.href = 'risk.html'
             else
                 $('.advise-btn').show()
             layer.closeAll()
@@ -197,7 +166,7 @@ $('.nine-next').click(function(){
 })
 var advise_btn_click_count = 0
 $('.advise-btn').click(function(){
-    if (advise_btn_click_count == 2) {
+    if (advise_btn_click_count == 1) {
         $(".advise-btn").attr("disabled", true);
         $(".advise-btn").css({'background-color' : 'gray'});
     }
@@ -222,6 +191,7 @@ $('.advise-btn').click(function(){
                 'color': 'white'
             })
             $('.layui-layer-btn').css({'padding-right': '316px'})
+            $('.layui-layer-iframe').css({'border-radius': '12px'})
         }
     });
     advise_btn_click_count ++
@@ -258,6 +228,7 @@ function showIntroduceAlert(num) {
                 'color': 'white'
             })
             $('.layui-layer-btn').css({'padding-right': '202px'})
+            $('.layui-layer-iframe').css({'border-radius': '12px'})
         }
     });
 }
@@ -290,6 +261,7 @@ function showPage(current_page) {
                         'color': 'white'
                     })
                     $('.layui-layer-btn').css({'padding-right': '202px'})
+                    $('.layui-layer-iframe').css({'border-radius': '12px'})
                 }
             });
             break
@@ -308,27 +280,6 @@ function showWenhaoAlert(num) {
         'font-size': '27px',
         'color': 'white'
     }
-    // switch (num) {
-    //     case 0:
-    //         area = ['900px', '570px']
-    //         content = ['1-wenhao.html']
-    //         close_btn_css = {
-    //             'right': '3px',
-    //             'top': '1px',
-    //             'background-position': '30px -32px'
-    //         }
-    //         confirm_btn_css = {'padding-right': '46%'}
-    //         break
-    //     case 1:
-    //         area = ['700px', '470px']
-    //         content = ['2-user.html']
-    //         close_btn_css = {
-    //             'right': '3px',
-    //             'top': '1px',
-    //             'background-position': '30px -32px'
-    //         }
-    //         confirm_btn_css = {'padding-right': '46%'}
-    // }
     area = ['700px', '470px']
     content = ['2-user.html']
     close_btn_css = {
@@ -351,6 +302,7 @@ function showWenhaoAlert(num) {
             $('.layui-layer-setwin a').append('X')
             $('.layui-layer-setwin a').css(confirm_a_css)
             $('.layui-layer-btn').css(confirm_btn_css)
+            $('.layui-layer-iframe').css({'border-radius': '12px'})
         }
     });
 }
@@ -380,6 +332,8 @@ function showUserAlert(num) {
                 'color': 'white'
             })
             $('.layui-layer-btn').css({'padding-right': '116px'})
+            $('.layui-layer-iframe').css({'border-radius': '20px'})
+            $('iframe').css({'border-radius': '12px'})
         },
         btn2: function () {
             window.location.href = 'risk.html'
