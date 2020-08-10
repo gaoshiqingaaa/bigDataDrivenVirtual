@@ -11,7 +11,7 @@ window.onload = function(){
     $($('.left-pages>div')[current_page]).show()
     // $('#right-page-code').show()
     $('#right-page-code').hide()
-    $('#right-page-eight').show()
+    $('#right-page-nine').show()
     $.ajax({
         type: 'get',
         url: 'http://47.97.205.240:8800/',
@@ -78,7 +78,8 @@ function eightAlertButton() {
         'font-size': '27px',
         'color': 'white'
     })
-    $('.layui-layer-btn').css({'padding-right': '158px'})
+    $('.layui-layer-iframe').css({'border-radius': '12px'})
+    alertBtnArgs()
 }
 function eightShowAlert(btnName) {
     if (btnName == 'adjust') {
@@ -107,7 +108,7 @@ function eightShowAlert(btnName) {
                 $($('.left-pages>div')[4]).show()
                 $('#right-page-eight').hide()
                 $('#right-page-code').show()
-                $('layui-layer-setwin a').click()
+                // $('layui-layer-setwin a').click()
                 layer.closeAll()
             } else if (btnName == 'buy'){
                 layer.closeAll()
@@ -145,7 +146,6 @@ function showNineAlert(status) {
         btn: btn,
         success: function(elem) {
             eightAlertButton()
-            $('.layui-layer-iframe').css({'border-radius': '12px'})
         },
         btn1: function () {
             if (status != 'showAdviseBtn') 
@@ -172,7 +172,7 @@ $('.advise-btn').click(function(){
     }
     layer.open({
         type: 2,
-        area: ['797px', '568px'], // 宽 高
+        area: ['560px', '380px'], // 宽 高
         title: false,
         closeBtn: 1,
         shadeClose: true,
@@ -181,17 +181,34 @@ $('.advise-btn').click(function(){
         content: ['9-advise.html', 'no'],
         success: function(){
             $(".layui-layer-setwin .layui-layer-close2").css({
-                'right': '18px',
+                'right': '1px',
                 'top': '-5px',
                 'background-position': '30px -32px'
             })
             $('.layui-layer-setwin a').append('X')
             $('.layui-layer-setwin a').css({
-                'font-size': '44px',
+                'font-size': '30px',
                 'color': 'white'
             })
-            $('.layui-layer-btn').css({'padding-right': '316px'})
-            $('.layui-layer-iframe').css({'border-radius': '12px'})
+            $('.layui-layer-iframe').css({'border-radius': '22px'})
+            $('.layui-layer-btn a').css({
+                'height': '40px',
+                'line-height': '40px',
+                'width': '185px',
+                'text-align': 'center',
+                'font-size': '16px'
+            })
+            $('.layui-layer-btn').css({
+                'position': 'relative',
+                'bottom': '2%',
+                'text-align': 'center'
+            })
+            $('.layui-layer-btn1').css({
+                'border-color': '#1E9FFF',
+                'background-color': '#1E9FFF',
+                'color': '#fff'
+            })
+            
         }
     });
     advise_btn_click_count ++
@@ -227,10 +244,24 @@ function showIntroduceAlert(num) {
                 'font-size': '27px',
                 'color': 'white'
             })
-            $('.layui-layer-btn').css({'padding-right': '202px'})
+            alertBtnArgs()
             $('.layui-layer-iframe').css({'border-radius': '12px'})
         }
     });
+}
+function alertBtnArgs() {
+    $('.layui-layer-btn a').css({
+        'height': '40px',
+        'line-height': '40px',
+        'width': '145px',
+        'text-align': 'center',
+        'font-size': '16px'
+    })
+    $('.layui-layer-btn').css({
+        'position': 'relative',
+        'bottom': '2%',
+        'text-align': 'center'
+    })
 }
 function showPage(current_page) {
     $('.left-pages>div').hide()
@@ -260,8 +291,8 @@ function showPage(current_page) {
                         'font-size': '27px',
                         'color': 'white'
                     })
-                    $('.layui-layer-btn').css({'padding-right': '202px'})
                     $('.layui-layer-iframe').css({'border-radius': '12px'})
+                    alertBtnArgs()
                 }
             });
             break

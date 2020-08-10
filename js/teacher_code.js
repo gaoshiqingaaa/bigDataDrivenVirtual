@@ -274,7 +274,7 @@ $('.run-code').click(function(){
                             'font-size': '27px',
                             'color': 'white'
                         })
-                        $('.layui-layer-btn').css({'padding-right': '46%'})
+                        alertBtnArgs()
                         $('.layui-layer-iframe').css({'border-radius': '21px'})
                     }
                 });
@@ -305,8 +305,8 @@ $('.run-code').click(function(){
                             'font-size': '27px',
                             'color': 'white'
                         })
-                        $('.layui-layer-btn').css({'padding-right': '39%'})
                         $('.layui-layer-iframe').css({'border-radius': '12px'})
+                        alertBtnArgs()
                     }
                 });
             }
