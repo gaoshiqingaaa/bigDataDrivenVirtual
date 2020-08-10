@@ -43,14 +43,14 @@
 .logindiv {
     position: absolute;
     top: 15vw;
-    left: 27px;
+    left: 32px;
 }
 
 .login{
     background: url(../img/login-btn@2x.png);
     border-radius: 8px;
     position: absolute;
-    width: 16vw; 
+    width: 15vw; 
     height: 25px;
     background-repeat: no-repeat;
     background-size: cover;
