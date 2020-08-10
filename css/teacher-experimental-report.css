@@ -6,10 +6,21 @@
 
 #but1 {
     float: right;
+    margin-right: 15px;
 }
 
 #but1 a {
     color: #6969EF;
+}
+.logoweizi{
+    width: 155px;
+    height: 35px;
+    background-image: url(../img/logo1.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 27px;
+    left: 35px;
 }
 
 .div1 {
@@ -23,9 +34,35 @@
     position: absolute;
     top: 6.82vw;
     left: 1.64vw;
-    border-radius: 1.5vw;
+    border-radius: 5px;
 }
-
+@font-face {
+    src:url("../lib/font/YouSheBiaoTiHei-2.ttf");
+    font-family: "shiyanfont";
+}
+.shiyanfont1{
+    position: absolute;
+    width:380px;
+    height:18px;
+    font-size:24px;
+    font-family:shiyanfont;
+    font-weight:400;
+    color:#ffffff;
+    line-height:23px;
+    left: 200px;
+    top: 32px;
+}
+.shiyanfont2{
+    width:90px;
+    height:18px;
+    font-size:24px;
+    font-family:shiyanfont;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+    line-height:23px;
+    margin: 0 auto;
+    margin-top: 48.5px;
+}
 #div1imgdownload{
     position: absolute;
     width: 4.93vw;
@@ -76,25 +113,25 @@
     top: 770px;
 }
 .div13font1{
-    font-size: 20px;
+    font-size: 14px;
     position: absolute;
     left: -19px;
     top: 20px;
 }
 .div13font2{
-    font-size: 20px;
+    font-size: 14px;
     position: absolute;
     left: -19px;
     top: 180px;
 }
 .div13font3{
-    font-size: 20px;
+    font-size: 14px;
     position: absolute;
     left: -19px;
     top: 300px;
 }
 .div13font4{
-    font-size: 20px;
+    font-size: 14px;
     position: absolute;
     left: -19px;
     top: 730px;
@@ -139,6 +176,9 @@
 }
 .div13tb2td1font{
     width: 1%;
+}
+.div13tb1fontsize{
+    font-size: 15px;
 }
 .div13tb3td1{
     width: 1%;
@@ -218,12 +258,12 @@ tr td,th{
 }
 
 .div11font{
-    font-size: 1.6vw;
+    font-size: 16px;
     margin-left: 6vw;
     margin-top: -2vw;
 }
 .div12font{
-    font-size: 1.6vw;
+    font-size: 16px;
     margin-left: 6vw;
     margin-top: -2vw;
 }
