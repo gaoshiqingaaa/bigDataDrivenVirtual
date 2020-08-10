@@ -9,202 +9,211 @@
         <link rel="stylesheet" href="../css/sys-index.css">
     </head>
     <body>
+        <!-- 导航栏 -->
+        <div id="nav">
+            <button type="button" class="layui-btn layui-btn-radius layui-btn-primary" id="but1"><a href="../index.html">返回</a></button>
+            <!-- <button type="button" class="layui-icon layui-icon-friends" id="friends"></button>
+            <button type="button" class="layui-icon layui-icon-help" id="help"></button> -->
+        </div>
         
-        <div class="layui-card">
-            <div class="layui-card-header">
-                <div id="jichu">&nbsp;</div>
-                <div id="kuaiwen">&nbsp;</div>
-                <button type="button" class="layui-btn layui-btn-radius layui-btn-primary" id="but1"><a href="../index.html">返回</a></button>
+        <!-- 基础知识/快问快答按钮 -->
+        <div class="header-nav">
+            <button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal dian" id="jichu">基础知识</button>
+            <button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal nodian" id="kuaiwen">快问快答</button>
+        </div>
+        
+        <!-- 基础知识幻灯片效果 -->
+        <div class="zhishi">
+            <div class="tupian">
+                <img src="../img/basis1.png" alt="图片加载失败" id="1" onclick="huantu(1)">
+                <img src="../img/basis2.png" alt="图片加载失败" id="2" onclick="huantu(2)">
+                <img src="../img/basis3.png" alt="图片加载失败" id="3" onclick="huantu(3)">
+                <img src="../img/basis4.png" alt="图片加载失败" id="4" onclick="huantu(4)">
+                <img src="../img/basis5.png" alt="图片加载失败" id="5" onclick="huantu(5)">
+                <img src="../img/basis6.png" alt="图片加载失败" id="6" onclick="huantu(6)">
+                <img src="../img/basis7.png" alt="图片加载失败" id="7" onclick="huantu(7)">
+                <img src="../img/basis8.png" alt="图片加载失败" id="8" onclick="huantu(8)">
+                <img src="../img/basis9.png" alt="图片加载失败" id="9" onclick="huantu(9)">
+                <img src="../img/basis10.png" alt="图片加载失败" id="10" onclick="huantu(10)">
+                <img src="../img/basis11.png" alt="图片加载失败" id="11" onclick="huantu(11)">
+                <img src="../img/basis12.png" alt="图片加载失败" id="12" onclick="huantu(12)">
+                <img src="../img/basis13.png" alt="图片加载失败" id="13" onclick="huantu(13)">
+                <img src="../img/basis14.png" alt="图片加载失败" id="14" onclick="huantu(14)">
+                <img src="../img/basis15.png" alt="图片加载失败" id="15" onclick="huantu(15)">
+                <img src="../img/basis16.png" alt="图片加载失败" id="16" onclick="huantu(16)">
+                <img src="../img/basis17.png" alt="图片加载失败" id="17" onclick="huantu(17)">
+                <img src="../img/basis18.png" alt="图片加载失败" id="18" onclick="huantu(18)">
+                <img src="../img/basis19.png" alt="图片加载失败" id="19" onclick="huantu(19)">
+                <img src="../img/basis20.png" alt="图片加载失败" id="20" onclick="huantu(20)">
+                <img src="../img/basis21.png" alt="图片加载失败" id="21" onclick="huantu(21)">
+                <img src="../img/basis22.png" alt="图片加载失败" id="22" onclick="huantu(22)">
+                <img src="../img/basis23.png" alt="图片加载失败" id="23" onclick="huantu(23)">
+                <img src="../img/basis24.png" alt="图片加载失败" id="24" onclick="huantu(24)">
+                <img src="../img/basis25.png" alt="图片加载失败" id="25" onclick="huantu(25)">
+                <img src="../img/basis26.png" alt="图片加载失败" id="26" onclick="huantu(26)">
+                <img src="../img/basis27.png" alt="图片加载失败" id="27" onclick="huantu(27)">
+                <img src="../img/basis28.png" alt="图片加载失败" id="28" onclick="huantu(28)">
+                <img src="../img/basis29.png" alt="图片加载失败" id="29" onclick="huantu(29)">
+                <img src="../img/basis30.png" alt="图片加载失败" id="30" onclick="huantu(30)">
+                <img src="../img/basis31.png" alt="图片加载失败" id="31" onclick="huantu(31)">
+                <img src="../img/basis32.png" alt="图片加载失败" id="32" onclick="huantu(32)">
+                <img src="../img/basis33.png" alt="图片加载失败" id="33" onclick="huantu(33)">
+                <img src="../img/basis34.png" alt="图片加载失败" id="34" onclick="huantu(34)">
+                <img src="../img/basis35.png" alt="图片加载失败" id="35" onclick="huantu(35)">
+                <img src="../img/basis36.png" alt="图片加载失败" id="36" onclick="huantu(36)">
+                <img src="../img/basis37.png" alt="图片加载失败" id="37" onclick="huantu(37)">
+                <img src="../img/basis38.png" alt="图片加载失败" id="38" onclick="huantu(38)">
+                <img src="../img/basis39.png" alt="图片加载失败" id="39" onclick="huantu(39)">
+                <img src="../img/basis40.png" alt="图片加载失败" id="40" onclick="huantu(40)">
             </div>
-            <div class="zhishi">
-                <div id="gongdong">
-                    <div class="tupian">
-                        <img src="../img/basis1.png" alt="图片加载失败" id="1" onclick="huantu(1)">
-                        <img src="../img/basis2.png" alt="图片加载失败" id="2" onclick="huantu(2)">
-                        <img src="../img/basis3.png" alt="图片加载失败" id="3" onclick="huantu(3)">
-                        <img src="../img/basis4.png" alt="图片加载失败" id="4" onclick="huantu(4)">
-                        <img src="../img/basis5.png" alt="图片加载失败" id="5" onclick="huantu(5)">
-                        <img src="../img/basis6.png" alt="图片加载失败" id="6" onclick="huantu(6)">
-                        <img src="../img/basis7.png" alt="图片加载失败" id="7" onclick="huantu(7)">
-                        <img src="../img/basis8.png" alt="图片加载失败" id="8" onclick="huantu(8)">
-                        <img src="../img/basis9.png" alt="图片加载失败" id="9" onclick="huantu(9)">
-                        <img src="../img/basis10.png" alt="图片加载失败" id="10" onclick="huantu(10)">
-                        <img src="../img/basis11.png" alt="图片加载失败" id="11" onclick="huantu(11)">
-                        <img src="../img/basis12.png" alt="图片加载失败" id="12" onclick="huantu(12)">
-                        <img src="../img/basis13.png" alt="图片加载失败" id="13" onclick="huantu(13)">
-                        <img src="../img/basis14.png" alt="图片加载失败" id="14" onclick="huantu(14)">
-                        <img src="../img/basis15.png" alt="图片加载失败" id="15" onclick="huantu(15)">
-                        <img src="../img/basis16.png" alt="图片加载失败" id="16" onclick="huantu(16)">
-                        <img src="../img/basis17.png" alt="图片加载失败" id="17" onclick="huantu(17)">
-                        <img src="../img/basis18.png" alt="图片加载失败" id="18" onclick="huantu(18)">
-                        <img src="../img/basis19.png" alt="图片加载失败" id="19" onclick="huantu(19)">
-                        <img src="../img/basis20.png" alt="图片加载失败" id="20" onclick="huantu(20)">
-                        <img src="../img/basis21.png" alt="图片加载失败" id="21" onclick="huantu(21)">
-                        <img src="../img/basis22.png" alt="图片加载失败" id="22" onclick="huantu(22)">
-                        <img src="../img/basis23.png" alt="图片加载失败" id="23" onclick="huantu(23)">
-                        <img src="../img/basis24.png" alt="图片加载失败" id="24" onclick="huantu(24)">
-                        <img src="../img/basis25.png" alt="图片加载失败" id="25" onclick="huantu(25)">
-                        <img src="../img/basis26.png" alt="图片加载失败" id="26" onclick="huantu(26)">
-                        <img src="../img/basis27.png" alt="图片加载失败" id="27" onclick="huantu(27)">
-                        <img src="../img/basis28.png" alt="图片加载失败" id="28" onclick="huantu(28)">
-                        <img src="../img/basis29.png" alt="图片加载失败" id="29" onclick="huantu(29)">
-                        <img src="../img/basis30.png" alt="图片加载失败" id="30" onclick="huantu(30)">
-                        <img src="../img/basis31.png" alt="图片加载失败" id="31" onclick="huantu(31)">
-                        <img src="../img/basis32.png" alt="图片加载失败" id="32" onclick="huantu(32)">
-                        <img src="../img/basis33.png" alt="图片加载失败" id="33" onclick="huantu(33)">
-                        <img src="../img/basis34.png" alt="图片加载失败" id="34" onclick="huantu(34)">
-                        <img src="../img/basis35.png" alt="图片加载失败" id="35" onclick="huantu(35)">
-                        <img src="../img/basis36.png" alt="图片加载失败" id="36" onclick="huantu(36)">
-                        <img src="../img/basis37.png" alt="图片加载失败" id="37" onclick="huantu(37)">
-                        <img src="../img/basis38.png" alt="图片加载失败" id="38" onclick="huantu(38)">
-                        <img src="../img/basis39.png" alt="图片加载失败" id="39" onclick="huantu(39)">
-                        <img src="../img/basis40.png" alt="图片加载失败" id="40" onclick="huantu(40)">
-                    </div>
-
-                </div>
-                <div id="shitu">
-                    <img src="../img/basis1.png" id="xiaoguo">
-                </div>
+            <div id="shitu">
+                <img src="../img/basis1.png" id="xiaoguo">
             </div>
-            <div class="layui-card-body" style="display: none;">
+        </div>
+        
+        <!-- 快问快答题目 -->
+        <div class="ti-body" style="display: none;">
+            <div class="beijing">
                 <!-- 第一题 -->
                 <div class="ti" style="display: block;">
-                    <h1>【多选题】1.系统性风险包括（&nbsp;&nbsp;）。</h1>
+                    <h1><span style="float: right; margin-left: 1%;"><b>1/15</b></span>【多选题】1.系统性风险包括（&nbsp;&nbsp;）。</h1>
                     <p><input type="checkbox" name="t1" value="t1_1" id="t1_1"><b>A.人事变动风险</b></p>
                     <p><input type="checkbox" name="t1" value="t1_2" id="t1_2"><b>B.经济周期波动风险</b></p>
                     <p><input type="checkbox" name="t1" value="t1_3" id="t1_3"><b>C.利率风险 </b></p>
                     <p><input type="checkbox" name="t1" value="t1_4" id="t1_4"><b>D.购买力风险</b></p>
-                    <button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" id="inend">确定</button>
+                    <button type="button" class="layui-btn layui-btn-lg layui-btn-normal" id="inend">确定</button>
                 </div>
                 <!-- 第二题 -->
                 <div class="ti" style="display: none;">
-                    <h1>【多选题】2.非系统性风险包括（&nbsp;&nbsp;）。</h1>
+                    <h1><span style="float: right; margin-left: 1%;"><b>2/15</b></span>【多选题】2.非系统性风险包括（&nbsp;&nbsp;）。</h1>
                     <p><input type="checkbox" name="t2" value="t2_1" id="t2_1"><b>A.信用风险</b></p>
                     <p><input type="checkbox" name="t2" value="t2_2" id="t2_2"><b>B.经营风险</b></p>
                     <p><input type="checkbox" name="t2" value="t2_3" id="t2_3"><b>C.财务风险</b></p>
                     <p><input type="checkbox" name="t2" value="t2_4" id="t2_4"><b>D.道德风险</b></p>
-                    <button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" id="inend">确定</button>
+                    <button type="button" class="layui-btn layui-btn-lg layui-btn-normal" id="inend">确定</button>
                 </div>
                 <!-- 第三题 -->
                 <div class="ti" style="display: none;">
-                    <h1>【多选题】3.影响用户风险偏好的因素有（&nbsp;&nbsp;）。</h1>
+                    <h1><span style="float: right; margin-left: 1%;"><b>3/15</b></span>【多选题】3.影响用户风险偏好的因素有（&nbsp;&nbsp;）。</h1>
                     <p><input type="checkbox" name="t3" value="t3_1" id="t3_1"><b>A.家庭结构</b></p>
                     <p><input type="checkbox" name="t3" value="t3_2" id="t3_2"><b>B.收入情况</b></p>
                     <p><input type="checkbox" name="t3" value="t3_3" id="t3_3"><b>C.可投资资产状况</b></p>
                     <p><input type="checkbox" name="t3" value="t3_4" id="t3_4"><b>D.对投资年限的认知</b></p>
-                    <button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" id="inend">确定</button>
+                    <button type="button" class="layui-btn layui-btn-lg layui-btn-normal" id="inend">确定</button>
                 </div>
                 <!-- 第四题 -->
                 <div class="ti" style="display: none;">
-                    <h1>【多选题】4.确定大类资产的选择范围需要考虑以下哪些因素（&nbsp;&nbsp;）。</h1>
+                    <h1><span style="float: right; margin-left: 1%;"><b>4/15</b></span>【多选题】4.确定大类资产的选择范围需要考虑以下哪些因素（&nbsp;&nbsp;）。</h1>
                     <p><input type="checkbox" name="t4" value="t4_1" id="t4_1"><b>A.大类资产未来一段时间的走势</b></p>
                     <p><input type="checkbox" name="t4" value="t4_2" id="t4_2"><b>B.大类资产的手续费</b></p>
                     <p><input type="checkbox" name="t4" value="t4_3" id="t4_3"><b>C.大类资产的收益及波动率 </b></p>
                     <p><input type="checkbox" name="t4" value="t4_4" id="t4_4"><b>D.大类资产之间的相关性</b></p>
-                    <button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" id="inend">确定</button>
+                    <button type="button" class="layui-btn layui-btn-lg layui-btn-normal" id="inend">确定</button>
                 </div>
                 <!-- 第五题 -->
                 <div class="ti" style="display: none;">
-                    <h1>【多选题】5.以下资产具有增值性，能产生高额回报的是（&nbsp;&nbsp;）。</h1>
+                    <h1><span style="float: right; margin-left: 1%;"><b>5/15</b></span>【多选题】5.以下资产具有增值性，能产生高额回报的是（&nbsp;&nbsp;）。</h1>
                     <p><input type="checkbox" name="t5" value="t5_1" id="t5_1"><b>A.大盘股</b></p>
                     <p><input type="checkbox" name="t5" value="t5_2" id="t5_2"><b>B.中盘股</b></p>
                     <p><input type="checkbox" name="t5" value="t5_3" id="t5_3"><b>C.美股</b></p>
                     <p><input type="checkbox" name="t5" value="t5_4" id="t5_4"><b>D.货币基金</b></p>
-                    <button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" id="inend">确定</button>
+                    <button type="button" class="layui-btn layui-btn-lg layui-btn-normal" id="inend">确定</button>
                 </div>
                 <!-- 第六题 -->
                 <div class="ti" style="display: none;">
-                    <h1>【判断题】6.一般地，投资者风险偏好值越大，表明其对于风险的承受能力更强，在投资时可能更加激进。（&nbsp;&nbsp;）</h1>
+                    <h1><span style="float: right; margin-left: 1%;"><b>6/15</b></span>【判断题】6.一般地，投资者风险偏好值越大，表明其对于风险的承受能力更强，在投资时可能更加激进。（&nbsp;&nbsp;）</h1>
                     <p>&nbsp;</p>
                     <p><input type="radio" name="t6" value="t6_2" id="t6_2"><b>A.对</b></p>
                     <p>&nbsp;</p>
                     <p><input type="radio" name="t6" value="t6_4" id="t6_4"><b>B.错</b></p>
-                    <button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" id="inend">确定</button>
+                    <button type="button" class="layui-btn layui-btn-lg layui-btn-normal" id="inend">确定</button>
                 </div>
                 <!-- 第七题 -->
                 <div class="ti" style="display: none;">
-                    <h1>【判断题】7.行为金融学的相关研究表明，用户往往会夸大自己的风险偏好，尤其适用于那些受过良好教育的，过于自信的男性投资者。（&nbsp;&nbsp;）</h1>
+                    <h1><span style="float: right; margin-left: 1%;"><b>7/15</b></span>【判断题】7.行为金融学的相关研究表明，用户往往会夸大自己的风险偏好，尤其适用于那些受过良好教育的，过于自信的男性投资者。（&nbsp;&nbsp;）</h1>
                     <p>&nbsp;</p>
                     <p><input type="radio" name="t7" value="t7_2" id="t7_2"><b>A.对</b></p>
                     <p>&nbsp;</p>
                     <p><input type="radio" name="t7" value="t7_4" id="t7_4"><b>B.错</b></p>
-                    <button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" id="inend">确定</button>
+                    <button type="button" class="layui-btn layui-btn-lg layui-btn-normal" id="inend">确定</button>
                 </div>
                 <!-- 第八题 -->
                 <div class="ti" style="display: none;">
-                    <h1>【判断题】8.降低投资风险的最佳方式就是进行分散投资，而不是单独投资于某一资产，即“不要把所有的鸡蛋放进一个篮子里”。（&nbsp;&nbsp;）</h1>
+                    <h1><span style="float: right; margin-left: 1%;"><b>8/15</b></span>【判断题】8.降低投资风险的最佳方式就是进行分散投资，而不是单独投资于某一资产，即“不要把所有的鸡蛋放进一个篮子里”。（&nbsp;&nbsp;）</h1>
                     <p>&nbsp;</p>
                     <p><input type="radio" name="t8" value="t8_2" id="t8_2"><b>A.对</b></p>
                     <p>&nbsp;</p>
                     <p><input type="radio" name="t8" value="t8_4" id="t8_4"><b>B.错</b></p>
-                    <button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" id="inend">确定</button>
+                    <button type="button" class="layui-btn layui-btn-lg layui-btn-normal" id="inend">确定</button>
                 </div>
                 <!-- 第九题 -->
                 <div class="ti" style="display: none;">
-                    <h1>【判断题】9.如果用户的风险偏好较高，即更加注重收益，那么投资组合处于有效前沿末端部分；如果风险偏好较低，即更加注重风险，那么投资组合处于有效前沿的前端部分。（&nbsp;&nbsp;）</h1>
+                    <h1><span style="float: right; margin-left: 1%;"><b>9/15</b></span>【判断题】9.如果用户的风险偏好较高，即更加注重收益，那么投资组合处于有效前沿末端部分；如果风险偏好较低，即更加注重风险，那么投资组合处于有效前沿的前端部分。（&nbsp;&nbsp;）</h1>
                     <p>&nbsp;</p>
                     <p><input type="radio" name="t9" value="t9_2" id="t9_2"><b>A.对</b></p>
                     <p>&nbsp;</p>
                     <p><input type="radio" name="t9" value="t9_4" id="t9_4"><b>B.错</b></p>
-                    <button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" id="inend">确定</button>
+                    <button type="button" class="layui-btn layui-btn-lg layui-btn-normal" id="inend">确定</button>
                 </div>
                 <!-- 第十题 -->
                 <div class="ti" style="display: none;">
-                    <h1>【判断题】10.资产配置时，对相关性较高的资产进行组合，能够有效对冲风险。（&nbsp;&nbsp;）</h1>
+                    <h1><span style="float: right; margin-left: 1%;"><b>10/15</b></span>【判断题】10.资产配置时，对相关性较高的资产进行组合，能够有效对冲风险。（&nbsp;&nbsp;）</h1>
                     <p>&nbsp;</p>
                     <p><input type="radio" name="t10" value="t10_2" id="t10_2"><b>A.对</b></p>
                     <p>&nbsp;</p>
                     <p><input type="radio" name="t10" value="t10_4" id="t10_4"><b>B.错</b></p>
-                    <button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" id="inend">确定</button>
+                    <button type="button" class="layui-btn layui-btn-lg layui-btn-normal" id="inend">确定</button>
                 </div>
                 <!-- 第十一题 -->
                 <div class="ti" style="display: none;">
-                    <h1>【判断题】11.随着证券数量的增加，虽然组合的平均收益不会有所影响，但是组合标准差会随证券数量的增多而降低。（&nbsp;&nbsp;）</h1>
+                    <h1><span style="float: right; margin-left: 1%;"><b>11/15</b></span>【判断题】11.随着证券数量的增加，虽然组合的平均收益不会有所影响，但是组合标准差会随证券数量的增多而降低。（&nbsp;&nbsp;）</h1>
                     <p>&nbsp;</p>
                     <p><input type="radio" name="t11" value="t11_2" id="t11_2"><b>A.对</b></p>
                     <p>&nbsp;</p>
                     <p><input type="radio" name="t11" value="t11_4" id="t11_4"><b>B.错</b></p>
-                    <button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" id="inend">确定</button>
+                    <button type="button" class="layui-btn layui-btn-lg layui-btn-normal" id="inend">确定</button>
                 </div>
                 <!-- 第十二题 -->
                 <div class="ti" style="display: none;">
-                    <h1>【判断题】12.对于风险承受能力较低的投资者，往往投资权益类资产的权重相对较大。（&nbsp;&nbsp;）</h1>
+                    <h1><span style="float: right; margin-left: 1%;"><b>12/15</b></span>【判断题】12.对于风险承受能力较低的投资者，往往投资权益类资产的权重相对较大。（&nbsp;&nbsp;）</h1>
                     <p>&nbsp;</p>
                     <p><input type="radio" name="t12" value="t12_2" id="t12_2"><b>A.对</b></p>
                     <p>&nbsp;</p>
                     <p><input type="radio" name="t12" value="t12_4" id="t12_4"><b>B.错</b></p>
-                    <button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" id="inend">确定</button>
+                    <button type="button" class="layui-btn layui-btn-lg layui-btn-normal" id="inend">确定</button>
                 </div>
                 <!-- 第十三题 -->
                 <div class="ti" style="display: none;">
-                    <h1>【判断题】13.风险较大的投资，其要求的收益率相对较高；反之，预期收益率较低的投资，风险也相对较小。（&nbsp;&nbsp;）</h1>
+                    <h1><span style="float: right; margin-left: 1%;"><b>13/15</b></span>【判断题】13.风险较大的投资，其要求的收益率相对较高；反之，预期收益率较低的投资，风险也相对较小。（&nbsp;&nbsp;）</h1>
                     <p>&nbsp;</p>
                     <p><input type="radio" name="t13" value="t13_2" id="t13_2"><b>A.对</b></p>
                     <p>&nbsp;</p>
                     <p><input type="radio" name="t13" value="t13_4" id="t13_4"><b>B.错</b></p>
-                    <button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" id="inend">确定</button>
+                    <button type="button" class="layui-btn layui-btn-lg layui-btn-normal" id="inend">确定</button>
                 </div>
                 <!-- 第十四题 -->
                 <div class="ti" style="display: none;">
-                    <h1>【判断题】14.非系统性风险也叫不可分散风险，不能通过投资组合进行分散。（&nbsp;&nbsp;）</h1>
+                    <h1><span style="float: right; margin-left: 1%;"><b>14/15</b></span>【判断题】14.非系统性风险也叫不可分散风险，不能通过投资组合进行分散。（&nbsp;&nbsp;）</h1>
                     <p>&nbsp;</p>
                     <p><input type="radio" name="t14" value="t14_2" id="t14_2"><b>A.对</b></p>
                     <p>&nbsp;</p>
                     <p><input type="radio" name="t14" value="t14_4" id="t14_4"><b>B.错</b></p>
-                    <button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" id="inend">确定</button>
+                    <button type="button" class="layui-btn layui-btn-lg layui-btn-normal" id="inend">确定</button>
                 </div>
                 <!-- 第十五题 -->
                 <div class="ti" style="display: none;">
-                    <h1>【判断题】15.系统性风险也被称为可分散风险，可以通过投资组合进行分散。（&nbsp;&nbsp;）</h1>
+                    <h1><span style="float: right; margin-left: 1%;"><b>15/15</b></span>【判断题】15.系统性风险也被称为可分散风险，可以通过投资组合进行分散。（&nbsp;&nbsp;）</h1>
                     <p>&nbsp;</p>
                     <p><input type="radio" name="t15" value="t15_2" id="t15_2"><b>A.对</b></p>
                     <p>&nbsp;</p>
                     <p><input type="radio" name="t15" value="t15_4" id="t15_4"><b>B.错</b></p>
-                    <button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" id="tijiao">提交</button>
+                    <button type="button" class="layui-btn layui-btn-lg layui-btn-normal" id="tijiao">提交</button>
                 </div>
+                
             </div>
         </div>
-
+    
+        <!-- 对错提示盒子 -->
         <div id="abc" style="display: none;">
             <p><span class="layui-icon layui-icon-close" style="font-size: 32px; color: red;"></span><b>回答错误！正确答案为ABC</b></p>
         </div>
@@ -228,24 +237,29 @@
         <script src="../lib/layui.all.js"></script>
         <script type="text/javascript">
             var num = 0;
-            //循环换题
+            //循环换题、判断对错
             var index = 0;
+            for (var i = 1; i < 16;i++){
+                eval("var t"+i+"="+0);
+            };
             var cont = document.getElementsByClassName("ti");
             $('button:button[id="inend"]').click(function() {
                 index++;
-                 $('#abc').hide();
-                 $('#abcd').hide();
-                 $('#bcd').hide();
-                 $('#dui').hide();
-                 $('#cuo').hide();
-                 $('#zhengque').hide();
+                $('#abc').hide();
+                $('#abcd').hide();
+                $('#bcd').hide();
+                $('#dui').hide();
+                $('#cuo').hide();
+                $('#zhengque').hide();
                 if (index == 1) {
                     var timu = document.getElementsByName('t1');
-                    if (timu[1].checked && timu[2].checked && timu[3].checked) {
+                    if (timu[0].checked == false && timu[1].checked && timu[2].checked && timu[3].checked) {
                         $('#zhengque').show();
                         num = num + 2;
+                        t1 = 2;
                     } else {
                         $('#bcd').show();
+                        t1 = 0;
                     }
                 } else {
                     $('#bcd').hide();
@@ -256,19 +270,23 @@
                     if (timu[0].checked && timu[1].checked && timu[2].checked && timu[3].checked) {
                         $('#zhengque').show();
                         num = num + 2;
+                        eval("t"+((index + 1) / 2)+"="+2);
                     } else {
                         $('#abcd').show();
+                        eval("t"+((index + 1) / 2)+"="+0);
                     }
                 } else {
                     $('#acbd').hide();
                 };
                 if (index == 9) {
                     var timu = document.getElementsByName('t5');
-                    if (timu[0].checked && timu[1].checked && timu[2].checked) {
+                    if (timu[0].checked && timu[1].checked && timu[2].checked && timu[3].checked == false) {
                         $('#zhengque').show();
                         num = num + 2;
+                        t5 = 2;
                     } else {
                         $('#abc').show();
+                        t5 = 0;
                     }
                 } else {
                     $('#abc').hide();
@@ -279,8 +297,10 @@
                     if (timu[0].checked) {
                         $('#zhengque').show();
                         num = num + 2;
+                        eval("t"+((index + 1) / 2)+"="+2);
                     } else {
                         $('#dui').show();
+                        eval("t"+((index + 1) / 2)+"="+0);
                     }
                 } else {
                     $('#dui').hide();
@@ -291,12 +311,15 @@
                     if (timu[1].checked) {
                         $('#zhengque').show();
                         num = num + 2;
+                        eval("t"+((index + 1) / 2)+"="+2);
                     } else {
                         $('#cuo').show();
+                        eval("t"+((index + 1) / 2)+"="+0);
                     }
                 } else {
                     $('#cuo').hide();
                 };
+                
                 if (index % 2 == 0) {
                     for (var i = 0; i < 15; i++) {
 
@@ -316,18 +339,43 @@
                 }
 
             });
+            
+            
+            // 提交按钮点击事件
             $('button:button[id="tijiao"]').click(function() {
+                
                 if (index == 28) {
                     var timu = document.getElementsByName('t15');
                     if (timu[1].checked) {
                         $('#zhengque').show();
                         num = num + 2;
+                        t15 = 2;
                     } else {
                         $('#cuo').show();
+                        t15 = 0;
                     }
                 } else {
                     $('#cuo').hide();
                 };
+                //保存成绩
+                let test_grade = {
+                    ti1: eval(t1),
+                    ti2: eval(t2),
+                    ti3: eval(t3),
+                    ti4: eval(t4),
+                    ti5: eval(t5),
+                    ti6: eval(t6),
+                    ti7: eval(t7),
+                    ti8: eval(t8),
+                    ti9: eval(t9),
+                    ti10: eval(t10),
+                    ti11: eval(t11),
+                    ti12: eval(t12),
+                    ti13: eval(t13),
+                    ti14: eval(t14),
+                    ti15: eval(t15),
+                };
+                localStorage.setItem("test_value", JSON.stringify(test_grade));
                 layer.confirm('共15题，每题两分。</br>您本次得分为：' + num + '分', {
                     btn: ['再来一次', '退出'] //按钮
                 }, function() {
@@ -349,23 +397,27 @@
                     window.open('../index.html')
                 });
             });
-
+            
+            //修改基础知识与快问快答按钮颜色、盒子的隐藏显示
             document.getElementById('jichu').onclick = function() {
                 $('.zhishi').show();
-                $('.layui-card-body').hide();
-                document.getElementById('jichu').style.backgroundImage = "url(../img/3-tab-study-nor@2x.png)";
-                document.getElementById('kuaiwen').style.backgroundImage = "url(../img/3-tab-answer-select@2x.png)";
+                $('.ti-body').hide();
+                $('#jichu').attr('class','layui-btn layui-btn-lg layui-btn-radius layui-btn-normal dian');
+                $('#kuaiwen').attr('class','layui-btn layui-btn-lg layui-btn-radius layui-btn-normal nodian');
             };
             document.getElementById('kuaiwen').onclick = function() {
                 $('.zhishi').hide();
-                $('.layui-card-body').show();
-                document.getElementById('kuaiwen').style.backgroundImage = "url(../img/3-tab-answer-nor@2x.png)";
-                document.getElementById('jichu').style.backgroundImage = "url(../img/3-tab-study-select@2x.png)";
+                $('.ti-body').show();
+                $('#jichu').attr('class','layui-btn layui-btn-lg layui-btn-radius layui-btn-normal nodian');
+                $('#kuaiwen').attr('class','layui-btn layui-btn-lg layui-btn-radius layui-btn-normal dian');
             };
+            
+            //幻灯片换图触发函数
             function huantu(id){
                 var URL = ("../img/basis"+id+".png");
                 $('#xiaoguo').attr('src',URL)
-            }
+            };
+            
             
         </script>
     </body>

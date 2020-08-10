@@ -15,7 +15,7 @@
         <a href="../index.html"><button type="button" class="layui-btn2  layui-btn-primary" id="but1"><p class="navfont">返回</p></button></a>
     </div>
     <div class="div1">
-        <a href="#111"><div id="div1imgdownload"></div></a>
+        <a href="#"><div id="div1imgdownload"></div></a>
 
         <div class="div11">
             <div class="div11img1"></div>
@@ -68,21 +68,21 @@
 
                         <tr>
                             <td>得分</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td id="ti1"></td>
+                            <td id="ti2"></td>
+                            <td id="ti3"></td>
+                            <td id="ti4"></td>
+                            <td id="ti5"></td>
+                            <td id="ti6"></td>
+                            <td id="ti7"></td>
+                            <td id="ti8"></td>
+                            <td id="ti9"></td>
+                            <td id="ti10"></td>
+                            <td id="ti11"></td>
+                            <td id="ti12"></td>
+                            <td id="ti13"></td>
+                            <td id="ti14"></td>
+                            <td id="ti15"></td>
                         </tr>
                     </table>
                 </div>
@@ -110,51 +110,77 @@
                             <tr>
                                 <td class="div13tb3td1">资产大类数据准备</td>
                                 <td class="div13tb3td2">
-                                    <img src="../img/1.jpg" style="width: 100%;">
+                                    <img id="code1" style="width: 100%;">
                                 </td>
-                                <td class="div13tb3td2"></td>
+                                <td class="div13tb3td2">
+                                    <img id="Operation_results1" style="width: 100%;">
+                                </td>
                                 <td class="div13tb3td3"></td>
                             </tr>
                             
                             <tr>
                                 <td class="div13tb3td1">计算年化收益率</td>
-                                <td class="div13tb3td2"></td>
-                                <td class="div13tb3td2"></td>
+                                <td class="div13tb3td2">
+                                    <img id="code2" style="width: 100%;">
+                                </td>
+                                <td class="div13tb3td2">
+                                    <img id="Operation_results2" style="width: 100%;">
+                                </td>
                                 <td class="div13tb3td3"></td>
                             </tr>
                             
                             <tr>
                                 <td class="div13tb3td1">计算年化标准差</td>
-                                <td class="div13tb3td2"></td>
-                                <td class="div13tb3td2"></td>
+                                <td class="div13tb3td2">
+                                    <img id="code3" style="width: 100%;">
+                                </td>
+                                <td class="div13tb3td2">
+                                    <img id="Operation_results3" style="width: 100%;">
+                                </td>
                                 <td class="div13tb3td3"></td>
                             </tr>
 
                             <tr>
                                 <td class="div13tb3td1">相关性系数矩阵</td>
-                                <td class="div13tb3td2"></td>
-                                <td class="div13tb3td2"></td>
+                                <td class="div13tb3td2">
+                                    <img id="code4" style="width: 100%;">
+                                </td>
+                                <td class="div13tb3td2">
+                                    <img id="Operation_results4" style="width: 100%;">
+                                </td>
                                 <td class="div13tb3td3"></td>
                             </tr>
 
                             <tr>
                                 <td class="div13tb3td1">构建组合的Effcient Frontier</td>
-                                <td class="div13tb3td2"></td>
-                                <td class="div13tb3td2"></td>
+                                <td class="div13tb3td5">
+                                    <img id="code5" style="width: 100%;">
+                                </td>
+                                <td class="div13tb3td2">
+                                    <img id="Operation_results5" style="width: 100%;">
+                                </td>
                                 <td class="div13tb3td3"></td>
                             </tr>
 
                             <tr>
                                 <td class="div13tb3td1">计算资产配置权重</td>
-                                <td class="div13tb3td2"></td>
-                                <td class="div13tb3td2"></td>
+                                <td class="div13tb3td2">
+                                    <img id="code6" style="width: 100%;">
+                                </td>
+                                <td class="div13tb3td2">
+                                    <img id="Operation_results6" style="width: 100%;">
+                                </td>
                                 <td class="div13tb3td3"></td>
                             </tr>
 
                             <tr>
                                 <td class="div13tb3td1">半年后总收益</td>
-                                <td class="div13tb3td2"></td>
-                                <td class="div13tb3td2"></td>
+                                <td class="div13tb3td2">
+                                    <img id="code7" style="width: 100%;">
+                                </td>
+                                <td class="div13tb3td2">
+                                    <img id="Operation_results7" style="width: 100%;">
+                                </td>
                                 <td class="div13tb3td3"></td>
                             </tr>
                         </table>
@@ -187,10 +213,12 @@
     </div>
 </div>
 </body>
-<script src="./lib/layui.js"></script>
+<script src="../lib/layui.js"></script>
 <script src="../js/jquery-2.1.4.js"></script>
 <script src="../lib/layui.all.js"></script>
 <script src="../js/jquery.min.js"></script>
+
+<!-- 下载为PDF -->
  	<script src="../js/html2canvas.js"></script>
     <script src="../js/jspdf.min.js"></script>
     <script type="text/javascript">
@@ -207,10 +235,67 @@
 	        });
         })
     })
-    </script>
+</script>
+
+<script>
+    const a = JSON.parse(localStorage.getItem("test_value"));
+        $("#ti1").html(String(a["ti1"]));
+        $("#ti2").html(String(a["ti2"]));
+        $("#ti3").html(String(a["ti3"]));
+        $("#ti4").html(String(a["ti4"]));
+        $("#ti5").html(String(a["ti5"]));
+        $("#ti6").html(String(a["ti6"]));
+        $("#ti7").html(String(a["ti7"]));
+        $("#ti8").html(String(a["ti8"]));
+        $("#ti9").html(String(a["ti9"]));
+        $("#ti10").html(String(a["ti10"]));
+        $("#ti11").html(String(a["ti11"]));
+        $("#ti12").html(String(a["ti12"]));
+        $("#ti13").html(String(a["ti13"]));
+        $("#ti14").html(String(a["ti14"]));
+        $("#ti15").html(String(a["ti15"]));
+</script>
+
+<!-- 请求图片 -->
+<script>
+    $.ajax({
+    /* url 地址可以是 /get-json/ 的方式
+    *  也可以是 http://www.qfedu.com/get-json/ 的方式
+    */
+    url: 'http://127.0.0.1:5000/result',
+    type: 'POST',
+    dataType: 'json',
+    data:{"user":"b1a438cf-85c3-4d04-bec4-02a37ea2588d"},
+    success: function(data){
+        // 成功处理逻辑
+        
+        $("#code1").attr('src',".."+data.code[0]);
+        $("#Operation_results1").attr('src',".."+data.print[0]);
+        $("#code2").attr('src',".."+data.code[1]);
+        $("#Operation_results2").attr('src',".."+data.print[1]);
+        $("#code3").attr('src',".."+data.code[2]);
+        $("#Operation_results3").attr('src',".."+data.print[2]);
+        $("#code4").attr('src',".."+data.code[3]);
+        $("#Operation_results4").attr('src',".."+data.print[3]);
+        $("#code5").attr('src',".."+data.code[4]);
+        $("#Operation_results5").attr('src',".."+data.print[4]);
+        $("#code6").attr('src',".."+data.code[5]);
+        $("#Operation_results6").attr('src',".."+data.print[5]);
+        $("#code7").attr('src',".."+data.code[6]);
+        $("#Operation_results7").attr('src',".."+data.print[6]);
+     },
+    error: function(res){
+        // 错误时处理逻辑
+        }
+            });
+</script>
+
+<!-- 提交 -->
 <script>
     $('button:button[id="tijiao"]').click(function(){ 
         layer.alert('您已成功提交')
     });
 </script>
+
+
 </html>

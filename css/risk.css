@@ -1,6 +1,11 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+
 body {
     background-image: url(../img/3-bg@2x.png);
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     overflow: hidden;
     width: 100%;
@@ -9,11 +14,9 @@ body {
 
 #nav {
     width: 100%;
-    margin-top: 2.5%;
-    
+    height: 8%;
+    margin-top:1.6%;
 }
-
-
 
 #help,
 #friends {
@@ -25,13 +28,13 @@ body {
     border-radius: 15px;
     float: right;
     margin-right: 2%;
+    margin-top: 0.5%;
 }
 
 #but1 {
     width: 10%;
     float: right;
     margin-right: 2%;
-    margin-top: -7px;
 }
 
 #but1 a {
@@ -39,103 +42,169 @@ body {
 }
 
 #mainWin {
-    margin: 3% 1.5% 0% 1.5%;
+    margin: 0 auto;
     background-image: url(../img/5-bg@2x.png);
     background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
     background-size: 100% 100%;
+    overflow: hidden;
+    width: 96.7%;
+    height: 86%;
 }
 
 #mainWin-nav {
+    width: 5%;
     float: left;
-    margin-left: 2%;
     margin-top: 4%;
-    padding-left: 4%;
+    padding-left: 6%;
 }
 
 .content {
+    width: 84.5%;
+    height: 77%;
+    float: right;
+    background-image: url(../img/3-right-place@2x.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+    margin-right: 2.9%;
+    margin-top: 7.2%;
+    border-radius: 10px;
+}
+
+#result {
+    width: 84.5%;
+    height: 68%;
+    float: right;
+    background-image: url(../img/3-right-place@2x.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+    margin-right: 2.9%;
+    margin-top: 7.2%;
+    border-radius: 10px;
+    padding-top: 4%;
+}
+
+#result pre{
+    text-align: left;
     margin-top: 8%;
-    margin-left: 12%;
-    padding-top: 2%;
-    padding-left: 2%;
 }
 
-.content h1 {
-    /* margin-top: 4%;
-    margin-bottom: 4%; */
-    line-height: 110%;
+.apple{
+    background-image: url(../img/15-icon-1@2x.png);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: 100% 100%;
+    width: 14%;
+    height: 100%;
+    vertical-align: middle;
+    display: inline-block;
 }
 
-#content {
-    margin-top: 8%;
-    margin-left: 12%;
-    padding-top: 2%;
-    padding-left: 2%;
+#wen_nav{
+    width: 97%;
+    height: 22%;
+    padding-left: 0%;
+    padding-top: 0%;
+    text-align: center;
 }
 
-#content #apple h1{
-   line-height: 500%;
+#wen_nav p{
+   font-size: 150%;
+   line-height: 100%;
+   display: inline-block;
+   
 }
 
 #wenzi{
-    float: left;
+    width: 60%;
     height: 100%;
-}
-
-#content h1{
-    font-size: 24px;
-    margin-top: 10%;
-    margin-bottom: 20%;
-    text-align: center;
-}
-
-#tupian{
-    float: right;
-    width: 45%;
+    float: left;
 }
 
 #tu{
-    margin-top: 10%;
-    text-align: center;
+    width: 40%;
+    height: 100%;
+    padding-top: 4%;
+    float: right;
 }
 
-#tu #leixing{
-    width: 70%;
-    margin-bottom: 15%;
+#tu a{
+    position: absolute;
+    right: 18%;
+    bottom: 18%;
+}
+
+#leixing{
+    width: 65%;
+    height: 35%;
+    margin: 0 auto;
     background-image: url(../img/62-card@2x.png);
-    background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
     background-size: 100% 100%;
 }
 
-#leixing{
-    font-size: 40px;
+#leixing p{
+    width: 84%;
+    height: 90%;
+    line-height: 400%;
+    padding-left: 8%;
+    padding-right: 8%;
+    text-align: center;
+    font-size:200%;
     color: white;
-    margin-left: 15%;
-    line-height: 420%;
 }
 
-
+.bsx span{
+    width: 25%;
+    height: 50%;
+    float: left;
+    margin-top: 12%;
+    margin-left: 5%;
+    display: inline-block; 
+    background-image: url(../img/6_ss.png);  
+    background-repeat: no-repeat; 
+    overflow: hidden; 
+    background-size: 100% 100%;
+}
 
 #bt {
     margin-top: 4%;
     margin-bottom: 3%;
 }
 
-#ti {
-    width: 30%;
-    height: 20px;
-    line-height: 20px;
-    padding: 4%;
+.ti1,.ti2,.ti3,.ti4,.ti5,.ti6,.ti7,.ti8,.ti9,.ti10{
+    width: 100%;
+    height: 73%;
+}
+
+.t1,.t2,.t3,.t4,.t5,.t6,.t7,.t8,.t9,.t10{
+    width: 33%;
+    height: 21%;
     background-image: url(../img/5-panel-nor@2x.png);
-    background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
     background-size: 100% 100%;
     font-size: 15px;
     float: left;
+    margin-left: 8%;
+    padding-top: 3%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+p input{
+    margin-left: 8%;
+    margin-right: 3%;
+}
+
+.ti_cli{
+    background-image: url(../img/5-panel-select@2x.png);
+}
+
+.tp_cli{
+    color: white;
 }
 
 #butt {
@@ -146,21 +215,18 @@ body {
     margin-left: 100px
 }
 
-#n{
-    margin-top: 1%;
-    margin-left: 6%;
-}
-
-#next, #n {
+#next, #tijiao{
     color: white;
-    width: 200px;
-    height: 40px;
+    width: 12%;
+    height: 6%;
     border: none;
     background-image: url(../img/5-btn-next@2x.png);
-    background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
     background-size: 100% 100%;
+    position: absolute;
+    bottom: 12%;
+    right: 7%;
 }
 
 #queren {
@@ -169,53 +235,58 @@ body {
     height: 40px;
     border: none;
     background-image: url(../img/5-btn-next@2x.png);
-    background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
     background-size: 100% 100%;
-    
+    position: absolute;
+    right: 14%;
+    bottom: 25%;
 }
 
 #back {
     color: white;
-    width: 200px;
-    height: 40px;
+    width: 12%;
+    height: 6%;
     border: none;
-    background-image: url(../img/5-btn-back@2x.png);
-    background-size: cover;
+    background-image: url(../img/5-btn-next@2x.png);
     background-repeat: no-repeat;
     overflow: hidden;
     background-size: 100% 100%;
+    position: absolute;
+    bottom: 12%;
+    right: 20%;
+}
 
+.line-nav{
+    width: 90%;
+    height: 22%;
+    padding-left: 3%;
+    margin-top: 2%;
+}
+
+.line-nav p{
+    font-size: 150%;
+    line-height: 100%;
+    display: inline-block;
 }
 
 #apple {
     background-image: url(../img/15-icon-1@2x.png);
-    background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
     background-size: 100% 100%;
-    width: 10.6%;
-    float: left;
-    margin-bottom: 30%;
+    width: 8.5%;
+    height: 100%;
+    vertical-align: middle;
+    display: inline-block
 }
 
 #apple h1 {
-    text-align: center;
-    line-height: 900%;
+    font-weight: bolder;
     color: white;
-}
-
-#tijiao{
-    color: white;
-    width: 200px;
-    height: 40px;
-    border: none;
-    background-image: url(../img/5-btn-next@2x.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    background-size: 100% 100%;
+    font-size: 200%;
+    line-height: 280%;
+    padding-left: 30%;
 }
 
 ol.steps::-webkit-scrollbar {
@@ -244,14 +315,14 @@ ol.steps li {
 }
 
 ol.steps li .step-line {
-    height: 25px;
+    height: 60%;
     position: absolute;
     background-color: #e0e0e0;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .2);
 
-    width: 3px;
-    top: 33px;
-    left: 0;
+    width: 18%;
+    top: 50%;
+    left: -8%;
 }
 
 ol.steps li.step-active .step-line {
@@ -268,14 +339,15 @@ ol.steps .step-content {
 
 ol.steps li .step-content .step-num {
     display: inline-block;
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
     color: #fff;
-    background-color: #b9b9b9;
+    background-color: #fff;
     line-height: 30px;
     border-radius: 50%;
     text-align: center;
-    border: 1px solid rgba(224, 224, 224, 1);
+    border: 5px solid rgba(255, 255, 255, 1);
+    box-shadow:1px 6px 20px 1px #383838;
 }
 
 ol.steps li.step-active .step-content .step-num {
@@ -291,26 +363,55 @@ ol.steps li.step-end .step-line {
     display: none;
 }
 
-.layui-card{
-    margin-top: 2.8%;
+.card{
+    width: 96.6%;
+    height: 85%;
     margin-left: 1.7%;
-    margin-right: 1.7%;
+    margin-top: 0.3%;
+    padding: 0.5%;
 }
 
-.layui-card-header{
-    padding-bottom: 2%;
+.card p{
+    width: 94%;
+    height: 10%;
+    color: white;
+    line-height: 350%;
+    font-size: 120%;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
-.layui-card-body{
-    font-size: 20px;
-    padding-left: 15%;
-    padding-right: 15%;
-    padding-top: 5%;
-    padding-bottom: 20%;
+#neirong{
+    width: 99%;
+    height: 83%;
+    background-image: url(../img/3-right-place@2x.png);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: 100% 100%;
+    border-radius: 5px;
+    padding-top: 2%;
 }
 
-.layui-card-body p{
-    line-height: 200%;
+#neirong p{
+    color: #000000;
+    line-height: 150%;
+}
+
+#neirong img{
+    margin-left: 2%;
+    margin-top: 3%;
+    width: 65%;
+}
+
+#n{
+    width: 15%;
+    height: 60%;
+    background-color: #6969EF;
+    color: white;
+    border:none;
+    border-radius: 5px;
+    margin-left: 3%;
+    margin-top: 2%;
 }
 
 #biaoti{
@@ -319,8 +420,8 @@ ol.steps li.step-end .step-line {
 
 #start{
     color: white;
-    width: 200px;
-    height: 40px;
+    width: 14%;
+    height: 7%;
     border: none;
     background-image: url(../img/5-btn-next@2x.png);
     background-size: cover;
@@ -329,6 +430,6 @@ ol.steps li.step-end .step-line {
     background-size: 100% 100%;
     position: absolute;
     float: right;
-    left: 80%;
-    top: 80%
+    right: 8%;
+    bottom: 10%
 }

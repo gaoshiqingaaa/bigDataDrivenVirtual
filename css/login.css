@@ -1,7 +1,7 @@
 .loginbox2 {
     width: 21%;
     height: 45%;
-    right: 21%;
+    right: 20.5%;
     top: 26%;
     position: absolute;
     display: flex;
@@ -42,7 +42,7 @@
 }
 .logindiv {
     position: absolute;
-    top: 15.5vw;
+    top: 15vw;
     left: 27px;
 }
 

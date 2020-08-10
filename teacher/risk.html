@@ -1,789 +1,793 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>风险承受能力评估问卷</title>
-    <link rel="stylesheet" href="../lib/css/layui.css">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/risk.css" />
-</head>
-<body>
-    <div id="nav">
-        <a href="../index.html"><button type="button" class="layui-btn layui-btn-radius layui-btn-primary" id="but1">返回</button></a>
-        <button type="button" class="layui-icon layui-icon-friends" id="friends"></button>
-        <button type="button" class="layui-icon layui-icon-help" id="help"></button>
-    </div>
-    <br>
-    <div class="layui-card" style="display: block;">
-        <div class="layui-card-header">
-            <button type="button" id="n">说明</button>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>风险承受能力评估问卷</title>
+        <link rel="stylesheet" href="../lib/css/layui.css">
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/risk.css" />
+    </head>
+    <body>
+        <!-- 导航栏 -->
+        <div id="nav">
+            <a href="../index.html"><button type="button" class="layui-btn layui-btn-radius layui-btn-primary" id="but1">返回</button></a>
+            <button type="button" class="layui-icon layui-icon-friends" id="friends"></button>
+            <button type="button" class="layui-icon layui-icon-help" id="help"></button>
         </div>
-        <div class="layui-card-body">
-            <p id="biaoti">尊敬的用户：</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;以下问题可协助评估您对投资产品和服务的风险承受能力，请您根据自身情况认真选择。评估结果仅供参考， 不构成投资建议。为了及时了解您的风险承受能力，我们建议您持续做好动态评估。我们承诺对您的所有个人资料保密。</p>
-            <button type="button" id="start">确定</button>
+
+        <!-- 说明页面 -->
+        <div class="card" style="display: block;">
+           <p>任务说明</p>
+           <div id="neirong">
+               <p>根据我国资本市场实际情况，本实验项目设定可选取的资产大类有六类：国内股市（大盘股、中盘股、小盘股）、国外股市（美股）、国内债卷
+               （国债、企业债）、货币基金。由于是被动投资。考虑历史数据长短问题，上述资产分别以沪深300、中证500、创业板、标普500、上证国债、
+               上证企业债为代表。</p>
+               <img src="../img/7-form@2x.png" >
+               <button type="button" id="start">开始分析</button>
+           </div>
         </div>
-    </div>
-    <div id="mainWin" style="display: none;">
-        <div id="mainWin-nav">
+
+        <!-- 选择题 -->
+        <div id="mainWin" style="display: none;">
+            <!-- 进度条 -->
+            <div id="mainWin-nav">
                 <ol class="steps">
-                        <li class="step-active">
-                            <div class="step-line"></div>
-                            <div class="step-content">
-                                <span class="step-num"></span>
-            
-                            </div>
-                        </li>
-                        <li >
-                            <div class="step-line"></div>
-                            <div class="step-content">
-                                <span class="step-num"></span>
-            
-                            </div>
-                        </li>
-                        <li >
-                            <div class="step-line"></div>
-                            <div class="step-content">
-                                <span class="step-num"></span>
-            
-                            </div>
-                        </li>
-                        <li >
-                            <div class="step-line"></div>
-                            <div class="step-content">
-                                <span class="step-num"></span>
-            
-                            </div>
-                        </li>
-                        <li >
-                            <div class="step-line"></div>
-                            <div class="step-content">
-                                <span class="step-num"></span>
-            
-                            </div>
-                        </li>
-                        <li >
-                            <div class="step-line"></div>
-                            <div class="step-content">
-                                <span class="step-num"></span>
-            
-                            </div>
-                        </li>
-                        <li>
-                            <div class="step-line"></div>
-                            <div class="step-content">
-                                <span class="step-num"></span>
-            
-                            </div>
-                        </li>
-                        <li>
-                            <div class="step-line"></div>
-                            <div class="step-content">
-                                <span class="step-num"></span>
-            
-                            </div>
-                        </li>
-                        <li>
-                            <div class="step-line"></div>
-                            <div class="step-content">
-                                <span class="step-num"></span>
-            
-                            </div>
-                        </li>
-                        <li class="step-end">
-                            <!-- <div class="step-line"></div> -->
-                            <div class="step-content">
-                                <span class="step-num"></span>
-            
-                            </div>
-                        </li>
-                    </ol>
-        </div>
-        <!-- 第一题 -->
-        <div class="content" style="display: block;">
-            <div id="apple">
-                <h1>1</h1>
-            </div>
-            <div id="bt">
-                <h1>请问您的年龄处于(  )。</h1>
-            </div>
-
-            <div id="ti">
-                <input type="radio" name="t1" value="t1_1" id="t1_1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>A.30岁以下</b>
-            </div>
-            <div id="ti">
-                <input type="radio" name="t1" value="t1_2" id="t1_2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>B.31-40岁</b>
-            </div>
-
-            <div id="ti">
-                <input type="radio" name="t1" value="t1_3" id="t1_3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>C.41-50岁</b>
-            </div>
-            <div id="ti">
-                <input type="radio" name="t1" value="t1_4" id="t1_4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>D.51-60岁</b>
-            </div>
-
-            <div id="ti">
-                <input type="radio" name="t1" value="t1_5" id="t1_5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>E.60岁以上</b>
-            </div>
-            <br>
-            <div style="position:absolute;bottom:10%;right:15%;">
-                <div id="butt">
-                    <button type="button" id="next">下一步</button>
-                </div>
-                <!-- <div id="butt">
-                    <button type="button" id="back">上一步</button>
-                </div> -->
-            </div>
-
-        </div>
-        <!-- 第二题 -->
-        <div class="content" style="display: none;">
-            <div id="apple">
-                <h1>2</h1>
-            </div>
-            <div id="bt">
-                <h1>您家庭预计进行证券投资的资金占家庭现有总资产(不含自住、自用房产及汽车等<br>固定资产)的比例是(  )。</h1>
-            </div>
-
-            <div id="ti">
-                <input type="radio" name="t2" value="t2_1" id="t2_1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>A.70%以上</b>
-            </div>
-            <div id="ti">
-                <input type="radio" name="t2" value="t2_2" id="t2_2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>B.50%-70%</b>
-            </div>
-
-            <div id="ti">
-                <input type="radio" name="t2" value="t2_3" id="t2_3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>C.30%-50%</b>
-            </div>
-            <div id="ti">
-                <input type="radio" name="t2" value="t2_4" id="t2_4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>D.10%-30%</b>
-            </div>
-
-            <div id="ti">
-                <input type="radio" name="t2" value="t2_5" id="t2_5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>E.10%以下</b>
-            </div>
-            <br>
-            <div style="position:absolute;bottom:10%;right:15%">
-                <div id="butt">
-                    <button type="button" id="next">下一步</button>
-                </div>
-                <div id="butt">
-                    <button type="button" id="back">上一步</button>
-                </div>
-            </div>
-        </div>
-        <!-- 第三题 -->
-        <div class="content" style="display: none;">
-            <div id="apple">
-                <h1>3</h1>
-            </div>
-            <div id="bt">
-                <h1>当您进行投资时，您的首要目标是（    ）。</h1>
+                    <li class="step-active">
+                        <div class="step-line"></div>
+                        <div class="step-content">
+                            <span class="step-num"></span>
+        
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-line"></div>
+                        <div class="step-content">
+                            <span class="step-num"></span>
+        
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-line"></div>
+                        <div class="step-content">
+                            <span class="step-num"></span>
+        
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-line"></div>
+                        <div class="step-content">
+                            <span class="step-num"></span>
+        
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-line"></div>
+                        <div class="step-content">
+                            <span class="step-num"></span>
+        
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-line"></div>
+                        <div class="step-content">
+                            <span class="step-num"></span>
+        
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-line"></div>
+                        <div class="step-content">
+                            <span class="step-num"></span>
+        
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-line"></div>
+                        <div class="step-content">
+                            <span class="step-num"></span>
+        
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-line"></div>
+                        <div class="step-content">
+                            <span class="step-num"></span>
+        
+                        </div>
+                    </li>
+                    <li class="step-end">
+                        <div class="step-content">
+                            <span class="step-num"></span>
+                        </div>
+                    </li>
+                </ol>
             </div>
             
-            <div id="ti">
-                <input type="radio" name="t3" value="t3_1" id="t3_1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>A.资产保值，我不愿意承担任何投资风险</b>
-            </div>
-            <div id="ti">
-                <input type="radio" name="t3" value="t3_2" id="t3_2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>B.尽可能保证本金安全，不在乎收益率比较低</b>
-            </div>
-
-            <div id="ti">
-                <input type="radio" name="t3" value="t3_3" id="t3_3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>C.产生较多的收益， 可以承担一定的投资风险</b>
-            </div>
-            <div id="ti">
-                <input type="radio" name="t3" value="t3_4" id="t3_4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>D.实现资产大幅增长，愿意承担很大的投资风险</b>
-            </div>
-            <div style="position:absolute;bottom:10%;right:15%">
-                <div id="butt">
-                    <button type="button" id="next">下一步</button>
+            <!-- 题目库 -->
+            <div class="content" style="display: block;">
+                <div class="line-nav">
+                    <div id="apple">
+                        <h1 id="a1">1</h1>
+                        <h1 id="a2" style="display: none;">2</h1>
+                        <h1 id="a3" style="display: none;">3</h1>
+                        <h1 id="a4" style="display: none;">4</h1>
+                        <h1 id="a5" style="display: none;">5</h1>
+                        <h1 id="a6" style="display: none;">6</h1>
+                        <h1 id="a7" style="display: none;">7</h1>
+                        <h1 id="a8" style="display: none;">8</h1>
+                        <h1 id="a9" style="display: none;">9</h1>
+                        <h1 id="a10" style="display: none; padding-left: 20%;">10</h1>
+                    </div>
+                    <p id="h1">请问您的年龄处于( )。</p>
+                    <p id="h2" style="display: none;">您家庭预计进行证券投资的资金占家庭现有总资产(不含自住、自用房产及汽车等固定资产)<br>的比例是(  )。</p>
+                    <p id="h3" style="display: none;">当您进行投资时，您的首要目标是（    ）。</p>
+                    <p id="h4" style="display: none;">进行一项重大投资后，您通常会觉得（    ）。</p>
+                    <p id="h5" style="display: none;">假设有两种不同的投资：投资A预期获得5%的收益，有可能承担非常小的损失；投资B预期获<br>得20%的收益，但有可能面临25%甚至更高的亏损。您将您的投资资产分配为()。</p>
+                    <p id="h6" style="display: none;">假如您前期用25元购入一只股票。该股现在升到30元，而根据预测该股近期有一半机会升到<br>35元，另一半机会跌到25元，您现在会（    ）。</p>
+                    <p id="h7" style="display: none;">同上题情况，该股现在已经跌到20元，而您估计该股近期有一半机会升回25元，另一半机会<br>继续下跌到15元，您现在会（    ）。</p>
+                    <p id="h8" style="display: none;">您用于证券投资的资金不会用作其它用途的时间段为（    ）。</p>
+                    <p id="h9" style="display: none;">您是否了解证券市场的相关知识（    ）。</p>
+                    <p id="h10" style="display: none;">您的投资经验可以被概括为（    ）。</p>
                 </div>
-                <div id="butt">
-                    <button type="button" id="back">上一步</button>
+                
+                <!-- 第一题 -->
+                <div class="ti1">
+                    <div class="t1">
+                        <p class="tp1"><input type="radio" name="t1" value="t1_1" id="t1_1">A.30岁以下</p>
+                    </div>
+                    <div class="t1">
+                        <p class="tp1"><input type="radio" name="t1" value="t1_2" id="t1_2">B.31-40岁</p>
+                    </div>
+                    <div class="t1">
+                        <p class="tp1"><input type="radio" name="t1" value="t1_3" id="t1_3">C.41-50岁</p>
+                    </div>
+                    <div class="t1">
+                        <p class="tp1"><input type="radio" name="t1" value="t1_4" id="t1_4">D.51-60岁</p>
+                    </div>
+                    <div class="t1">
+                        <p class="tp1"><input type="radio" name="t1" value="t1_5" id="t1_5">E.60岁以上</p>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <!-- 第四题 -->
-        <div class="content" style="display: none;">
-            <div id="apple">
-                <h1>4</h1>
-            </div>
-            <div id="bt">
-                <h1>进行一项重大投资后，您通常会觉得（    ）。</h1>
+                
+                <!-- 第二题 -->
+                <div class="ti2" style="display: none;">
+                    <div class="t2">
+                        <p class="tp2"><input type="radio" name="t2" value="t2_1" id="t2_1">A.70%以上</p>
+                    </div>
+                    <div class="t2">
+                        <p class="tp2"><input type="radio" name="t2" value="t2_2" id="t2_2">B.50%-70%</p>
+                    </div>
+                    <div class="t2">
+                        <p class="tp2"><input type="radio" name="t2" value="t2_3" id="t2_3">C.30%-50%</p>
+                    </div>
+                    <div class="t2">
+                        <p class="tp2"><input type="radio" name="t2" value="t2_4" id="t2_4">D.10%-30%</p>
+                    </div>
+                    <div class="t2">
+                        <p class="tp2"><input type="radio" name="t2" value="t2_5" id="t2_5">E.10%以下</p>
+                    </div>
+                </div>
+                
+                <!-- 第三题 -->
+                <div class="ti3">
+                    <div class="t3">
+                        <p class="tp3"><input type="radio" name="t3" value="t3_1" id="t3_1">A.资产保值，我不愿意承担任何投资风险</p>
+                    </div>
+                    <div class="t3">
+                        <p class="tp3"><input type="radio" name="t3" value="t3_2" id="t3_2">B.尽可能保证本金安全，不在乎收益率比较低</p>
+                    </div>
+                    <div class="t3">
+                        <p class="tp3"><input type="radio" name="t3" value="t3_3" id="t3_3">C.产生较多的收益， 可以承担一定的投资风险</p>
+                    </div>
+                    <div class="t3">
+                        <p class="tp3"><input type="radio" name="t3" value="t3_4" id="t3_4">D.实现资产大幅增长，愿意承担很大的投资风险</p>
+                    </div>
+                </div>
+                
+                <!-- 第四题 -->
+                <div class="ti4">
+                    <div class="t4">
+                        <p class="tp4"><input type="radio" name="t4" value="t4_1" id="t4_1">A.很高兴，对自己的决定很有信心</p>
+                    </div>
+                    <div class="t4">
+                        <p class="tp4"><input type="radio" name="t4" value="t4_2" id="t4_2">B.轻松，基本持乐观态度</p>
+                    </div>
+                    <div class="t4">
+                        <p class="tp4"><input type="radio" name="t4" value="t4_3" id="t4_3">C.基本没什么影响</p>
+                    </div>
+                    <div class="t4">
+                        <p class="tp4"><input type="radio" name="t4" value="t4_4" id="t4_4">D.比较担心投资结果</p>
+                    </div>
+                    <div class="t4">
+                        <p class="tp4"><input type="radio" name="t4" value="t4_5" id="t4_5">E.非常担心投资结果</p>
+                    </div>
+                </div>
+                
+                <!-- 第五题 -->
+                <div class="ti5">
+                    <div class="t5">
+                        <p class="tp5"><input type="radio" name="t5" value="t5_1" id="t5_1">A.全部投资于A</p>
+                    </div>
+                    <div class="t5">
+                        <p class="tp5"><input type="radio" name="t5" value="t5_2" id="t5_2">B.大部分投资于A</p>
+                    </div>
+                    <div class="t5">
+                        <p class="tp5"><input type="radio" name="t5" value="t5_3" id="t5_3">C.两种投资各一半</p>
+                    </div>
+                    <div class="t5">
+                        <p class="tp5"><input type="radio" name="t5" value="t5_4" id="t5_4">D.大部分投资于B</p>
+                    </div>
+                    <div class="t5">
+                        <p class="tp5"><input type="radio" name="t5" value="t5_5" id="t5_5">E.全部投资于B</p>
+                    </div>
+                </div>
+                
+                <!-- 第六题 -->
+                <div class="ti6">
+                    <div class="t6">
+                        <p class="tp6"><input type="radio" name="t6" value="t6_1" id="t6_1">A.立刻卖出</p>
+                    </div>
+                    <div class="t6">
+                        <p class="tp6"><input type="radio" name="t6" value="t6_2" id="t6_2">B.部分卖出</p>
+                    </div>
+                    <div class="t6">
+                        <p class="tp6"><input type="radio" name="t6" value="t6_3" id="t6_3">C.继续持有</p>
+                    </div>
+                    <div class="t6">
+                        <p class="tp6"><input type="radio" name="t6" value="t6_4" id="t6_4">D.继续买入</p>
+                    </div>
+                </div>
+                
+                <!-- 第七题 -->
+                <div class="ti7">
+                    <div class="t7">
+                        <p class="tp7"><input type="radio" name="t7" value="t7_1" id="t7_1">A.立刻卖出</p>
+                    </div>
+                    <div class="t7">
+                        <p class="tp7"><input type="radio" name="t7" value="t7_2" id="t7_2">B.部分卖出</p>
+                    </div>
+                    <div class="t7">
+                        <p class="tp7"><input type="radio" name="t7" value="t7_3" id="t7_3">C.继续持有</p>
+                    </div>
+                    <div class="t7">
+                        <p class="tp7"><input type="radio" name="t7" value="t7_4" id="t7_4">D.继续买入</p>
+                    </div>
+                </div>
+                
+                <!-- 第八题 -->
+                <div class="ti8">
+                    <div class="t8">
+                        <p class="tp8"><input type="radio" name="t8" value="t8_1" id="t8_1">A.短期：0-1年</p>
+                    </div>
+                    <div class="t8">
+                        <p class="tp8"><input type="radio" name="t8" value="t8_2" id="t8_2">B.中期：1-5年</p>
+                    </div>
+                    <div class="t8">
+                        <p class="tp8"><input type="radio" name="t8" value="t8_3" id="t8_3">C.长期：5年以上</p>
+                    </div>
+                </div>
+                
+                <!-- 第九题 -->
+                <div class="ti9">
+                    <div class="t9">
+                        <p class="tp9"><input type="radio" name="t9" value="t9_1" id="t9_1">A.从来没有参与过证券交易，对投资知识完全不了解</p>
+                    </div>
+                    <div class="t9">
+                        <p class="tp9"><input type="radio" name="t9" value="t9_2" id="t9_2">B.学习过证券投资知识，但没有实际操作经验，不懂投资技巧</p>
+                    </div>
+                    <div class="t9">
+                        <p class="tp9"><input type="radio" name="t9" value="t9_3" id="t9_3">C.了解证券市场的投资知识，并且有过实际操作经验，懂得一些投资技巧</p>
+                    </div>
+                    <div class="t9">
+                        <p class="tp9"><input type="radio" name="t9" value="t9_4" id="t9_4">D.参与过多年的证券交易，投资知识丰富，具有一定的专业水平</p>
+                    </div>
+                </div>
+                
+                <!-- 第十题 -->
+                <div class="ti10">
+                    <div class="t10">
+                        <p class="tp10"><input type="radio" name="t10" value="t10_1" id="t10_1">A.有限：除银行活期账户和定期存款外，我基本没有其他投资经验</p>
+                    </div>
+                    <div class="t10">
+                        <p class="tp10"><input type="radio" name="t10" value="t10_2" id="t10_2">B.一般：除银行活期账户和定期存款外，我购买过基金、保险等理财产品，但还需要进一步的指导</p>
+                    </div>
+                    <div class="t10">
+                        <p class="tp10"><input type="radio" name="t10" value="t10_3" id="t10_3">C.丰富：我是一位有经验的投资者，参与过股票、基金等产品的交易，并倾向于自己做出投资决策</p>
+                    </div>
+                    <div class="t10">
+                        <p class="tp10"><input type="radio" name="t10" value="t10_4" id="t10_4">D.非常丰富：我是一位非常有经验的投资者，参与过权证、期货或创业板等高风险产品的交易</p>
+                    </div>
+                </div>
+                
+                <button type="button" id="back" style="display: none;">上一步</button>
+                <button type="button" id="next">下一步</button>
+                <button type="button" id="tijiao" style="display: none;">提交</button>
             </div>
             
-            <div id="ti">
-                <input type="radio" name="t4" value="t4_1" id="t4_1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>A.很高兴，对自己的决定很有信心</b>
-            </div>
-            <div id="ti">
-                <input type="radio" name="t4" value="t4_2" id="t4_2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>B.轻松，基本持乐观态度</b>
-            </div>
-
-            <div id="ti">
-                <input type="radio" name="t4" value="t4_3" id="t4_3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>C.基本没什么影响</b>
-            </div>
-            <div id="ti">
-                <input type="radio" name="t4" value="t4_4" id="t4_4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>D.比较担心投资结果</b>
-            </div>
-
-            <div id="ti">
-                <input type="radio" name="t4" value="t4_5" id="t4_5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>E.非常担心投资结果</b>
-            </div>
-            <br>
-            <div style="position:absolute;bottom:10%;right:15%;">
-                <div id="butt">
-                    <button type="button" id="next">下一步</button>
+            <!-- 结果页面 -->
+            <div id="result" style="display: none;">
+                <div id="wenzi">
+                    <div id="wen_nav">
+                        <div class="apple"></div>
+                        <p>根据您的情况，您的风险承受能力为</p>
+                    </div>
+                    <pre id="baoshou" style="display: none;">
+                                    此类投资者对于投资产品的任何下跌都不愿意接受，甚至不能承受极小的资
+                            产波动。属于风险厌恶型的投资者， 首要目的是保持投资的稳定性与资产的保
+                            值，这类投资者需要注意为达到上述目标回报率可能很低，以换取本金免于受
+                            损和较高的流动性。
+                    </pre>
+                    <pre id="xiangbaoshou" style="display: none;">
+                                    此类投资者不愿意接受暂时的投资损失。关注本金的安全，往往是稍微有些
+                            风险厌恶型的投资者，首要投资目标是资产一定程度的增值，为了获得一定的
+                            收益能承受少许本金损失和波动，此类投资者可以承受少许的资产波动和本金
+                            损失风险。 
+                    </pre>
+                    <pre id="wenjian" style="display: none;">
+                                    此类投资者愿意承担一定程度的风险，主要强调投资风险和资产增值之间的
+                            平衡，为了获得一定收益可以承受投资产品价格的波动，甚至可以承受一段时
+                            间内投资产品价格的下跌，此类投资者可以承受一定程度的资产波动风险和本
+                            金亏损风险。
+                    </pre>
+                    <pre id="xiangjiji" style="display: none;">
+                                    此类投资者为了获得高回报的投资收益，能够承受投资产品价格的显著波动
+                            ，主要投资目标是实现资产增值，为实现目标往往愿意承担相当程度的风险此
+                            类投资者可以承受相当大的资产波动风险和本金亏损风险
+                    </pre>
+                    <pre id="jiji" style="display: none;">
+                                    此类投资者能够承受投资产品价格的剧烈波动，也可以承担这种波动所带
+                            来的结果，投资目标主要是取得超额收益，为实现投资目标愿意官更大的风险
+                            。此类投资者能够承担相当大的投资风险和更大的本金亏损风险
+                    </pre>
                 </div>
-                <div id="butt">
-                    <button type="button" id="back">上一步</button>
-                </div>
-            </div>
-        </div>
-        <!-- 第五题 -->
-        <div class="content" style="display: none;">
-            <div id="apple">
-                <h1>5</h1>
-            </div>
-            <div id="bt">
-                <h1>假设有两种不同的投资：投资A预期获得5%的收益，有可能承担非常小的损失；<br>投资B预期获得20%的收益，但有可能面临25%甚至更高的亏损。您将您的投资资<br>产分配为()。</h1>
-            </div>
-            
-            <div id="ti">
-                <input type="radio" name="t5" value="t5_1" id="t5_1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>A.全部投资于A</b>
-            </div>
-            <div id="ti">
-                <input type="radio" name="t5" value="t5_2" id="t5_2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>B.大部分投资于A</b>
-            </div>
-
-            <div id="ti">
-                <input type="radio" name="t5" value="t5_3" id="t5_3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>C.两种投资各一半</b>
-            </div>
-            <div id="ti">
-                <input type="radio" name="t5" value="t5_4" id="t5_4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>D.大部分投资于B</b>
-            </div>
-
-            <div id="ti">
-                <input type="radio" name="t5" value="t5_5" id="t5_5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>E.全部投资于B</b>
-            </div>
-            <br>
-            <div style="position:absolute;bottom:10%;right:15%;">
-                <div id="butt">
-                    <button type="button" id="next">下一步</button>
-                </div>
-                <div id="butt">
-                    <button type="button" id="back">上一步</button>
-                </div>
-            </div>
-        </div>
-        <!-- 第六题 -->
-        <div class="content" style="display: none;">
-            <div id="apple">
-                <h1>6</h1>
-            </div>
-            <div id="bt">
-                <h1>假如您前期用25元购入一只股票。该股现在升到30元，而根据预测该股近期有一半<br>机会升到35元，另一半机会跌到25元，您现在会（    ）。</h1>
-            </div>
-            
-            <div id="ti">
-                <input type="radio" name="t6" value="t6_1" id="t6_1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>A.立刻卖出</b>
-            </div>
-            <div id="ti">
-                <input type="radio" name="t6" value="t6_2" id="t6_2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>B.部分卖出</b>
-            </div>
-
-            <div id="ti">
-                <input type="radio" name="t6" value="t6_3" id="t6_3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>C.继续持有</b>
-            </div>
-            <div id="ti">
-                <input type="radio" name="t6" value="t6_4" id="t6_4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>D.继续买入</b>
-            </div>
-            <div style="position:absolute;bottom:10%;right:15%;">
-                <div id="butt">
-                    <button type="button" id="next">下一步</button>
-                </div>
-                <div id="butt">
-                    <button type="button" id="back">上一步</button>
-                </div>
-            </div>
-        </div>
-        <!-- 第七题 -->
-        <div class="content" style="display: none;">
-            <div id="apple">
-                <h1>7</h1>
-            </div>
-            <div id="bt">
-                <h1>同上题情况，该股现在已经跌到20元，而您估计该股近期有一半机会升回25元，另<br>一半机会继续下跌到15元，您现在会（    ）。</h1>
-            </div>
-            
-            <div id="ti">
-                <input type="radio" name="t7" value="t7_1" id="t7_1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>A.立刻卖出</b>
-            </div>
-            <div id="ti">
-                <input type="radio" name="t7" value="t7_2" id="t7_2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>B.部分卖出</b>
-            </div>
-
-            <div id="ti">
-                <input type="radio" name="t7" value="t7_3" id="t7_3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>C.继续持有</b>
-            </div>
-            <div id="ti">
-                <input type="radio" name="t7" value="t7_4" id="t7_4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>D.继续买入</b>
-            </div>
-            <div style="position:absolute;bottom:10%;right:15%;">
-                <div id="butt">
-                    <button type="button" id="next">下一步</button>
-                </div>
-                <div id="butt">
-                    <button type="button" id="back">上一步</button>
-                </div>
-            </div>
-        </div>
-        <!-- 第八题 -->
-        <div class="content" style="display: none;">
-            <div id="apple">
-                <h1>8</h1>
-            </div>
-            <div id="bt">
-               <h1>您用于证券投资的资金不会用作其它用途的时间段为（    ）。</h1> 
-            </div>
-            
-            <div id="ti">
-                <input type="radio" name="t8" value="t8_1" id="t8_1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>A.短期：0-1年</b>
-            </div>
-            <div id="ti">
-                <input type="radio" name="t8" value="t8_2" id="t8_2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>B.中期：1-5年</b>
-            </div>
-
-            <div id="ti">
-                <input type="radio" name="t8" value="t8_3" id="t8_3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>C.长期：5年以上</b>
-            </div>
-            <div style="position:absolute;bottom:10%;right:15%;">
-                <div id="butt">
-                    <button type="button" id="next">下一步</button>
-                </div>
-                <div id="butt">
-                    <button type="button" id="back">上一步</button>
-                </div>
-            </div>
-        </div>
-        <!-- 第九题 -->
-        <div class="content" style="display: none;">
-            <div id="apple">
-                <h1>9</h1>
-            </div>
-            <div id="bt">
-                <h1>您是否了解证券市场的相关知识（    ）。</h1>
-            </div>
-            
-            <div id="ti">
-                <input type="radio" name="t9" value="t9_1" id="t9_1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>A.从来没有参与过证券交易，对投资知识完全不了解</b>
-            </div>
-            <div id="ti">
-                <input type="radio" name="t9" value="t9_2" id="t9_2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>B.学习过证券投资知识，但没有实际操作经验，不懂投资技巧</b>
-            </div>
-
-            <div id="ti">
-                <input type="radio" name="t9" value="t9_3" id="t9_3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>C.了解证券市场的投资知识，并且有过实际操作经验，懂得一些投资技巧</b>
-            </div>
-            <div id="ti">
-                <input type="radio" name="t9" value="t9_4" id="t9_4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>D.参与过多年的证券交易，投资知识丰富，具有一定的专业水平</b>
-            </div>
-            <div style="position:absolute;bottom:10%;right:15%;">
-                <div id="butt">
-                    <button type="button" id="next">下一步</button>
-                </div>
-                <div id="butt">
-                    <button type="button" id="back">上一步</button>
-                </div>
-            </div>
-        </div>
-        <!-- 第十题 -->
-        <div class="content" style="display: none;">
-            <div id="apple">
-                <h1>10</h1>
-            </div>
-            <div id="bt">
-                <h1>您的投资经验可以被概括为（    ）。</h1>
-            </div>
-            
-            <div id="ti">
-                <input type="radio" name="t10" value="t10_1" id="t10_1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>A.有限：除银行活期账户和定期存款外，我基本没有其他投资经验</b>
-            </div>
-            <div id="ti">
-                <input type="radio" name="t10" value="t10_2" id="t10_2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>B.一般：除银行活期账户和定期存款外，我购买过基金、保险等理财产品，但还需要进一步的指导</b>
-            </div>
-
-            <div id="ti">
-                <input type="radio" name="t10" value="t10_3" id="t10_3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>C.丰富：我是一位有经验的投资者，参与过股票、基金等产品的交易，并倾向于自己做出投资决策</b>
-            </div>
-            <div id="ti">
-                <input type="radio" name="t10" value="t10_4" id="t10_4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>D.非常丰富：我是一位非常有经验的投资者，参与过权证、期货或创业板等高风险产品的交易</b>
-            </div>
-            <div style="position:absolute;bottom:10%;right:15%;">
-                <div id="butt">
-                    <button type="button" id="tijiao">提交</button>
-                </div>
-                <div id="butt">
-                    <button type="button" id="back">上一步</button>
-                </div>
-            </div>
-        </div>
-        <div id="content" style="display: none">
-            <div id="apple">
-                <h1>&nbsp;</h1>
-            </div>
-            <div id="wenzi">
-                <h1>根据您的情况，您的风险承受能力为</h1>
-                <pre id="baoshou" style="display: none;">
-    此类投资者对于投资产品的任何下跌都不愿意接受，甚至不能承受极小的资
-产波动。属于风险厌恶型的投资者， 首要目的是保持投资的稳定性与资产的保
-值，这类投资者需要注意为达到上述目标回报率可能很低，以换取本金免于受
-损和较高的流动性。
-                </pre>
-                <pre id="xiangbaoshou" style="display: none;">
-   此类投资者不愿意接受暂时的投资损失。关注本金的安全，往往是稍微有些
-风险厌恶型的投资者，首要投资目标是资产一定程度的增值，为了获得一定的
-收益能承受少许本金损失和波动，此类投资者可以承受少许的资产波动和本金
-损失风险。 
-                </pre>
-                <pre id="wenjian" style="display: none;">
-    此类投资者愿意承担一定程度的风险，主要强调投资风险和资产增值之间的
-平衡，为了获得一定收益可以承受投资产品价格的波动，甚至可以承受一段时
-间内投资产品价格的下跌，此类投资者可以承受一定程度的资产波动风险和本
-金亏损风险。
-                </pre>
-                <pre id="xiangjiji" style="display: none;">
-    此类投资者为了获得高回报的投资收益，能够承受投资产品价格的显著波动
-，主要投资目标是实现资产增值，为实现目标往往愿意承担相当程度的风险此
-类投资者可以承受相当大的资产波动风险和本金亏损风险
-                </pre>
-                <pre id="jiji" style="display: none;">
-    此类投资者能够承受投资产品价格的剧烈波动，也可以承担这种波动所带
-来的结果，投资目标主要是取得超额收益，为实现投资目标愿意官更大的风险
-。此类投资者能够承担相当大的投资风险和更大的本金亏损风险
-                </pre>
-            </div>
-            <div id="tupian">
+                
                 <div id="tu">
                     <div id="leixing">
-                        <span id="bsx" style="display: none;"><span style="font-size:50px; background-image: url(../img/6_ss.png); background-size: cover; background-repeat: no-repeat; overflow: hidden; background-size: 100% 100%;">&nbsp;&nbsp;&nbsp;&nbsp;</span>保守型</span>
-                        <span id="xdbsx" style="display: none;"><span style="font-size:50px; background-image: url(../img/6_ss.png); background-size: cover; background-repeat: no-repeat; overflow: hidden; background-size: 100% 100%;">&nbsp;&nbsp;&nbsp;&nbsp;</span>相对保守型</span>
-                        <span id="wjx" style="display: none;"><span style="font-size:50px; background-image: url(../img/6_ss.png); background-size: cover; background-repeat: no-repeat; overflow: hidden; background-size: 100% 100%;">&nbsp;&nbsp;&nbsp;&nbsp;</span>稳健型</span>
-                        <span id="xdjjx" style="display: none;"><span style="font-size:50px; background-image: url(../img/6_ss.png); background-size: cover; background-repeat: no-repeat; overflow: hidden; background-size: 100% 100%;">&nbsp;&nbsp;&nbsp;&nbsp;</span>相对积极性</span>
-                        <span id="jjx" style="display: none;"><span style="font-size:50px; background-image: url(../img/6_ss.png); background-size: cover; background-repeat: no-repeat; overflow: hidden; background-size: 100% 100%;">&nbsp;&nbsp;&nbsp;&nbsp;</span>积极型</span>
+                        <p id="bsx" class="bsx" style="display: none;"><span></span>保&nbsp;守&nbsp;型</p>
+                        <p id="xdbsx" class="bsx" style="display: none;"><span></span>相对保守型</p>
+                        <p id="wjx" class="bsx" style="display: none;"><span></span>稳&nbsp;健&nbsp;型</p>
+                        <p id="xdjjx" class="bsx" style="display: none;"><span></span>相对积极性</p>
+                        <p id="jjx" class="bsx" style="display: none;"><span></span>积&nbsp;极&nbsp;型</p>
                     </div>
-                    <!-- <img src="../img/6-card@2x.png" > -->
-                    <button type="button" id="queren"><a href="../teacher/pages.html">确认风险结果</a></button>
-                    <br>
-                    <br>
-                    <a href="">重新测试</a>
+                    
+                    <button type="button" id="queren" onclick="window.location.href = '../teacher/pages.html'">确认风险结果</button>
+                    <a href="./risk.html">重新测试</a>
                 </div>
             </div>
         </div>
-    </div>
-
-    <script src="../js/jquery-2.1.4.js"></script>
-    <script src="../lib/layui.all.js"></script>
-    <script>
-        var index = 0;
-        var cont = document.getElementsByClassName("content");
-        var jd = document.getElementsByTagName('li')
-        $('button:button[id="start"]').click(function(){
-            document.getElementsByClassName('layui-card')[0].style.display = 'none';
-            document.getElementById('mainWin').style.display = 'block';
-        })
-        
-        for (var j = 1; j < 11; j++){
-            var tt = ('t'+j);
-            var timuy = document.getElementsByName(tt);
-            for (var k = 0; k < timuy.length; k++){
-                if(timuy[k].checked){
-                    timuy[k].style.backgroundImage = "url(../img/5-panel-select@2x.png)"
-                }
-            }
-        };
-        var num = 0;
-        var Grades = '';
-        $('button:button[id="tijiao"]').click(function(){ 
-            for (var i = 1; i < 11; i++){
-                var t = ('t'+i);
-                var timu = document.getElementsByName(t);
-                if (i == 1){
-                    if(timu[0].checked){
-                       num = num + 3;
-                    }else if(timu[1].checked){
-                        num = num + 7;
-                    }else if(timu[2].checked){                    
-                        num = num + 9;
-                    }else if(timu[3].checked){
-                    
-                        num = num + 5;
-                    }else if(timu[4].checked){
-                    
-                        num = num + 1;
-                    }else{
-                        layer.msg('第一题选择有误！',{time: 20000,btn: ['知道了']})
-                    }
-                }
-                if (i == 2){
-                    if(timu[0].checked){
-                       num = num + 1;
-                    }else if(timu[1].checked){
-                    
-                        num = num + 3;
-                    }else if(timu[2].checked){
-                    
-                        num = num + 5;
-                    }else if(timu[3].checked){
-                    
-                        num = num + 7;
-                    }else if(timu[4].checked){
-                    
-                        num = num + 9;
-                    }else{
-                        layer.msg('第二题选择有误！',{time: 20000,btn: ['知道了']})
-                    }
-                }
-                if (i == 3){
-                    if(timu[0].checked){
-                       num = num + 1;
-                    }else if(timu[1].checked){
-                    
-                        num = num + 5;
-                    }else if(timu[2].checked){
-                    
-                        num = num + 7;
-                    }else if(timu[3].checked){
-                    
-                        num = num + 9;
-                    }else{
-                        layer.msg('第三题选择有误！',{time: 20000,btn: ['知道了']})
-                    }
-                }
-                if (i == 4){
-                    if(timu[0].checked){
-                       num = num + 9;
-                    }else if(timu[1].checked){
-                    
-                        num = num + 7;
-                    }else if(timu[2].checked){
-                    
-                        num = num + 5;
-                    }else if(timu[3].checked){
-                    
-                        num = num + 3;
-                    }else if(timu[4].checked){
-                    
-                        num = num + 1;
-                    }else{
-                        layer.msg('第四题选择有误！',{time: 20000,btn: ['知道了']})
-                    }
-                }
-                if (i == 5){
-                    if(timu[0].checked){
-                       num = num + 0;
-                    }else if(timu[1].checked){
-                    
-                        num = num + 3;
-                    }else if(timu[2].checked){
-                    
-                        num = num + 5;
-                    }else if(timu[3].checked){
-                    
-                        num = num + 7;
-                    }else if(timu[4].checked){
-                    
-                        num = num + 9;
-                    }else{
-                        layer.msg('第五题选择有误！',{time: 20000,btn: ['知道了']})
-                    }
-                }
-                if (i == 6){
-                    if(timu[0].checked){
-                       num = num + 0;
-                    }else if(timu[1].checked){
-                    
-                        num = num + 3;
-                    }else if(timu[2].checked){
-                    
-                        num = num + 5;
-                    }else if(timu[3].checked){
-                    
-                        num = num + 7;
-                    }else{
-                        layer.msg('第六题选择有误！',{time: 20000,btn: ['知道了']})
-                    }
-                }
-                if (i == 7){
-                    if(timu[0].checked){
-                       num = num + 0;
-                    }else if(timu[1].checked){
-                    
-                        num = num + 3;
-                    }else if(timu[2].checked){
-                    
-                        num = num + 5;
-                    }else if(timu[3].checked){
-                    
-                        num = num + 7;
-                    }else{
-                        layer.msg('第七题选择有误！',{time: 20000,btn: ['知道了']})
-                    }
-                }
-                if (i == 8){
-                    if(timu[0].checked){
-                       num = num + 1;
-                    }else if(timu[1].checked){
-                    
-                        num = num + 5;
-                    }else if(timu[2].checked){
-                    
-                        num = num + 7;
-                    }else{
-                        layer.msg('第八题选择有误！',{time: 20000,btn: ['知道了']})
-                    }
-                }
-                if (i == 9){
-                    if(timu[0].checked){
-                       num = num + 1;
-                    }else if(timu[1].checked){
-                    
-                        num = num + 3;
-                    }else if(timu[2].checked){
-                    
-                        num = num + 7;
-                    }else if(timu[3].checked){
-                    
-                        num = num + 9;
-                    }else{
-                        layer.msg('第九题选择有误！',{time: 20000,btn: ['知道了']})
-                    }
-                }
-                if (i == 10){
-                    if(timu[0].checked){
-                       num = num + 1;
-                    }else if(timu[1].checked){
-                    
-                        num = num + 3;
-                    }else if(timu[2].checked){
-                    
-                        num = num + 7;
-                    }else if(timu[3].checked){
-                    
-                        num = num + 9;
-                    }else{
-                        layer.msg('第十题选择有误！',{time: 20000,btn: ['知道了']})
-                    }
-                }
-            }
-            if (num >= 73){
-                var cont = document.getElementsByClassName("content");
-                for (var i = 0; i < cont.length; i++){
-                    cont[i].style.display = 'none';
-                };
-                $('#content').show();
-                $('#jiji').show();
-                $('#jjx').show();
-                // document.getElementById('content').style.display = 'block';
-                // document.getElementById('jiji').style.display = 'block';
-                layer.alert('您的得分是：'+num+'积极型！');
-                Grades = '积极型！';
-            }else if(num >= 65){
-                var cont = document.getElementsByClassName("content");
-                for (var i = 0; i < cont.length; i++){
-                    cont[i].style.display = 'none';
-                };
-                $('#content').show();
-                $('#xiangjiji').show();
-                $('#xdjjx').show();
-                // document.getElementById('content').style.display = 'block';
-                // document.getElementById('xiangjiji').style.display = 'block';
-                layer.alert('您的得分是：'+num+'相对积极型！');
-                Grades = '相对积极型！';
-            }else if(num >= 31){
-                var cont = document.getElementsByClassName("content");
-                for (var i = 0; i < cont.length; i++){
-                    cont[i].style.display = 'none';
-                };
-                $('#content').show();
-                $('#wenjian').show();
-                $('#wjx').show();
-                // document.getElementById('content').style.display = 'block';
-                // document.getElementById('wenjian').style.display = 'block';
-                layer.alert('您的得分是：'+num+'稳健型！');
-                Grades = '稳健型！';
-            }else if(num >= 21){
-                var cont = document.getElementsByClassName("content");
-                for (var i = 0; i < cont.length; i++){
-                    cont[i].style.display = 'none';
-                };
-                $('#content').show();
-                $('#xiangbaoshou').show();
-                $('#xdbsx').show();
-                // document.getElementById('content').style.display = 'block';
-                // document.getElementById('xiangbaoshou').style.display = 'block';
-                layer.alert('您的得分是：'+num+'相对保守型！');
-                Grades = '相对保守型！';
-            }else if(num >= 7){
-                var cont = document.getElementsByClassName("content");
-                for (var i = 0; i < cont.length; i++){
-                    cont[i].style.display = 'none';
-                };
-                $('#content').show();
-                $('#baoshou').show();
-                $('#bsx').show();
-                // document.getElementById('content').style.display = 'block';
-                // document.getElementById('baoshou').style.display = 'block';
-                layer.alert('您的得分是：'+num+'保守型！');
-                Grades = '保守型！';
-            };
-            localStorage.setItem("Grades", Grades);
-            num = 0
-        })
-        
-        $('button:button[id="help"]').click(function () {
-            layer.alert('尊敬的用户：以下问题可协助评估您对投资产品和服务的风险承受能力，请您根据自身情况认真选择。评估结果仅供参考， 不构成投资建议。为了及时了解您的风险承受能力，我们建议您持续做好动态评估。我们承诺对您的所有个人资料保密。')
-        })
-        $('button:button[id="friends"]').click(function () {
-            layer.alert('请先完成风险评估问卷！',{icon:5})
-        })
-        
-        
-        $('button:button[id="next"]').click(function () {
-            index++;
-            for (var i = 0; i < 10; i++) {
-
-                if (i == index) {
-                    cont[i].style.display = 'block';
-                    jd[i].className = 'step-active' 
-                } else {
-                    cont[i].style.display = 'none';
-                }
-
-                if (index == 10) {
-                    index = 0;
-                    cont[0].style.display = 'block';
-                }
-            }
-        })
-        $('button:button[id="back"]').click(function () {
-            index--;
-            for (var i = 9; i >= 0; i--) {
-
-                if (i == index) {
-                    cont[i].style.display = 'block';
-                    jd[i+1].classList.remove('step-active'); 
-                } else {
-                    cont[i].style.display = 'none';
-                }
-
-                if (index == -1) {
-                    index = 9;
-                    cont[9].style.display = 'block';
-                }
-            }
-        })
-    </script>
-</body>
+            
+        <script src="../js/jquery-2.1.4.js"></script>
+        <script src="../lib/layui.all.js"></script>
+        <script>
+           var index = 0;
+           var jd = document.getElementsByTagName('li');
+           var num = 0;
+           var Grades = '';
+           
+           //进入答题环节
+           $('#start').click(function(){
+              $('.card').hide();
+               $('#mainWin').show();
+           });
+           
+           //选项背景切换
+           $('.t1 input').click(function() {
+               $('.t1').removeClass('ti_cli');
+               $('.tp1').removeClass('tp_cli');
+               // let _this = $(this) //;当前点击的html元素
+               //class 【//背景图的】 on
+               //css 文件 diant1.on{}
+               $(this).parent().addClass('tp_cli');
+               $(this).parent().parent().addClass('ti_cli');
+           });
+           
+           //提交按钮事件
+           $('button:button[id="tijiao"]').click(function() {
+               for (var i = 1; i < 11; i++) {
+                   var t = ('t' + i);
+                   var timu = document.getElementsByName(t);
+                   if (i == 1) {
+                       if (timu[0].checked) {
+                           num = num + 3;
+                       } else if (timu[1].checked) {
+                           num = num + 7;
+                       } else if (timu[2].checked) {
+                           num = num + 9;
+                       } else if (timu[3].checked) {
+           
+                           num = num + 5;
+                       } else if (timu[4].checked) {
+           
+                           num = num + 1;
+                       } else if(timu[0].checked == false && timu[1].checked == false && timu[2].checked == false&& timu[3].checked == false&& timu[4].checked == false){
+                           layer.msg('第一题选择有误！', {
+                               shade: [0.5, '#000'],
+                               anim: 6,
+                               icon: 5,
+                               area:['300px', '150px'],
+                               time: 20000,
+                               btn: ['知道了']
+                           })
+                           num = 0
+                           break;
+                       }
+                   }else if (i == 2) {
+                       if (timu[0].checked) {
+                           num = num + 1;
+                       } else if (timu[1].checked) {
+           
+                           num = num + 3;
+                       } else if (timu[2].checked) {
+           
+                           num = num + 5;
+                       } else if (timu[3].checked) {
+           
+                           num = num + 7;
+                       } else if (timu[4].checked) {
+           
+                           num = num + 9;
+                       } else if(timu[0].checked == false && timu[1].checked == false && timu[2].checked == false&& timu[3].checked == false&& timu[4].checked == false){
+                           layer.msg('第二题选择有误！', {
+                               shade: [0.5, '#000'],
+                               anim: 6,
+                               area:['500px', '300px'],
+                               icon: 5,
+                               time: 20000,
+                               btn: ['知道了']
+                           })
+                           num = 0
+                           break;
+                       }
+                   }else if (i == 3) {
+                       if (timu[0].checked) {
+                           num = num + 1;
+                       } else if (timu[1].checked) {
+           
+                           num = num + 5;
+                       } else if (timu[2].checked) {
+           
+                           num = num + 7;
+                       } else if (timu[3].checked) {
+           
+                           num = num + 9;
+                       } else if(timu[0].checked == false && timu[1].checked == false && timu[2].checked == false&& timu[3].checked == false){
+                           layer.msg('第三题选择有误！', {
+                               shade: [0.5, '#000'],
+                               anim: 6,
+                               area:['500px', '300px'],
+                               icon: 5,
+                               time: 20000,
+                               btn: ['知道了']
+                           })
+                           num = 0
+                           break;
+                       }
+                   }else if (i == 4) {
+                       if (timu[0].checked) {
+                           num = num + 9;
+                       } else if (timu[1].checked) {
+           
+                           num = num + 7;
+                       } else if (timu[2].checked) {
+           
+                           num = num + 5;
+                       } else if (timu[3].checked) {
+           
+                           num = num + 3;
+                       } else if (timu[4].checked) {
+           
+                           num = num + 1;
+                       } else if(timu[0].checked == false && timu[1].checked == false && timu[2].checked == false&& timu[3].checked == false&& timu[4].checked == false){
+                           layer.msg('第四题选择有误！', {
+                               shade: [0.5, '#000'],
+                               anim: 6,
+                               area:['500px', '300px'],
+                               icon: 5,
+                               time: 20000,
+                               btn: ['知道了']
+                           })
+                           num = 0
+                           break;
+                       }
+                   }else if (i == 5) {
+                       if (timu[0].checked) {
+                           num = num + 0;
+                       } else if (timu[1].checked) {
+           
+                           num = num + 3;
+                       } else if (timu[2].checked) {
+           
+                           num = num + 5;
+                       } else if (timu[3].checked) {
+           
+                           num = num + 7;
+                       } else if (timu[4].checked) {
+           
+                           num = num + 9;
+                       } else if(timu[0].checked == false && timu[1].checked == false && timu[2].checked == false&& timu[3].checked == false&& timu[4].checked == false){
+                           layer.msg('第五题选择有误！', {
+                               shade: [0.5, '#000'],
+                               anim: 6,
+                               area:['500px', '300px'],
+                               icon: 5,
+                               time: 20000,
+                               btn: ['知道了']
+                           })
+                           num = 0
+                           break;
+                       }
+                   }else if (i == 6) {
+                       if (timu[0].checked) {
+                           num = num + 0;
+                       } else if (timu[1].checked) {
+           
+                           num = num + 3;
+                       } else if (timu[2].checked) {
+           
+                           num = num + 5;
+                       } else if (timu[3].checked) {
+           
+                           num = num + 7;
+                       } else if(timu[0].checked == false && timu[1].checked == false && timu[2].checked == false&& timu[3].checked == false){
+                           layer.msg('第六题选择有误！', {
+                               shade: [0.5, '#000'],
+                               anim: 6,
+                               area:['500px', '300px'],
+                               icon: 5,
+                               time: 20000,
+                               btn: ['知道了']
+                           })
+                           num = 0
+                           break;
+                       }
+                   }else if (i == 7) {
+                       if (timu[0].checked) {
+                           num = num + 0;
+                       } else if (timu[1].checked) {
+           
+                           num = num + 3;
+                       } else if (timu[2].checked) {
+           
+                           num = num + 5;
+                       } else if (timu[3].checked) {
+           
+                           num = num + 7;
+                       } else if(timu[0].checked == false && timu[1].checked == false && timu[2].checked == false&& timu[3].checked == false){
+                           layer.msg('第七题选择有误！', {
+                               shade: [0.5, '#000'],
+                               anim: 6,
+                               area:['500px', '300px'],
+                               icon: 5,
+                               time: 20000,
+                               btn: ['知道了']
+                           })
+                           num = 0
+                           break;
+                       }
+                   }else if (i == 8) {
+                       if (timu[0].checked) {
+                           num = num + 1;
+                       } else if (timu[1].checked) {
+           
+                           num = num + 5;
+                       } else if (timu[2].checked) {
+           
+                           num = num + 7;
+                       } else if(timu[0].checked == false && timu[1].checked == false && timu[2].checked == false){
+                           layer.msg('第八题选择有误！', {
+                               shade: [0.5, '#000'],
+                               anim: 6,
+                               area:['500px', '300px'],
+                               icon: 5,
+                               time: 20000,
+                               btn: ['知道了']
+                           })
+                           num = 0
+                           break;
+                       }
+                   }else if (i == 9) {
+                       if (timu[0].checked) {
+                           num = num + 1;
+                       } else if (timu[1].checked) {
+           
+                           num = num + 3;
+                       } else if (timu[2].checked) {
+           
+                           num = num + 7;
+                       } else if (timu[3].checked) {
+           
+                           num = num + 9;
+                       } else if(timu[0].checked == false && timu[1].checked == false && timu[2].checked == false&& timu[3].checked == false){
+                           layer.msg('第九题选择有误！', {
+                               shade: [0.5, '#000'],
+                               anim: 6,
+                               area:['500px', '300px'],
+                               icon: 5,
+                               time: 20000,
+                               btn: ['知道了']
+                           })
+                           num = 0
+                           break;
+                       }
+                   }else if (i == 10) {
+                       if (timu[0].checked) {
+                           num = num + 1;
+                       } else if (timu[1].checked) {
+           
+                           num = num + 3;
+                       } else if (timu[2].checked) {
+           
+                           num = num + 7;
+                       } else if (timu[3].checked) {
+           
+                           num = num + 9;
+                       } else if(timu[0].checked == false && timu[1].checked == false && timu[2].checked == false&& timu[3].checked == false){
+                           layer.msg('第十题选择有误！', {
+                               shade: [0.5, '#000'],
+                               anim: 6,
+                               area:['500px', '300px'],
+                               icon: 5,
+                               time: 20000,
+                               btn: ['知道了']
+                           })
+                           num = 0
+                           break;
+                       }
+                   }
+               }
+               if (num >= 73) {
+                   $('.content').hide();
+                   $('#result').show();
+                   $('#jiji').show();
+                   $('#jjx').show();
+                   layer.alert('您的得分是：' + num + '积极型！');
+                   Grades = '积极型！';
+               } else if (num >= 65) {
+                   $('.content').hide();
+                   $('#result').show();
+                   $('#xiangjiji').show();
+                   $('#xdjjx').show();
+                   layer.alert('您的得分是：' + num + '相对积极型！');
+                   Grades = '相对积极型！';
+               } else if (num >= 31) {
+                   $('.content').hide();
+                   $('#result').show();
+                   $('#wenjian').show();
+                   $('#wjx').show();
+                   layer.alert('您的得分是：' + num + '稳健型！');
+                   Grades = '稳健型！';
+               } else if (num >= 21) {
+                   $('.content').hide();
+                   $('#result').show();
+                   $('#xiangbaoshou').show();
+                   $('#xdbsx').show();
+                   layer.alert('您的得分是：' + num + '相对保守型！');
+                   Grades = '相对保守型！';
+               } else if (num >= 7) {
+                   $('.content').hide();
+                   $('#result').show();
+                   $('#baoshou').show();
+                   $('#bsx').show();
+                   layer.alert('您的得分是：' + num + '保守型！');
+                   Grades = '保守型！';
+               };
+               try{
+                   localStorage.setItem("Grades", Grades);
+               }catch(e){
+                   //TODO handle the exception
+                   console.log("成绩录入异常！")
+               }
+               
+               num = 0
+           })
+           
+           //帮助按钮触发事件
+           $('button:button[id="help"]').click(function() {
+               layer.alert(
+                   '尊敬的用户：以下问题可协助评估您对投资产品和服务的风险承受能力，请您根据自身情况认真选择。评估结果仅供参考， 不构成投资建议。为了及时了解您的风险承受能力，我们建议您持续做好动态评估。我们承诺对您的所有个人资料保密。'
+               )
+           })
+           
+           //个人按钮触发事件
+           $('button:button[id="friends"]').click(function() {
+               layer.alert('请先完成风险评估问卷！', {
+                   icon: 5
+               })
+           })
+           
+           //下一题按钮
+           $('button:button[id="next"]').click(function() {
+               index++;
+               for (var i = 0; i < 10; i++) {
+                   if (i == index) {
+                       var tinum = (".ti"+(i+1));
+                       var anum = ("#a"+(i+1));
+                       var hnum = ("#h"+(i+1));
+                       var t = ('.t'+(i+1)+' input');
+                       var tt = ('.t'+(i+1));
+                       var tp = ('.tp'+(i+1));
+                       $(tinum).show();
+                       $(anum).show();
+                       $(hnum).show();
+                       $(t).click(function() {
+                           $(tt).removeClass('ti_cli');
+                           $(tp).removeClass('tp_cli');
+                           $(this).parent().addClass('tp_cli');
+                           $(this).parent().parent().addClass('ti_cli');
+                       });
+                       jd[i].className = 'step-active'
+                   } else {
+                       var tinum = (".ti"+(i+1));
+                       var anum = ("#a"+(i+1));
+                       var hnum = ("#h"+(i+1));
+                       $(tinum).hide();
+                       $(anum).hide();
+                       $(hnum).hide();
+                   };
+                   
+                   if(index == 0){
+                       $('#back').hide();
+                   }else{
+                       $('#back').show();
+                   };
+                   
+                   if(index == 9){
+                       $('#tijiao').show();
+                       $('#next').hide();
+                   }else{
+                       $('#tijiao').hide();
+                       $('#next').show();
+                   };
+               }
+           });
+           
+           //上一题按钮
+           $('button:button[id="back"]').click(function() {
+               index--;
+               for (var i = 9; i >= 0; i--) {
+                   if (i == index) {
+                       var tinum = (".ti"+(i+1));
+                       var anum = ("#a"+(i+1));
+                       var hnum = ("#h"+(i+1));
+                       $(tinum).show();
+                       $(anum).show();
+                       $(hnum).show();
+                       var t = ('.t'+(i+1)+' input');
+                       var tt = ('.t'+(i+1));
+                       var tp = ('.tp'+(i+1));
+                       $(t).click(function() {
+                           $(tt).removeClass('ti_cli');
+                           $(tp).removeClass('tp_cli');
+                           $(this).parent().addClass('tp_cli');
+                           $(this).parent().parent().addClass('ti_cli');
+                       });
+                       jd[i + 1].classList.remove('step-active');
+                   } else {
+                       var tinum = (".ti"+(i+1));
+                       var anum = ("#a"+(i+1));
+                       var hnum = ("#h"+(i+1));
+                       $(tinum).hide();
+                       $(anum).hide();
+                       $(hnum).hide();
+                   };
+                   
+                   if(index == 0){
+                       $('#back').hide();
+                   }else{
+                       $('#back').show();
+                   };
+                   
+                   if(index == 9){
+                       $('#tijiao').show();
+                       $('#next').hide();
+                   }else{
+                       $('#tijiao').hide();
+                       $('#next').show();
+                   };
+               }
+           }); 
+        </script>
+    </body>
 
 </html>
