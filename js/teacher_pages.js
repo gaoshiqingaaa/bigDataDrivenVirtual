@@ -9,9 +9,9 @@ for (i = 0; i < 7; i++)
 var current_page = 0
 window.onload = function(){
     $($('.left-pages>div')[current_page]).show()
-    // $('#right-page-code').show()
-    $('#right-page-code').hide()
-    $('#right-page-nine').show()
+    $('#right-page-code').show()
+    // $('#right-page-code').hide()
+    // $('#right-page-nine').show()
     $.ajax({
         type: 'get',
         url: 'http://47.97.205.240:8800/',
