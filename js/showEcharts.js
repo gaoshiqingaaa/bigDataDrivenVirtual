@@ -2,16 +2,19 @@ var pie = echarts.init(document.getElementById('pie'));
 var pie1 = echarts.init(document.getElementById('pie1'));
 var line_smooth = echarts.init(document.getElementById('line-smooth'));
 
-var pie_legend_data = [], pie_series_data = []
+var pie_legend_data, pie_series_data
 function init_pie() {
+    pie_legend_data = [], pie_series_data = []
     for (key in six_best_weight){
-        console.log(six_best_weight);
+        // console.log(six_best_weight);
         pie_legend_data.push(key + '\t' + six_best_weight[key] + '%')
         pie_series_data.push({
             'value': six_best_weight[key],
             'name': key + '\t' + six_best_weight[key] + '%'
         })
     }
+    pie_option.legend.data = pie_legend_data
+    pie_option.series[0].data = pie_series_data
 }
 
 var pie_option = {

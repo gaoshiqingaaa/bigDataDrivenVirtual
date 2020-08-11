@@ -149,27 +149,11 @@ var code_in = CodeMirror.fromTextArea(document.getElementById("code-in"), {
 });
 code_in.setSize('100%','100%'); //宽 高
 code_in.setOption('value', codes[0])
-// code_in.on('keypress', function() {
-//     code_in.showHint()
-// })
 
-// var code_out = CodeMirror.fromTextArea(document.getElementById("code-out"), {
-//     mode: {
-//         name: 'python'
-//     },
-//     lineNumbers: true,
-//     theme: "idea",	//设置主题
-//     // lineWrapping: true,	//代码折叠
-//     foldGutter: true,
-//     gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
-//     matchBrackets: true,	//括号匹配
-//     readOnly: true,        //只读
-//     scrollbarStyle: 'simple',
-// });
-// code_out.setSize('100%','570px'); //宽 高 570
 var tt
 var xishu_html
 var six_best_weight = {}
+var isTeacher = window.location.href.indexOf('assets') == -1
 const name_code = {
     '000300.ZICN': '沪深300',
     '000905.ZICN': '中证500',
@@ -179,7 +163,14 @@ const name_code = {
     '000013.ZICN': '上证企业债',
 }
 $('.run-code').click(function(){
-    run_code_clicked[current_page] = true
+    code = code_in.getValue().trim()
+    if (code == '') {
+        html = '<tr style="text-align: center;color: red"><td colspan=7>代码输入不能为空，请先填写代码!</td></tr>'
+        $('#result-tbody').html(html)
+        return
+    } else {
+        code += '\n'
+    }
     $.ajax({
         type: 'POST',
         url: 'http://47.97.205.240:8800/code',
@@ -188,51 +179,82 @@ $('.run-code').click(function(){
             user: user,
             step: current_page,
             // step: 0, //测试用
-            code: code_in.getValue().trim() + '\n'
+            code: code
         },
         success: function(data){
             tt = data
             result = data.result
             html = ''
-            for (i = 0; i < result.length; i++){
-                if (result[i][0].trim() != ''){
-                    html += '<tr  style="text-align: center">'
-                    if (i==0 && (current_page == 3 || current_page == 6 || current_page == 0)){
-                        html += '<td></td>'
-                    }
-                    for (j = 0; j <result[i].length; j++){
-                        if (current_page == 0 && i != 0) {
-                            if (j == 0) {
-                                html += '<td>' + result[i][j] + ' ' + result[i][j+1] + '</td>'
-                                continue
-                            } else if (j == 1){
-                                continue
-                            }
+            if (data.iserr == 0) {
+                run_code_clicked[current_page] = true
+                for (i = 0; i < result.length; i++){
+                    if (result[i][0].trim() != ''){
+                        html += '<tr  style="text-align: center">'
+                        if (i==0 && (current_page == 3 || current_page == 6 || current_page == 0)){
+                            html += '<td></td>'
                         }
-                        html += '<td>' + result[i][j] + '</td>'
+                        for (j = 0; j <result[i].length; j++){
+                            if (current_page == 0 && i != 0) {
+                                if (j == 0) {
+                                    html += '<td>' + result[i][j] + ' ' + result[i][j+1] + '</td>'
+                                    continue
+                                } else if (j == 1){
+                                    continue
+                                }
+                            }
+                            html += '<td>' + result[i][j] + '</td>'
+                        }
+                        html += '</tr>'
                     }
-                    html += '</tr>'
                 }
-            }
-            if (current_page == 3)
-                xishu_html = html
-            html += '<tr style="text-align: center"><td colspan=7>运行完成！</td></tr>'
-            $('#result-tbody').html(html)
-            if (current_page == 5) {
-                for (i = 0; i < data.files.length; i++) {
-                    if (data.files[i] == '/static/' + user + '/5.png') {
-                        $('.img_box').css({                            
-                            'background': 'url("http://47.97.205.240:8800/static/' + user + '/5.png") no-repeat center top',
-                            'background-size': '614px 451px'
-                        })
+                html += '<tr style="text-align: center"><td colspan=7>运行完成！</td></tr>'
+                if (current_page == 5) {
+                    for (i = 0; i < data.files.length; i++) {
+                        if (data.files[i] == '/static/' + user + '/5.png') {
+                            $('.img_box').css({                            
+                                'background': 'url("http://47.97.205.240:8800/static/' + user + '/5.png") no-repeat center top',
+                                'background-size': '614px 451px'
+                            })
+                            if (isTeacher) {
+                                layer.open({
+                                    type: 2,
+                                    area: ['600px', '370px'], 
+                                    title: false,
+                                    closeBtn: 1,
+                                    shadeClose: true,
+                                    skin: '',
+                                    content: '5-run-code.html',
+                                    btn: ['知道了'],
+                                    success: function(elem) {
+                                        $(".layui-layer-setwin .layui-layer-close2").css({
+                                            'right': '3px',
+                                            'top': '1px',
+                                            'background-position': '30px -32px'
+                                        })
+                                        $('.layui-layer-setwin a').append('X')
+                                        $('.layui-layer-setwin a').css({
+                                            'font-size': '27px',
+                                            'color': 'white'
+                                        })
+                                        $('.layui-layer-btn').css({'padding-right': '46%'})
+                                        $('.layui-layer-iframe').css({'border-radius': '16px'})
+                                    }
+                                });
+                            }
+                            break
+                        }
+                    }
+                }else if (current_page == 3) {
+                    xishu_html = html
+                    if (isTeacher) {
                         layer.open({
                             type: 2,
-                            area: ['600px', '370px'], 
+                            area: ['900px', '570px'], 
                             title: false,
                             closeBtn: 1,
                             shadeClose: true,
                             skin: '',
-                            content: '5-run-code.html',
+                            content: '4-run-code.html',
                             btn: ['知道了'],
                             success: function(elem) {
                                 $(".layui-layer-setwin .layui-layer-close2").css({
@@ -245,71 +267,49 @@ $('.run-code').click(function(){
                                     'font-size': '27px',
                                     'color': 'white'
                                 })
-                                $('.layui-layer-btn').css({'padding-right': '46%'})
-                                $('.layui-layer-iframe').css({'border-radius': '16px'})
+                                alertBtnArgs()
+                                $('.layui-layer-iframe').css({'border-radius': '21px'})
                             }
                         });
-                        break
+                    }
+                } else if (current_page == 6) {
+                    for (i=1;i<result.length-2;i++){
+                        // if (result[i][1] != 0)
+                            six_best_weight[name_code[result[i][0]]] = Math.round(result[i][1] * 100)
+                    }
+                    init_pie()
+                    pie.setOption(pie_option);
+                    if (isTeacher) {
+                        layer.open({
+                            type: 2,
+                            area: ['400px', '250px'], 
+                            title: false,
+                            closeBtn: 1,
+                            shadeClose: true,
+                            skin: '',
+                            content: ['6-run-code.html','no'],
+                            btn: ['知道了'],
+                            success: function(elem) {
+                                $(".layui-layer-setwin .layui-layer-close2").css({
+                                    'right': '3px',
+                                    'top': '-7px',
+                                    'background-position': '30px -32px'
+                                })
+                                $('.layui-layer-setwin a').append('X')
+                                $('.layui-layer-setwin a').css({
+                                    'font-size': '27px',
+                                    'color': 'white'
+                                })
+                                $('.layui-layer-iframe').css({'border-radius': '12px'})
+                                alertBtnArgs()
+                            }
+                        });
                     }
                 }
-            }else if (current_page == 3) {
-                tt = data.result
-                layer.open({
-                    type: 2,
-                    area: ['900px', '570px'], 
-                    title: false,
-                    closeBtn: 1,
-                    shadeClose: true,
-                    skin: '',
-                    content: '4-run-code.html',
-                    btn: ['知道了'],
-                    success: function(elem) {
-                        $(".layui-layer-setwin .layui-layer-close2").css({
-                            'right': '3px',
-                            'top': '1px',
-                            'background-position': '30px -32px'
-                        })
-                        $('.layui-layer-setwin a').append('X')
-                        $('.layui-layer-setwin a').css({
-                            'font-size': '27px',
-                            'color': 'white'
-                        })
-                        alertBtnArgs()
-                        $('.layui-layer-iframe').css({'border-radius': '21px'})
-                    }
-                });
-            } else if (current_page == 6) {
-                for (i=1;i<result.length-2;i++){
-                    // if (result[i][1] != 0)
-                        six_best_weight[name_code[result[i][0]]] = Math.round(result[i][1] * 100)
-                }
-                init_pie()
-                pie.setOption(pie_option);
-                layer.open({
-                    type: 2,
-                    area: ['400px', '250px'], 
-                    title: false,
-                    closeBtn: 1,
-                    shadeClose: true,
-                    skin: '',
-                    content: ['6-run-code.html','no'],
-                    btn: ['知道了'],
-                    success: function(elem) {
-                        $(".layui-layer-setwin .layui-layer-close2").css({
-                            'right': '3px',
-                            'top': '-7px',
-                            'background-position': '30px -32px'
-                        })
-                        $('.layui-layer-setwin a').append('X')
-                        $('.layui-layer-setwin a').css({
-                            'font-size': '27px',
-                            'color': 'white'
-                        })
-                        $('.layui-layer-iframe').css({'border-radius': '12px'})
-                        alertBtnArgs()
-                    }
-                });
+            } else if (data.iserr == -1) {
+                html += '<tr style="text-align: center;color: red"><td colspan=7>代码输入错误，请重新输入!</td></tr>'
             }
+            $('#result-tbody').html(html)
         }   
     })
 })
