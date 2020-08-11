@@ -12,6 +12,17 @@
 #but1 a {
     color: #6969EF;
 }
+#help,
+#friends {
+    width: 25px;
+    height: 25px;
+    border: none;
+    color: #6969EF;
+    background-color: white;
+    border-radius: 15px;
+    float: right;
+    margin-right: 2%;
+}
 .logoweizi{
     width: 155px;
     height: 35px;
@@ -19,7 +30,7 @@
     background-size: 100%;
     background-repeat: no-repeat;
     position: absolute;
-    top: 27px;
+    top: 2vw;
     left: 35px;
 }
 
@@ -50,7 +61,7 @@
     color:#ffffff;
     line-height:23px;
     left: 200px;
-    top: 32px;
+    top: 2.5vw;
 }
 .shiyanfont2{
     width:90px;
