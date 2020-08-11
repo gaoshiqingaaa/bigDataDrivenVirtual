@@ -14,7 +14,7 @@
     <div class="loginbox2">
         <div class="layui-form-item">
             <p style="margin-top: 18px; float: left;">用户信息</p>
-            <p style="    margin-top: 20px; left: 80%; font-size: 12px; position: absolute;"><a href="./index.html" style="color: #A9A9A9;">跳过</a></p>
+            <p style="    margin-top: 20px; left: 80%; font-size: 12px; position: absolute;"><a id="tiaoguo" style="color: #A9A9A9;">跳过</a></p>
             
             <div class="cnter">
             <form class="layui-form" action="">
@@ -52,6 +52,7 @@
 <script src="./lib/layui.all.js"></script>
 <script src="./lib/layui.js"></script>
 <script>
+    // 开始实验
 layui.use('form', function(){
   var form = layui.form;
   
@@ -63,5 +64,29 @@ layui.use('form', function(){
   });
 });
 
+
+//跳过
+$('[id="tiaoguo"]').click(function(){ 
+    $.ajax({
+    /* url 地址可以是 /get-json/ 的方式
+    *  也可以是 http://www.qfedu.com/get-json/ 的方式
+    */
+    // url: 'http://47.97.205.240:8800/',
+    url: 'http://127.0.0.1:5000/',
+    type: 'get',
+    success: function(data){
+        
+        localStorage.setItem("temporary_user", JSON.stringify(data.user));
+        window.location.href = "./index.html"
+        // window.location.href = "./index.html"
+    },
+    error: function(res){
+        // 错误时处理逻辑
+        $('[id="tiaoguo"]').click(function(){ 
+        layer.alert('错误,无法链接到服务')
+        });
+        }
+            });
+    });
 </script>
 </html>
