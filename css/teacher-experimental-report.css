@@ -1,12 +1,11 @@
 #nav {
     width: 96vw;
-    margin-top: 2.46vw;
-    
 }
 
 #but1 {
     float: right;
     margin-right: 15px;
+    margin-top: 2.5vw;
 }
 
 #but1 a {
@@ -151,7 +150,7 @@
     width: 58vw;
     height: 
     100px;
-    border: 0.5px solid;
+    border: 1px solid;
     border-radius: 4px;
     overflow: hidden;
 }
@@ -159,7 +158,7 @@
     width: 58vw;
     height: 
     60px;
-    border: 0.5px solid;
+    border: 1px solid;
     border-radius: 4px;
     overflow: hidden;
 }
@@ -167,7 +166,7 @@
     width: 58vw;
     height: 
     370px;
-    border: 0.5px solid;
+    border: 1px solid;
     border-radius: 4px;
     overflow: hidden;
 }
@@ -175,38 +174,91 @@
     width: 58vw;
     height: 
     60px;
-    border: 0.5px solid;
+    border: 1px solid;
     border-radius: 4px;
     overflow: hidden;
 }
 .div13tb1td1{
     font-size: 12px;
-    border:0.5px solid black;
+    border:0px;
     text-align: left;
     padding-left: 25px;
 }
 .div13tb2td1font{
     width: 1%;
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
 }
 .div13tb1fontsize{
     font-size: 15px;
+    border-top: 0px;
+    border-left: 0px;
+}
+.div13tb1fontsize1{
+    font-size: 15px;
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+}
+.div13tb1fontsize12{
+    font-size: 15px;
+    border-right: 0px;
+    border-left: 0px;
+    border-top: 0px;
+}
+.div13tb1fontsize13{
+    font-size: 15px;
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+    border-top: 0px;
 }
 .div13tb3td1{
     width: 1%;
     height: 6%;
     background-color: #5C6C91;
     color: #ffffff;
+    border-top: 0px;
+    border-left: 0px;
+}
+.div13tb3td11{
+    width: 1%;
+    height: 6%;
+    background-color: #5C6C91;
+    color: #ffffff;
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
 }
 .div13tb3td2{
     width: 12%;
+    border-top: 0px;
+    border-left: 0px;
+}
+.div13tb3td21{
+    width: 12%;
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
 }
 .div13tb3td3{
     width: 5%;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+.div13tb3td31{
+    width: 5%;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
 }
 tr td,th{
     text-align: center;
     font-size: 14px;
-    border:0.5px solid black;
+    border:1px solid black;
     width: 4%;
     color: #25264E;
 }
