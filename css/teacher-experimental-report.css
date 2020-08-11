@@ -81,8 +81,9 @@
     background-image: url(../img/15-btn-download@2x.png);
     background-position: center;
     background-size: 2.87vw;
-    left: 82.23vw;
-    top: 5.34vw;
+    left: 87.23vw;
+    top: 11.34vw;
+    z-index: 2;
 }
 
 .div11{
@@ -351,8 +352,8 @@ tr td,th{
 
 .div1btn{
     position: absolute;
-    top: 130%;
-    left: 31vw;
+    top: 94%;
+    left: 40vw;
 }
 .layui-btn1 {
     height: 2.7vw;

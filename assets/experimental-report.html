@@ -21,8 +21,10 @@
 
     <div class="shiyanfont1">大数据驱动的智能投顾虚拟仿真实验室</div>
     
+    <a href="#"><div id="div1imgdownload"></div></a>
+
     <div class="div1">
-        <a href="#"><div id="div1imgdownload"></div></a>
+        
 
         <div class="shiyanfont2">实验报告</div>
 
@@ -206,9 +208,6 @@
             <div class="div12font"><span>心得体会</span></div>
 
             <div class="layui-form-item layui-form-text div2win">
-                <div class="div1btn">
-                    <button type="button" class="layui-btn1 layui-btn-primary" id="tijiao"><p class="font">提交</p></button>
-                </div>
                 <div class="layui-input-block">
                   <textarea class="layui-textarea border"></textarea>
                 </div>
@@ -216,6 +215,11 @@
 
         </div>
     </div>
+
+    <div class="div1btn">
+        <button type="button" class="layui-btn1 layui-btn-primary" id="tijiao"><p class="font">提交</p></button>
+    </div>
+    
 </div>
 </body>
 <script src="../lib/layui.js"></script>
@@ -300,14 +304,24 @@
         $("#shiyaniti7").html(String(data.grade[6]));
         
         // 计算总分
-
-        $("#zongfen").html(String());
+        list1=[data.grade[0],data.grade[1],data.grade[2],data.grade[3],data.grade[4],data.grade[5]
+            ,data.grade[6],a["ti1"],a["ti2"],a["ti3"],a["ti4"],a["ti5"],a["ti6"],a["ti7"],a["ti8"],a["ti9"],a["ti10"]
+            ,a["ti11"],a["ti12"],a["ti13"],a["ti14"],a["ti15"]]
      },
     error: function(res){
         // 错误时处理逻辑
         layer.alert('无数据,请您先完成实验!')
         }
             });
+
+    function sum(arr) {
+            var s = 0;
+            for (var i=arr.length-1; i>=0; i--) {
+                s += arr[i];
+                }
+                return s;
+            }
+        $("#zongfen").html(String(sum(list1)));
 </script>
 
 <!-- 提交 -->

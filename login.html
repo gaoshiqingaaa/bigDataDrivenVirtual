@@ -14,7 +14,7 @@
     <div class="loginbox2">
         <div class="layui-form-item">
             <p style="margin-top: 18px; float: left;">用户信息</p>
-            <p style="    margin-top: 20px; left: 80%; font-size: 12px; position: absolute;"><a id="tiaoguo" style="color: #A9A9A9;">跳过</a></p>
+            <p style="    margin-top: 20px; left: 80%; font-size: 12px; position: absolute;" id="tiaoguo"><a href="#" style="color: #A9A9A9;">跳过</a></p>
             
             <div class="cnter">
             <form class="layui-form" action="">
@@ -82,9 +82,9 @@ $('[id="tiaoguo"]').click(function(){
     },
     error: function(res){
         // 错误时处理逻辑
-        $('[id="tiaoguo"]').click(function(){ 
+        
         layer.alert('错误,无法链接到服务')
-        });
+
         }
             });
     });
