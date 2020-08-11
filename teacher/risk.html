@@ -312,34 +312,34 @@
                         <div class="apple"></div>
                         <p>根据您的情况，您的风险承受能力为</p>
                     </div>
-                    <pre id="baoshou" style="display: none;">
-                                    此类投资者对于投资产品的任何下跌都不愿意接受，甚至不能承受极小的资
-                            产波动。属于风险厌恶型的投资者， 首要目的是保持投资的稳定性与资产的保
-                            值，这类投资者需要注意为达到上述目标回报率可能很低，以换取本金免于受
-                            损和较高的流动性。
-                    </pre>
-                    <pre id="xiangbaoshou" style="display: none;">
-                                    此类投资者不愿意接受暂时的投资损失。关注本金的安全，往往是稍微有些
-                            风险厌恶型的投资者，首要投资目标是资产一定程度的增值，为了获得一定的
-                            收益能承受少许本金损失和波动，此类投资者可以承受少许的资产波动和本金
-                            损失风险。 
-                    </pre>
-                    <pre id="wenjian" style="display: none;">
-                                    此类投资者愿意承担一定程度的风险，主要强调投资风险和资产增值之间的
-                            平衡，为了获得一定收益可以承受投资产品价格的波动，甚至可以承受一段时
-                            间内投资产品价格的下跌，此类投资者可以承受一定程度的资产波动风险和本
-                            金亏损风险。
-                    </pre>
-                    <pre id="xiangjiji" style="display: none;">
-                                    此类投资者为了获得高回报的投资收益，能够承受投资产品价格的显著波动
-                            ，主要投资目标是实现资产增值，为实现目标往往愿意承担相当程度的风险此
-                            类投资者可以承受相当大的资产波动风险和本金亏损风险
-                    </pre>
-                    <pre id="jiji" style="display: none;">
-                                    此类投资者能够承受投资产品价格的剧烈波动，也可以承担这种波动所带
-                            来的结果，投资目标主要是取得超额收益，为实现投资目标愿意官更大的风险
-                            。此类投资者能够承担相当大的投资风险和更大的本金亏损风险
-                    </pre>
+                    <p id="baoshou" style="display: none;">
+                                    此类投资者对于投资产品的任何下跌都不愿意接受，甚至不能承受极小
+                            的资产波动。属于风险厌恶型的投资者， 首要目的是保持投资的稳定性与
+                            资产的保值，这类投资者需要注意为达到上述目标回报率可能很低，以换
+                            取本金免于受损和较高的流动性。
+                    </p>
+                    <p id="xiangbaoshou" style="display: none;">
+                                    此类投资者不愿意接受暂时的投资损失。关注本金的安全，往往是稍微
+                            有些风险厌恶型的投资者，首要投资目标是资产一定程度的增值，为了获
+                            得一定的收益能承受少许本金损失和波动，此类投资者可以承受少许的资
+                            产波动和本金损失风险。 
+                    </p>
+                    <p id="wenjian" style="display: none;">
+                                    此类投资者愿意承担一定程度的风险，主要强调投资风险和资产增值之
+                            间的平衡，为了获得一定收益可以承受投资产品价格的波动，甚至可以承
+                            受一段时间内投资产品价格的下跌，此类投资者可以承受一定程度的资产
+                            波动风险和本金亏损风险。
+                    </p>
+                    <p id="xiangjiji" style="display: none;">
+                                    此类投资者为了获得高回报的投资收益，能够承受投资产品价格的显著
+                            波动，主要投资目标是实现资产增值，为实现目标往往愿意承担相当程度
+                            的风险此类投资者可以承受相当大的资产波动风险和本金亏损风险。
+                    </p>
+                    <p id="jiji" style="display: none;">
+                                    此类投资者能够承受投资产品价格的剧烈波动，也可以承担这种波动
+                            所带来的结果，投资目标主要是取得超额收益，为实现投资目标愿意官更
+                            大的风险。此类投资者能够承担相当大的投资风险和更大的本金亏损风险
+                    </p>
                 </div>
                 
                 <div id="tu">
@@ -364,6 +364,11 @@
            var jd = document.getElementsByTagName('li');
            var num = 0;
            var Grades = '';
+           
+           //广播皮肤
+           layer.config({
+               extend: 'myskin/style.css'
+           });
            
            //进入答题环节
            $('#start').click(function(){
@@ -405,9 +410,9 @@
                                shade: [0.5, '#000'],
                                anim: 6,
                                icon: 5,
-                               area:['300px', '150px'],
-                               time: 20000,
-                               btn: ['知道了']
+                               // area:['300px', '150px'],
+                               // time: 20000,
+                               // btn: ['知道了']
                            })
                            num = 0
                            break;
@@ -431,10 +436,10 @@
                            layer.msg('第二题选择有误！', {
                                shade: [0.5, '#000'],
                                anim: 6,
-                               area:['500px', '300px'],
+                               // area:['500px', '300px'],
                                icon: 5,
-                               time: 20000,
-                               btn: ['知道了']
+                               // time: 20000,
+                               // btn: ['知道了']
                            })
                            num = 0
                            break;
@@ -455,10 +460,10 @@
                            layer.msg('第三题选择有误！', {
                                shade: [0.5, '#000'],
                                anim: 6,
-                               area:['500px', '300px'],
+                               // area:['500px', '300px'],
                                icon: 5,
-                               time: 20000,
-                               btn: ['知道了']
+                               // time: 20000,
+                               // btn: ['知道了']
                            })
                            num = 0
                            break;
@@ -482,10 +487,10 @@
                            layer.msg('第四题选择有误！', {
                                shade: [0.5, '#000'],
                                anim: 6,
-                               area:['500px', '300px'],
+                               // area:['500px', '300px'],
                                icon: 5,
-                               time: 20000,
-                               btn: ['知道了']
+                               // time: 20000,
+                               // btn: ['知道了']
                            })
                            num = 0
                            break;
@@ -509,10 +514,10 @@
                            layer.msg('第五题选择有误！', {
                                shade: [0.5, '#000'],
                                anim: 6,
-                               area:['500px', '300px'],
+                               // area:['500px', '300px'],
                                icon: 5,
-                               time: 20000,
-                               btn: ['知道了']
+                               // time: 20000,
+                               // btn: ['知道了']
                            })
                            num = 0
                            break;
@@ -533,10 +538,10 @@
                            layer.msg('第六题选择有误！', {
                                shade: [0.5, '#000'],
                                anim: 6,
-                               area:['500px', '300px'],
+                               // area:['500px', '300px'],
                                icon: 5,
-                               time: 20000,
-                               btn: ['知道了']
+                               // time: 20000,
+                               // btn: ['知道了']
                            })
                            num = 0
                            break;
@@ -557,10 +562,10 @@
                            layer.msg('第七题选择有误！', {
                                shade: [0.5, '#000'],
                                anim: 6,
-                               area:['500px', '300px'],
+                               // area:['500px', '300px'],
                                icon: 5,
-                               time: 20000,
-                               btn: ['知道了']
+                               // time: 20000,
+                               // btn: ['知道了']
                            })
                            num = 0
                            break;
@@ -578,10 +583,10 @@
                            layer.msg('第八题选择有误！', {
                                shade: [0.5, '#000'],
                                anim: 6,
-                               area:['500px', '300px'],
+                               // area:['500px', '300px'],
                                icon: 5,
-                               time: 20000,
-                               btn: ['知道了']
+                               // time: 20000,
+                               // btn: ['知道了']
                            })
                            num = 0
                            break;
@@ -602,10 +607,10 @@
                            layer.msg('第九题选择有误！', {
                                shade: [0.5, '#000'],
                                anim: 6,
-                               area:['500px', '300px'],
+                               // area:['500px', '300px'],
                                icon: 5,
-                               time: 20000,
-                               btn: ['知道了']
+                               // time: 20000,
+                               // btn: ['知道了']
                            })
                            num = 0
                            break;
@@ -626,10 +631,10 @@
                            layer.msg('第十题选择有误！', {
                                shade: [0.5, '#000'],
                                anim: 6,
-                               area:['500px', '300px'],
+                               // area:['500px', '300px'],
                                icon: 5,
-                               time: 20000,
-                               btn: ['知道了']
+                               // time: 20000,
+                               // btn: ['知道了']
                            })
                            num = 0
                            break;
@@ -641,35 +646,35 @@
                    $('#result').show();
                    $('#jiji').show();
                    $('#jjx').show();
-                   layer.alert('您的得分是：' + num + '积极型！');
+                   layer.alert('您的得分是：' + num + '积极型！',{skin: 'layer-bg',move: false,});
                    Grades = '积极型！';
                } else if (num >= 65) {
                    $('.content').hide();
                    $('#result').show();
                    $('#xiangjiji').show();
                    $('#xdjjx').show();
-                   layer.alert('您的得分是：' + num + '相对积极型！');
+                   layer.alert('您的得分是：' + num + '相对积极型！',{skin: 'layer-bg',move: false,});
                    Grades = '相对积极型！';
                } else if (num >= 31) {
                    $('.content').hide();
                    $('#result').show();
                    $('#wenjian').show();
                    $('#wjx').show();
-                   layer.alert('您的得分是：' + num + '稳健型！');
+                   layer.alert('您的得分是：' + num + '稳健型！',{skin: 'layer-bg',move: false,});
                    Grades = '稳健型！';
                } else if (num >= 21) {
                    $('.content').hide();
                    $('#result').show();
                    $('#xiangbaoshou').show();
                    $('#xdbsx').show();
-                   layer.alert('您的得分是：' + num + '相对保守型！');
+                   layer.alert('您的得分是：' + num + '相对保守型！',{skin: 'layer-bg',move: false,});
                    Grades = '相对保守型！';
                } else if (num >= 7) {
                    $('.content').hide();
                    $('#result').show();
                    $('#baoshou').show();
                    $('#bsx').show();
-                   layer.alert('您的得分是：' + num + '保守型！');
+                   layer.alert('您的得分是：' + num + '保守型！',{skin: 'layer-bg',move: false,});
                    Grades = '保守型！';
                };
                try{
@@ -684,15 +689,21 @@
            
            //帮助按钮触发事件
            $('button:button[id="help"]').click(function() {
+               
                layer.alert(
-                   '尊敬的用户：以下问题可协助评估您对投资产品和服务的风险承受能力，请您根据自身情况认真选择。评估结果仅供参考， 不构成投资建议。为了及时了解您的风险承受能力，我们建议您持续做好动态评估。我们承诺对您的所有个人资料保密。'
+                   '尊敬的用户：</br>以下问题可协助评估您对投资产品和服务的风险承受能力，请您根据自身情况认真选择。评估结果仅供参考， 不构成投资建议。为了及时了解您的风险承受能力，我们建议您持续做好动态评估。我们承诺对您的所有个人资料保密。',
+                   {
+                    skin: 'layer-bg',
+                    move: false
+                    }
                )
            })
            
            //个人按钮触发事件
            $('button:button[id="friends"]').click(function() {
-               layer.alert('请先完成风险评估问卷！', {
-                   icon: 5
+               layer.alert('<i class="layui-icon" style="color:red; font-size:300%">&#xe69c;</i>请先完成风险评估问卷！', {
+                   skin: 'layer-bg',
+                   move: false
                })
            })
            
