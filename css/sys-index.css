@@ -12,11 +12,16 @@ body {
     height: 100%;
 }
 
-#but1 a {
+#but1 {
     color: #6969EF;
-   
+    width: 10%;
+    float: right;
+    margin-right: 2%;
 }
- #but1 {
+#but1:hover {
+    color: white;
+    background-color: #7e9ff0;
+    border: 1.5px solid white;
     width: 10%;
     float: right;
     margin-right: 2%;
@@ -63,6 +68,11 @@ body {
 .dian{
     background-color: white;
     color: #6464dd;
+}
+
+.dian:hover {
+    background-color: #6464dd;
+    color: #fff;;
 }
 
 .nodian{
@@ -127,7 +137,7 @@ body {
     border-radius: 5px;
 }
 
-#zhengque,#abc,#abcd,#bcd,#dui,#cuo{
+#zhengque,#abc,#abcd,#bcd,#dui,#cuo,#wuda{
     font-size: 30px;
     text-align: center;
     width: 30%;
