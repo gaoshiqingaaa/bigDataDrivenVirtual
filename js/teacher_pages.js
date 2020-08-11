@@ -29,7 +29,7 @@ $('.next').click(function(){
     if (current_page < 9) {
         if (current_page < 7) {
             if (!run_code_clicked[current_page]) {
-                html += '<tr style="text-align: center"><td colspan=7 style="color: red">亲，先运行这一步哦~</td></tr>'
+                html += '<tr style="text-align: center"><td colspan=7 style="color: red">亲，先成功运行这一步哦~</td></tr>'
                 $('#result-tbody').html(html)
                 return
             }
@@ -271,30 +271,32 @@ function showPage(current_page) {
             showIntroduceAlert(1)
             break
         case 6:
-            layer.open({
-                type: 2,
-                area: ['500px', '270px'], 
-                title: false,
-                closeBtn: 1,
-                shadeClose: true,
-                skin: 'introduce-alert',
-                content: '7-intro.html',
-                btn: ['知道了'],
-                success: function(elem) {
-                    $(".layui-layer-setwin .layui-layer-close2").css({
-                        'right': '3px',
-                        'top': '-11px',
-                        'background-position': '30px -32px'
-                    })
-                    $('.layui-layer-setwin a').append('X')
-                    $('.layui-layer-setwin a').css({
-                        'font-size': '27px',
-                        'color': 'white'
-                    })
-                    $('.layui-layer-iframe').css({'border-radius': '12px'})
-                    alertBtnArgs()
-                }
-            });
+            if (isTeacher) {
+                layer.open({
+                    type: 2,
+                    area: ['500px', '270px'], 
+                    title: false,
+                    closeBtn: 1,
+                    shadeClose: true,
+                    skin: 'introduce-alert',
+                    content: '7-intro.html',
+                    btn: ['知道了'],
+                    success: function(elem) {
+                        $(".layui-layer-setwin .layui-layer-close2").css({
+                            'right': '3px',
+                            'top': '-11px',
+                            'background-position': '30px -32px'
+                        })
+                        $('.layui-layer-setwin a').append('X')
+                        $('.layui-layer-setwin a').css({
+                            'font-size': '27px',
+                            'color': 'white'
+                        })
+                        $('.layui-layer-iframe').css({'border-radius': '12px'})
+                        alertBtnArgs()
+                    }
+                });
+            }
             break
         case 7:
             $('.right-page-content').hide()
