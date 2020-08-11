@@ -463,7 +463,7 @@
 
 .right-content-top-left-nine .top {
     width: 100%;
-    height: 21%;
+    height: 22%;
     overflow: hidden;
     margin-top: 5%;
 }
@@ -473,6 +473,10 @@
     height: 100%;
     width: 10%;
     float: left;
+}
+
+.right-content-top-left-nine .top .img img{
+    width: 126%;
 }
 
 .right-content-top-left-nine .top .text {
@@ -558,4 +562,8 @@
     margin-top: 11%;
     color: red;
     text-align: center;
+}
+
+.right-content-top-left-nine .bottom img {
+    width: 100%;
 }
