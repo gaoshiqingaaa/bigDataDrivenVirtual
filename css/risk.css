@@ -183,17 +183,50 @@ body {
     height: 73%;
 }
 
-.t1,.t2,.t3,.t4,.t5,.t6,.t7,.t8,.t9,.t10{
+.t1,.t2,.t4,.t5,.t6,.t7,.t8{
     width: 33%;
-    height: 20%;
+    height: 85px;
     background-image: url(../img/5-panel-nor@2x.png);
     background-repeat: no-repeat;
     overflow: hidden;
     background-size: 100% 100%;
-    font-size: 15px;
+    font-size: 18px;
+    float: left;
+    margin-left: 8%;
+    /* padding-top: 2%; */
+    line-height: 85px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.t3,.t9{
+    width: 33%;
+    height: 100px;
+    background-image: url(../img/5-panel-nor@2x.png);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: 100% 100%;
+    font-size: 18px;
     float: left;
     margin-left: 8%;
     padding-top: 2%;
+    line-height: 35px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.t10{
+    width: 33%;
+    height: 110px;
+    background-image: url(../img/5-panel-nor@2x.png);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: 100% 100%;
+    font-size: 18px;
+    float: left;
+    margin-left: 8%;
+    padding-top: 2%;
+    line-height: 28px;
     padding-left: 2%;
     padding-right: 2%;
 }
@@ -276,18 +309,19 @@ p input{
     background-repeat: no-repeat;
     overflow: hidden;
     background-size: 100% 100%;
-    width: 8.5%;
-    height: 100%;
+    width: 80px;
+    height: 80px;
     vertical-align: middle;
     display: inline-block
 }
 
 #apple h1 {
+    padding-left: 0% ！important;
+    text-align: center;
     font-weight: bolder;
     color: white;
-    font-size: 200%;
-    line-height: 280%;
-    padding-left: 30%;
+    font-size: 22px;
+    line-height: 75px;
 }
 
 ol.steps::-webkit-scrollbar {
