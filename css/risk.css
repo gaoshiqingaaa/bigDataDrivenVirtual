@@ -217,7 +217,7 @@ body {
 
 .t10{
     width: 33%;
-    height: 110px;
+    height: 120px;
     background-image: url(../img/5-panel-nor@2x.png);
     background-repeat: no-repeat;
     overflow: hidden;
@@ -229,6 +229,24 @@ body {
     line-height: 28px;
     padding-left: 2%;
     padding-right: 2%;
+}
+
+.tp3, .tp9, .tp10{
+    position: relative;
+    padding-top: 6px;
+}
+
+.tp3 input, .tp9 input, .tp10 input{
+    position: absolute !important;
+    top: 16px !important;
+    left: 0;
+    height: 14px !important;
+    left: -15px !important;
+}
+
+.tp3 span, .tp9 span, .tp10 span{
+    margin-left: 40px;
+    display: block;
 }
 
 p input{
@@ -293,15 +311,19 @@ p input{
 
 .line-nav{
     width: 90%;
-    height: 22%;
+    height: 110px;
     padding-left: 3%;
     margin-top: 2%;
 }
 
+#pri{
+    width: 85%;
+    float: right;
+}
+
 .line-nav p{
-    font-size: 150%;
-    line-height: 100%;
-    display: inline-block;
+    font-size: 22px;
+    line-height: 50px;
 }
 
 #apple {
@@ -309,19 +331,11 @@ p input{
     background-repeat: no-repeat;
     overflow: hidden;
     background-size: 100% 100%;
+    float: left;
     width: 80px;
     height: 80px;
     vertical-align: middle;
-    display: inline-block
-}
-
-#apple h1 {
-    padding-left: 0% ！important;
-    text-align: center;
-    font-weight: bolder;
-    color: white;
-    font-size: 22px;
-    line-height: 75px;
+    display: inline-block;
 }
 
 ol.steps::-webkit-scrollbar {
@@ -466,3 +480,4 @@ ol.steps li.step-end .step-line {
     right: 8%;
     bottom: 10%
 }
+
