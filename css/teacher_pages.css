@@ -14,16 +14,18 @@
     top: 3%;
     left: 8%;
     width: 80%;
-    height: 12%;
+    height: 10%;
     background-color: rgba(46, 94, 175, 1);
     border-radius: 3px;
+    text-align: center;
 }
 
 .left-title {
-    font-size: 30px;
+    font-size: 18px;
     display: inline-block;
     color:#fff;
-    margin: 5% 0 0 25%;
+    line-height: 53px;
+    /* margin: 5% 0 0 25%; */
 }
 
 .left-pages {
@@ -85,17 +87,17 @@
 .lang-intro {
     position: relative;
     top: 5%;
-    left: 2%;
+    left: 1%;
 }
 
 .lang-intro p {
-    font-size: 25px;
+    font-size: 18px;
 }
 
 .run-code-li {
     position: relative;
     top: 6%;
-    left: 73%;
+    left: 78%;
     height: 56%;
     width: 9%;
 }
