@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <title>大数据驱动的智能投顾虚拟仿真实验-登录</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="./lib/css/layui.css">
@@ -36,11 +36,10 @@
             <div class="layui-input-inline shadow">
                 <div class="usernameimg"><img src="./img/school@2x.png" class="imgsize"><div class="Verticalline"></div></div>
                 <input type="text" name="school" required lay-verify="required" placeholder="学校/单位名称" autocomplete="off" class="layui-input input1">
+                    <button type="submit" lay-submit="" lay-verify="login" lay-filter="formDemo" class="layui-btn layui-btn-xs layui-btn-normal login">开始实验</button>
             </div>
 
-            <div class="logindiv">
-                <button type="submit" lay-submit="" lay-verify="login" lay-filter="formDemo" class="layui-btn layui-btn-xs layui-btn-normal login">开始实验</button>
-            </div>
+            
           </form>
             </div>
           </div>

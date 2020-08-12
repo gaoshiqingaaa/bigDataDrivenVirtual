@@ -1,5 +1,6 @@
 #nav {
     width: 96vw;
+    height: 80px;
 }
 
 #but1 {
@@ -34,17 +35,15 @@
 }
 
 .div1 {
-    width: 96.5%;
+    width: 90%;
     height: 93%;
     background-image: url(../img/16-bg-gezi@2x.png);
     background-position: top;
     background-repeat: no-repeat;
     background-size: 120%;
     background-color: #ffffff;
-    position: absolute;
-    top: 6.82vw;
-    left: 1.64vw;
     border-radius: 5px;
+    margin: 0 auto;
 }
 @font-face {
     src:url("../lib/font/YouSheBiaoTiHei-2.ttf");
@@ -63,15 +62,14 @@
     top: 2.5vw;
 }
 .shiyanfont2{
-    width:90px;
     height:18px;
     font-size:24px;
     font-family:shiyanfont;
     font-weight:400;
     color:rgba(102,102,102,1);
     line-height:23px;
-    margin: 0 auto;
-    margin-top: 48.5px;
+    padding-top: 48.5px;
+    text-align: center;
 }
 #div1imgdownload{
     position: absolute;
@@ -87,65 +85,78 @@
 }
 
 .div11{
-    position: absolute;
-    width: 71%;
+    position: relative;
     height: 5%;
-    top: 9%;
+    top: 3%;
     left: 8.223684210526317vw;
+    width: 70%;
 }
 .div12{
-    position: absolute;
-    width: 71%;
+    position: relative;
     height: 5%;
-    top: 16%;
+    top: 3%;
     left: 8.22vw;
+    width: 70%;
 }
 .div13{
-    position: absolute;
-    width: 71%;
+    position: relative;
+    /* width: 71%; */
     height: 65%;
-    top: 23%;
+    top: 3%;
     left: 8.22vw;
+    width: 70%;
 }
+.div14{
+    position: relative;
+    height: 5%;
+    top: 50px;
+    left: 8.22vw;
+    width: 70%;
+}
+
+.div111{
+    position: relative;
+}
+
 .div131{
-    position: absolute;
-    top: 60px;
+    left: 15px;
+    position: relative;
+    top: 40px;
 }
 .div132{
-    position: absolute;
-    top: 220px;
+    left: 15px;
+    position: relative;
+    top: 95px;
 }
 .div133{
-    position: absolute;
-    top: 340px;
+    left: 15px;
+    position: relative;
+    top: 150px;
 }
 .div134{
-    position: absolute;
-    top: 770px;
+    left: 15px;
+    position: relative;
+    top: 205px;
 }
 .div13font1{
     font-size: 14px;
-    position: absolute;
-    left: -19px;
+    position: relative;
     top: 20px;
 }
 .div13font2{
     font-size: 14px;
-    position: absolute;
-    left: -19px;
-    top: 180px;
+    position: relative;
+    top: 75px;
 }
 .div13font3{
     font-size: 14px;
-    position: absolute;
-    left: -19px;
-    top: 300px;
+    position: relative;
+    top: 130px;
 }
 .div13font4{
     font-size: 14px;
-    position: absolute;
-    left: -19px;
-    top: 730px;
+    position: relative;
+    top: 185px;
 }
 .div13tb1{
     width: 58vw;
@@ -272,13 +283,6 @@ tr td,th{
     border-collapse: separate;
     border-spacing: 0;
   }
-.div14{
-    position: absolute;
-    width: 71%;
-    height: 5%;
-    top: 1195px;
-    left: 8.22vw;
-}
 
 .div11img1{
     width: 6.74vw;
@@ -322,20 +326,20 @@ tr td,th{
 }
 
 .div11font{
+    position: absolute;
     font-size: 16px;
-    margin-left: 6vw;
-    margin-top: -2vw;
+    left: 6vw;
+    top: -2vw;
 }
 .div12font{
+    position: absolute;
     font-size: 16px;
-    margin-left: 6vw;
-    margin-top: -2vw;
+    left: 6vw;
+    top: -2vw;
 }
 .div21font{
     font-size: 0.8vw;
-    position: absolute;
-    left: 8vw;
-    top: 0.8vw;
+    padding-left: 10%;
     white-space: nowrap;
 }
 .div2win{
@@ -352,8 +356,8 @@ tr td,th{
 
 .div1btn{
     position: absolute;
-    top: 94%;
-    left: 40vw;
+    bottom: 4%;
+    left: 42vw;
 }
 .layui-btn1 {
     height: 2.7vw;
