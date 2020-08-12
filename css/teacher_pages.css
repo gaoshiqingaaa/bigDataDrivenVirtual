@@ -21,7 +21,7 @@
 }
 
 .left-title {
-    font-size: 20px;
+    font-size: 18px;
     display: inline-block;
     color:#fff;
     line-height: 53px;
@@ -87,17 +87,17 @@
 .lang-intro {
     position: relative;
     top: 5%;
-    left: 2%;
+    left: 1%;
 }
 
 .lang-intro p {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .run-code-li {
     position: relative;
     top: 6%;
-    left: 77%;
+    left: 78%;
     height: 56%;
     width: 9%;
 }
