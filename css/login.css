@@ -41,12 +41,11 @@
     position: absolute;
 }
 .logindiv {
-    position: absolute;
-    top: 15vw;
-    left: 32px;
+    
 }
 
 .login{
+    margin-top: 3.5vw;
     background: url(../img/login-btn@2x.png);
     border-radius: 8px;
     position: absolute;
