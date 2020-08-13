@@ -308,6 +308,7 @@ function showPage(current_page) {
         case 8:
             $('#right-page-eight').hide()
             $('#right-page-nine').show()
+            localStorage.setItem("step_score", JSON.stringify(step_score))
             break
     }
 }

@@ -1,3 +1,16 @@
+function getRiskAversion() {
+    var risk_score = {}
+    var risk_aversion = 0
+    if (isTeacher)
+        risk_score = localStorage.getItem('Grades')
+    else
+        risk_score = localStorage.getItem('aGrades')
+    if (risk_score != null) {
+        risk_score = JSON.parse(risk_score).number
+        risk_aversion = (84 - risk_score) / (84 - 7) * (6 - 3) + 3
+    }
+    return risk_aversion.toFixed(2)
+}
 if (window.location.href.indexOf('teacher') != -1){
     codes = {
         0: `import csv
@@ -69,7 +82,7 @@ ax1.set_ylabel('Expected Return', fontsize = 12)
 ax1.tick_params(labelsize = 12)
 ax1.legend(['portfolio1','portfolio2'], loc = 'best', fontsize = 14)
 `,
-    6: `risk_aversion = 3
+    6: `risk_aversion = ` + getRiskAversion() + `
 P = risk_aversion * matrix(cov_mat.values)
 q = -1 * matrix(exp_rtn.values)
 G = matrix(np.vstack((np.diag(np.ones(len(exp_rtn))),np.diag(-np.ones(len(exp_rtn))))))
@@ -82,6 +95,8 @@ print(DataFrame(index=exp_rtn.index,data = np.round(sol['x'],2), columns = ['wei
 `
     }
 } else if (window.location.href.indexOf('assets') != -1) {
+    risk_score = JSON.parse(localStorage.getItem('aGrades')).number
+    risk_aversion = (84 - risk_score) / (84 - 7) * (6 - 3) + 3
     codes = {
         0: `import csv
 import numpy as np
@@ -107,7 +122,7 @@ print(rtn_table.head(10))
         3: 'print(rtn_table.corr())',
         4: '',
         5: '#绘出efficient frontier',
-        6: `risk_aversion = 3
+        6: `risk_aversion = ` + getRiskAversion() + `
 P = risk_aversion * matrix(cov_mat.values)
 q = -1 * matrix(exp_rtn.values)
 G = matrix(np.vstack((np.diag(np.ones(len(exp_rtn))),np.diag(-np.ones(len(exp_rtn))))))
