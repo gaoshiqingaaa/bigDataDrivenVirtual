@@ -250,7 +250,7 @@ $('.run-code').click(function(){
                                     })
                                     $('.layui-layer-btn').css({'padding-right': '46%'})
                                     $('.layui-layer-iframe').css({'border-radius': '16px'})
-                                }
+                                },
                             });
                         
                             break

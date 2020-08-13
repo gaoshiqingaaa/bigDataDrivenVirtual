@@ -569,3 +569,19 @@
 .right-content-top-left-nine .bottom img {
     width: 100%;
 }
+
+.right-content-top-right .content #zichan {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    border: 0;
+    text-align: center;
+}
+
+.right-content-top-right #analytical_result {
+    width: 95%;
+    height: 95%;
+    resize: none;
+    border: 0;
+    text-align: center;
+}

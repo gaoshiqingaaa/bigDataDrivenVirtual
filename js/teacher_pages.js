@@ -11,7 +11,7 @@ window.onload = function(){
     $($('.left-pages>div')[current_page]).show()
     $('#right-page-code').show()
     // $('#right-page-code').hide()
-    // $('#right-page-nine').show()
+    // $('#right-page-eight').show()
     user = JSON.parse(localStorage.getItem('temporary_user'))
     if (user == null) {
         $.ajax({
@@ -48,6 +48,12 @@ $('.next').click(function(){
             $('.bottom-left img').attr('src', 'http://47.97.205.240:8800/static/' + user + '/5.png')
             pie1.setOption(pie_option);
             $('#page-eight-tbody').html(xishu_html)
+            if (!isTeacher) {
+                best_combine = localStorage.getItem('best_combine')
+                if (best_combine == null)
+                    best_combine = ''
+                $('#combine').html(best_combine)
+            }
         }
         code_in.setValue('')
         if (current_page < 7)
