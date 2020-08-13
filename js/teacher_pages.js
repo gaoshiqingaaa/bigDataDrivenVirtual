@@ -12,7 +12,7 @@ window.onload = function(){
     $('#right-page-code').show()
     // $('#right-page-code').hide()
     // $('#right-page-nine').show()
-    user = localStorage.getItem('temporary_user')
+    user = JSON.parse(localStorage.getItem('temporary_user'))
     if (user == null) {
         $.ajax({
             type: 'get',
