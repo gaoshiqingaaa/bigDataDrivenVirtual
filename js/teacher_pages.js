@@ -12,14 +12,17 @@ window.onload = function(){
     $('#right-page-code').show()
     // $('#right-page-code').hide()
     // $('#right-page-nine').show()
-    $.ajax({
-        type: 'get',
-        url: 'http://47.97.205.240:8800/',
-        // url: 'http://localhost:5000/',
-        success: function(data){
-            user = data.user
-        }
-    })
+    user = localStorage.getItem('temporary_user')
+    if (user == null) {
+        $.ajax({
+            type: 'get',
+            url: 'http://47.97.205.240:8800/',
+            // url: 'http://localhost:5000/',
+            success: function(data){
+                user = data.user
+            }
+        })
+    }
 }
 function toChildValue() {
     return xishu_html
@@ -29,7 +32,7 @@ $('.next').click(function(){
     if (current_page < 9) {
         if (current_page < 7) {
             if (!run_code_clicked[current_page]) {
-                html += '<tr style="text-align: center"><td colspan=7 style="color: red">亲，先成功运行这一步哦~</td></tr>'
+                html += '<tr style="text-align: center"><td colspan=7 style="color: red">亲，先运行这一步哦~</td></tr>'
                 $('#result-tbody').html(html)
                 return
             }

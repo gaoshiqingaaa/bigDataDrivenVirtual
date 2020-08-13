@@ -1,11 +1,3 @@
-var version = '# version: Python3\n\n'
-var codeAreaTip = "# please edit your code here:\n"
-var codeStart = '# code start \n\t\n'
-var codeEnd = '# code end \n\n'
-var codeTip = "'''\nThis function is the entry of this program\n'''\n"
-var code = 'def solution():\n\tpass'
-var initValue = version + codeAreaTip + codeStart + codeEnd + codeTip + code
-
 if (window.location.href.indexOf('teacher') != -1){
     codes = {
         0: `import csv
@@ -162,6 +154,11 @@ const name_code = {
     '000012.ZICN': '上证国债',
     '000013.ZICN': '上证企业债',
 }
+var step_score = {}
+for (i = 0; i < 7; i++) {
+    step_score[i] = 0
+}
+
 $('.run-code').click(function(){
     code = code_in.getValue().trim()
     if (code == '') {
@@ -183,10 +180,11 @@ $('.run-code').click(function(){
         },
         success: function(data){
             tt = data
+            run_code_clicked[current_page] = true
             result = data.result
             html = ''
             if (data.iserr == 0) {
-                run_code_clicked[current_page] = true
+                step_score[current_page] = 10
                 for (i = 0; i < result.length; i++){
                     if (result[i][0].trim() != ''){
                         html += '<tr  style="text-align: center">'
