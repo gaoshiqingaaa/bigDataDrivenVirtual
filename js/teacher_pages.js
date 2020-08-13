@@ -11,15 +11,18 @@ window.onload = function(){
     $($('.left-pages>div')[current_page]).show()
     $('#right-page-code').show()
     // $('#right-page-code').hide()
-    // $('#right-page-nine').show()
-    $.ajax({
-        type: 'get',
-        url: 'http://47.97.205.240:8800/',
-        // url: 'http://localhost:5000/',
-        success: function(data){
-            user = data.user
-        }
-    })
+    // $('#right-page-eight').show()
+    user = JSON.parse(localStorage.getItem('temporary_user'))
+    if (user == null) {
+        $.ajax({
+            type: 'get',
+            url: 'http://47.97.205.240:8800/',
+            // url: 'http://localhost:5000/',
+            success: function(data){
+                user = data.user
+            }
+        })
+    }
 }
 function toChildValue() {
     return xishu_html
@@ -29,7 +32,7 @@ $('.next').click(function(){
     if (current_page < 9) {
         if (current_page < 7) {
             if (!run_code_clicked[current_page]) {
-                html += '<tr style="text-align: center"><td colspan=7 style="color: red">亲，先成功运行这一步哦~</td></tr>'
+                html += '<tr style="text-align: center"><td colspan=7 style="color: red">亲，先运行这一步哦~</td></tr>'
                 $('#result-tbody').html(html)
                 return
             }
@@ -45,6 +48,12 @@ $('.next').click(function(){
             $('.bottom-left img').attr('src', 'http://47.97.205.240:8800/static/' + user + '/5.png')
             pie1.setOption(pie_option);
             $('#page-eight-tbody').html(xishu_html)
+            if (!isTeacher) {
+                best_combine = localStorage.getItem('best_combine')
+                if (best_combine == null)
+                    best_combine = ''
+                $('#combine').html(best_combine)
+            }
         }
         code_in.setValue('')
         if (current_page < 7)
@@ -305,6 +314,7 @@ function showPage(current_page) {
         case 8:
             $('#right-page-eight').hide()
             $('#right-page-nine').show()
+            localStorage.setItem("step_score", JSON.stringify(step_score))
             break
     }
 }

@@ -13,7 +13,7 @@
 </html>
 
 <script>
-    var grade = localStorage.getItem('Grades')
+    var grade = JSON.parse(localStorage.getItem('aGrades')).grade
     document.getElementById('grade').innerHTML = '您的风险承受能力评级属于：' + grade
 </script>
 

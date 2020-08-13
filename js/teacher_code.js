@@ -1,11 +1,16 @@
-var version = '# version: Python3\n\n'
-var codeAreaTip = "# please edit your code here:\n"
-var codeStart = '# code start \n\t\n'
-var codeEnd = '# code end \n\n'
-var codeTip = "'''\nThis function is the entry of this program\n'''\n"
-var code = 'def solution():\n\tpass'
-var initValue = version + codeAreaTip + codeStart + codeEnd + codeTip + code
-
+function getRiskAversion() {
+    var risk_score = {}
+    var risk_aversion = 0
+    if (isTeacher)
+        risk_score = localStorage.getItem('Grades')
+    else
+        risk_score = localStorage.getItem('aGrades')
+    if (risk_score != null) {
+        risk_score = JSON.parse(risk_score).number
+        risk_aversion = (84 - risk_score) / (84 - 7) * (6 - 3) + 3
+    }
+    return risk_aversion.toFixed(2)
+}
 if (window.location.href.indexOf('teacher') != -1){
     codes = {
         0: `import csv
@@ -77,7 +82,7 @@ ax1.set_ylabel('Expected Return', fontsize = 12)
 ax1.tick_params(labelsize = 12)
 ax1.legend(['portfolio1','portfolio2'], loc = 'best', fontsize = 14)
 `,
-    6: `risk_aversion = 3
+    6: `risk_aversion = ` + getRiskAversion() + `
 P = risk_aversion * matrix(cov_mat.values)
 q = -1 * matrix(exp_rtn.values)
 G = matrix(np.vstack((np.diag(np.ones(len(exp_rtn))),np.diag(-np.ones(len(exp_rtn))))))
@@ -90,6 +95,8 @@ print(DataFrame(index=exp_rtn.index,data = np.round(sol['x'],2), columns = ['wei
 `
     }
 } else if (window.location.href.indexOf('assets') != -1) {
+    risk_score = JSON.parse(localStorage.getItem('aGrades')).number
+    risk_aversion = (84 - risk_score) / (84 - 7) * (6 - 3) + 3
     codes = {
         0: `import csv
 import numpy as np
@@ -115,7 +122,7 @@ print(rtn_table.head(10))
         3: 'print(rtn_table.corr())',
         4: '',
         5: '#绘出efficient frontier',
-        6: `risk_aversion = 3
+        6: `risk_aversion = ` + getRiskAversion() + `
 P = risk_aversion * matrix(cov_mat.values)
 q = -1 * matrix(exp_rtn.values)
 G = matrix(np.vstack((np.diag(np.ones(len(exp_rtn))),np.diag(-np.ones(len(exp_rtn))))))
@@ -162,6 +169,11 @@ const name_code = {
     '000012.ZICN': '上证国债',
     '000013.ZICN': '上证企业债',
 }
+var step_score = {}
+for (i = 0; i < 7; i++) {
+    step_score[i] = 0
+}
+
 $('.run-code').click(function(){
     code = code_in.getValue().trim()
     if (code == '') {
@@ -183,10 +195,11 @@ $('.run-code').click(function(){
         },
         success: function(data){
             tt = data
+            run_code_clicked[current_page] = true
             result = data.result
             html = ''
             if (data.iserr == 0) {
-                run_code_clicked[current_page] = true
+                step_score[current_page] = 10
                 for (i = 0; i < result.length; i++){
                     if (result[i][0].trim() != ''){
                         html += '<tr  style="text-align: center">'
@@ -215,32 +228,31 @@ $('.run-code').click(function(){
                                 'background': 'url("http://47.97.205.240:8800/static/' + user + '/5.png") no-repeat center top',
                                 'background-size': '614px 451px'
                             })
-                            if (isTeacher) {
-                                layer.open({
-                                    type: 2,
-                                    area: ['600px', '370px'], 
-                                    title: false,
-                                    closeBtn: 1,
-                                    shadeClose: true,
-                                    skin: '',
-                                    content: '5-run-code.html',
-                                    btn: ['知道了'],
-                                    success: function(elem) {
-                                        $(".layui-layer-setwin .layui-layer-close2").css({
-                                            'right': '3px',
-                                            'top': '1px',
-                                            'background-position': '30px -32px'
-                                        })
-                                        $('.layui-layer-setwin a').append('X')
-                                        $('.layui-layer-setwin a').css({
-                                            'font-size': '27px',
-                                            'color': 'white'
-                                        })
-                                        $('.layui-layer-btn').css({'padding-right': '46%'})
-                                        $('.layui-layer-iframe').css({'border-radius': '16px'})
-                                    }
-                                });
-                            }
+                            layer.open({
+                                type: 2,
+                                area: ['600px', '370px'], 
+                                title: false,
+                                closeBtn: 1,
+                                shadeClose: true,
+                                skin: '',
+                                content: '5-run-code.html',
+                                btn: ['知道了'],
+                                success: function(elem) {
+                                    $(".layui-layer-setwin .layui-layer-close2").css({
+                                        'right': '3px',
+                                        'top': '1px',
+                                        'background-position': '30px -32px'
+                                    })
+                                    $('.layui-layer-setwin a').append('X')
+                                    $('.layui-layer-setwin a').css({
+                                        'font-size': '27px',
+                                        'color': 'white'
+                                    })
+                                    $('.layui-layer-btn').css({'padding-right': '46%'})
+                                    $('.layui-layer-iframe').css({'border-radius': '16px'})
+                                },
+                            });
+                        
                             break
                         }
                     }
