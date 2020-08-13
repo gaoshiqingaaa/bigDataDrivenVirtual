@@ -441,7 +441,7 @@ ol.steps li.step-end .step-line {
     font-size: 24px;
 }
 
-.kspinguo{
+/* .kspinguo{
     width: 200px;
     height: 40px;
     background-color: #666666;
@@ -452,11 +452,11 @@ ol.steps li.step-end .step-line {
     bottom: 10%;
     left: 50%;
     margin-left: -100px;
-}
+} */
 
-.kspinguo:hover{
+/* .kspinguo:hover{
     background-color: #6969EF;
-}
+} */
 
 #neirong{
     width: 99%;
