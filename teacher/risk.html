@@ -17,19 +17,19 @@
         </div>
 
         <!-- 说明页面 -->
-        <div class="card" style="display: block;">
+        <div class="card" style="display: none;">
            <p>任务说明</p>
            <div id="neirong">
                <p>根据我国资本市场实际情况，本实验项目设定可选取的资产大类有六类：国内股市（大盘股、中盘股、小盘股）、国外股市（美股）、国内债卷
                （国债、企业债）、货币基金。由于是被动投资。考虑历史数据长短问题，上述资产分别以沪深300、中证500、创业板、标普500、上证国债、
                上证企业债为代表。</p>
                <img src="../img/7-form@2x.png" >
-               <button type="button" id="start">开始分析</button>
+               <button type="button" id="start" onclick="window.location.href = '../teacher/pages.html'">开始分析</button>
            </div>
         </div>
 
         <!-- 选择题 -->
-        <div id="mainWin" style="display: none;">
+        <div id="mainWin">
             <!-- 进度条 -->
             <div id="mainWin-nav">
                 <ol class="steps">
@@ -343,7 +343,7 @@
                         <p id="jjx" class="bsx" style="display: none;"><span></span>积&nbsp;极&nbsp;型</p>
                     </div>
                     
-                    <button type="button" id="queren" onclick="window.location.href = '../teacher/pages.html'">确认风险结果</button>
+                    <button type="button" id="queren">确认风险结果</button>
                     <a href="./risk.html">重新测试</a>
                 </div>
             </div>
@@ -363,9 +363,9 @@
            });
            
            //进入答题环节
-           $('#start').click(function(){
-              $('.card').hide();
-               $('#mainWin').show();
+           $('#queren').click(function(){
+              $('.card').show();
+               $('#mainWin').hide();
            });
            
            //点击盒子换题
