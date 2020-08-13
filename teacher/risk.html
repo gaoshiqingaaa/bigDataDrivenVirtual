@@ -554,7 +554,11 @@
                    Grades = '保守型！';
                };
                try{
-                   localStorage.setItem("Grades", Grades);
+                   let Grade = {
+                       grade:Grades,
+                       number:num,
+                   };
+                   localStorage.setItem("Grades", JSON.stringify(Grade));
                }catch(e){
                    //TODO handle the exception
                    console.log("成绩录入异常！")
