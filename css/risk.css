@@ -430,6 +430,34 @@ ol.steps li.step-end .step-line {
     padding-right: 3%;
 }
 
+.sming{
+    margin-bottom: 0.5%;
+    margin-top: 0.5%;
+    height: 8%;
+    width: 220px;
+    background-color: #333366;
+    color: white;
+    border: none;
+    font-size: 24px;
+}
+
+.kspinguo{
+    width: 200px;
+    height: 40px;
+    background-color: #666666;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    margin-left: -100px;
+}
+
+.kspinguo:hover{
+    background-color: #6969EF;
+}
+
 #neirong{
     width: 99%;
     height: 83%;
