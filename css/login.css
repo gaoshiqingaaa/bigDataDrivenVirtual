@@ -1,54 +1,57 @@
 .loginbox2 {
-    width: 21%;
-    height: 45%;
-    right: 20.5%;
-    top: 26%;
-    position: absolute;
-    display: flex;
+    width: 20%;
+    left: 59vw;
+    top: 31%;
+    position: relative;
 }
 .shadow{
     -moz-box-shadow:0 0 5px 5px rgb(179, 179, 179);
     -webkit-box-shadow:0 0 5px 5px rgb(179, 179, 179);
     box-shadow:0 0 5px 0px rgb(218, 217, 217);
-    position: relative;
+
     margin-top: 5px;
     left: 33px;
 }
 .layui-form-item .layui-input-inline {
     float: left;
-    width: 70%;
+    width: 14.5vw;
     margin-right: 10px;
-}
-.cnter {
-    margin: auto;
-    width: 100%;
-    height: 40%;
     position: relative;
-    top: 24%;
+    left: 2.5vw;
 }
 .usernameimg{
     position: absolute;
-    width: 42px;
+    width: 2vw;
     height: 80%;
-    top: 10%;
     left: 3%;
     background-size: 5%;
 }
 .imgsize{
-    width: 40%;
-    top: 10%;
+    width: 80%;
+    top: 25%;
     left: 10%;
-    position: absolute;
-}
-.logindiv {
-    
+    position: relative;
 }
 
+.divfont{
+    height: 4vw;
+}
+.divfont1{
+    position: relative;
+    right: 1.5vw;
+}
+#tiaoguo{
+    color: #A9A9A9;
+    font-size: 12px;
+    position: relative;
+    top: -18px;
+    left: 19vw;
+}
 .login{
     margin-top: 3.5vw;
     background: url(../img/login-btn@2x.png);
-    border-radius: 8px;
-    position: absolute;
+    border-radius: 4px;
+    margin-left: 2.3vw;
     width: 15vw; 
     height: 25px;
     background-repeat: no-repeat;
@@ -64,8 +67,8 @@
     right: 23%;
 }
 .input1{
-    margin-left: 35px;
+    margin-left: 2vw;
     height: 2.5vw;
     width: 70%;
-    border:0px;
+    border: 0px;
 }
