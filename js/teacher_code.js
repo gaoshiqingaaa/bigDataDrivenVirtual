@@ -158,7 +158,7 @@ code_in.setSize('100%','100%'); //宽 高
 code_in.setOption('value', codes[0])
 
 var tt
-var xishu_html
+var xishu_html = ''
 var six_best_weight = {}
 var isTeacher = window.location.href.indexOf('assets') == -1
 const name_code = {
@@ -256,11 +256,11 @@ $('.run-code').click(function(){
                         }
                     }
                 }else if (current_page == 3) {
-                    xishu_html = html
+                    xishu_html = html.split('<tr style="text-align: center"><td colspan=7>运行完成！</td></tr>')[0]
                     if (isTeacher) {
                         layer.open({
                             type: 2,
-                            area: ['900px', '570px'], 
+                            area: ['900px', '600px'], 
                             title: false,
                             closeBtn: 1,
                             shadeClose: true,

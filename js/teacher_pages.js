@@ -158,7 +158,7 @@ function showNineAlert(status) {
         },
         btn1: function () {
             if (status != 'showAdviseBtn') 
-                window.location.href = 'risk.html'
+                window.location.href = '../index.html'
             else
                 $('.advise-btn').show()
             layer.closeAll()
@@ -344,8 +344,11 @@ function showWenhaoAlert(num) {
             $(".layui-layer-setwin .layui-layer-close2").css(close_btn_css)
             $('.layui-layer-setwin a').append('X')
             $('.layui-layer-setwin a').css(confirm_a_css)
-            $('.layui-layer-btn').css(confirm_btn_css)
-            $('.layui-layer-iframe').css({'border-radius': '12px'})
+            $('.layui-layer-iframe').css({'border-radius': '20px'})
+            alertBtnArgs()
+            $('.layui-layer-btn').css({
+                'bottom': '5%',
+            })
         }
     });
 }
@@ -374,9 +377,23 @@ function showUserAlert(num) {
                 'font-size': '27px',
                 'color': 'white'
             })
-            $('.layui-layer-btn').css({'padding-right': '116px'})
             $('.layui-layer-iframe').css({'border-radius': '20px'})
             $('iframe').css({'border-radius': '12px'})
+            $('.layui-layer-btn a').css({
+                'height': '40px',
+                'line-height': '40px',
+                'width': '110px',
+                'text-align': 'center',
+                'font-size': '16px',
+                'border-color': '#1E9FFF',
+                'background-color': '#1E9FFF',
+                'color': 'white'
+            })
+            $('.layui-layer-btn').css({
+                'position': 'relative',
+                'bottom': '8%',
+                'text-align': 'center',
+            })
         },
         btn2: function () {
             window.location.href = 'risk.html'
