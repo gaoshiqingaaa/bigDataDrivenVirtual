@@ -35,8 +35,9 @@
 }
 
 .div1 {
-    width: 90%;
-    height: 93%;
+    width: 96.5%;
+    padding-bottom: 105px;
+    height: auto;
     background-image: url(../img/16-bg-gezi@2x.png);
     background-position: top;
     background-repeat: no-repeat;
@@ -86,109 +87,96 @@
 
 .div11{
     position: relative;
-    height: 5%;
-    top: 3%;
     left: 8.223684210526317vw;
     width: 70%;
+    margin-top: 4.5vw;
 }
 .div12{
     position: relative;
-    height: 5%;
-    top: 3%;
     left: 8.22vw;
     width: 70%;
+    margin-top: 3.5vw;
 }
 .div13{
     position: relative;
-    /* width: 71%; */
-    height: 65%;
-    top: 3%;
     left: 8.22vw;
     width: 70%;
+    margin-top: 3.5vw;
 }
 .div14{
     position: relative;
-    height: 5%;
-    top: 50px;
-    left: 8.22vw;
+    left: 8.223684210526317vw;
     width: 70%;
+    margin-top: 3.5vw;
 }
 
 .div111{
+    height: 1px;
     position: relative;
 }
 
 .div131{
-    left: 15px;
-    position: relative;
-    top: 40px;
+    margin-top: 19.5px;
 }
 .div132{
-    left: 15px;
-    position: relative;
-    top: 95px;
+
 }
 .div133{
-    left: 15px;
-    position: relative;
-    top: 150px;
+
 }
 .div134{
-    left: 15px;
-    position: relative;
-    top: 205px;
+
 }
 .div13font1{
     font-size: 14px;
-    position: relative;
-    top: 20px;
+    margin-top: 23.5px;
 }
 .div13font2{
     font-size: 14px;
-    position: relative;
-    top: 75px;
+    margin-top: 24.5px;
 }
 .div13font3{
     font-size: 14px;
-    position: relative;
-    top: 130px;
+    margin-top: 24.5px;
 }
 .div13font4{
     font-size: 14px;
-    position: relative;
-    top: 185px;
+    margin-top: 24.5px;
 }
 .div13tb1{
-    width: 58vw;
-    height: 
-    100px;
+    margin-left: 12px;
+    width: 65vw;
+    height: 100px;
     border: 1px solid;
     border-radius: 4px;
     overflow: hidden;
 }
 .div13tb2{
-    width: 58vw;
-    height: 
-    60px;
+    margin-left: 12px;
+    width: 65vw;
+    height: 60px;
     border: 1px solid;
     border-radius: 4px;
     overflow: hidden;
+    margin-top: 19.5px;
 }
 .div13tb3{
-    width: 58vw;
-    height: 
-    370px;
+    margin-left: 12px;
+    width: 65vw;
+    height: 370px;
     border: 1px solid;
     border-radius: 4px;
     overflow: hidden;
+    margin-top: 19.5px;
 }
 .div13tb4{
-    width: 58vw;
-    height: 
-    60px;
+    margin-left: 12px;
+    width: 65vw;
+    height: 60px;
     border: 1px solid;
     border-radius: 4px;
     overflow: hidden;
+    margin-top: 19.5px;
 }
 .div13tb1td1{
     font-size: 12px;
@@ -327,13 +315,13 @@ tr td,th{
 
 .div11font{
     position: absolute;
-    font-size: 16px;
+    font-size: 1.3vw;
     left: 6vw;
     top: -2vw;
 }
 .div12font{
     position: absolute;
-    font-size: 16px;
+    font-size: 1.3vw;
     left: 6vw;
     top: -2vw;
 }
@@ -343,23 +331,23 @@ tr td,th{
     white-space: nowrap;
 }
 .div2win{
-    position: absolute;
-    left: -0.9vw;
-    top: 0.8vw;
+
 }
 .layui-textarea{
     resize:none;
     }
 .layui-textarea{
-    width: 59vw;
+    width: 68vw;
 }
 
 .div1btn{
-    position: absolute;
-    bottom: 4%;
+    position: relative;
     left: 42vw;
+    width: 16%;
+    bottom: 90px;
 }
 .layui-btn1 {
+    border-radius: 4px;
     height: 2.7vw;
     line-height: 2.3vw;
     width: 16vw;
@@ -381,6 +369,7 @@ tr td,th{
     color: #6969EF;
 }
 .font{
+    font-size: 1.2vw;
     color: #ffffff;
 }
 .border{
@@ -389,4 +378,8 @@ tr td,th{
 }
 #layui-input:hover{
     border-color: #000000;
+}
+.layui-input-block{
+    margin-left: 6vw;
+    min-height: 36px;
 }

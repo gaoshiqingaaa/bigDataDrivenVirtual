@@ -58,7 +58,7 @@
             </div>
             <div class="div21font">
 
-               <p class="div13font1">1.快问快答</p>
+               <p class="div13font1">1、快问快答</p>
                 <div class="div131">
                     <table class="div13tb1">
                         <tr>
@@ -101,12 +101,12 @@
                     </table>
                 </div>
 
-                <p class="div13font2">2.风险评测</p>
+                <p class="div13font2">2、风险评测</p>
                     <div class="div132">
                         <table class="div13tb2">
                             <tr>
                                 <td class="div13tb2td1font">平测结果</td>
-                                <td class="div13tb1td1">保守型/相对保守型/稳健型/相对积极型/积极型</td>
+                                <td class="div13tb1td1" id="User_investment_type">保守型/相对保守型/稳健型/相对积极型/积极型</td>
                             </tr>
                         </table>
                     </div>
@@ -200,7 +200,7 @@
                         </table>
                     </div>
                 
-                <p class="div13font4">4.实验成绩</p>
+                <p class="div13font4">4、实验成绩</p>
                     <div class="div134">
                         <table class="div13tb4">
                             <td class="div13tb2td1font">总分</td>
@@ -216,11 +216,10 @@
             <div class="div12font"><span>心得体会</span></div>
             </div>
 
-            <div class="layui-form-item layui-form-text div2win">
                 <div class="layui-input-block">
                   <textarea class="layui-textarea border"></textarea>
                 </div>
-            </div>
+            
 
         </div>
     </div>
@@ -256,6 +255,7 @@
 </script>
 
 <script>
+    //快问快答得分
     const a = JSON.parse(localStorage.getItem("test_value"));
         $("#ti1").html(String(a["ti1"]));
         $("#ti2").html(String(a["ti2"]));
@@ -274,8 +274,14 @@
         $("#ti15").html(String(a["ti15"]));
 
 
-    // 请求图片
+
+    //获取临时userid
     const temporary_user = JSON.parse(localStorage.getItem("temporary_user"));
+
+    //获取用户投资类型
+    const user_investment_type = JSON.parse(localStorage.getItem("Grades"));
+    $("#User_investment_type").html(String(user_investment_type["grade"]));
+    //获取图片
     $.ajax({
     /* url 地址可以是 /get-json/ 的方式
     *  也可以是 http://www.qfedu.com/get-json/ 的方式
