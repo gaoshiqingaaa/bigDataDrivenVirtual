@@ -268,7 +268,7 @@ function alertBtnArgs() {
     })
     $('.layui-layer-btn').css({
         'position': 'relative',
-        'bottom': '2%',
+        'bottom': '8%',
         'text-align': 'center'
     })
 }

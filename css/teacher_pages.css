@@ -1,4 +1,6 @@
 .bottom {
+    position: relative;
+    top: 1%;
     height: 88%;
 }
 
@@ -114,6 +116,7 @@
 .right-box-bottom {
     position: relative;
     top: -1%;
+    left: -0.58%;
     display: flex;
     height: 90%;
     width: 100%;
@@ -217,11 +220,11 @@
 }
 
 .top-right-table {
-    width: 96%;
-    height: 95%;
+    width: 85%;
+    height: 90%;
     border: 1px solid #000;
     border-radius: 7px;
-    margin: 1% auto;
+    margin: 3% auto;
 }
 
 .top-right-table td {
@@ -446,7 +449,7 @@
 
 #right-page-eight h4 {
     position: relative;
-    top: 1%;
+    top: 4%;
     left: 2%;
     font-size: 18px;
 }

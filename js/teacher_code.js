@@ -248,11 +248,10 @@ $('.run-code').click(function(){
                                         'font-size': '27px',
                                         'color': 'white'
                                     })
-                                    $('.layui-layer-btn').css({'padding-right': '46%'})
+                                    alertBtnArgs()
                                     $('.layui-layer-iframe').css({'border-radius': '16px'})
                                 },
                             });
-                        
                             break
                         }
                     }
@@ -280,6 +279,9 @@ $('.run-code').click(function(){
                                     'color': 'white'
                                 })
                                 alertBtnArgs()
+                                $('.layui-layer-btn').css({
+                                    'bottom': '3%',
+                                })
                                 $('.layui-layer-iframe').css({'border-radius': '21px'})
                             }
                         });
