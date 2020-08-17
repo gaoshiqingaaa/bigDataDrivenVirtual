@@ -509,3 +509,48 @@ ol.steps li.step-end .step-line {
     bottom: 10%
 }
 
+/* 复选框checkbox */
+.input_check {
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    display: none;
+}
+/* 未选 */
+.input_check{
+    display: inline-block;
+    border: 1px solid #343434;
+    border-radius: 4px;
+    width: 18px;
+    height: 18px;
+}
+input[type=file]:focus, input[type=checkbox]:focus, input[type=radio]:focus{
+    outline: none; 
+}
+/* 鼠标滑过未选 */
+ input[type=file]:hover, input[type=checkbox]:hover, input[type=radio]:hover{
+    border: 2px solid #3bb8f6;
+} 
+/* 已选 */
+.input_check:checked {
+    display: inline-block;
+    background-image: url(../img/14-icon@2x.png);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-position: 0px 0px; 
+    width: 25px;
+    height: 20px;
+    border: none;
+} 
+/* 鼠标滑过已选 */
+.input_check:checked:hover{
+    display: inline-block;
+    background-image: url(../img/14-icon@2x.png);
+    background-repeat: no-repeat;  
+    background-position: 0px 0px; 
+    width: 25px;
+    height: 20px;
+    border: none;
+    outline: none;
+}

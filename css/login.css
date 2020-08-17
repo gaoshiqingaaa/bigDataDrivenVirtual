@@ -1,7 +1,7 @@
 .loginbox2 {
     width: 20%;
     left: 59vw;
-    top: 31%;
+    top: 27.5%;
     position: relative;
 }
 .shadow{
@@ -53,9 +53,10 @@
     border-radius: 4px;
     margin-left: 2.3vw;
     width: 15vw; 
-    height: 25px;
+    height: 2vw;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 126% 164%;
+    background-position: left;
 }
 .Verticalline{
     position: absolute;
