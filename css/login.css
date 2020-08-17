@@ -48,6 +48,7 @@
     left: 19vw;
 }
 .login{
+    font-size: 0.8vw;
     margin-top: 3.5vw;
     background: url(../img/login-btn@2x.png);
     border-radius: 4px;
