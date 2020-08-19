@@ -12,6 +12,10 @@ window.onload = function(){
     $('#right-page-code').show()
     // $('#right-page-code').hide()
     // $('#right-page-nine').show()
+    // localStorage.clear()
+    localStorage.setItem('old_weight', null)
+    console.log(six_best_weight);
+    localStorage.setItem('new_weight', null)
     user = JSON.parse(localStorage.getItem('temporary_user'))
     if (user == null) {
         $.ajax({
@@ -134,9 +138,8 @@ $('#adjust').click(function(){
         page_codes[i] = ''
 })
 $('#buy').click(function(){
-    advise_btn_click_count = 0
     eightShowAlert('buy')
-    init_line_smooth(0)
+    init_line_smooth(0, 100000)
 })
 function showNineAlert(status) {
     if (status == 'showAdviseBtn') {
@@ -161,11 +164,31 @@ function showNineAlert(status) {
         btn1: function () {
             if (status != 'showAdviseBtn') 
                 window.location.href = '../index.html'
-            else
+            else{
                 $('.advise-btn').show()
+                risk = window.location.href.indexOf('teacher') != -1? 3: getRiskAversion()
+                getWeight(1, risk)
+                setMoney()
+            }
             layer.closeAll()
         }
     });
+}
+function getWeight(step, risk) {
+    $.ajax({
+        type: 'POST',
+        url: 'http://127.0.0.1:5000/weight',
+        data: {
+            step: step,
+            risk: risk
+        },
+        success: function(data){
+            localStorage.setItem('old_weight', JSON.stringify(six_best_weight))
+            console.log(six_best_weight);
+            localStorage.setItem('new_weight', JSON.stringify(data))
+        }
+    
+    })
 }
 $('.nine-next').click(function(){
     if ($('.advise-btn').css('display') == 'none'){
@@ -175,6 +198,7 @@ $('.nine-next').click(function(){
         showNineAlert('showComplete')
     }
 })
+var total_money = 100000.00
 var advise_btn_click_count = 0
 $('.advise-btn').click(function(){
     if (advise_btn_click_count == 1) {
@@ -222,12 +246,35 @@ $('.advise-btn').click(function(){
             
         },
         btn1: function(){
-            init_line_smooth(advise_btn_click_count)
+            six_best_weight = JSON.parse(localStorage.getItem('new_weight'))
+            for (var o in six_best_weight) {
+                six_best_weight_code[name_code_reverse[o]] = six_best_weight[o]
+            }
+            init_line_smooth(advise_btn_click_count, total_money)
+            risk = window.location.href.indexOf('teacher') != -1? 3: getRiskAversion()
+            getWeight(2, risk)
+            init_pie()
             layer.closeAll()
         }
     });
     advise_btn_click_count ++
 })
+function setMoney(){
+    if (money_info.new_earning > 0) {
+        $('.right-content-top-left-nine .bottom .left .text h2').css({'color': 'red'})
+    } else {
+        $('.right-content-top-left-nine .bottom .left .text h2').css({'color': 'green'})
+    }
+    if (money_info.leiji > 0) {
+        $('.right-content-top-left-nine .bottom .right .text h2').css({'color': 'red'})
+    } else {
+        $('.right-content-top-left-nine .bottom .right .text h2').css({'color': 'green'})
+    }
+    $('.right-content-top-left-nine .top .text h1').html(money_info.total_money)
+    $('.right-content-top-left-nine .bottom .left .text p').html('最新收益(' + money_info.new_day.split('-')[1] + '-' + money_info.new_day.split('-')[2] + ')')
+    $('.right-content-top-left-nine .bottom .left .text h2').html(money_info.new_earning)
+    $('.right-content-top-left-nine .bottom .right .text h2').html(money_info.leiji)
+}
 function showIntroduceAlert(num) {
     switch (num) {
         case 1:

@@ -5,12 +5,37 @@
     <body>
         <div style="width: 100%;height: 100%;">
             <div class="top">
-                <img src="../img/13-form@2x.png" alt="">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td>类别</td>
+                            <td>调仓前</td>
+                            <td></td>
+                            <td>调仓目标</td>
+                        </tr>
+                    </thead>
+                    <tbody id="advise-tbody">
+                    </tbody>
+                  </table>
             </div>
         </div>
     </body>
 </html>
-
+<script>
+    var old_weight = JSON.parse(localStorage.getItem('old_weight'))
+    var new_weight = JSON.parse(localStorage.getItem('new_weight'))
+    html = ''
+    for (o in new_weight) {
+        
+        html += `<tr>
+                    <td>` + o + `</td>
+                    <td>` + (Math.round(old_weight[o] <= 1?old_weight[o] * 100: old_weight[o])) + `%</td>
+                    <td>-></td>
+                    <td>` + (Math.round(new_weight[o] <= 1?new_weight[o] * 100: new_weight[o])) + `%</td>
+                </tr>`
+    }
+    $('#advise-tbody').html(html)
+</script>
 <style>
     * {
         padding: 0;
@@ -24,8 +49,29 @@
         position: absolute;
         top: 15%;
         left: 0;
-        height: 70%;
-        width: 80%;
+        height: 80%;
+        width: 100%;
+        text-align: center;
+    }
+    .table {
+        background-color: rgb(85, 178, 224);
+        color: white;
+        text-align: center;
+        height: 100%;
+        width: 90%;
+        margin: 10px auto;
+        border-radius: 20px;
+    }
+    .table thead tr {
+        font-size: 20px;
+        background-color: rgb(85, 178, 224);
+    }
+    .table tbody tr:nth-child(odd){     
+        background-color: rgb(66, 112, 183);
+    }
+    .table td {
+        width: 100px;
+        height: 30px;
     }
     img {
         width: 100%;
