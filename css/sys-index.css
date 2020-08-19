@@ -93,12 +93,12 @@ body {
 }
 
 .ti{
-    width: 73%;
+    width: 54%;
     height: 91.5%;
     padding-top: 3%;
-    padding-left: 14%;
+    padding-left: 26%;
     padding-bottom: 0%;
-    padding-right: 13%;
+    padding-right: 20%;
 }
 
 .ddp{
@@ -117,7 +117,7 @@ body {
     font-size: 24px;
     margin-bottom: 3%;
     line-height: 150%;
-    text-align: center;
+    text-align: left;
 }
 
 .ti input{
@@ -139,8 +139,9 @@ body {
     width: 15%;
     height: 6%;
     position: absolute;
-    right: 6%;
+    right: 50%;
     bottom: 10%;
+    margin-right: -7.5%;
     border-radius: 5px;
 }
 
@@ -162,7 +163,7 @@ body {
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    bottom: 12%;
+    bottom: 20%;
 }
 
 .zhishi{
