@@ -342,8 +342,32 @@
 <!-- 提交 -->
 <script>
     $('button:button[id="tijiao"]').click(function(){ 
-        layer.alert('您已成功提交')
+        var utextinput = document.getElementById("utext");
+        var text = utextinput.value; 
+        let data={principle : $('.ex-principle').text(),
+                  objective : $('.ex-purpose').text(),
+                  answer:JSON.stringify(localStorage.getItem('test_value')),
+                  assessment : $('#User_investment_type').text(),
+                  procedures:"123",
+                  grade : String($.s),
+                  realize : String(text)}
+        $.ajax({
+        url: 'http://127.0.0.1:5000/result',
+        type: 'POST',
+        dataType: 'json',
+        data:data,
+        success: function(data){
+            layer.alert("您已提交成功")
+        }, error: function(res){
+            layer.alert("提交失败")
+        }
+
+        })
+        
+        
+        
     });
+    
 </script>
 
 
