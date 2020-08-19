@@ -64,6 +64,7 @@ html, body {
     width: 10%;
     float: right;
     margin-right: 2%;
+    border-radius: 8px;
 }
 
 #back-to a {

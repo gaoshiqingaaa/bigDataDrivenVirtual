@@ -51,19 +51,21 @@
 <script src="./lib/layui.all.js"></script>
 <script src="./lib/layui.js"></script>
 <script>
-    // 开始实验
-layui.use('form', function(){
-  var form = layui.form;
+//     // 开始实验
+// layui.use('form', function(){
+//   var form = layui.form;
   
-  //监听提交
-  form.on('submit(formDemo)', function(data){
-    console.log(JSON.stringify(data.field))
+//   //监听提交
+// //   form.on('submit(formDemo)', function(data){
+// //     console.log(JSON.stringify(data.field))
+// //     window.location.href = "./index.html"
+// //     return false;
+// //   });
+// });
+
+$('.login').click(function(){
     window.location.href = "./index.html"
-    return false;
-  });
-});
-
-
+})
 //跳过
 $('[id="tiaoguo"]').click(function(){ 
     $.ajax({

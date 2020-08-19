@@ -35,6 +35,7 @@ body {
     width: 10%;
     float: right;
     margin-right: 2%;
+    border-radius: 8px;
 }
 
 #but1 a {
@@ -54,7 +55,7 @@ body {
 #mainWin-nav {
     width: 5%;
     float: left;
-    margin-top: 4%;
+    margin-top: 7%;
     padding-left: 6%;
 }
 
@@ -237,11 +238,11 @@ body {
 }
 
 .tp3 input, .tp9 input, .tp10 input{
-    position: absolute !important;
-    top: 16px !important;
+    position: absolute ;
+    top: 16px ;
     left: 0;
-    height: 14px !important;
-    left: -15px !important;
+    /* /height: 14px ; */
+    left: -28px ;
 }
 
 .tp3 span, .tp9 span, .tp10 span{
@@ -308,6 +309,11 @@ p input{
     bottom: 11%;
     right: 20%;
 }
+.layui-iconB{
+    color: red;
+    font-size: 22px;
+    margin-right: 10px;
+}
 
 .line-nav{
     width: 90%;
@@ -358,7 +364,7 @@ ol.steps li:after {
 ol.steps li {
 
     width: 49px;
-    height: 50px;
+    height: 62px;
     position: relative;
 
 }
@@ -366,11 +372,10 @@ ol.steps li {
 ol.steps li .step-line {
     height: 60%;
     position: absolute;
-    background-color: #e0e0e0;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .2);
-
-    width: 18%;
-    top: 50%;
+    background-color: #fff;
+    /* box-shadow: inset 0 1px 1px rgba(0, 0, 0, .2); */
+    width: 3px;
+    top: 40%;
     left: -8%;
 }
 
@@ -388,15 +393,14 @@ ol.steps .step-content {
 
 ol.steps li .step-content .step-num {
     display: inline-block;
-    height: 20px;
-    width: 20px;
+    height: 15px;
+    width: 15px;
     color: #fff;
     background-color: #fff;
     line-height: 30px;
     border-radius: 50%;
     text-align: center;
     border: 5px solid rgba(255, 255, 255, 1);
-    box-shadow:1px 6px 20px 1px #383838;
 }
 
 ol.steps li.step-active .step-content .step-num {
