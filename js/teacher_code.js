@@ -19,22 +19,48 @@ import pandas as pd
 from pandas import DataFrame, Series
 from matplotlib import pyplot as plt
 
-# 这里改成自己本地数据包的位置
-PERFIX = './fin_data/'
-
+# 这里是数据包的位置
+PERFIX = 'fin_data/'
+# 这个方法接受数据集的部分名称，并且将数据集文件数据转换为dataframe对象
 def get_return(ticker):
     tmp_lst = []
     fname = PERFIX + 'data_'+ticker+'.csv'
-# please edit your code here:
-# code start
+    with open(fname, 'r') as f:
+        reader = csv.reader(f)
+        for row in reader:
+            tmp_lst.append(row)
+    df = pd.DataFrame(tmp_lst[1:], columns=tmp_lst[0]) 
+    df['Date'] = pd.to_datetime(df['Date'])
+    df = df.set_index("Date")
+    #print(df)
+    temp = df['Close'].astype('float64').pct_change().fillna(0.)
+    return temp;
 
-# code end
+# 程序开始，指定数据集文件，并创建一个空的DataFrame对象
+secIDs = ['000300.ZICN','000905.ZICN','399006.ZICN','SPX.ZIUS','000012.ZICN','000013.ZICN']   
+rtn_table = DataFrame()
+# 依次处理数据集文件，将所有数据集文件整合拼接在一起
+for secID in secIDs:
+    # 请补全代码
 
+    # 结束
+    
+rtn_table.fillna(0,inplace = True)
+
+# 显示前十行数据
 print(rtn_table.head(10))
 `,
-    1: "print(rtn_table.mean() * 250) #关于代码的注释\n",
-    2: "print(rtn_table.std() * np.sqrt(250))\n",
-    3: "print(rtn_table.corr())\n",
+    1: `# 请补全代码
+print()
+# 结束
+`,
+    2: `# 请补全代码
+print()
+# 结束
+`,
+    3: `# 请补全代码
+print()
+# 结束`,
     4: `from cvxopt import matrix,solvers
 
 portfolio1 = [0,1,2,4,5] 
@@ -54,19 +80,12 @@ def cal_efficient_frontier(portfolio):
     risks = []
     returns = []
     
-    for level_rtn in np.linspace(min_rtn, max_rtn, 20):
-        sec_num = len(portfolio)
-        P = 2 * matrix(cov_mat1.values)
-        q = matrix(np.zeros(sec_num))
-        G = matrix(np.diag(-1 * np.ones(sec_num)))
-        h = matrix(0.0, (sec_num,1))
-        A = matrix(np.matrix([np.ones(sec_num),exp_rtn1.values]))
-        b = matrix([1.0,level_rtn])
-        solvers.options['show_progress'] = False
-        sol = solvers.qp(P,q, G, h, A, b)
-        risks.append(sol['primal objective'])
-        returns.append(level_rtn)
-    return np.sqrt(risks), returns
+    # 请补全代码
+
+
+
+
+    # 结束
     
     
 risk1, return1 = cal_efficient_frontier(portfolio1)
@@ -82,7 +101,7 @@ ax1.set_ylabel('Expected Return', fontsize = 12)
 ax1.tick_params(labelsize = 12)
 ax1.legend(['portfolio1','portfolio2'], loc = 'best', fontsize = 14)
 `,
-    6: `risk_aversion = ` + getRiskAversion() + `
+    6: `risk_aversion = 3
 P = risk_aversion * matrix(cov_mat.values)
 q = -1 * matrix(exp_rtn.values)
 G = matrix(np.vstack((np.diag(np.ones(len(exp_rtn))),np.diag(-np.ones(len(exp_rtn))))))
@@ -104,35 +123,87 @@ import pandas as pd
 from pandas import DataFrame, Series
 from matplotlib import pyplot as plt
 
-# 这里改成自己本地数据包的位置
-PERFIX = './fin_data/'
-
+# 这里是数据包的位置
+PERFIX = 'fin_data/'
+# 这个方法接受数据集的部分名称，并且将数据集文件数据转换为dataframe对象
 def get_return(ticker):
     tmp_lst = []
     fname = PERFIX + 'data_'+ticker+'.csv'
-# please edit your code here:
-# code start
+    with open(fname, 'r') as f:
+        reader = csv.reader(f)
+        for row in reader:
+            tmp_lst.append(row)
+    df = pd.DataFrame(tmp_lst[1:], columns=tmp_lst[0]) 
+    df['Date'] = pd.to_datetime(df['Date'])
+    df = df.set_index("Date")
+    #print(df)
+    temp = df['Close'].astype('float64').pct_change().fillna(0.)
+    return temp;
 
-# code end
+    # 请补全代码
+    
+    
+    
+    
+    
+    
 
-print(rtn_table.head(10))
+    # 结束
 `,
-        1: '',
-        2: '',
-        3: 'print(rtn_table.corr())',
-        4: '',
-        5: '#绘出efficient frontier',
+        1: `# 请补全代码
+
+# 结束`,
+        2: `# 请补全代码
+
+# 结束
+        `,
+        3: `# 请补全代码
+
+# 结束`,
+        4: `from cvxopt import matrix,solvers
+# 请补全代码    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 结束 `,
+        5: `# 请补全代码    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 结束 `,
         6: `risk_aversion = ` + getRiskAversion() + `
-P = risk_aversion * matrix(cov_mat.values)
-q = -1 * matrix(exp_rtn.values)
-G = matrix(np.vstack((np.diag(np.ones(len(exp_rtn))),np.diag(-np.ones(len(exp_rtn))))))
-h = matrix(np.array([np.ones(len(exp_rtn)),np.zeros(len(exp_rtn))]).reshape(len(exp_rtn)*2,1))
-A = matrix(np.ones(len(exp_rtn)),(1,len(exp_rtn)))
-b = matrix([1.0])
-solvers.options['show_progress'] = False
-sol = solvers.qp(P,q, G, h, A, b)
-print(DataFrame(index=exp_rtn.index,data = np.round(sol['x'],2), columns = ['weight']))  # 权重精确到小数点后两位    
-`
+# 请补全代码
+
+
+
+
+
+
+
+
+# 结束`
     }
 }
 

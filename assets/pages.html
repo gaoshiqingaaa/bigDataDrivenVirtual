@@ -56,10 +56,12 @@
                         <div class="left-box-bottom" id="page-two">
                             <h2><strong>2、计算标的资产的年化收益率</strong></h2>
                             <p>说明：</p>
+                            <p>我们使用 250 个交易日，从每日收益得出年化收益；</p>
                         </div>
                         <div class="left-box-bottom" id="page-three">
                             <h2><strong>3、计算标的资产的年化标准差</strong></h2>
                             <p>说明：</p>
+                            <p>我们使用 250 个交易日，计算年化标准差；</p>
                         </div>
                         <div class="left-box-bottom" id="page-four">
                             <h2><strong>4、计算相关性系数</strong></h2>
@@ -73,21 +75,17 @@
                             <h2><strong>5、构建投资组合的Efficient frontier</strong></h2>
                             <p>说明：</p>
                             <p><strong>构建两个投资组合作为对比。</strong></p>
-                            <ul>
-                                <li><p><strong>组合一</strong>包含沪深 300、中证 500、创业板、国债；</p></li>
-                                <li><p><strong>组合二</strong>包含组合一，标普 500 及企业债。</p></li>
-                                <li><p>绘制effiecient frontier用到了凸优化包cvxopt.</p></li>
-                                <li><p>在构建efficient frontier中，预期收益采取市场中性原则，用过去三年的平均收益.</p></li>
-                            </ul>
+                            <p>在构建efficient frontier中，预期收益采取市场中性原则，用过去三年的平均收益.</p>
                         </div>
                         <div class="left-box-bottom" id="page-six">
                             <h2><strong>6、绘出Efficient frontie</strong></h2>
-                            <p>说明：</p>
                         </div>
                         <div class="left-box-bottom" id="page-seven">
                             <h2><strong>7、计算最优组合的资产配置权重</strong></h2>
                             <p>说明：</p>
-                            <p>给定预期收益，得到最优权重。</p>
+                            <p>给定预期收益，得到最优权重；</p>
+                            <p>risk_aversion为风险厌恶系数，是根据风险承受能力评测的结果计算得出；</p>
+                            <p>考核模式中，系统将根据风险承受能力测试结果计算得出风险厌恶系数。</p>
                         </div>
                         <div class="left-box-bottom" id="page-eight">
                             <h2><strong>8、可视化结果分析。</strong></h2>
@@ -97,6 +95,8 @@
                         </div>
                         <div class="left-box-bottom" id="page-nine">
                             <h2><strong>9、持仓情况</strong></h2>
+                            <p>说明：</p>
+                            <p>买入该投资组合后，随着金融市场的变化，系统会重新计算最优配置权重，并将结果通过“调仓建议”推送给实验者。实验者自行判断是否调仓。系统将根据最终的收益情况对实验者进行考核，作为成绩评定的一部分。</p>
                         </div>
                     </div>
                 </div>
