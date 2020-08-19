@@ -17,6 +17,27 @@ function init_pie() {
     pie_option.series[0].data = pie_series_data
 }
 
+var line_smooth_legend_data, line_smooth_series_data
+function init_line_smooth(step) {
+    line_smooth_legend_data = [], line_smooth_series_data = []
+    $.ajax({
+        type: 'POST',
+        url: 'http://127.0.0.1:8800/echartsData',
+        data: {
+            step: step,
+            weight: JSON.stringify(six_best_weight_code)
+        },
+        success: function(data){
+            line_smooth_option.xAxis.data = data.label
+            line_smooth_option.series[0].data = data.data
+            line_smooth_option.yAxis.min = data.min - 1
+            line_smooth_option.yAxis.max = data.max + 1
+            line_smooth.setOption(line_smooth_option)
+        }
+    
+    })
+
+}
 var pie_option = {
     tooltip: {
         trigger: 'item',
@@ -57,19 +78,20 @@ var pie_option = {
 var line_smooth_option = {
     xAxis: {
         type: 'category',
-        data: ['06-29', '', '', '', 
-                '06-30', '', '', '', 
-                '07-01', '', '', '', 
-                '07-02', '', '', '', 
-                '07-03', '', '', '', 
-                '07-04', '', '', '', 
-                '07-05', '', '', '', ]
+        // data: ['06-29', '', '', '', 
+        //         '06-30', '', '', '', 
+        //         '07-01', '', '', '', 
+        //         '07-02', '', '', '', 
+        //         '07-03', '', '', '', 
+        //         '07-04', '', '', '', 
+        //         '07-05', '', '', '', ]
+        data: []
     },
     yAxis: {
         type: 'value',
         min: -0.77,
         max: 0.77,
-        interval: 0.5,
+        interval: 1,
         splitLine:{
             show:false
         },
@@ -78,13 +100,7 @@ var line_smooth_option = {
         // }
     },
     series: [{
-        data: [-0.17, 0.2, 0.05, -0.04,
-               -0.16, -0.05, -0.2, 0.25, 
-               0.23, 0.25, 0.244, 0.34,
-               0.24, 0.23, 0.22, 0.2,
-               0.55, 0.25, -0.23, 0.1,
-               0.23, 0, -0.15, -0.2, 
-               0, 0.1, 0.2, 0.3],
+        data: [],
         type: 'line',
         smooth: true,
         emphasis: {
@@ -100,49 +116,3 @@ var line_smooth_option = {
     // 使用刚指定的配置项和数据显示图表。
 
 line_smooth.setOption(line_smooth_option)
-
-   
-/*var option = { 
-    tooltip: {
-        trigger: 'item',
-        formatter: '{a} <br/>{b}: {c} ({d}%)'
-    },
-    legend: {
-        orient: 'vertical',
-        left: 10,
-        data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎'],
-        left: "60%",
-        top: "10%",
-    },
-    series: [
-        {
-            name: '访问来源',
-            type: 'pie',
-            radius: ['50%', '70%'],
-            center: ["30%", "35%"], 
-            avoidLabelOverlap: false,
-            label: {
-                show: false,
-                position: 'center'
-            },
-            emphasis: {
-                label: {
-                    show: true,
-                    fontSize: '30',
-                    fontWeight: 'bold'
-                }
-            },
-            labelLine: {
-                show: false
-            },
-            data: [
-                {value: 335, name: '直接访问'},
-                {value: 310, name: '邮件营销'},
-                {value: 234, name: '联盟广告'},
-                {value: 135, name: '视频广告'},
-                {value: 1548, name: '搜索引擎'}
-            ]
-        }
-    ]
-};
-pie.setOption(option) */

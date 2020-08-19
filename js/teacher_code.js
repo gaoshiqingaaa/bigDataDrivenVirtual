@@ -231,6 +231,7 @@ code_in.setOption('value', codes[0])
 var tt
 var xishu_html = ''
 var six_best_weight = {}
+var six_best_weight_code = {}
 var isTeacher = window.location.href.indexOf('assets') == -1
 const name_code = {
     '000300.ZICN': '沪深300',
@@ -361,6 +362,7 @@ $('.run-code').click(function(){
                     for (i=1;i<result.length-2;i++){
                         // if (result[i][1] != 0)
                             six_best_weight[name_code[result[i][0]]] = Math.round(result[i][1] * 100)
+                            six_best_weight_code [result[i][0]] = result[i][1]
                     }
                     init_pie()
                     pie.setOption(pie_option);

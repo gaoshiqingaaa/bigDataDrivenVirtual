@@ -11,7 +11,7 @@ window.onload = function(){
     $($('.left-pages>div')[current_page]).show()
     $('#right-page-code').show()
     // $('#right-page-code').hide()
-    // $('#right-page-eight').show()
+    // $('#right-page-nine').show()
     user = JSON.parse(localStorage.getItem('temporary_user'))
     if (user == null) {
         $.ajax({
@@ -134,7 +134,9 @@ $('#adjust').click(function(){
         page_codes[i] = ''
 })
 $('#buy').click(function(){
+    advise_btn_click_count = 0
     eightShowAlert('buy')
+    init_line_smooth(0)
 })
 function showNineAlert(status) {
     if (status == 'showAdviseBtn') {
@@ -218,6 +220,10 @@ $('.advise-btn').click(function(){
                 'color': '#fff'
             })
             
+        },
+        btn1: function(){
+            init_line_smooth(advise_btn_click_count)
+            layer.closeAll()
         }
     });
     advise_btn_click_count ++
