@@ -24,8 +24,8 @@ function init_line_smooth(step, total_money) {
     line_smooth_legend_data = [], line_smooth_series_data = []
     $.ajax({
         type: 'POST',
-        // url: 'http://47.97.205.240:8800/echartsData',
-        url: 'http://127.0.0.1:5000/echartsData',
+        url: 'http://47.97.205.240:8800/echartsData',
+        // url: 'http://127.0.0.1:5000/echartsData',
         data: {
             step: step,
             weight: JSON.stringify(six_best_weight_code),

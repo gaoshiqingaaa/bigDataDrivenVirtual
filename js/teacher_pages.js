@@ -177,7 +177,8 @@ function showNineAlert(status) {
 function getWeight(step, risk) {
     $.ajax({
         type: 'POST',
-        url: 'http://127.0.0.1:5000/weight',
+        // url: 'http://127.0.0.1:5000/weight',
+        url: 'http://47.97.205.240:8800/weight',
         data: {
             step: step,
             risk: risk
