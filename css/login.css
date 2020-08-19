@@ -1,7 +1,7 @@
 .loginbox2 {
     width: 20%;
     left: 59vw;
-    top: 27.5%;
+    top: 29.5%;
     position: relative;
 }
 .shadow{
@@ -49,7 +49,7 @@
 }
 .login{
     font-size: 0.8vw;
-    margin-top: 3.5vw;
+    margin-top: 1.5vw;
     background: url(../img/login-btn@2x.png);
     border-radius: 4px;
     margin-left: 2.3vw;
