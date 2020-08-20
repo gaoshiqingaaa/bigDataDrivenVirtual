@@ -27,10 +27,11 @@
     background-size: 5%;
 }
 .imgsize{
-    width: 80%;
+    width: 60%;
+    height: 60%;
     top: 25%;
     left: 10%;
-    position: relative;
+    position: absolute;
 }
 
 .divfont{

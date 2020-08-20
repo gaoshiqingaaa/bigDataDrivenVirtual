@@ -32,11 +32,10 @@
         <div class="div11">
             <div class="div111">
             <div class="div11img1"></div>
-            <div class="div11font"><span>实验目的</span></div>
+            <div class="div11font"><span>实验名称</span></div>
             </div>
             <div class="div21font">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
-                <p>Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate</p>
+                <p class="ex-purpose">湖北经济学院智能投顾实验系统</p>
             </div>
         </div>
         
@@ -46,8 +45,11 @@
             <div class="div12font"><span>实验原理</span></div>
             </div>
             <div class="div21font">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
-                <p>Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate</p>
+                <p class="ex-principle">
+                    金融科技背景下智能投顾市场发展潜力巨大，对复合型高层次金融专业人才 需求日益迫切。本实验项目高度模拟了智能投顾平台的核心流程与功能，为学生提供了深度学习金融科技创新应 <br>
+                    用的良好平台。实验帮助学生综合运用现代投资组合理论（MPT)、数据分析、Python等技术，为虚拟的不同偏好的投资者进行风险评估和客户画像，推送以中国 ETF 为标的的定制化资产<br>
+                    组合配置方案和动态优化建议，掌握金融科技最具代表意义的智能投顾平台的虚拟仿真运作原理，为步入金融科技工作岗位奠定坚实的理论功底，积累丰富的实战经验。
+                </p>
             </div>
         </div>
 
@@ -217,7 +219,7 @@
             </div>
 
                 <div class="layui-input-block">
-                  <textarea class="layui-textarea border"></textarea>
+                  <textarea id="utext" class="layui-textarea border"></textarea>
                 </div>
             
 
@@ -292,6 +294,7 @@
     data:{"user":temporary_user},
     // data:{"user":"b1a438cf-85c3-4d04-bec4-02a37ea2588d"},
     success: function(data){
+        localStorage.setItem("Experimental_report", JSON.parse(data));
         // 成功处理逻辑
         // 展示代码&代码运行结果的图片
         $("#code1").attr('src',".."+data.code[0]);
@@ -344,13 +347,13 @@
     $('button:button[id="tijiao"]').click(function(){ 
         var utextinput = document.getElementById("utext");
         var text = utextinput.value; 
-        let data={principle : $('.ex-principle').text(),
-                  objective : $('.ex-purpose').text(),
-                  answer:JSON.stringify(localStorage.getItem('test_value')),
-                  assessment : $('#User_investment_type').text(),
-                  procedures:"123",
-                  grade : String($.s),
-                  realize : String(text)}
+        let data={principle : $('.ex-principle').text(),//实验原理
+                  objective : $('.ex-purpose').text(),//实验目的
+                  answer:JSON.parse(localStorage.getItem('test_value')),//快问快答
+                  assessment : $('#User_investment_type').text(),//风险评测
+                  procedures:JSON.parse(localStorage.getItem("Experimental_report")),//获取实验步骤
+                  grade : String($.s),//实验成绩
+                  realize : String(text)}//心得体会
         $.ajax({
         url: 'http://127.0.0.1:5000/result',
         type: 'POST',
