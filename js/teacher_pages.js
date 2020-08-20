@@ -127,6 +127,14 @@ function eightShowAlert(btnName) {
                 layer.closeAll()
                 layer.msg('购买成功！', {icon: 6});
                 current_page ++
+                if (money_info.combination > 0) {
+                    $('.right-content-bottom-all-nine .combination h3').css({'color': 'red'})
+                    combination = '+' + money_info.combination + '%'
+                } else {
+                    $('.right-content-bottom-all-nine .combination h3').css({'color': 'green'})
+                    combination = money_info.combination + '%'
+                }
+                $('.right-content-bottom-all-nine .combination h3').html(combination)
                 showPage(current_page)
             }
         }
