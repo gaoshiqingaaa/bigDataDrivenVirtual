@@ -15,11 +15,11 @@ function init_pie() {
     }
     pie_option.legend.data = pie_legend_data
     pie_option.series[0].data = pie_series_data
-    pie.setOption(pie_option);
+    // pie.setOption(pie_option);
 }
 var money_info = {}
 var line_smooth_legend_data, line_smooth_series_data
-var setMoneyFlag = 0
+// var setMoneyFlag = 0
 function init_line_smooth(step, total_money) {
     line_smooth_legend_data = [], line_smooth_series_data = []
     $.ajax({
@@ -38,15 +38,15 @@ function init_line_smooth(step, total_money) {
             money_info['leiji'] = data.leiji
             money_info['combination'] = data.data[data.data.length - 1]
             localStorage.setItem('leiji', data.leiji)
-            if (setMoneyFlag != 0) {
-                setMoney()
-            }
-            setMoneyFlag = 1
+            // if (setMoneyFlag != 0) {
+            //     setMoney()
+            // }
+            // setMoneyFlag = 1
             line_smooth_option.xAxis.data = data.label
             line_smooth_option.series[0].data = data.data
             line_smooth_option.yAxis.min = data.min - 1
             line_smooth_option.yAxis.max = data.max + 1
-            line_smooth.setOption(line_smooth_option)
+            // line_smooth.setOption(line_smooth_option)
         }
     
     })

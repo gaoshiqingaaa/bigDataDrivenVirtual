@@ -302,6 +302,11 @@ $('.run-code').click(function(){
                 }
                 html += '<tr style="text-align: center"><td colspan=7>运行完成！</td></tr>'
                 if (current_page == 5) {
+                    if (isTeacher) {
+                        btn = ['知道了']
+                    } else {
+                        btn = ['确定']
+                    }
                     for (i = 0; i < data.files.length; i++) {
                         if (data.files[i] == '/static/' + user + '/5.png') {
                             $('.img_box').css({                            

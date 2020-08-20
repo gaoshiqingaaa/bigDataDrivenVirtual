@@ -14,7 +14,6 @@ window.onload = function(){
     // $('#right-page-nine').show()
     // localStorage.clear()
     localStorage.setItem('old_weight', null)
-    console.log(six_best_weight);
     localStorage.setItem('new_weight', null)
     localStorage.setItem('analyse_score', null)
     localStorage.setItem('combine_score', null)
@@ -63,11 +62,6 @@ $('.next').click(function(){
             }
         }
         code_in.setValue('')
-        if (current_page < 7)
-        code = page_codes[current_page].trim()
-        if (code == '')
-            code = codes[current_page]
-        code_in.setValue(code)
         showPage(current_page)
     }
 })
@@ -130,6 +124,7 @@ function eightShowAlert(btnName) {
                 layer.closeAll()
                 layer.msg('购买成功！', {icon: 6});
                 current_page ++
+                // 买入后直接显示 
                 if (money_info.combination > 0) {
                     $('.right-content-bottom-all-nine .combination h3').css({'color': 'red'})
                     combination = '+' + money_info.combination + '%'
@@ -138,19 +133,23 @@ function eightShowAlert(btnName) {
                     combination = money_info.combination + '%'
                 }
                 $('.right-content-bottom-all-nine .combination h3').html(combination)
-                showPage(current_page)
+                line_smooth.setOption(line_smooth_option)
             }
+            showPage(current_page)
         }
     });
 }
 $('#adjust').click(function(){
     eightShowAlert('adjust')
-    for (i=4;i<7;i++)
-        page_codes[i] = ''
+    // for (i=4;i<7;i++)
+    //     page_codes[i] = ''
 })
 $('#buy').click(function(){
     eightShowAlert('buy')
+    init_pie()
     init_line_smooth(0, 100000)
+    pie.setOption(pie_option);
+    // line_smooth.setOption(line_smooth_option)
 })
 function showNineAlert(status) {
     if (status == 'showAdviseBtn') {
@@ -177,8 +176,8 @@ function showNineAlert(status) {
                 window.location.href = '../index.html'
             else{
                 $('.advise-btn').show()
-                risk = window.location.href.indexOf('teacher') != -1? 3: getRiskAversion()
-                getWeight(1, risk)
+                pie.setOption(pie_option);
+                line_smooth.setOption(line_smooth_option)
                 setMoney()
             }
             layer.closeAll()
@@ -196,23 +195,36 @@ function getWeight(step, risk) {
         },
         success: function(data){
             localStorage.setItem('old_weight', JSON.stringify(six_best_weight))
-            console.log(six_best_weight);
             localStorage.setItem('new_weight', JSON.stringify(data))
         }
     
     })
 }
-$('.nine-next').click(function(){
-    if ($('.advise-btn').css('display') == 'none'){
-        showNineAlert('showAdviseBtn')
-    }
-    if ($(".advise-btn").prop("disabled") == true){
-        showNineAlert('showComplete')
-    }
-})
+var nine_next_click_count = 0
 var total_money = 100000.00
+$('.nine-next').click(function(){
+    if (advise_flag == true) {
+        init_pie()
+        init_line_smooth(nine_next_click_count, total_money)
+    }
+    risk = window.location.href.indexOf('teacher') != -1? 3: getRiskAversion()
+    getWeight(nine_next_click_count + 1, risk)
+    if (nine_next_click_count >= 3){
+        showNineAlert('showComplete')
+    } else {
+        if (advise_click_flag || nine_next_click_count == 0){
+            nine_next_click_count ++
+            showNineAlert('showAdviseBtn')
+        }
+    }
+    advise_flag = false
+    advise_click_flag = false
+})
 var advise_btn_click_count = 0
+var advise_flag = false
+var advise_click_flag = false
 $('.advise-btn').click(function(){
+    advise_click_flag = true
     if (advise_btn_click_count == 1) {
         $(".advise-btn").attr("disabled", true);
         $(".advise-btn").css({'background-color' : 'gray'});
@@ -262,10 +274,11 @@ $('.advise-btn').click(function(){
             for (var o in six_best_weight) {
                 six_best_weight_code[name_code_reverse[o]] = six_best_weight[o]
             }
-            init_line_smooth(advise_btn_click_count, total_money)
-            risk = window.location.href.indexOf('teacher') != -1? 3: getRiskAversion()
-            getWeight(2, risk)
-            init_pie()
+            advise_flag = true
+            // init_line_smooth(advise_btn_click_count, total_money)
+            // risk = window.location.href.indexOf('teacher') != -1? 3: getRiskAversion()
+            // getWeight(2, risk)
+            // init_pie()
             layer.closeAll()
         }
     });
@@ -290,9 +303,11 @@ function setMoney(){
     if (money_info.combination > 0) {
         $('.right-content-bottom-all-nine .combination h3').css({'color': 'red'})
         combination = '+' + money_info.combination + '%'
-    } else {
+    } else if (money_info.combination < 0){
         $('.right-content-bottom-all-nine .combination h3').css({'color': 'green'})
         combination = money_info.combination + '%'
+    } else if (money_info.combination == undefined) {
+        money_info.combination = 0 
     }
     $('.right-content-top-left-nine .top .text h1').html(money_info.total_money)
     $('.right-content-top-left-nine .bottom .left .text p').html('最新收益(' + money_info.new_day.split('-')[1] + '-' + money_info.new_day.split('-')[2] + ')')
@@ -351,6 +366,11 @@ function alertBtnArgs() {
     })
 }
 function showPage(current_page) {
+    if (current_page < 7)
+    code = page_codes[current_page].trim()
+    if (code == '')
+        code = codes[current_page]
+    code_in.setValue(code)
     $('.left-pages>div').hide()
     $($('.left-pages>div')[current_page]).show()
     switch (current_page) {
