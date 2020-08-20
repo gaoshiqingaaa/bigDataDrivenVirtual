@@ -36,6 +36,7 @@ function init_line_smooth(step, total_money) {
             money_info['new_earning'] = data.new_earning
             money_info['new_day'] = data.new_day
             money_info['leiji'] = data.leiji
+            money_info['combination'] = data.data[data.data.length - 1]
             localStorage.setItem('leiji', data.leiji)
             if (setMoneyFlag != 0) {
                 setMoney()

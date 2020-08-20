@@ -208,7 +208,7 @@ $('.advise-btn').click(function(){
     }
     layer.open({
         type: 2,
-        area: ['560px', '380px'], // 宽 高
+        area: ['640px', '460px'], // 宽 高
         title: false,
         closeBtn: 1,
         shadeClose: true,
@@ -230,13 +230,13 @@ $('.advise-btn').click(function(){
             $('.layui-layer-btn a').css({
                 'height': '40px',
                 'line-height': '40px',
-                'width': '185px',
+                'width': '210px',
                 'text-align': 'center',
                 'font-size': '16px'
             })
             $('.layui-layer-btn').css({
                 'position': 'relative',
-                'bottom': '2%',
+                'bottom': '5%',
                 'text-align': 'center'
             })
             $('.layui-layer-btn1').css({
@@ -261,20 +261,33 @@ $('.advise-btn').click(function(){
     advise_btn_click_count ++
 })
 function setMoney(){
+    var new_earning, leiji, combination
     if (money_info.new_earning > 0) {
         $('.right-content-top-left-nine .bottom .left .text h2').css({'color': 'red'})
+        new_earning = '+' + money_info.new_earning
     } else {
         $('.right-content-top-left-nine .bottom .left .text h2').css({'color': 'green'})
+        new_earning = money_info.new_earning
     }
     if (money_info.leiji > 0) {
+        leiji = '+' + money_info.leiji
         $('.right-content-top-left-nine .bottom .right .text h2').css({'color': 'red'})
     } else {
         $('.right-content-top-left-nine .bottom .right .text h2').css({'color': 'green'})
+        leiji = money_info.leiji
+    }
+    if (money_info.combination > 0) {
+        $('.right-content-bottom-all-nine .combination h3').css({'color': 'red'})
+        combination = '+' + money_info.combination + '%'
+    } else {
+        $('.right-content-bottom-all-nine .combination h3').css({'color': 'green'})
+        combination = money_info.combination + '%'
     }
     $('.right-content-top-left-nine .top .text h1').html(money_info.total_money)
     $('.right-content-top-left-nine .bottom .left .text p').html('最新收益(' + money_info.new_day.split('-')[1] + '-' + money_info.new_day.split('-')[2] + ')')
-    $('.right-content-top-left-nine .bottom .left .text h2').html(money_info.new_earning)
-    $('.right-content-top-left-nine .bottom .right .text h2').html(money_info.leiji)
+    $('.right-content-top-left-nine .bottom .left .text h2').html(new_earning)
+    $('.right-content-top-left-nine .bottom .right .text h2').html(leiji)
+    $('.right-content-bottom-all-nine .combination h3').html(combination)
 }
 function showIntroduceAlert(num) {
     switch (num) {
