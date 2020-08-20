@@ -475,8 +475,17 @@ function showUserAlert(num) {
         }
     });
 }
+layer.config({
+    extend: 'myskin/style.css'
+});
 $('#help').click(function(){
-    showWenhaoAlert(current_page)
+    // showWenhaoAlert(current_page)
+    layer.open({
+        type: 2,
+        area:['1000px', '600px'], 
+        content:'../system.html',
+        skin: 'layer-bg',
+    })
 })
 $('#friends').click(function(){
     showUserAlert(current_page)
