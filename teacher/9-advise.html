@@ -29,9 +29,15 @@
         
         html += `<tr>
                     <td>` + o + `</td>
-                    <td>` + (Math.round(old_weight[o] <= 1?old_weight[o] * 100: old_weight[o])) + `%</td>
-                    <td>-></td>
-                    <td>` + (Math.round(new_weight[o] <= 1?new_weight[o] * 100: new_weight[o])) + `%</td>
+                    <td>` + (Math.round(old_weight[o] <= 1?old_weight[o] * 100: old_weight[o])) + `%</td>`
+        if ((Math.round(old_weight[o] <= 1?old_weight[o] * 100: old_weight[o])) < Math.round(new_weight[o] <= 1?new_weight[o] * 100: new_weight[o])) {
+            html += `<td style="color: red">→</td>`
+        } else if ((Math.round(old_weight[o] <= 1?old_weight[o] * 100: old_weight[o])) > Math.round(new_weight[o] <= 1?new_weight[o] * 100: new_weight[o])) {
+            html += `<td style="color: #00ff00">→</td>`
+        } else {
+            html += `<td>→</td>`
+        }
+        html += `<td>` + (Math.round(new_weight[o] <= 1?new_weight[o] * 100: new_weight[o])) + `%</td>
                 </tr>`
     }
     $('#advise-tbody').html(html)
@@ -47,27 +53,43 @@
     }
     .top {
         position: absolute;
-        top: 15%;
+        top: 20%;
         left: 0;
-        height: 80%;
+        height: 72%;
         width: 100%;
         text-align: center;
     }
     .table {
-        background-color: rgb(85, 178, 224);
+        /* background-color: rgb(85, 178, 224); */
+        background: url('../img/advide_table_bg.png') no-repeat center top;
+        background-size: cover;
         color: white;
         text-align: center;
         height: 100%;
-        width: 90%;
+        width: 85%;
         margin: 10px auto;
-        border-radius: 20px;
+        border-radius: 7px;
     }
     .table thead tr {
-        font-size: 20px;
-        background-color: rgb(85, 178, 224);
+        border-radius: 7px;
+        font-size: 17px;
+        background-color: rgba(0, 0, 0, .1);
     }
-    .table tbody tr:nth-child(odd){     
-        background-color: rgb(66, 112, 183);
+    .table thead tr td:last-child {
+        border-top-right-radius: 7px;
+
+    }
+    .table thead tr :first-child {
+        border-top-left-radius: 7px;
+    }
+    .table tbody tr:nth-child(even){     
+        background-color: rgba(0, 0, 0, .1);
+    }
+    #advise-tbody :last-child :last-child {
+        border-bottom-right-radius: 7px;
+    }
+    #advise-tbody :last-child :first-child {
+        border-bottom-left-radius: 7px;
     }
     .table td {
         width: 100px;
