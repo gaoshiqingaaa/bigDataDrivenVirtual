@@ -262,7 +262,7 @@ $('.run-code').click(function(){
     $.ajax({
         type: 'POST',
         url: 'http://47.97.205.240:8800/code',
-        // url: 'http://localhost:5000/code',
+        // url: 'http://127.0.0.1:8800/code',
         data: {
             user: user,
             step: current_page,
