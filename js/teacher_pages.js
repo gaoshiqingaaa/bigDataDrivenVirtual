@@ -28,6 +28,13 @@ window.onload = function(){
             }
         })
     }
+    $.ajax({
+        type: 'post',
+        url: 'http://47.97.205.240:8800/delete',
+        data: {
+            user: user
+        },
+    })
 }
 function toChildValue() {
     return xishu_html
@@ -48,8 +55,10 @@ $('.next').click(function(){
         current_page ++ //增加了1 后面的页数 页面显示多少就是多少
         if (current_page == 5) 
             $('.img_box').show()
-        else
+        else {
             $('.img_box').hide()
+            $('.img_box').css({'background': 'url()'})
+        }
         if (current_page == 7){
             $('.bottom-left img').attr('src', 'http://47.97.205.240:8800/static/' + user + '/5.png')
             pie1.setOption(pie_option);
@@ -71,8 +80,10 @@ $('.pre').click(function(){
         current_page --
         if (current_page == 5)
             $('.img_box').show()
-        else
+        else{
+            $('.img_box').css({'background': 'url()'})
             $('.img_box').hide()
+        }
         showPage(current_page)
         code_in.setValue(page_codes[current_page])
     }
