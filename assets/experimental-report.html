@@ -295,23 +295,23 @@
     data:{"user":temporary_user},
     // data:{"user":"b1a438cf-85c3-4d04-bec4-02a37ea2588d"},
     success: function(data){
-        localStorage.setItem("Experimental_report", JSON.parse(data));
+        // localStorage.setItem("Experimental_report", JSON.parse(data));
         // 成功处理逻辑
         // 展示代码&代码运行结果的图片
-        $("#code1").attr('src',".."+data.code[0]);
-        $("#Operation_results1").attr('src',".."+data.print[0]);
-        $("#code2").attr('src',".."+data.code[1]);
-        $("#Operation_results2").attr('src',".."+data.print[1]);
-        $("#code3").attr('src',".."+data.code[2]);
-        $("#Operation_results3").attr('src',".."+data.print[2]);
-        $("#code4").attr('src',".."+data.code[3]);
-        $("#Operation_results4").attr('src',".."+data.print[3]);
-        $("#code5").attr('src',".."+data.code[4]);
-        $("#Operation_results5").attr('src',".."+data.print[4]);
-        $("#code6").attr('src',".."+data.code[5]);
-        $("#Operation_results6").attr('src',".."+data.print[5]);
-        $("#code7").attr('src',".."+data.code[6]);
-        $("#Operation_results7").attr('src',".."+data.print[6]);
+        $("#code1").attr('src',"http://47.97.205.240:8800"+data.code[0]);
+        $("#Operation_results1").attr('src',"http://47.97.205.240:8800"+data.print[0]);
+        $("#code2").attr('src',"http://47.97.205.240:8800"+data.code[1]);
+        $("#Operation_results2").attr('src',"http://47.97.205.240:8800"+data.print[1]);
+        $("#code3").attr('src',"http://47.97.205.240:8800"+data.code[2]);
+        $("#Operation_results3").attr('src',"http://47.97.205.240:8800"+data.print[2]);
+        $("#code4").attr('src',"http://47.97.205.240:8800"+data.code[3]);
+        $("#Operation_results4").attr('src',"http://47.97.205.240:8800"+data.print[3]);
+        $("#code5").attr('src',"http://47.97.205.240:8800"+data.code[4]);
+        $("#Operation_results5").attr('src',"http://47.97.205.240:8800"+data.print[4]);
+        $("#code6").attr('src',"http://47.97.205.240:8800"+data.code[5]);
+        $("#Operation_results6").attr('src',"http://47.97.205.240:8800"+data.print[5]);
+        $("#code7").attr('src',"http://47.97.205.240:8800"+data.code[6]);
+        $("#Operation_results7").attr('src',"http://47.97.205.240:8800"+data.print[6]);
 
         // 展示代码得分
         $("#shiyaniti1").html(String(data.grade[0]));
