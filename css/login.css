@@ -20,17 +20,12 @@
     left: 2.5vw;
 }
 .usernameimg{
-    position: absolute;
-    width: 2vw;
-    height: 80%;
-    left: 3%;
-    background-size: 5%;
+
 }
 .imgsize{
-    width: 60%;
-    height: 60%;
+    width: 8%;
     top: 25%;
-    left: 10%;
+    left: 8%;
     position: absolute;
 }
 
@@ -70,8 +65,9 @@
     right: 23%;
 }
 .input1{
-    margin-left: 2vw;
+    margin-left: 2.2vw;
     height: 2.5vw;
     width: 70%;
     border: 0px;
+    font-size: 0.7vw;
 }
