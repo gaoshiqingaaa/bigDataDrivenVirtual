@@ -4,7 +4,7 @@
         <div class="top"></div>
         <div class="bottom">
            <h2>请对该组曲线进行分析</h2>
-           <textarea name="" id="" cols="30" rows="10"></textarea>
+           <textarea name="" id="analyse" cols="30" rows="10"></textarea>
            <h2>最优组合为</h2>
            <textarea name="" id="best-combine" cols="30" rows="10"></textarea>
         </div>
@@ -13,9 +13,23 @@
 
 <script src="../js/jquery-2.1.4.js"></script>
 <script>
+    $('#analyse').keyup(function() {
+        if ($('#analyse').val().length != 0) {
+            localStorage.setItem("analyse_score", $('#analyse').val())
+        }
+    })
     $('#best-combine').keyup(function() {
         localStorage.setItem("best_combine", $('#best-combine').val())
+        if ($('#best-combine').val().length != 0) {
+            localStorage.setItem("combine_score", $('#analyse').val())
+        }
     })
+    if (localStorage.getItem("analyse_score") != 'null') {
+        $('#analyse').html(localStorage.getItem("analyse_score"))
+    }
+    if (localStorage.getItem("combine_score") != 'null') {
+        $('#best-combine').html(localStorage.getItem("combine_score"))
+    }
 </script>
 
 <style>

@@ -16,6 +16,8 @@ window.onload = function(){
     localStorage.setItem('old_weight', null)
     console.log(six_best_weight);
     localStorage.setItem('new_weight', null)
+    localStorage.setItem('analyse_score', null)
+    localStorage.setItem('combine_score', null)
     user = JSON.parse(localStorage.getItem('temporary_user'))
     if (user == null) {
         $.ajax({
@@ -31,6 +33,7 @@ window.onload = function(){
 function toChildValue() {
     return xishu_html
 }
+var caled_score = false
 $('.next').click(function(){
     html = ''
     if (current_page < 9) {
@@ -43,8 +46,8 @@ $('.next').click(function(){
         }
         $('#result-tbody').html('')
         page_codes[current_page] = code_in.getValue()
-        current_page ++
-        if (current_page == 5)
+        current_page ++ //增加了1 后面的页数 页面显示多少就是多少
+        if (current_page == 5) 
             $('.img_box').show()
         else
             $('.img_box').hide()
@@ -389,6 +392,9 @@ function showPage(current_page) {
         case 8:
             $('#right-page-eight').hide()
             $('#right-page-nine').show()
+            var analyse_score = localStorage.getItem('analyse_score') == 'null'? 0: 5
+            var combine_score = localStorage.getItem('combine_score') == 'null'? 0: 5
+            step_score[5] += + analyse_score + combine_score
             localStorage.setItem("step_score", JSON.stringify(step_score))
             break
     }

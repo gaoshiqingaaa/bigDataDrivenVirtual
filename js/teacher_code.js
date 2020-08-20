@@ -275,7 +275,11 @@ $('.run-code').click(function(){
             result = data.result
             html = ''
             if (data.iserr == 0) {
-                step_score[current_page] = 10
+                if (current_page == 5){
+                    step_score[current_page] = 5
+                } else {
+                    step_score[current_page] = 10
+                }
                 for (i = 0; i < result.length; i++){
                     if (result[i][0].trim() != ''){
                         html += '<tr  style="text-align: center">'
