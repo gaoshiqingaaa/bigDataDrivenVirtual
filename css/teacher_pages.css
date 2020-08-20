@@ -588,3 +588,19 @@
     border: 0;
     text-align: center;
 }
+
+.right-content-bottom-all-nine .combination {
+    height: 13%;
+    width: 20%;
+    position: relative;
+    left: 80%;
+    top: -3%;
+    display: flex;
+    line-height: 100%;
+}
+
+.right-content-bottom-all-nine .combination h3 {
+    font-size: 25px;
+    color: red;
+    font-weight: 600;
+}

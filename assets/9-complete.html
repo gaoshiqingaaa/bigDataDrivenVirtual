@@ -1,3 +1,4 @@
+<script src="../js/jquery-2.1.4.js"></script>
 <html>
     <body>
         <div class="content">
@@ -6,8 +7,8 @@
                 <div class="title">
                     <p class="t">经过半年的模拟投资，总共收益为：</p>
                     <div>
-                        <h2>2318.97元</h2>
-                        <h2>4.2%</h2>
+                        <h2 id="one"></h2>
+                        <h2 id="two"></h2>
                         <h2>10分</h2>
                     </div>
                     <div class="text">
@@ -20,6 +21,13 @@
         </div>
     </body>
 </html>
+<script>
+    var leiji = localStorage.getItem('leiji')
+    $('#one').html(leiji)
+    var rate = ((leiji / 100000) / 365) * 365 * 100
+    $('#two').html(rate.toFixed(2) + '%')
+    
+</script>
 
 <style>
     * {

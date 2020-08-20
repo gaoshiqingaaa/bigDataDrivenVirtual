@@ -114,7 +114,7 @@ print(DataFrame(index=exp_rtn.index,data = np.round(sol['x'],2), columns = ['wei
 `
     }
 } else if (window.location.href.indexOf('assets') != -1) {
-    risk_score = JSON.parse(localStorage.getItem('aGrades')).number
+    risk_score = localStorage.getItem('aGrades') == null? 3: JSON.parse(localStorage.getItem('aGrades')).number
     risk_aversion = (84 - risk_score) / (84 - 7) * (6 - 3) + 3
     codes = {
         0: `import csv
@@ -241,6 +241,10 @@ const name_code = {
     '000012.ZICN': '上证国债',
     '000013.ZICN': '上证企业债',
 }
+var name_code_reverse = {}
+for (var o in name_code) {
+    name_code_reverse[name_code[o]] = o
+}
 var step_score = {}
 for (i = 0; i < 7; i++) {
     step_score[i] = 0
@@ -365,7 +369,6 @@ $('.run-code').click(function(){
                             six_best_weight_code [result[i][0]] = result[i][1]
                     }
                     init_pie()
-                    pie.setOption(pie_option);
                     if (isTeacher) {
                         layer.open({
                             type: 2,

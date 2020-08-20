@@ -7,27 +7,41 @@ function init_pie() {
     pie_legend_data = [], pie_series_data = []
     for (key in six_best_weight){
         // console.log(six_best_weight);
-        pie_legend_data.push(key + '\t' + six_best_weight[key] + '%')
+        pie_legend_data.push(key + '\t' + (six_best_weight[key] <= 1? six_best_weight[key] * 100: six_best_weight[key]) + '%')
         pie_series_data.push({
-            'value': six_best_weight[key],
-            'name': key + '\t' + six_best_weight[key] + '%'
+            'value': (six_best_weight[key] <= 1? six_best_weight[key] * 100: six_best_weight[key]),
+            'name': key + '\t' + (six_best_weight[key] <= 1? six_best_weight[key] * 100: six_best_weight[key]) + '%'
         })
     }
     pie_option.legend.data = pie_legend_data
     pie_option.series[0].data = pie_series_data
+    pie.setOption(pie_option);
 }
-
+var money_info = {}
 var line_smooth_legend_data, line_smooth_series_data
-function init_line_smooth(step) {
+var setMoneyFlag = 0
+function init_line_smooth(step, total_money) {
     line_smooth_legend_data = [], line_smooth_series_data = []
     $.ajax({
         type: 'POST',
-        url: 'http://127.0.0.1:8800/echartsData',
+        url: 'http://47.97.205.240:8800/echartsData',
+        // url: 'http://127.0.0.1:5000/echartsData',
         data: {
             step: step,
-            weight: JSON.stringify(six_best_weight_code)
+            weight: JSON.stringify(six_best_weight_code),
+            total_money: total_money
         },
         success: function(data){
+            money_info['total_money'] = data.total_money
+            money_info['new_earning'] = data.new_earning
+            money_info['new_day'] = data.new_day
+            money_info['leiji'] = data.leiji
+            money_info['combination'] = data.data[data.data.length - 1]
+            localStorage.setItem('leiji', data.leiji)
+            if (setMoneyFlag != 0) {
+                setMoney()
+            }
+            setMoneyFlag = 1
             line_smooth_option.xAxis.data = data.label
             line_smooth_option.series[0].data = data.data
             line_smooth_option.yAxis.min = data.min - 1

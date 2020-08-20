@@ -1,3 +1,4 @@
+<script src="../js/jquery-2.1.4.js"></script>
 <html>
     <body>
         <div class="content">
@@ -5,12 +6,16 @@
             <div class="bottom">
                 <div class="title">
                     <p>经过半年的模拟投资，总共收益为：</p>
-                    <h1>2318.97元</h1>
+                    <h1></h1>
                 </div>
             </div>
         </div>
     </body>
 </html>
+
+<script>
+    $('h1').html(localStorage.getItem('leiji'))
+</script>
 
 <style>
     * {
