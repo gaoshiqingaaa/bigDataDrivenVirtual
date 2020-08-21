@@ -6,8 +6,410 @@
     <title>实验报告</title>
     <link rel="stylesheet" href="../lib/css/layui.css">
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/teacher-experimental-report.css" />
-    <link rel="stylesheet" href="../css/public.css" />
+    <style>
+        #nav {
+    width: 96vw;
+    height: 80px;
+}
+
+#but1 {
+    float: right;
+    margin-right: 15px;
+    margin-top: 2.5vw;
+    border-radius: 8px;
+}
+
+#but1 a {
+    color: #6969EF;
+}
+#help,
+#friends {
+    width: 25px;
+    height: 25px;
+    border: none;
+    color: #6969EF;
+    background-color: white;
+    border-radius: 15px;
+    float: right;
+    margin-right: 2%;
+}
+.logoweizi{
+    width: 155px;
+    height: 35px;
+    background-image: url(../img/logo1.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 2vw;
+    left: 35px;
+}
+
+.div1 {
+    width: 96.5%;
+    padding-bottom: 105px;
+    height: auto;
+    background-image: url(../img/16-bg-gezi@2x.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 120%;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+@font-face {
+    src:url("../lib/font/YouSheBiaoTiHei-2.ttf");
+    font-family: "shiyanfont";
+}
+.shiyanfont1{
+    position: absolute;
+    width:380px;
+    height:18px;
+    font-size:24px;
+    font-family:shiyanfont;
+    font-weight:400;
+    color:#ffffff;
+    line-height:23px;
+    left: 200px;
+    top: 2.5vw;
+}
+.shiyanfont2{
+    height:18px;
+    font-size:24px;
+    font-family:shiyanfont;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+    line-height:23px;
+    padding-top: 48.5px;
+    text-align: center;
+}
+#div1imgdownload{
+    position: absolute;
+    width: 4.93vw;
+    height: 4.19vw;
+    background-repeat: no-repeat;
+    background-image: url(../img/15-btn-download@2x.png);
+    background-position: center;
+    background-size: 2.87vw;
+    left: 87.23vw;
+    top: 11.34vw;
+    z-index: 2;
+}
+
+.div11{
+    position: relative;
+    left: 8.223684210526317vw;
+    width: 70%;
+    margin-top: 4.5vw;
+}
+.div12{
+    position: relative;
+    left: 8.22vw;
+    width: 70%;
+    margin-top: 3.5vw;
+}
+.div13{
+    position: relative;
+    left: 8.22vw;
+    width: 70%;
+    margin-top: 3.5vw;
+}
+.div14{
+    position: relative;
+    left: 8.223684210526317vw;
+    width: 70%;
+    margin-top: 3.5vw;
+}
+
+.div111{
+    height: 1px;
+    position: relative;
+}
+
+.div131{
+    margin-top: 19.5px;
+}
+.div132{
+
+}
+.div133{
+
+}
+.div134{
+
+}
+.div13font1{
+    font-size: 14px;
+    margin-top: 23.5px;
+}
+.div13font2{
+    font-size: 14px;
+    margin-top: 24.5px;
+}
+.div13font3{
+    font-size: 14px;
+    margin-top: 24.5px;
+}
+.div13font4{
+    font-size: 14px;
+    margin-top: 24.5px;
+}
+.div13tb1{
+    margin-left: 12px;
+    width: 65vw;
+    height: 100px;
+    border: 1px solid;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.div13tb2{
+    margin-left: 12px;
+    width: 65vw;
+    height: 60px;
+    border: 1px solid;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 19.5px;
+}
+.div13tb3{
+    margin-left: 12px;
+    width: 65vw;
+    height: 370px;
+    border: 1px solid;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 19.5px;
+}
+.div13tb4{
+    margin-left: 12px;
+    width: 65vw;
+    height: 60px;
+    border: 1px solid;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 19.5px;
+}
+.div13tb1td1{
+    font-size: 12px;
+    border:0px;
+    text-align: left;
+    padding-left: 25px;
+}
+.div13tb2td1font{
+    width: 1%;
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+}
+.div13tb1fontsize{
+    font-size: 15px;
+    border-top: 0px;
+    border-left: 0px;
+}
+.div13tb1fontsize1{
+    font-size: 15px;
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+}
+.div13tb1fontsize12{
+    font-size: 15px;
+    border-right: 0px;
+    border-left: 0px;
+    border-top: 0px;
+}
+.div13tb1fontsize13{
+    font-size: 15px;
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+    border-top: 0px;
+}
+.div13tb3td1{
+    width: 1%;
+    height: 6%;
+    background-color: #5C6C91;
+    color: #ffffff;
+    border-top: 0px;
+    border-left: 0px;
+}
+.div13tb3td11{
+    width: 1%;
+    height: 6%;
+    background-color: #5C6C91;
+    color: #ffffff;
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+}
+.div13tb3td2{
+    width: 12%;
+    border-top: 0px;
+    border-left: 0px;
+}
+.div13tb3td21{
+    width: 12%;
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+}
+.div13tb3td3{
+    width: 5%;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+.div13tb3td31{
+    width: 5%;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+}
+tr td,th{
+    text-align: center;
+    font-size: 14px;
+    border:1px solid black;
+    width: 4%;
+    color: #25264E;
+}
+.tdfont{
+    font-size: 9px;
+    padding-top: 13.5px;
+    vertical-align: baseline;
+}
+  table{
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+.div11img1{
+    width: 6.74vw;
+    height: 6.74vw;
+    position: absolute;
+    background-image: url(../img/15-icon-1@2x.png);
+    background-size: 4.76vw;
+    background-repeat: no-repeat;
+    top: -2.79vw;
+    left: 1.233vw;
+}
+.div11img2{
+    width: 4vw;
+    height: 4vw;
+    position: absolute;
+    background-image: url(../img/15-icon-2@2x.png);
+    background-size: 3.2vw;
+    background-repeat: no-repeat;
+    top: -2.3vw;
+    left: 1.6vw;
+}
+.div11img3{
+    width: 4vw;
+    height: 4vw;
+    position: absolute;
+    background-image: url(../img/15-icon-3@2x.png);
+    background-size: 3.2vw;
+    background-repeat: no-repeat;
+    top: -2.3vw;
+    left: 1.6vw;
+}
+.div11img4{
+    width: 4vw;
+    height: 4vw;
+    position: absolute;
+    background-image: url(../img/15-icon-4@2x.png);
+    background-size: 3.2vw;
+    background-repeat: no-repeat;
+    top: -2.3vw;
+    left: 1.6vw;
+}
+
+.div11font{
+    position: absolute;
+    font-size: 1.3vw;
+    left: 6vw;
+    top: -2vw;
+}
+.div12font{
+    position: absolute;
+    font-size: 1.3vw;
+    left: 6vw;
+    top: -2vw;
+}
+.div21font{
+    font-size: 0.8vw;
+    padding-left: 10%;
+    white-space: nowrap;
+}
+.div2win{
+
+}
+.layui-textarea{
+    resize:none;
+    }
+.layui-textarea{
+    width: 68vw;
+}
+
+.div1btn{
+    position: relative;
+    left: 42vw;
+    width: 16%;
+    bottom: 80px;
+}
+.layui-btn1 {
+    border-radius: 4px;
+    height: 2.7vw;
+    line-height: 2.3vw;
+    width: 16vw;
+    background-image: url(../img/15-btn-submit@2x.png);
+    background-position: center;
+    background-size: 150% 150%;
+    background-repeat: no-repeat;
+}
+.layui-btn2 {
+    height: 2vw;
+    line-height: 0vw;
+    width: 8vw;
+    background-color: #ffffff;
+    background-position: center;
+    border-radius: 0.5vw;
+}
+.navfont{
+    font-size: 1vw;
+    color: #6969EF;
+}
+.font{
+    font-size: 1.2vw;
+    color: #ffffff;
+}
+.border{
+    border-color: #000000;
+    border-radius: 4px;
+}
+#layui-input:hover{
+    border-color: #000000;
+}
+.layui-input-block{
+    margin-left: 6vw;
+    min-height: 36px;
+}
+.box1{
+    background-image: url(../img/8-output-right@2x.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.box2 {
+    background-image: url(../img/16-bg@2x.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+    </style>
 </head>
 <body>
 <div class="box2">
@@ -116,89 +518,7 @@
                 <p class="div13font3">3.实验步骤</p>
                     <div class="div133">
                         <table class="div13tb3">
-                            <tr>
-                                <td class="div13tb3td1">实验步骤</td>
-                                <td class="div13tb3td2" style="background-color: #5C6C91; color: #FFFFFF;">代码</td>
-                                <td class="div13tb3td2" style="background-color: #5C6C91; color: #FFFFFF;">运行结果</td>
-                                <td class="div13tb3td3" style="background-color: #5C6C91; color: #FFFFFF;">得分</td>
-                            </tr>
 
-                            <tr>
-                                <td class="div13tb3td1 tdfont">资产大类数据准备</td>
-                                <td class="div13tb3td2">
-                                    <img id="code1" style="width: 100%;">
-                                </td>
-                                <td class="div13tb3td2">
-                                    <img id="Operation_results1" style="width: 100%;">
-                                </td>
-                                <td class="div13tb3td3" id="shiyaniti1"></td>
-                            </tr>
-                            
-                            <tr>
-                                <td class="div13tb3td1 tdfont">计算年化收益率</td>
-                                <td class="div13tb3td2">
-                                    <img id="code2" style="width: 100%;">
-                                </td>
-                                <td class="div13tb3td2">
-                                    <img id="Operation_results2" style="width: 100%;">
-                                </td>
-                                <td class="div13tb3td3" id="shiyaniti2"></td>
-                            </tr>
-                            
-                            <tr>
-                                <td class="div13tb3td1 tdfont">计算年化标准差</td>
-                                <td class="div13tb3td2">
-                                    <img id="code3" style="width: 100%;">
-                                </td>
-                                <td class="div13tb3td2">
-                                    <img id="Operation_results3" style="width: 100%;">
-                                </td>
-                                <td class="div13tb3td3" id="shiyaniti3"></td>
-                            </tr>
-
-                            <tr>
-                                <td class="div13tb3td1 tdfont">相关性系数矩阵</td>
-                                <td class="div13tb3td2">
-                                    <img id="code4" style="width: 100%;">
-                                </td>
-                                <td class="div13tb3td2">
-                                    <img id="Operation_results4" style="width: 100%;">
-                                </td>
-                                <td class="div13tb3td3" id="shiyaniti4"></td>
-                            </tr>
-
-                            <tr>
-                                <td class="div13tb3td1 tdfont">构建组合的Effcient Frontier</td>
-                                <td class="div13tb3td2">
-                                    <img id="code5" style="width: 100%;">
-                                </td>
-                                <td class="div13tb3td2">
-                                    <img id="Operation_results5" style="width: 100%;">
-                                </td>
-                                <td class="div13tb3td3" id="shiyaniti5"></td>
-                            </tr>
-
-                            <tr>
-                                <td class="div13tb3td1 tdfont">计算资产配置权重</td>
-                                <td class="div13tb3td2">
-                                    <img id="code6" style="width: 100%;">
-                                </td>
-                                <td class="div13tb3td2">
-                                    <img id="Operation_results6" style="width: 100%;">
-                                </td>
-                                <td class="div13tb3td3" id="shiyaniti6"></td>
-                            </tr>
-
-                            <tr>
-                                <td class="div13tb3td11 tdfont">半年后总收益</td>
-                                <td class="div13tb3td21">
-                                    <img id="code7" style="width: 100%;">
-                                </td>
-                                <td class="div13tb3td21">
-                                    <img id="Operation_results7" style="width: 100%;">
-                                </td>
-                                <td class="div13tb3td31" id="shiyaniti7"></td>
-                            </tr>
                         </table>
                     </div>
                 
@@ -221,8 +541,6 @@
                 <div class="layui-input-block">
                   <textarea id="utext" class="layui-textarea border"></textarea>
                 </div>
-            
-
         </div>
     </div>
 
@@ -279,93 +597,150 @@
 
     //获取临时userid
     const temporary_user = JSON.parse(localStorage.getItem("temporary_user"));
-
     //获取用户投资类型
     const user_investment_type = JSON.parse(localStorage.getItem("Grades"));
     $("#User_investment_type").html(String(user_investment_type["grade"]));
-    //获取图片
+    // 获取图片
     $.ajax({
     /* url 地址可以是 /get-json/ 的方式
     *  也可以是 http://www.qfedu.com/get-json/ 的方式
     */
     url: 'http://47.97.205.240:8800/result',
-    // url: 'http://127.0.0.1:8800/result',
     type: 'POST',
     dataType: 'json',
     data:{"user":temporary_user},
     // data:{"user":"b1a438cf-85c3-4d04-bec4-02a37ea2588d"},
     success: function(data){
-        // localStorage.setItem("Experimental_report", JSON.parse(data));
+        localStorage.setItem("data1", JSON.stringify(data));
         // 成功处理逻辑
         // 展示代码&代码运行结果的图片
-        $("#code1").attr('src',"http://47.97.205.240:8800"+data.code[0]);
-        $("#Operation_results1").attr('src',"http://47.97.205.240:8800"+data.print[0]);
-        $("#code2").attr('src',"http://47.97.205.240:8800"+data.code[1]);
-        $("#Operation_results2").attr('src',"http://47.97.205.240:8800"+data.print[1]);
-        $("#code3").attr('src',"http://47.97.205.240:8800"+data.code[2]);
-        $("#Operation_results3").attr('src',"http://47.97.205.240:8800"+data.print[2]);
-        $("#code4").attr('src',"http://47.97.205.240:8800"+data.code[3]);
-        $("#Operation_results4").attr('src',"http://47.97.205.240:8800"+data.print[3]);
-        $("#code5").attr('src',"http://47.97.205.240:8800"+data.code[4]);
-        $("#Operation_results5").attr('src',"http://47.97.205.240:8800"+data.print[4]);
-        $("#code6").attr('src',"http://47.97.205.240:8800"+data.code[5]);
-        $("#Operation_results6").attr('src',"http://47.97.205.240:8800"+data.print[5]);
-        $("#code7").attr('src',"http://47.97.205.240:8800"+data.code[6]);
-        $("#Operation_results7").attr('src',"http://47.97.205.240:8800"+data.print[6]);
+        html=(`
+                            <tr>
+                                <td class="div13tb3td1">实验步骤</td>
+                                <td class="div13tb3td2" style="background-color: #5C6C91; color: #FFFFFF;">代码</td>
+                                <td class="div13tb3td2" style="background-color: #5C6C91; color: #FFFFFF;">运行结果</td>
+                                <td class="div13tb3td3" style="background-color: #5C6C91; color: #FFFFFF;">得分</td>
+                            </tr>
 
-        //获取代码得分
-        step_score = JSON.parse(localStorage.getItem('step_score'))
+                            <tr>
+                                <td class="div13tb3td1 tdfont">`+data.datas[0].name+`</td>
+                                <td class="div13tb3td2">
+                                    <img src="http://47.97.205.240:8800`+data.datas[0].code+`" style="width: 100%;">
+                                </td>
+                                <td class="div13tb3td2">
+                                    <img src="http://47.97.205.240:8800`+data.datas[0].print+`" style="width: 100%;">
+                                </td>
+                                <td class="div13tb3td3">`+data.datas[0].grade+`</td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="div13tb3td1 tdfont">`+data.datas[1].name+`</td>
+                                <td class="div13tb3td2">
+                                    <img src="http://47.97.205.240:8800`+data.datas[1].code+`" style="width: 100%;">
+                                </td>
+                                <td class="div13tb3td2">
+                                    <img src="http://47.97.205.240:8800`+data.datas[1].print+`" style="width: 100%;">
+                                </td>
+                                <td class="div13tb3td3">`+data.datas[1].grade+`</td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="div13tb3td1 tdfont">`+data.datas[2].name+`</td>
+                                <td class="div13tb3td2">
+                                    <img src="http://47.97.205.240:8800`+data.datas[2].code+`" style="width: 100%;">
+                                </td>
+                                <td class="div13tb3td2">
+                                    <img src="http://47.97.205.240:8800`+data.datas[2].print+`" style="width: 100%;">
+                                </td>
+                                <td class="div13tb3td3">`+data.datas[2].grade+`</td>
+                            </tr>
 
-        // 展示代码得分
-        $("#shiyaniti1").html(String(step_score[0]));
-        $("#shiyaniti2").html(String(step_score[1]));
-        $("#shiyaniti3").html(String(step_score[2]));
-        $("#shiyaniti4").html(String(step_score[3]));
-        $("#shiyaniti5").html(String(step_score[4]));
-        $("#shiyaniti6").html(String(step_score[5]));
-        $("#shiyaniti7").html(String(step_score[6]));
-        
-        // 计算总分
-        list1=[step_score[0],step_score[1],step_score[2],step_score[3],step_score[4],step_score[5]
-            ,step_score[6],a["ti1"],a["ti2"],a["ti3"],a["ti4"],a["ti5"],a["ti6"],a["ti7"],a["ti8"],a["ti9"],a["ti10"]
-            ,a["ti11"],a["ti12"],a["ti13"],a["ti14"],a["ti15"]]
-        $("#zongfen").html(String(sum(list1)));
+                            <tr>
+                                <td class="div13tb3td1 tdfont">`+data.datas[3].name+`</td>
+                                <td class="div13tb3td2">
+                                    <img src="http://47.97.205.240:8800`+data.datas[3].code+`" style="width: 100%;">
+                                </td>
+                                <td class="div13tb3td2">
+                                    <img src="http://47.97.205.240:8800`+data.datas[3].print+`" style="width: 100%;">
+                                </td>
+                                <td class="div13tb3td3">`+data.datas[3].grade+`</td>
+                            </tr>
+
+                            <tr>
+                                <td class="div13tb3td1 tdfont">`+data.datas[4].name+`</td>
+                                <td class="div13tb3td2">
+                                    <img src="http://47.97.205.240:8800`+data.datas[4].code+`" style="width: 100%;">
+                                </td>
+                                <td class="div13tb3td2">
+                                    <img src="http://47.97.205.240:8800`+data.image[0]+`" style="width: 100%;">
+                                </td>
+                                <td class="div13tb3td3">`+data.datas[4].grade+`</td>
+                            </tr>
+
+                            <tr>
+                                <td class="div13tb3td1 tdfont">`+data.datas[5].name+`</td>
+                                <td class="div13tb3td2">
+                                    <img src="http://47.97.205.240:8800`+data.datas[5].code+`" style="width: 100%;">
+                                </td>
+                                <td class="div13tb3td2">
+                                    <img src="http://47.97.205.240:8800`+data.datas[5].print+`" style="width: 100%;">
+                                </td>
+                                <td class="div13tb3td3">`+data.datas[5].grade+`</td>
+                            </tr>
+
+                            <tr>
+                                <td class="div13tb3td11 tdfont">`+data.datas[6].name+`</td>
+                                <td class="div13tb3td21">
+                                    <img src="http://47.97.205.240:8800`+data.datas[6].code+`" style="width: 100%;">
+                                </td>
+                                <td class="div13tb3td21">
+                                    <img src="http://47.97.205.240:8800`+data.datas[6].print+`" style="width: 100%;">
+                                </td>
+                                <td class="div13tb3td31">`+data.datas[6].grade+`</td>
+                            </tr>
+                        `)
+            
+              $('.div13tb3').html(html);
+              list1=[data.datas[0].grade,data.datas[1].grade,data.datas[2].grade,data.datas[3].grade,data.datas[4].grade,data.datas[5].grade,data.datas[6].grade,a["ti1"],a["ti2"],a["ti3"],a["ti4"],a["ti5"],a["ti6"],a["ti7"],a["ti8"],a["ti9"],a["ti10"],a["ti11"],a["ti12"],a["ti13"],a["ti14"],a["ti15"]]
+                var Total_score = sum(list1)
+                localStorage.setItem("Total_score", JSON.stringify(Total_score));
+              $("#zongfen").html(String(Total_score));
      },
     error: function(res){
         // 错误时处理逻辑
         layer.alert('无数据,请您先完成实验!')
         }
             });
-
-    function sum(arr) {
-            var s = 0;
-            for (var i=arr.length-1; i>=0; i--) {
-                s += arr[i];
+            function sum(arr) {
+                var s = 0;
+                for (var i=arr.length-1; i>=0; i--) {
+                    s += arr[i];
                 }
                 return s;
-            }
+                }
         
 </script>
 
 <!-- 提交 -->
 <script>
+    const data2 = JSON.parse(localStorage.getItem("data1"));
+    const Total_score1 = JSON.parse(localStorage.getItem("Total_score"));
     $('button:button[id="tijiao"]').click(function(){ 
         var utextinput = document.getElementById("utext");
         var text = utextinput.value; 
-        let data={
-	  user: temporary_user,
-	  principle : $('.ex-principle').text(),//实验原理
+        let data={principle : $('.ex-principle').text(),//实验原理
                   objective : $('.ex-purpose').text(),//实验目的
                   answer:JSON.parse(localStorage.getItem('test_value')),//快问快答
                   assessment : $('#User_investment_type').text(),//风险评测
-                  procedures:JSON.parse(localStorage.getItem("Experimental_report")),//获取实验步骤
-                  grade : String($.s),//实验成绩
-                  realize : String(text)}//心得体会
+                  procedures:data2,//获取实验步骤
+                  grade : String(Total_score1),//实验成绩
+                  realize : String(text)//心得体会
+                }
+
         $.ajax({
-        url: 'http://47.97.205.240:8800/result',
-        // url: 'http://127.0.0.1:8800/result',
+        url: 'http://py.91bbjia.com/project/log/attachment/upload',
         type: 'POST',
-        dataType: 'json',
+        // dataType:"json",
         data:data,
         success: function(data){
             layer.alert("您已提交成功")

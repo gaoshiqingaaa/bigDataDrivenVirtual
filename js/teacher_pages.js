@@ -185,14 +185,6 @@ function showNineAlert(status) {
         btn1: function () {
             if (status != 'showAdviseBtn') {
                 window.location.href = '../index.html'
-                $.ajax({
-                    url: "http://47.97.205.240:8800/sendStepScore",
-                    method: 'post',
-                    data: {
-                        user: user,
-                        step_score: JSON.stringify(step_score)
-                    }
-                })
             }
             else{
                 $('.advise-btn').show()
@@ -241,6 +233,15 @@ $('.nine-next').click(function(){
     }
     advise_flag = false
     advise_click_flag = false
+    step_score['leiji'] = $('.right-content-top-left-nine .bottom .right .text h2').text()
+    $.ajax({
+        url: "http://47.97.205.240:8800/sendStepScore",
+        method: 'post',
+        data: {
+            user: user,
+            step_score: JSON.stringify(step_score)
+        }
+    })
 })
 var advise_btn_click_count = 0
 var advise_flag = false
