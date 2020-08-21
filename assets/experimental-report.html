@@ -295,37 +295,41 @@
     data:{"user":temporary_user},
     // data:{"user":"b1a438cf-85c3-4d04-bec4-02a37ea2588d"},
     success: function(data){
-        localStorage.setItem("Experimental_report", JSON.parse(data));
+        // localStorage.setItem("Experimental_report", JSON.parse(data));
         // 成功处理逻辑
         // 展示代码&代码运行结果的图片
-        $("#code1").attr('src',".."+data.code[0]);
-        $("#Operation_results1").attr('src',".."+data.print[0]);
-        $("#code2").attr('src',".."+data.code[1]);
-        $("#Operation_results2").attr('src',".."+data.print[1]);
-        $("#code3").attr('src',".."+data.code[2]);
-        $("#Operation_results3").attr('src',".."+data.print[2]);
-        $("#code4").attr('src',".."+data.code[3]);
-        $("#Operation_results4").attr('src',".."+data.print[3]);
-        $("#code5").attr('src',".."+data.code[4]);
-        $("#Operation_results5").attr('src',".."+data.print[4]);
-        $("#code6").attr('src',".."+data.code[5]);
-        $("#Operation_results6").attr('src',".."+data.print[5]);
-        $("#code7").attr('src',".."+data.code[6]);
-        $("#Operation_results7").attr('src',".."+data.print[6]);
+        $("#code1").attr('src',"http://47.97.205.240:8800"+data.code[0]);
+        $("#Operation_results1").attr('src',"http://47.97.205.240:8800"+data.print[0]);
+        $("#code2").attr('src',"http://47.97.205.240:8800"+data.code[1]);
+        $("#Operation_results2").attr('src',"http://47.97.205.240:8800"+data.print[1]);
+        $("#code3").attr('src',"http://47.97.205.240:8800"+data.code[2]);
+        $("#Operation_results3").attr('src',"http://47.97.205.240:8800"+data.print[2]);
+        $("#code4").attr('src',"http://47.97.205.240:8800"+data.code[3]);
+        $("#Operation_results4").attr('src',"http://47.97.205.240:8800"+data.print[3]);
+        $("#code5").attr('src',"http://47.97.205.240:8800"+data.code[4]);
+        $("#Operation_results5").attr('src',"http://47.97.205.240:8800"+data.print[4]);
+        $("#code6").attr('src',"http://47.97.205.240:8800"+data.code[5]);
+        $("#Operation_results6").attr('src',"http://47.97.205.240:8800"+data.print[5]);
+        $("#code7").attr('src',"http://47.97.205.240:8800"+data.code[6]);
+        $("#Operation_results7").attr('src',"http://47.97.205.240:8800"+data.print[6]);
+
+        //获取代码得分
+        step_score = JSON.parse(localStorage.getItem('step_score'))
 
         // 展示代码得分
-        $("#shiyaniti1").html(String(data.grade[0]));
-        $("#shiyaniti2").html(String(data.grade[1]));
-        $("#shiyaniti3").html(String(data.grade[2]));
-        $("#shiyaniti4").html(String(data.grade[3]));
-        $("#shiyaniti5").html(String(data.grade[4]));
-        $("#shiyaniti6").html(String(data.grade[5]));
-        $("#shiyaniti7").html(String(data.grade[6]));
+        $("#shiyaniti1").html(String(step_score[0]));
+        $("#shiyaniti2").html(String(step_score[1]));
+        $("#shiyaniti3").html(String(step_score[2]));
+        $("#shiyaniti4").html(String(step_score[3]));
+        $("#shiyaniti5").html(String(step_score[4]));
+        $("#shiyaniti6").html(String(step_score[5]));
+        $("#shiyaniti7").html(String(step_score[6]));
         
         // 计算总分
-        list1=[data.grade[0],data.grade[1],data.grade[2],data.grade[3],data.grade[4],data.grade[5]
-            ,data.grade[6],a["ti1"],a["ti2"],a["ti3"],a["ti4"],a["ti5"],a["ti6"],a["ti7"],a["ti8"],a["ti9"],a["ti10"]
+        list1=[step_score[0],step_score[1],step_score[2],step_score[3],step_score[4],step_score[5]
+            ,step_score[6],a["ti1"],a["ti2"],a["ti3"],a["ti4"],a["ti5"],a["ti6"],a["ti7"],a["ti8"],a["ti9"],a["ti10"]
             ,a["ti11"],a["ti12"],a["ti13"],a["ti14"],a["ti15"]]
+        $("#zongfen").html(String(sum(list1)));
      },
     error: function(res){
         // 错误时处理逻辑
@@ -340,7 +344,7 @@
                 }
                 return s;
             }
-        $("#zongfen").html(String(sum(list1)));
+        
 </script>
 
 <!-- 提交 -->
@@ -348,7 +352,9 @@
     $('button:button[id="tijiao"]').click(function(){ 
         var utextinput = document.getElementById("utext");
         var text = utextinput.value; 
-        let data={principle : $('.ex-principle').text(),//实验原理
+        let data={
+	  user: temporary_user,
+	  principle : $('.ex-principle').text(),//实验原理
                   objective : $('.ex-purpose').text(),//实验目的
                   answer:JSON.parse(localStorage.getItem('test_value')),//快问快答
                   assessment : $('#User_investment_type').text(),//风险评测
