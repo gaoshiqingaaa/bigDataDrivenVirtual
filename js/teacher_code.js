@@ -249,10 +249,20 @@ var step_score = {}
 for (i = 0; i < 7; i++) {
     step_score[i] = 0
 }
+function isInputEmpty(code) {
+    flag = true
+    lines = code.split('\n')
+    for (i = 0; i< lines.length; i++) {
+        if (lines[i].trim() != '' && !lines[i].trim().startsWith('#') && codes[current_page].indexOf(lines[i].trim()) == -1) {
+            flag = false
+        } 
+    }
+    return flag
+}
 
 $('.run-code').click(function(){
     code = code_in.getValue().trim()
-    if (code == '') {
+    if (isInputEmpty(code)) {
         html = '<tr style="text-align: center;color: red"><td colspan=7>代码输入不能为空，请先填写代码!</td></tr>'
         $('#result-tbody').html(html)
         return
