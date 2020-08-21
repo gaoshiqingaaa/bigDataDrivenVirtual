@@ -183,8 +183,17 @@ function showNineAlert(status) {
             eightAlertButton()
         },
         btn1: function () {
-            if (status != 'showAdviseBtn') 
+            if (status != 'showAdviseBtn') {
                 window.location.href = '../index.html'
+                $.ajax({
+                    url: "http://47.97.205.240:8800/sendStepScore",
+                    method: 'post',
+                    data: {
+                        user: user,
+                        step_score: JSON.stringify(step_score)
+                    }
+                })
+            }
             else{
                 $('.advise-btn').show()
                 pie.setOption(pie_option);
@@ -213,6 +222,7 @@ function getWeight(step, risk) {
 }
 var nine_next_click_count = 0
 var total_money = 100000.00
+var nine_next_click_flag = false
 $('.nine-next').click(function(){
     if (advise_flag == true) {
         init_pie()
@@ -224,6 +234,7 @@ $('.nine-next').click(function(){
         showNineAlert('showComplete')
     } else {
         if (advise_click_flag || nine_next_click_count == 0){
+            nine_next_click_flag = true
             nine_next_click_count ++
             showNineAlert('showAdviseBtn')
         }
@@ -236,64 +247,68 @@ var advise_flag = false
 var advise_click_flag = false
 $('.advise-btn').click(function(){
     advise_click_flag = true
-    if (advise_btn_click_count == 1) {
-        $(".advise-btn").attr("disabled", true);
-        $(".advise-btn").css({'background-color' : 'gray'});
-    }
-    layer.open({
-        type: 2,
-        area: ['640px', '460px'], // 宽 高
-        title: false,
-        closeBtn: 1,
-        shadeClose: true,
-        btn: ['调仓', '不调仓'],
-        skin: 'advise-alert',
-        content: ['9-advise.html', 'no'],
-        success: function(){
-            $(".layui-layer-setwin .layui-layer-close2").css({
-                'right': '1px',
-                'top': '-5px',
-                'background-position': '30px -32px'
-            })
-            $('.layui-layer-setwin a').append('X')
-            $('.layui-layer-setwin a').css({
-                'font-size': '30px',
-                'color': 'white'
-            })
-            $('.layui-layer-iframe').css({'border-radius': '22px'})
-            $('.layui-layer-btn a').css({
-                'height': '40px',
-                'line-height': '40px',
-                'width': '210px',
-                'text-align': 'center',
-                'font-size': '16px'
-            })
-            $('.layui-layer-btn').css({
-                'position': 'relative',
-                'bottom': '5%',
-                'text-align': 'center'
-            })
-            $('.layui-layer-btn1').css({
-                'border-color': '#1E9FFF',
-                'background-color': '#1E9FFF',
-                'color': '#fff'
-            })
-            
-        },
-        btn1: function(){
-            six_best_weight = JSON.parse(localStorage.getItem('new_weight'))
-            for (var o in six_best_weight) {
-                six_best_weight_code[name_code_reverse[o]] = six_best_weight[o]
-            }
-            advise_flag = true
-            // init_line_smooth(advise_btn_click_count, total_money)
-            // risk = window.location.href.indexOf('teacher') != -1? 3: getRiskAversion()
-            // getWeight(2, risk)
-            // init_pie()
-            layer.closeAll()
+    if (nine_next_click_flag) {
+        if (advise_btn_click_count == 1) {
+            $(".advise-btn").attr("disabled", true);
+            $(".advise-btn").css({'background-color' : 'gray'});
         }
-    });
-    advise_btn_click_count ++
+        layer.open({
+            type: 2,
+            area: ['640px', '460px'], // 宽 高
+            title: false,
+            closeBtn: 1,
+            shadeClose: true,
+            btn: ['调仓', '不调仓'],
+            skin: 'advise-alert',
+            content: ['9-advise.html', 'no'],
+            success: function(){
+                $(".layui-layer-setwin .layui-layer-close2").css({
+                    'right': '1px',
+                    'top': '-5px',
+                    'background-position': '30px -32px'
+                })
+                $('.layui-layer-setwin a').append('X')
+                $('.layui-layer-setwin a').css({
+                    'font-size': '30px',
+                    'color': 'white'
+                })
+                $('.layui-layer-iframe').css({'border-radius': '22px'})
+                $('.layui-layer-btn a').css({
+                    'height': '40px',
+                    'line-height': '40px',
+                    'width': '210px',
+                    'text-align': 'center',
+                    'font-size': '16px'
+                })
+                $('.layui-layer-btn').css({
+                    'position': 'relative',
+                    'bottom': '5%',
+                    'text-align': 'center'
+                })
+                $('.layui-layer-btn1').css({
+                    'border-color': '#1E9FFF',
+                    'background-color': '#1E9FFF',
+                    'color': '#fff'
+                })
+                
+            },
+            btn1: function(){
+                six_best_weight = JSON.parse(localStorage.getItem('new_weight'))
+                for (var o in six_best_weight) {
+                    six_best_weight_code[name_code_reverse[o]] = six_best_weight[o]
+                }
+                advise_flag = true
+                // init_line_smooth(advise_btn_click_count, total_money)
+                // risk = window.location.href.indexOf('teacher') != -1? 3: getRiskAversion()
+                // getWeight(2, risk)
+                // init_pie()
+                layer.closeAll()
+            }
+        });
+        nine_next_click_flag = false
+        advise_btn_click_count ++
+    }
+    
 })
 function setMoney(){
     var new_earning, leiji, combination
