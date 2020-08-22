@@ -273,7 +273,7 @@ tr td,th{
     color: #25264E;
 }
 .tdfont{
-    font-size: 9px;
+    font-size: 0px;
     padding-top: 13.5px;
     vertical-align: baseline;
 }
@@ -608,7 +608,7 @@ tr td,th{
     url: 'http://47.97.205.240:8800/result',
     type: 'POST',
     dataType: 'json',
-    data:{"user":"78f99ab9-c760-421e-bd2c-3a6063a9a6d2"},
+    data:{"user":"e35c0fce-19d1-43d8-a641-b1710ce450af"},
     // data:{"user":"b1a438cf-85c3-4d04-bec4-02a37ea2588d"},
     success: function(data){
         localStorage.setItem("data1", JSON.stringify(data));
@@ -691,17 +691,16 @@ tr td,th{
                             <tr>
                                 <td class="div13tb3td11 tdfont">`+data.datas[6].name+`</td>
                                 <td class="div13tb3td21">
-                                    <img src="http://47.97.205.240:8800`+data.datas[6].code+`" style="width: 100%;">
+                                    `+data.datas[6].leiji+`
                                 </td>
-                                <td class="div13tb3td21">
-                                    <img src="http://47.97.205.240:8800`+data.datas[6].print+`" style="width: 100%;">
+                                <td class="div13tb3td21">-
                                 </td>
-                                <td class="div13tb3td31">`+data.datas[6].grade+`</td>
+                                <td class="div13tb3td31">`+"-"+`</td>
                             </tr>
                         `)
             
               $('.div13tb3').html(html);
-              list1=[data.datas[0].grade,data.datas[1].grade,data.datas[2].grade,data.datas[3].grade,data.datas[4].grade,data.datas[5].grade,data.datas[6].grade,a["ti1"],a["ti2"],a["ti3"],a["ti4"],a["ti5"],a["ti6"],a["ti7"],a["ti8"],a["ti9"],a["ti10"],a["ti11"],a["ti12"],a["ti13"],a["ti14"],a["ti15"]]
+              list1=[data.datas[0].grade,data.datas[1].grade,data.datas[2].grade,data.datas[3].grade,data.datas[4].grade,data.datas[5].grade,a["ti1"],a["ti2"],a["ti3"],a["ti4"],a["ti5"],a["ti6"],a["ti7"],a["ti8"],a["ti9"],a["ti10"],a["ti11"],a["ti12"],a["ti13"],a["ti14"],a["ti15"]]
                 var Total_score = sum(list1)
                 localStorage.setItem("Total_score", JSON.stringify(Total_score));
               $("#zongfen").html(String(Total_score));
