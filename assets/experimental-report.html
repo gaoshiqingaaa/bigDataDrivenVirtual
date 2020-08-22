@@ -273,7 +273,7 @@ tr td,th{
     color: #25264E;
 }
 .tdfont{
-    font-size: 0px;
+    font-size: 9px;
     padding-top: 13.5px;
     vertical-align: baseline;
 }
@@ -608,7 +608,7 @@ tr td,th{
     url: 'http://47.97.205.240:8800/result',
     type: 'POST',
     dataType: 'json',
-    data:{"user":"e35c0fce-19d1-43d8-a641-b1710ce450af"},
+    data:{"user":temporary_user},
     // data:{"user":"b1a438cf-85c3-4d04-bec4-02a37ea2588d"},
     success: function(data){
         localStorage.setItem("data1", JSON.stringify(data));
@@ -672,7 +672,7 @@ tr td,th{
                                     <img src="http://47.97.205.240:8800`+data.datas[4].code+`" style="width: 100%;">
                                 </td>
                                 <td class="div13tb3td2">
-                                    <img src="http://47.97.205.240:8800`+data2.image[0]+`" style="width: 100%;">
+                                    <img src="http://47.97.205.240:8800`+data.image[0]+`" style="width: 100%;">
                                 </td>
                                 <td class="div13tb3td3">`+data.datas[4].grade+`</td>
                             </tr>
@@ -738,6 +738,7 @@ tr td,th{
 
         $.ajax({
         url: 'http://py.91bbjia.com/project/log/attachment/upload',
+        headers: {'Content-Type': 'multipart/form-data'},
         type: 'POST',
         // dataType:"json",
         data:data,
