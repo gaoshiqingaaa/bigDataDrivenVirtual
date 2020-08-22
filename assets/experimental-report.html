@@ -608,7 +608,7 @@ tr td,th{
     url: 'http://47.97.205.240:8800/result',
     type: 'POST',
     dataType: 'json',
-    data:{"user":temporary_user},
+    data:{"user":"78f99ab9-c760-421e-bd2c-3a6063a9a6d2"},
     // data:{"user":"b1a438cf-85c3-4d04-bec4-02a37ea2588d"},
     success: function(data){
         localStorage.setItem("data1", JSON.stringify(data));
@@ -672,7 +672,7 @@ tr td,th{
                                     <img src="http://47.97.205.240:8800`+data.datas[4].code+`" style="width: 100%;">
                                 </td>
                                 <td class="div13tb3td2">
-                                    <img src="http://47.97.205.240:8800`+data.image[0]+`" style="width: 100%;">
+                                    <img src="http://47.97.205.240:8800`+data2.image[0]+`" style="width: 100%;">
                                 </td>
                                 <td class="div13tb3td3">`+data.datas[4].grade+`</td>
                             </tr>
