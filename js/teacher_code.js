@@ -251,11 +251,6 @@ for (i = 0; i < 7; i++) {
 }
 function isInputEmpty(code) {
     flag = true
-    if (isTeacher) {
-        if (current_page == 5 || current_page == 6) {
-            return false
-        }
-    }
     lines = code.split('\n')
     for (i = 0; i< lines.length; i++) {
         if (lines[i].trim() != '' && !lines[i].trim().startsWith('#') && codes[current_page].indexOf(lines[i].trim()) == -1) {
@@ -330,12 +325,12 @@ $('.run-code').click(function(){
                             })
                             layer.open({
                                 type: 2,
-                                area: ['600px', '390px'], 
+                                area: ['600px', '370px'], 
                                 title: false,
                                 closeBtn: 1,
                                 shadeClose: true,
                                 skin: '',
-                                content: ['5-run-code.html', 'no'],
+                                content: '5-run-code.html',
                                 btn: ['知道了'],
                                 success: function(elem) {
                                     $(".layui-layer-setwin .layui-layer-close2").css({
@@ -349,9 +344,6 @@ $('.run-code').click(function(){
                                         'color': 'white'
                                     })
                                     alertBtnArgs()
-                                    $('.layui-layer-btn').css({
-                                        'bottom': '4%',
-                                    })
                                     $('.layui-layer-iframe').css({'border-radius': '16px'})
                                 },
                             });

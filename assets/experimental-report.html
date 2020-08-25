@@ -7,16 +7,23 @@
     <link rel="stylesheet" href="../lib/css/layui.css">
     <link rel="stylesheet" href="../css/reset.css">
     <style>
-        #nav {
-    width: 96vw;
-    height: 80px;
+* {
+    font-family: Droid;
+}
+@font-face {
+    src:url("../lib/font/YouSheBiaoTiHei-2.ttf");
+    font-family: "shiyanfont";
+}
+#nav {
+    width: 100%;
+    height: 62.5px;
 }
 
 #but1 {
     float: right;
-    margin-right: 15px;
-    margin-top: 2.5vw;
-    border-radius: 8px;
+    margin-right: 31.5px;
+    margin-top: 20px;
+    border-radius: 4px;
 }
 
 #but1 a {
@@ -31,52 +38,50 @@
     background-color: white;
     border-radius: 15px;
     float: right;
-    margin-right: 2%;
+    margin-right: 25px;
 }
 .logoweizi{
     width: 155px;
     height: 35px;
     background-image: url(../img/logo1.png);
-    background-size: 100%;
+    background-size: 150px;
     background-repeat: no-repeat;
     position: absolute;
-    top: 2vw;
+    top: 15.5px;
     left: 35px;
 }
 
 .div1 {
+    margin: 0 auto;
     width: 96.5%;
-    padding-bottom: 105px;
+    padding-bottom: 180px;
     height: auto;
     background-image: url(../img/16-bg-gezi@2x.png);
     background-position: top;
     background-repeat: no-repeat;
-    background-size: 120%;
+    background-size: 1200px;
     background-color: #ffffff;
     border-radius: 5px;
-    margin: 0 auto;
 }
-@font-face {
-    src:url("../lib/font/YouSheBiaoTiHei-2.ttf");
-    font-family: "shiyanfont";
-}
+
 .shiyanfont1{
     position: absolute;
-    width:380px;
-    height:18px;
-    font-size:24px;
+    padding: 5px;
     font-family:shiyanfont;
+    font-size:24px;
     font-weight:400;
+    width:415px;
+    height:31.5px;
     color:#ffffff;
     line-height:23px;
     left: 200px;
-    top: 2.5vw;
+    top: 15.5px;
 }
 .shiyanfont2{
     height:18px;
-    font-size:24px;
     font-family:shiyanfont;
     font-weight:400;
+    font-size:24px;
     color:rgba(102,102,102,1);
     line-height:23px;
     padding-top: 48.5px;
@@ -84,40 +89,44 @@
 }
 #div1imgdownload{
     position: absolute;
-    width: 4.93vw;
-    height: 4.19vw;
+    width: 30px;
+    height: 25.5px;
     background-repeat: no-repeat;
     background-image: url(../img/15-btn-download@2x.png);
     background-position: center;
-    background-size: 2.87vw;
-    left: 87.23vw;
-    top: 11.34vw;
+    background-size: 30px;
+    right: 65px;
+    top: 103.5px;
     z-index: 2;
 }
 
 .div11{
+    width: 698.5px;
     position: relative;
-    left: 8.223684210526317vw;
-    width: 70%;
-    margin-top: 4.5vw;
+    left: 10vw;
+    margin-top: 18px;
+    height: 58.5px;
 }
 .div12{
+    width: 698.5px;
     position: relative;
-    left: 8.22vw;
-    width: 70%;
-    margin-top: 3.5vw;
+    left: 10vw;
+    margin-top: 0px;
+    height: 58.5px;
 }
 .div13{
+    width: 698.5px;
     position: relative;
-    left: 8.22vw;
-    width: 70%;
-    margin-top: 3.5vw;
+    left: 10vw;
+    margin-top: 45px;
+    height: auto;
 }
 .div14{
+    width: 698.5px;
     position: relative;
-    left: 8.223684210526317vw;
-    width: 70%;
-    margin-top: 3.5vw;
+    left: 10vw;
+    margin-top: 28px;
+    height: 58.5px;
 }
 
 .div111{
@@ -138,32 +147,45 @@
 
 }
 .div13font1{
+    margin-top: 24.5px;
     font-size: 14px;
-    margin-top: 23.5px;
+    font-weight: 400;
+    color: rgba(52,52,52,1);
+    line-height: 14px;
 }
 .div13font2{
-    font-size: 14px;
     margin-top: 24.5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(52,52,52,1);
+    line-height: 14px;
 }
 .div13font3{
-    font-size: 14px;
     margin-top: 24.5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(52,52,52,1);
+    line-height: 14px;
 }
 .div13font4{
-    font-size: 14px;
     margin-top: 24.5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(52,52,52,1);
+    line-height: 14px;
 }
 .div13tb1{
+    font-size: 15px;
     margin-left: 12px;
-    width: 65vw;
-    height: 100px;
+    width: 720px;
+    height: 91px;
     border: 1px solid;
     border-radius: 4px;
     overflow: hidden;
 }
 .div13tb2{
     margin-left: 12px;
-    width: 65vw;
+    width: 720px;
     height: 60px;
     border: 1px solid;
     border-radius: 4px;
@@ -172,7 +194,7 @@
 }
 .div13tb3{
     margin-left: 12px;
-    width: 65vw;
+    width: 720px;
     height: 370px;
     border: 1px solid;
     border-radius: 4px;
@@ -181,7 +203,7 @@
 }
 .div13tb4{
     margin-left: 12px;
-    width: 65vw;
+    width: 720px;
     height: 60px;
     border: 1px solid;
     border-radius: 4px;
@@ -189,36 +211,39 @@
     margin-top: 19.5px;
 }
 .div13tb1td1{
-    font-size: 12px;
+    font-size: 14px;
     border:0px;
     text-align: left;
     padding-left: 25px;
 }
 .div13tb2td1font{
-    width: 1%;
+    font-size: 14px;
+    font-weight:400;
+    color:rgba(38,38,78,1);
+    width: 10px;
     border-top: 0px;
     border-left: 0px;
     border-bottom: 0px;
 }
 .div13tb1fontsize{
-    font-size: 15px;
+
     border-top: 0px;
     border-left: 0px;
 }
 .div13tb1fontsize1{
-    font-size: 15px;
+
     border-top: 0px;
     border-left: 0px;
     border-bottom: 0px;
 }
 .div13tb1fontsize12{
-    font-size: 15px;
+
     border-right: 0px;
     border-left: 0px;
     border-top: 0px;
 }
 .div13tb1fontsize13{
-    font-size: 15px;
+
     border-right: 0px;
     border-left: 0px;
     border-bottom: 0px;
@@ -233,8 +258,8 @@
     border-left: 0px;
 }
 .div13tb3td11{
-    width: 1%;
-    height: 6%;
+    width: 10px;
+    height: 60px;
     background-color: #5C6C91;
     color: #ffffff;
     border-top: 0px;
@@ -242,24 +267,24 @@
     border-bottom: 0px;
 }
 .div13tb3td2{
-    width: 12%;
+    width: 40px;
     border-top: 0px;
     border-left: 0px;
 }
 .div13tb3td21{
-    width: 12%;
+    width: 40px;
     border-top: 0px;
     border-left: 0px;
     border-bottom: 0px;
 }
 .div13tb3td3{
-    width: 5%;
+    width: 30px;
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
 }
 .div13tb3td31{
-    width: 5%;
+    width: 30px;
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
@@ -267,13 +292,11 @@
 }
 tr td,th{
     text-align: center;
-    font-size: 14px;
     border:1px solid black;
-    width: 4%;
+    width: 45px;
     color: #25264E;
 }
 .tdfont{
-    font-size: 9px;
     padding-top: 13.5px;
     vertical-align: baseline;
 }
@@ -283,61 +306,47 @@ tr td,th{
   }
 
 .div11img1{
-    width: 6.74vw;
-    height: 6.74vw;
+    display :block;
+    width: 46.5px;
+    height: 46.5px;
     position: absolute;
-    background-image: url(../img/15-icon-1@2x.png);
-    background-size: 4.76vw;
+    background-size: 52px;
     background-repeat: no-repeat;
-    top: -2.79vw;
-    left: 1.233vw;
 }
 .div11img2{
-    width: 4vw;
-    height: 4vw;
+    display :block;
+    width: 33.5px;
+    height: 33.5px;
     position: absolute;
-    background-image: url(../img/15-icon-2@2x.png);
-    background-size: 3.2vw;
+    background-size: 37px;
     background-repeat: no-repeat;
-    top: -2.3vw;
-    left: 1.6vw;
-}
-.div11img3{
-    width: 4vw;
-    height: 4vw;
-    position: absolute;
-    background-image: url(../img/15-icon-3@2x.png);
-    background-size: 3.2vw;
-    background-repeat: no-repeat;
-    top: -2.3vw;
-    left: 1.6vw;
-}
-.div11img4{
-    width: 4vw;
-    height: 4vw;
-    position: absolute;
-    background-image: url(../img/15-icon-4@2x.png);
-    background-size: 3.2vw;
-    background-repeat: no-repeat;
-    top: -2.3vw;
-    left: 1.6vw;
+    top: 6px;
+    left: 4px;
 }
 
 .div11font{
     position: absolute;
-    font-size: 1.3vw;
-    left: 6vw;
-    top: -2vw;
+    left: 49.5px;
+    top: 12px;
+    font-size:16px;
+    font-weight:400;
+    color:rgba(52,52,52,1);
 }
 .div12font{
     position: absolute;
-    font-size: 1.3vw;
-    left: 6vw;
-    top: -2vw;
+    left: 49.5px;
+    top: 12px;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(52,52,52,1);
 }
 .div21font{
-    font-size: 0.8vw;
-    padding-left: 10%;
+    font-size:9px;
+    font-weight:400;
+    color:rgba(52,52,52,1);
+    line-height:14px;
+    padding-left: 50px;
+    padding-top: 35px;
     white-space: nowrap;
 }
 .div2win{
@@ -347,42 +356,47 @@ tr td,th{
     resize:none;
     }
 .layui-textarea{
-    width: 68vw;
+    width: 780px;
 }
 
 .div1btn{
     position: relative;
-    left: 42vw;
-    width: 16%;
+    left: 420px;
+    width: 160px;
     bottom: 80px;
 }
 .layui-btn1 {
     border-radius: 4px;
-    height: 2.7vw;
-    line-height: 2.3vw;
-    width: 16vw;
+    height: 30px;
+    line-height: 0px;
+    width: 145px;
     background-image: url(../img/15-btn-submit@2x.png);
     background-position: center;
-    background-size: 150% 150%;
+    background-size: 150px 40px;
     background-repeat: no-repeat;
 }
 .layui-btn2 {
-    height: 2vw;
-    line-height: 0vw;
-    width: 8vw;
+    font-size: 12px;
+    height:20px;
+    line-height: 0px;
+    width: 85px;
     background-color: #ffffff;
     background-position: center;
-    border-radius: 0.5vw;
+    border-radius: 8px;
 }
 .navfont{
-    font-size: 1vw;
+
     color: #6969EF;
 }
 .font{
-    font-size: 1.2vw;
-    color: #ffffff;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(236,236,236,1);
+    line-height: 23px;
 }
 .border{
+    width: 745.5px;
+    height: 85px;
     border-color: #000000;
     border-radius: 4px;
 }
@@ -390,16 +404,9 @@ tr td,th{
     border-color: #000000;
 }
 .layui-input-block{
-    margin-left: 6vw;
+    margin-left: 50px;
     min-height: 36px;
-}
-.box1{
-    background-image: url(../img/8-output-right@2x.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-    height: 100%;
-    position: absolute;
+    margin-top: 35px;
 }
 .box2 {
     background-image: url(../img/16-bg@2x.png);
@@ -433,7 +440,7 @@ tr td,th{
 
         <div class="div11">
             <div class="div111">
-            <div class="div11img1"></div>
+             <img class="div11img1" src="data:image/png;base64,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">
             <div class="div11font"><span>实验名称</span></div>
             </div>
             <div class="div21font">
@@ -443,21 +450,22 @@ tr td,th{
         
         <div class="div12">
             <div class="div111">
-            <div class="div11img2"></div>
+             <img class="div11img2" src="data:image/png;base64,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">
             <div class="div12font"><span>实验原理</span></div>
             </div>
             <div class="div21font">
                 <p class="ex-principle">
-                    金融科技背景下智能投顾市场发展潜力巨大，对复合型高层次金融专业人才 需求日益迫切。本实验项目高度模拟了智能投顾平台的核心流程与功能，为学生提供了深度学习金融科技创新应 <br>
-                    用的良好平台。实验帮助学生综合运用现代投资组合理论（MPT)、数据分析、Python等技术，为虚拟的不同偏好的投资者进行风险评估和客户画像，推送以中国 ETF 为标的的定制化资产<br>
-                    组合配置方案和动态优化建议，掌握金融科技最具代表意义的智能投顾平台的虚拟仿真运作原理，为步入金融科技工作岗位奠定坚实的理论功底，积累丰富的实战经验。
+                    金融科技背景下智能投顾市场发展潜力巨大，对复合型高层次金融专业人才 需求日益迫切。本实验项目高度模拟了智能投顾平台的核心流程与功能，<br>
+                    为学生提供了深度学习金融科技创新应用的良好平台。实验帮助学生综合运用现代投资组合理论（MPT)、数据分析、Python等技术，为虚拟的不同偏好的<br>
+                    投资者进行风险评估和客户画像，推送以中国 ETF 为标的的定制化资产组合配置方案和动态优化建议，掌握金融科技最具代表意义的智能投顾平台的虚拟仿真<br>
+                    运作原理，为步入金融科技工作岗位奠定坚实的理论功底，积累丰富的实战经验。
                 </p>
             </div>
         </div>
 
         <div class="div13">
             <div class="div111">
-            <div class="div11img3"></div>
+            <img class="div11img2" src="data:image/png;base64,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">
             <div class="div12font"><span>实验环节及得分</span></div>
             </div>
             <div class="div21font">
@@ -509,7 +517,7 @@ tr td,th{
                     <div class="div132">
                         <table class="div13tb2">
                             <tr>
-                                <td class="div13tb2td1font">平测结果</td>
+                                <td class="div13tb2td1font">评测结果</td>
                                 <td class="div13tb1td1" id="User_investment_type">保守型/相对保守型/稳健型/相对积极型/积极型</td>
                             </tr>
                         </table>
@@ -534,7 +542,7 @@ tr td,th{
 
         <div class="div14">
             <div class="div111">
-            <div class="div11img4"></div>
+             <img class="div11img2" src="data:image/png;base64,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">
             <div class="div12font"><span>心得体会</span></div>
             </div>
 
@@ -561,15 +569,7 @@ tr td,th{
     <script type="text/javascript">
     $(function(){
     	$(document).on('click','#div1imgdownload',function(){
-        	var pdf = new jsPDF('p','pt','a4');
-	        pdf.internal.scaleFactor = 1;  //可以调整缩放比例
-	        var options = {
-	            //pagesplit: true //分页
-	            pagesplit: false//不分页
-	        };
-        	pdf.addHTML($('.div1').get(0),0,0,options,function() {
-	            pdf.save($('.header .h1Title').text()+'.pdf');
-	        });
+        	window.location.href='http://py.91bbjia.com/uploads/template.pdf'
         })
     })
 </script>
@@ -598,7 +598,7 @@ tr td,th{
     //获取临时userid
     const temporary_user = JSON.parse(localStorage.getItem("temporary_user"));
     //获取用户投资类型
-    const user_investment_type = JSON.parse(localStorage.getItem("Grades"));
+    const user_investment_type = JSON.parse(localStorage.getItem("aGrades"));
     $("#User_investment_type").html(String(user_investment_type["grade"]));
     // 获取图片
     $.ajax({
@@ -672,7 +672,7 @@ tr td,th{
                                     <img src="http://47.97.205.240:8800`+data.datas[4].code+`" style="width: 100%;">
                                 </td>
                                 <td class="div13tb3td2">
-                                    <img src="http://47.97.205.240:8800`+data.image[0]+`" style="width: 100%;">
+                                    <img src="http://47.97.205.240:8800`+data2.datas[4].print+`" style="width: 100%;">
                                 </td>
                                 <td class="div13tb3td3">`+data.datas[4].grade+`</td>
                             </tr>
@@ -725,25 +725,436 @@ tr td,th{
     const data2 = JSON.parse(localStorage.getItem("data1"));
     const Total_score1 = JSON.parse(localStorage.getItem("Total_score"));
     $('button:button[id="tijiao"]').click(function(){ 
-        var utextinput = document.getElementById("utext");
-        var text = utextinput.value; 
-        let data={principle : $('.ex-principle').text(),//实验原理
-                  objective : $('.ex-purpose').text(),//实验目的
-                  answer:JSON.parse(localStorage.getItem('test_value')),//快问快答
-                  assessment : $('#User_investment_type').text(),//风险评测
-                  procedures:data2,//获取实验步骤
-                  grade : String(Total_score1),//实验成绩
-                  realize : String(text)//心得体会
-                }
-
+        console.log($("#utext").val())
+        $("#utext").html($("#utext").val())
         $.ajax({
         url: 'http://py.91bbjia.com/project/log/attachment/upload',
         headers: {'Content-Type': 'multipart/form-data'},
         type: 'POST',
+        header:{
+            'content-type':"application/json"
+        },
+        
         // dataType:"json",
-        data:data,
+        data:{
+            xjwt:"AAABdBB0UDYCAAAAAAABiDA%3d.Euj%2bpjdOBwh5mEadwX9KGDK%2bcyUM2XJd%2b5pPbpFzpUyxBtj6qZj7t0uZT%2bzLKr7yOC7wOUH%2bZOmy9ZTrTgeOZAuOcT5JrYwhfq0w0j5ojVaFXtLlTi3mwsPWM5E0k1C6fzeOU9TSHQRtWOfxaAiiwOu2v97rG7DrI%2b2oxdWZ7OL4obYK9kVi0cIe%2fvdEKviKLF2Y4uyjuxURg5f5x46JaSwnCPGScyWWhFnZTiwDoowFIIoMnyK1M3dRgfvG5NFeEg6Asu7f0xWJid1UB%2b3dS8H8LSD%2flZDu5exUNUIlovFvaBVulnP%2bXEibgs3cKGkE.bj%2b%2fxTqv74dOUD5QrTH3C2i4XzcR%2bvZxgLhFVe5M8Yc%3d",
+            html:'<html>'+'<head>'+
+            `<style>
+* {
+    font-family: Droid;
+}
+*{
+    font-family: msyh;
+}
+#nav {
+    width: 100%;
+    height: 62.5px;
+}
+
+#but1 {
+    float: right;
+    margin-right: 31.5px;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+
+#but1 a {
+    color: #6969EF;
+}
+#help,
+#friends {
+    width: 25px;
+    height: 25px;
+    border: none;
+    color: #6969EF;
+    background-color: white;
+    border-radius: 15px;
+    float: right;
+    margin-right: 25px;
+}
+.logoweizi{
+    width: 155px;
+    height: 35px;
+    background-image: url(../img/logo1.png);
+    background-size: 150px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 15.5px;
+    left: 35px;
+}
+
+.div1 {
+    margin: 0 auto;
+    width: 630px;
+    padding-bottom: 180px;
+    height: auto;
+    background-image: url(../img/16-bg-gezi@2x.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 1200px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.shiyanfont1{
+    position: absolute;
+    padding: 5px;
+    /* font-family:shiyanfont; */
+    font-size:24px;
+    font-weight:400;
+    width:415px;
+    height:31.5px;
+    color:#ffffff;
+    line-height:23px;
+    left: 200px;
+    top: 15.5px;
+}
+.shiyanfont2{
+    position: relative;
+    height: 18px;
+    width: 100%;
+    font-size: 24px;
+    color: rgba(102,102,102,1);
+    line-height: 23px;
+    padding-top: 48.5px;
+    left:315px;
+}
+#div1imgdownload{
+    position: absolute;
+    width: 30px;
+    height: 25.5px;
+    background-repeat: no-repeat;
+    background-image: url(../img/15-btn-download@2x.png);
+    background-position: center;
+    background-size: 30px;
+    right: 65px;
+    top: 103.5px;
+    z-index: 2;
+}
+
+.div11{
+    width: 698.5px;
+    position: relative;
+    margin-top: 18px;
+    height: 58.5px;
+}
+.div12{
+    width: 698.5px;
+    position: relative;
+    margin-top: 0px;
+    height: 58.5px;
+}
+.div13{
+    width: 698.5px;
+    position: relative;
+    margin-top: 48px;
+    height: auto;
+}
+.div14{
+    width: 698.5px;
+    position: relative;
+    margin-top: 28px;
+    height: 58.5px;
+}
+
+.div111{
+    height: 1px;
+    position: relative;
+}
+
+.div131{
+    margin-top: 19.5px;
+}
+.div132{
+
+}
+.div133{
+
+}
+.div134{
+
+}
+.div13font1{
+    margin-top: 24.5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(52,52,52,1);
+    line-height: 14px;
+}
+.div13font2{
+    margin-top: 24.5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(52,52,52,1);
+    line-height: 14px;
+}
+.div13font3{
+    margin-top: 24.5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(52,52,52,1);
+    line-height: 14px;
+}
+.div13font4{
+    margin-top: 24.5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(52,52,52,1);
+    line-height: 14px;
+}
+.div13tb1{
+    font-size: 15px;
+    margin-left: 12px;
+    width: 610px;
+    height: 45px;
+    border: 1px solid;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.div13tb2{
+    margin-left: 12px;
+    width: 610px;
+    height: 20px;
+    border: 1px solid;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 19.5px;
+}
+.div13tb3{
+    margin-left: 12px;
+    width: 610px;
+    height: auto;
+    border: 1px solid;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 19.5px;
+}
+.div13tb4{
+    margin-left: 12px;
+    width: 610px;
+    height: 23px;
+    border: 1px solid;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 19.5px;
+}
+.div13tb1td1{
+    font-size: 14px;
+    border:0px;
+    text-align: left;
+    padding-left: 25px;
+}
+.div13tb2td1font{
+    font-size: 14px;
+    font-weight:400;
+    color:rgba(38,38,78,1);
+    width: 10px;
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+}
+.div13tb1fontsize{
+
+    border-top: 0px;
+    border-left: 0px;
+}
+.div13tb1fontsize1{
+
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+}
+.div13tb1fontsize12{
+
+    border-right: 0px;
+    border-left: 0px;
+    border-top: 0px;
+}
+.div13tb1fontsize13{
+
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+    border-top: 0px;
+}
+.div13tb3td1{
+    width: 1%;
+    height: 6%;
+    background-color: #5C6C91;
+    color: #ffffff;
+    border-top: 0px;
+    border-left: 0px;
+}
+.div13tb3td11{
+    width: 10px;
+    height: 60px;
+    background-color: #5C6C91;
+    color: #ffffff;
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+}
+.div13tb3td2{
+    width: 40px;
+    border-top: 0px;
+    border-left: 0px;
+}
+.div13tb3td21{
+    width: 40px;
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+}
+.div13tb3td3{
+    width: 30px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+.div13tb3td31{
+    width: 30px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+}
+tr td,th{
+    text-align: center;
+    border:1px solid black;
+    width: 25px;
+    color: #25264E;
+}
+.tdfont{
+
+    padding-top: 13.5px;
+    vertical-align: baseline;
+}
+  table{
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+.div11img1{
+    display :block;
+    width: 46.5px;
+    height: 46.5px;
+    position: absolute;
+    background-size: 52px;
+    background-repeat: no-repeat;
+    top:6px;
+}
+.div11img2{
+    display :block;
+    width: 33.5px;
+    height: 33.5px;
+    position: absolute;
+    background-size: 37px;
+    background-repeat: no-repeat;
+    top: 10px;
+    left: 4px;
+}
+.div11font{
+    position: absolute;
+    left: 49.5px;
+    top: 12px;
+    font-size:16px;
+    font-weight:400;
+    color:rgba(52,52,52,1);
+}
+.div12font{
+    position: absolute;
+    left: 49.5px;
+    top: 12px;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(52,52,52,1);
+}
+.div21font{
+    font-size:9px;
+    font-weight:400;
+    color:rgba(52,52,52,1);
+    line-height:14px;
+    padding-left: 50px;
+    padding-top: 15px;
+    white-space: nowrap;
+}
+.div2win{
+
+}
+.layui-textarea{
+    resize:none;
+    }
+.layui-textarea{
+    width: 780px;
+}
+
+.div1btn{
+    position: relative;
+    left: 420px;
+    width: 160px;
+    bottom: 80px;
+}
+.layui-btn1 {
+    border-radius: 4px;
+    height: 30px;
+    line-height: 0px;
+    width: 145px;
+    background-image: url(../img/15-btn-submit@2x.png);
+    background-position: center;
+    background-size: 150px 40px;
+    background-repeat: no-repeat;
+}
+.layui-btn2 {
+    font-size: 12px;
+    height:20px;
+    line-height: 0px;
+    width: 85px;
+    background-color: #ffffff;
+    background-position: center;
+    border-radius: 8px;
+}
+.navfont{
+
+    color: #6969EF;
+}
+.font{
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(236,236,236,1);
+    line-height: 23px;
+}
+.border{
+    width: 620.5px;
+    height: 85px;
+    border-color: #000000;
+    border-radius: 4px;
+}
+#layui-input:hover{
+    border-color: #000000;
+}
+.layui-input-block{
+    margin-left: 50px;
+    min-height: 36px;
+    margin-top: 45px;
+}
+.box2 {
+    background-image: url(../img/16-bg@2x.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+    </style>`
+            +'</head>'+
+            '<body style="width:960px;">'
+            +'<div>'
+            +$('.div1').html()+'</div>'
+            +'</body>'
+            +'</html>'
+        },
         success: function(data){
             layer.alert("您已提交成功")
+
         }, error: function(res){
             layer.alert("提交失败")
         }
@@ -755,6 +1166,5 @@ tr td,th{
     });
     
 </script>
-
 
 </html>
