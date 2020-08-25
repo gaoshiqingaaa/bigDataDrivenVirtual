@@ -201,6 +201,54 @@
     overflow: hidden;
     margin-top: 19.5px;
 }
+.div13tb3img0c{
+    width: 260px;
+    height: 345px;
+}
+.div13tb3img0p{
+    width: 200px; 
+    height:100px;
+}
+.div13tb3img1c{
+    width: 260px;
+    height: 30px;
+}
+.div13tb3img1p{
+    width: 230px;
+    height: 75px;
+}
+.div13tb3img2c{
+    width: 260px;
+    height: 30px;
+}
+.div13tb3img2p{
+    width: 230px;
+    height: 90px;
+}
+.div13tb3img3c{
+    width: 260px;
+    height: 30px;
+}
+.div13tb3img3p{
+    width: 200px; 
+    height:100px;
+}
+.div13tb3img4c{
+    width: 260px;
+    height: 350px;
+}
+.div13tb3img4p{
+    width: 230px;
+    height: 180px;
+}
+.div13tb3img5c{
+    width: 230px;
+    height: 190px;
+}
+.div13tb3img5p{
+    width: 230px;
+    height: 100px;
+}
 .div13tb4{
     margin-left: 12px;
     width: 720px;
@@ -608,10 +656,11 @@ tr td,th{
     url: 'http://47.97.205.240:8800/result',
     type: 'POST',
     dataType: 'json',
-    data:{"user":temporary_user},
-    // data:{"user":"b1a438cf-85c3-4d04-bec4-02a37ea2588d"},
+    // data:{"user":temporary_user},
+    data:{"user":"f41a5cf9-c826-485a-b95f-f944b8823977"},
     success: function(data){
         localStorage.setItem("data1", JSON.stringify(data));
+        console.log(data.datas[0].code)
         // 成功处理逻辑
         // 展示代码&代码运行结果的图片
         html=(`
@@ -625,10 +674,10 @@ tr td,th{
                             <tr>
                                 <td class="div13tb3td1 tdfont">`+data.datas[0].name+`</td>
                                 <td class="div13tb3td2">
-                                    <img src="http://47.97.205.240:8800`+data.datas[0].code+`" style="width: 100%;">
+                                    <img src="`+data.datas[0].code+`" class="div13tb3img0c">
                                 </td>
                                 <td class="div13tb3td2">
-                                    <img src="http://47.97.205.240:8800`+data.datas[0].print+`" style="width: 100%;">
+                                    <img src="`+data.datas[0].print+`" class="div13tb3img0p">
                                 </td>
                                 <td class="div13tb3td3">`+data.datas[0].grade+`</td>
                             </tr>
@@ -636,10 +685,10 @@ tr td,th{
                             <tr>
                                 <td class="div13tb3td1 tdfont">`+data.datas[1].name+`</td>
                                 <td class="div13tb3td2">
-                                    <img src="http://47.97.205.240:8800`+data.datas[1].code+`" style="width: 100%;">
+                                    <img src="`+data.datas[1].code+`" class="div13tb3img1c">
                                 </td>
                                 <td class="div13tb3td2">
-                                    <img src="http://47.97.205.240:8800`+data.datas[1].print+`" style="width: 100%;">
+                                    <img src="`+data.datas[1].print+`" class="div13tb3img1p">
                                 </td>
                                 <td class="div13tb3td3">`+data.datas[1].grade+`</td>
                             </tr>
@@ -647,21 +696,21 @@ tr td,th{
                             <tr>
                                 <td class="div13tb3td1 tdfont">`+data.datas[2].name+`</td>
                                 <td class="div13tb3td2">
-                                    <img src="http://47.97.205.240:8800`+data.datas[2].code+`" style="width: 100%;">
+                                    <img src="`+data.datas[2].code+`" class="div13tb3img2c">
                                 </td>
                                 <td class="div13tb3td2">
-                                    <img src="http://47.97.205.240:8800`+data.datas[2].print+`" style="width: 100%;">
+                                    <img src="`+data.datas[2].print+`" class="div13tb3img2p">
                                 </td>
                                 <td class="div13tb3td3">`+data.datas[2].grade+`</td>
                             </tr>
 
-                            <tr>
+                            <tr> 
                                 <td class="div13tb3td1 tdfont">`+data.datas[3].name+`</td>
                                 <td class="div13tb3td2">
-                                    <img src="http://47.97.205.240:8800`+data.datas[3].code+`" style="width: 100%;">
+                                    <img src="`+data.datas[3].code+`" class="div13tb3img3c">
                                 </td>
                                 <td class="div13tb3td2">
-                                    <img src="http://47.97.205.240:8800`+data.datas[3].print+`" style="width: 100%;">
+                                    <img src="`+data.datas[3].print+`" class="div13tb3img3p">
                                 </td>
                                 <td class="div13tb3td3">`+data.datas[3].grade+`</td>
                             </tr>
@@ -669,10 +718,10 @@ tr td,th{
                             <tr>
                                 <td class="div13tb3td1 tdfont">`+data.datas[4].name+`</td>
                                 <td class="div13tb3td2">
-                                    <img src="http://47.97.205.240:8800`+data.datas[4].code+`" style="width: 100%;">
+                                    <img src="`+data.datas[4].code+`" class="div13tb3img4c">
                                 </td>
                                 <td class="div13tb3td2">
-                                    <img src="http://47.97.205.240:8800`+data.datas[4].print+`" style="width: 100%;">
+                                    <img src="`+data.image[0]+`" class="div13tb3img4p">
                                 </td>
                                 <td class="div13tb3td3">`+data.datas[4].grade+`</td>
                             </tr>
@@ -680,10 +729,10 @@ tr td,th{
                             <tr>
                                 <td class="div13tb3td1 tdfont">`+data.datas[5].name+`</td>
                                 <td class="div13tb3td2">
-                                    <img src="http://47.97.205.240:8800`+data.datas[5].code+`" style="width: 100%;">
+                                    <img src="`+data.datas[5].code+`" class="div13tb3img5c">
                                 </td>
                                 <td class="div13tb3td2">
-                                    <img src="http://47.97.205.240:8800`+data.datas[5].print+`" style="width: 100%;">
+                                    <img src="`+data.datas[5].print+`" class="div13tb3img5p">
                                 </td>
                                 <td class="div13tb3td3">`+data.datas[5].grade+`</td>
                             </tr>
@@ -729,7 +778,6 @@ tr td,th{
         $("#utext").html($("#utext").val())
         $.ajax({
         url: 'http://py.91bbjia.com/project/log/attachment/upload',
-        headers: {'Content-Type': 'multipart/form-data'},
         type: 'POST',
         header:{
             'content-type':"application/json"
@@ -928,6 +976,54 @@ tr td,th{
     border-radius: 4px;
     overflow: hidden;
     margin-top: 19.5px;
+}
+.div13tb3img0c{
+    width: 260px;
+    height: 345px;
+}
+.div13tb3img0p{
+    width: 200px; 
+    height:100px;
+}
+.div13tb3img1c{
+    width: 260px;
+    height: 30px;
+}
+.div13tb3img1p{
+    width: 230px;
+    height: 75px;
+}
+.div13tb3img2c{
+    width: 260px;
+    height: 30px;
+}
+.div13tb3img2p{
+    width: 230px;
+    height: 90px;
+}
+.div13tb3img3c{
+    width: 260px;
+    height: 30px;
+}
+.div13tb3img3p{
+    width: 200px; 
+    height:100px;
+}
+.div13tb3img4c{
+    width: 260px;
+    height: 350px;
+}
+.div13tb3img4p{
+    width: 230px;
+    height: 180px;
+}
+.div13tb3img5c{
+    width: 230px;
+    height: 190px;
+}
+.div13tb3img5p{
+    width: 230px;
+    height: 100px;
 }
 .div13tb4{
     margin-left: 12px;
