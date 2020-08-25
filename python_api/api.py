@@ -15,6 +15,7 @@ from PIL import Image, ImageFont, ImageDraw
 from flask_log_request_id import RequestID, current_request_id
 from json import loads,dump, load
 from run_code import CalWeight
+import base64
 
 matplotlib.use('Agg')
 
@@ -34,7 +35,7 @@ def txt2image(txt, log_id, step):
         dr.text((0, hight), k, font=font, fill="black")
         hight += 20
     im.save('static/' + log_id + '_ima/' + step + '.jpg')
-    return log_id + '_ima/' + step + '.jpg'
+    return 'static/' + log_id + '_ima/' + step + '.jpg'
 
 
 app = f.Flask(__name__)
@@ -163,37 +164,30 @@ def get_result():
     result = {'datas': [], 'image': []}
     datas = []
     for i in range(len(file_list) // 2):
-        data = {'name': '', 'code': '', 'print': '', 'grade': ''}
-        data['name'] = name_code[str(i)]
-        data['grade'] = step_score[str(i)]
-        with open(stp_path + '/' + str(i) + '.py', 'r', encoding='utf-8') as stp_code:
-            data['code'] = f.url_for('static', filename=txt2image(stp_code.read(), log_id, str(i) + '.py'))
-        with open(stp_path + '/' + str(i) + '.txt', 'r', encoding='utf-8') as stp_print:
-            pri = stp_print.read()
-            data['print'] = f.url_for('static', filename=txt2image(pri, log_id, str(i) + '.txt'))
+        if i <= 5:
+            data = {'name': '', 'code': '', 'print': '', 'grade': ''}
+            data['name'] = name_code[str(i)]
+            if i == 5:  # 画图步骤不需要 i += 1
+                i += 1
+            data['grade'] = step_score[str(i)]
+            with open(stp_path + '/' + str(i) + '.py', 'r', encoding='utf-8') as stp_code:
+                path = txt2image(stp_code.read(), log_id, str(i) + '.py')
+                with open(path, 'rb') as fp:
+                    data['code'] = 'data:image/jpg;base64,' + str(base64.b64encode(fp.read()))[2: -1]
+            with open(stp_path + '/' + str(i) + '.txt', 'r', encoding='utf-8') as stp_print:
+                pri = stp_print.read()
+                path = txt2image(pri, log_id, str(i) + '.txt')
+                with open(path, 'rb') as fp:
+                    data['print'] = 'data:image/jpg;base64,' + str(base64.b64encode(fp.read()))[2: -1]
+        elif i == 6:
+            data = {'name': name_code[str(i)], 'leiji': step_score['leiji']}
         datas.append(data)
     result['datas'] = datas
-    # result = {'code': {}, 'print': {}, 'image': [], 'grade': {}}
-    # for i in file_list:
-    #     k = i.split('.')  # k[0] --> 数字 步骤
-    #     if 'py' == k[-1]:
-    #         with open(stp_path + '/' + i, 'r', encoding='utf-8') as stp_code:
-    #             result['code'][k[0]] = f.url_for('static', filename=txt2image(stp_code.read(), log_id, i))
-    #     if 'txt' == k[-1]:
-    #         with open(stp_path + '/' + i, 'r', encoding='utf-8') as stp_print:
-    #             pri = stp_print.read()
-    #             if pri.split('\n')[-1] != '':
-    #                 result['grade'][k[0]] = '0'
-    #             else:
-    #                 result['grade'][k[0]] = '10'
-    #             result['print'][k[0]] = f.url_for('static', filename=txt2image(pri, log_id, i))
     code_path = 'static/' + log_id
     ima_list = os.listdir(code_path)
     if ima_list != []:
         for i in ima_list:
             m = i.split('.')[0]
-            if m.isdigit():
-                result['grade'][m] = '10'
             result['image'].append(f.url_for('static', filename=log_id + '/' + i))
     return f.jsonify(result)
 
@@ -303,4 +297,4 @@ def initData():
 
 
 if __name__ == '__main__':
-    app.run(port=8800)
+    app.run('172.16.250.100', port=8800)
