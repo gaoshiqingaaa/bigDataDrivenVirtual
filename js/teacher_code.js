@@ -250,6 +250,11 @@ for (i = 0; i < 7; i++) {
     step_score[i] = 0
 }
 function isInputEmpty(code) {
+    if (isTeacher) {
+        if (current_page == 5 || current_page == 6) {
+            return false
+        }
+    }
     flag = true
     lines = code.split('\n')
     for (i = 0; i< lines.length; i++) {
@@ -285,10 +290,12 @@ $('.run-code').click(function(){
             result = data.result
             html = ''
             if (data.iserr == 0) {
-                if (current_page == 5){
-                    step_score[current_page] = 5
-                } else {
-                    step_score[current_page] = 10
+                if (!isTeacher) {
+                    if (current_page == 5){
+                        step_score[current_page] = 5
+                    } else {
+                        step_score[current_page] = 10
+                    }
                 }
                 for (i = 0; i < result.length; i++){
                     if (result[i][0].trim() != ''){
@@ -344,6 +351,9 @@ $('.run-code').click(function(){
                                         'color': 'white'
                                     })
                                     alertBtnArgs()
+                                    $('.layui-layer-btn').css({
+                                        'bottom': '4%',
+                                    })
                                     $('.layui-layer-iframe').css({'border-radius': '16px'})
                                 },
                             });
