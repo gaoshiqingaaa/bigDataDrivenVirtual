@@ -297,7 +297,6 @@ tr td,th{
     color: #25264E;
 }
 .tdfont{
-
     padding-top: 13.5px;
     vertical-align: baseline;
 }
@@ -609,7 +608,7 @@ tr td,th{
     url: 'http://47.97.205.240:8800/result',
     type: 'POST',
     dataType: 'json',
-    data:{"user":"15498d29-fb63-481a-9b5d-ca748f28aff4"},
+    data:{"user":temporary_user},
     // data:{"user":"b1a438cf-85c3-4d04-bec4-02a37ea2588d"},
     success: function(data){
         localStorage.setItem("data1", JSON.stringify(data));
@@ -730,6 +729,7 @@ tr td,th{
         $("#utext").html($("#utext").val())
         $.ajax({
         url: 'http://py.91bbjia.com/project/log/attachment/upload',
+        headers: {'Content-Type': 'multipart/form-data'},
         type: 'POST',
         header:{
             'content-type':"application/json"
