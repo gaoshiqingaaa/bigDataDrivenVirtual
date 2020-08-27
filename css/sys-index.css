@@ -286,3 +286,42 @@ input[type=file]:focus, input[type=checkbox]:focus, input[type=radio]:focus{
     outline: none;
 }
 
+#left-button{
+    float: left;
+    margin: 10px;
+    /* position: relative; */
+    background-image: url(../img/left.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    transform: translateY(50%);
+    width: 50px;
+    height: 50px;
+}
+
+#right-button{
+    float: right;
+    background-image: url(../img/right.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+    position: absolute;
+    margin: 10px;
+    top: 50%;
+    right: 5%;
+    transform: translateY(50%);
+    border-radius: 25px;
+    width: 50px;
+    height: 50px;
+    
+}
+
+#right-button:active{
+    background-image: url(../img/right2.png);
+}
+
+#left-button:active{
+    background-image: url(../img/left2.png);
+}

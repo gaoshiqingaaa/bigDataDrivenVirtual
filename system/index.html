@@ -67,6 +67,8 @@
                 <img src="../img/basis40.png" alt="图片加载失败" id="40" onclick="huantu(40)">
             </div>
             <div id="shitu">
+                <div id="left-button"></div>
+                <div id="right-button"></div>
                 <img src="../img/basis1.png" id="xiaoguo">
             </div>
         </div>
@@ -572,7 +574,31 @@
                 $('#xiaoguo').attr('src',URL)
             };
             
-            
+            //按钮切换幻灯片
+            $('#left-button').click(function() {
+                var src = $("#xiaoguo")[0].src;
+                src = src.slice(-6);
+                var pagnum = src.replace(/[^0-9]/ig,"");
+                if(pagnum > 1){
+                    pagnum = pagnum - 1;
+                    var URL = ("../img/basis"+pagnum+".png");
+                    $('#xiaoguo').attr('src',URL)
+                }else{
+                    console.log("超出索引！");
+                }
+            })
+            $('#right-button').click(function() {
+                var src = $("#xiaoguo")[0].src;
+                src = src.slice(-6);
+                var pagnum = src.replace(/[^0-9]/ig,"");
+                if(pagnum < 40){
+                    pagnum = parseInt(pagnum) + 1;
+                    var URL = ("../img/basis"+pagnum+".png");
+                    $('#xiaoguo').attr('src',URL)
+                }else{
+                    console.log("超出索引！");
+                }
+            })
         </script>
     </body>
 </html>
