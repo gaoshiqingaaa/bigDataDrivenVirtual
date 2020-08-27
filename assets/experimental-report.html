@@ -175,6 +175,7 @@
     line-height: 14px;
 }
 .div13tb1{
+    background: #ffffff;
     font-size: 15px;
     margin-left: 12px;
     width: 720px;
@@ -184,6 +185,7 @@
     overflow: hidden;
 }
 .div13tb2{
+    background: #ffffff;
     margin-left: 12px;
     width: 720px;
     height: 60px;
@@ -200,6 +202,17 @@
     border-radius: 4px;
     overflow: hidden;
     margin-top: 19.5px;
+    background: #ffffff;
+}
+.div13tb4{
+    margin-left: 12px;
+    width: 720px;
+    height: 60px;
+    border: 1px solid;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 19.5px;
+    background: #ffffff;
 }
 .div13tb3img0c{
     width: 260px;
@@ -249,15 +262,6 @@
     width: 230px;
     height: 100px;
 }
-.div13tb4{
-    margin-left: 12px;
-    width: 720px;
-    height: 60px;
-    border: 1px solid;
-    border-radius: 4px;
-    overflow: hidden;
-    margin-top: 19.5px;
-}
 .div13tb1td1{
     font-size: 14px;
     border:0px;
@@ -300,21 +304,22 @@
 .div13tb3td1{
     width: 1%;
     height: 6%;
-    background-color: #5C6C91;
-    color: #ffffff;
+    color: #000000;
     border-top: 0px;
     border-left: 0px;
+    padding: 10px;
+    font-weight:bold;
 }
 .div13tb3td11{
     width: 10px;
     height: 60px;
-    background-color: #5C6C91;
-    color: #ffffff;
     border-top: 0px;
     border-left: 0px;
     border-bottom: 0px;
+    font-weight: bold;
 }
 .div13tb3td2{
+    font-weight:bold;
     width: 40px;
     border-top: 0px;
     border-left: 0px;
@@ -330,6 +335,7 @@
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
+    font-weight:bold;
 }
 .div13tb3td31{
     width: 30px;
@@ -527,7 +533,7 @@ tr td,th{
             </div>
             <div class="div21font">
 
-               <p class="div13font1">1、快问快答</p>
+               <p class="div13font1">1、快问快答 (每题1分，共15分)</p>
                 <div class="div131">
                     <table class="div13tb1">
                         <tr>
@@ -580,14 +586,14 @@ tr td,th{
                         </table>
                     </div>
 
-                <p class="div13font3">3.实验步骤</p>
+                <p class="div13font3">3.实验步骤 (共85分)</p>
                     <div class="div133">
                         <table class="div13tb3">
 
                         </table>
                     </div>
                 
-                <p class="div13font4">4、实验成绩</p>
+                <p class="div13font4">4、实验成绩 (共100分)</p>
                     <div class="div134">
                         <table class="div13tb4">
                             <td class="div13tb2td1font">总分</td>
@@ -656,7 +662,7 @@ tr td,th{
     const temporary_user = JSON.parse(localStorage.getItem("temporary_user"));
     //获取用户投资类型
     const user_investment_type = JSON.parse(localStorage.getItem("aGrades"));
-    $("#User_investment_type").html(String(user_investment_type["grade"]));
+    $("#User_investment_type").html(String(user_investment_type["grade"].slice(0,3)));
     // 获取图片
     $.ajax({
     /* url 地址可以是 /get-json/ 的方式
@@ -669,19 +675,19 @@ tr td,th{
     // data:{"user":"f41a5cf9-c826-485a-b95f-f944b8823977"},
     success: function(data){
         localStorage.setItem("data1", JSON.stringify(data));
-        console.log(data.datas[0].code)
+
         // 成功处理逻辑
         // 展示代码&代码运行结果的图片
         html=(`
                             <tr>
                                 <td class="div13tb3td1">实验步骤</td>
-                                <td class="div13tb3td2" style="background-color: #5C6C91; color: #FFFFFF;">代码</td>
-                                <td class="div13tb3td2" style="background-color: #5C6C91; color: #FFFFFF;">运行结果</td>
-                                <td class="div13tb3td3" style="background-color: #5C6C91; color: #FFFFFF;">得分</td>
+                                <td class="div13tb3td2" >代码</td>
+                                <td class="div13tb3td2" >运行结果</td>
+                                <td class="div13tb3td3" >得分</td>
                             </tr>
 
                             <tr>
-                                <td class="div13tb3td1 tdfont">`+data.datas[0].name+`</td>
+                                <td class="div13tb3td1 tdfont">`+data.datas[0].name+`<br>(10分)</td>
                                 <td class="div13tb3td2">
                                     <img src="`+data.datas[0].code+`" class="div13tb3img0c">
                                 </td>
@@ -692,7 +698,7 @@ tr td,th{
                             </tr>
                             
                             <tr>
-                                <td class="div13tb3td1 tdfont">`+data.datas[1].name+`</td>
+                                <td class="div13tb3td1 tdfont">`+data.datas[1].name+`<br>(10分)</td>
                                 <td class="div13tb3td2">
                                     <img src="`+data.datas[1].code+`" class="div13tb3img1c">
                                 </td>
@@ -703,7 +709,7 @@ tr td,th{
                             </tr>
                             
                             <tr>
-                                <td class="div13tb3td1 tdfont">`+data.datas[2].name+`</td>
+                                <td class="div13tb3td1 tdfont">`+data.datas[2].name+`<br>(10分)</td>
                                 <td class="div13tb3td2">
                                     <img src="`+data.datas[2].code+`" class="div13tb3img2c">
                                 </td>
@@ -714,7 +720,7 @@ tr td,th{
                             </tr>
 
                             <tr> 
-                                <td class="div13tb3td1 tdfont">`+data.datas[3].name+`</td>
+                                <td class="div13tb3td1 tdfont">`+data.datas[3].name+`<br>(10分)</td>
                                 <td class="div13tb3td2">
                                     <img src="`+data.datas[3].code+`" class="div13tb3img3c">
                                 </td>
@@ -725,7 +731,7 @@ tr td,th{
                             </tr>
 
                             <tr>
-                                <td class="div13tb3td1 tdfont">`+data.datas[4].name+`</td>
+                                <td class="div13tb3td1 tdfont">`+data.datas[4].name+`<br>(15分)</td>
                                 <td class="div13tb3td2">
                                     <img src="`+data.datas[4].code+`" class="div13tb3img4c">
                                 </td>
@@ -736,7 +742,7 @@ tr td,th{
                             </tr>
 
                             <tr>
-                                <td class="div13tb3td1 tdfont">`+data.datas[5].name+`</td>
+                                <td class="div13tb3td1 tdfont">`+data.datas[5].name+`<br>(10分)</td>
                                 <td class="div13tb3td2">
                                     <img src="`+data.datas[5].code+`" class="div13tb3img5c">
                                 </td>
@@ -747,7 +753,7 @@ tr td,th{
                             </tr>
 
                             <tr>
-                                <td class="div13tb3td11 tdfont">`+data.datas[6].name+`</td>
+                                <td class="div13tb3td11 tdfont">`+data.datas[6].name+`<br>(20分)</td>
                                 <td class="div13tb3td21">
                                     `+data.datas[6].leiji+`
                                 </td>
@@ -783,7 +789,7 @@ tr td,th{
     const data2 = JSON.parse(localStorage.getItem("data1"));
     const Total_score1 = JSON.parse(localStorage.getItem("Total_score"));
     $('button:button[id="tijiao"]').click(function(){ 
-        console.log($("#utext").val())
+
         $("#utext").html($("#utext").val())
         $.ajax({
         url: 'http://py.91bbjia.com/project/log/attachment/upload',
@@ -1083,23 +1089,25 @@ tr td,th{
     border-top: 0px;
 }
 .div13tb3td1{
+    font-weight: bold;
     width: 1%;
     height: 6%;
-    background-color: #5C6C91;
-    color: #ffffff;
+    color: #000000;
     border-top: 0px;
     border-left: 0px;
 }
 .div13tb3td11{
+    color: #000000;
+    font-weight: bold;
     width: 10px;
     height: 60px;
-    background-color: #5C6C91;
-    color: #ffffff;
     border-top: 0px;
     border-left: 0px;
     border-bottom: 0px;
 }
 .div13tb3td2{
+    color: #000000;
+    font-weight: bold;
     padding: 10px;
     width: 40px;
     border-top: 0px;
@@ -1112,6 +1120,8 @@ tr td,th{
     border-bottom: 0px;
 }
 .div13tb3td3{
+    color: #000000;
+    font-weight: bold;
     width: 30px;
     border-top: 0px;
     border-left: 0px;
