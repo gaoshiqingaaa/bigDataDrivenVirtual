@@ -20,7 +20,7 @@ function init_pie() {
 var money_info = {}
 var line_smooth_legend_data, line_smooth_series_data
 // var setMoneyFlag = 0
-function init_line_smooth(step, total_money) {
+function init_line_smooth(step, money) {
     line_smooth_legend_data = [], line_smooth_series_data = []
     $.ajax({
         type: 'POST',
@@ -29,24 +29,22 @@ function init_line_smooth(step, total_money) {
         data: {
             step: step,
             weight: JSON.stringify(six_best_weight_code),
-            total_money: total_money
+            total_money: money
         },
         success: function(data){
+            if (step != -1) {
+                total_money = data.total_money
+            }
             money_info['total_money'] = data.total_money
             money_info['new_earning'] = data.new_earning
             money_info['new_day'] = data.new_day
             money_info['leiji'] = data.leiji
             money_info['combination'] = data.data[data.data.length - 1]
             localStorage.setItem('leiji', data.leiji)
-            // if (setMoneyFlag != 0) {
-            //     setMoney()
-            // }
-            // setMoneyFlag = 1
             line_smooth_option.xAxis.data = data.label
             line_smooth_option.series[0].data = data.data
             line_smooth_option.yAxis.min = data.min - 1
             line_smooth_option.yAxis.max = data.max + 1
-            // line_smooth.setOption(line_smooth_option)
         }
     
     })

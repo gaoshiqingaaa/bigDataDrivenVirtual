@@ -158,7 +158,7 @@ $('#adjust').click(function(){
 $('#buy').click(function(){
     eightShowAlert('buy')
     init_pie()
-    init_line_smooth(0, 100000)
+    init_line_smooth(-1, 100000)
     pie.setOption(pie_option);
     // line_smooth.setOption(line_smooth_option)
 })
@@ -272,10 +272,11 @@ $('.nine-next').click(function(){
     })
 })
 var advise_btn_click_count = 0
-var advise_flag = false
+var advise_flag = true
 var advise_click_flag = true
 $('.advise-btn').click(function(){
     advise_click_flag = true
+    advise_flag = true
     if (nine_next_click_flag) {
         if (advise_btn_click_count == 1) {
             $(".advise-btn").attr("disabled", true);
@@ -326,7 +327,6 @@ $('.advise-btn').click(function(){
                 for (var o in six_best_weight) {
                     six_best_weight_code[name_code_reverse[o]] = six_best_weight[o]
                 }
-                advise_flag = true
                 // init_line_smooth(advise_btn_click_count, total_money)
                 // risk = window.location.href.indexOf('teacher') != -1? 3: getRiskAversion()
                 // getWeight(2, risk)
