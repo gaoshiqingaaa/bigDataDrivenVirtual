@@ -162,17 +162,38 @@ $('#buy').click(function(){
     pie.setOption(pie_option);
     // line_smooth.setOption(line_smooth_option)
 })
+var sharpRateStep = 0
+var total_expected_rate = 0
+var total_std = 0
+function getSharpRate(step) {
+    $.ajax({
+        url: 'http://47.97.205.240:8800/getSharpRate',
+        method: 'POST',
+        data: {
+            step: sharpRateStep,
+            weight: JSON.stringify(six_best_weight_code)
+        },
+        success: function(data) {
+            sharpRateStep ++
+            total_expected_rate += data.expected_rate
+            total_std += data.std
+            console.log(data);
+        }
+    })
+}
 function showNineAlert(status) {
     if (status == 'showAdviseBtn') {
         content = ['9-showAdviseBtn.html', 'no']
         btn = ['确认']
+        area = ['400px', '250px']
     } else {
         content = ['9-complete.html', 'no']
         btn = ['完成实验']
+        area = ['450px', '250px']
     }
     layer.open({
         type: 2,
-        area: ['400px', '250px'], 
+        area: area, 
         title: false,
         closeBtn: 1,
         shadeClose: true,
@@ -187,6 +208,10 @@ function showNineAlert(status) {
                 window.location.href = '../index.html'
             }
             else{
+                getSharpRate(sharpRateStep)
+                advise_click_flag = false
+                nine_next_click_flag = true
+                nine_next_click_count ++
                 $('.advise-btn').show()
                 pie.setOption(pie_option);
                 line_smooth.setOption(line_smooth_option)
@@ -196,6 +221,7 @@ function showNineAlert(status) {
         }
     });
 }
+
 function getWeight(step, risk) {
     $.ajax({
         type: 'POST',
@@ -223,16 +249,18 @@ $('.nine-next').click(function(){
     risk = window.location.href.indexOf('teacher') != -1? 3: getRiskAversion()
     getWeight(nine_next_click_count + 1, risk)
     if (nine_next_click_count >= 3){
+        expected_rate = total_expected_rate / 3
+        std = total_std / 3
+        sharpRate = (expected_rate - 0.0175) / std
+        localStorage.setItem('sharpRate', sharpRate)
         showNineAlert('showComplete')
     } else {
         if (advise_click_flag || nine_next_click_count == 0){
-            nine_next_click_flag = true
-            nine_next_click_count ++
             showNineAlert('showAdviseBtn')
         }
     }
     advise_flag = false
-    advise_click_flag = false
+
     step_score['leiji'] = $('.right-content-top-left-nine .bottom .right .text h2').text()
     $.ajax({
         url: "http://47.97.205.240:8800/sendStepScore",
@@ -245,7 +273,7 @@ $('.nine-next').click(function(){
 })
 var advise_btn_click_count = 0
 var advise_flag = false
-var advise_click_flag = false
+var advise_click_flag = true
 $('.advise-btn').click(function(){
     advise_click_flag = true
     if (nine_next_click_flag) {
