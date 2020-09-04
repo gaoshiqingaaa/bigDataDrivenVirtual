@@ -4,11 +4,11 @@ html{
 }
 
 body {
-    background-image: url(../img/3-bg@2x.png);
+    background-image: url(../img/3-bg@3x.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     overflow: hidden;
-    width: 100%;
+    min-width: 100%;
     height: 100%;
 }
 
@@ -49,7 +49,7 @@ body {
     background-size: 100% 100%;
     overflow: hidden;
     width: 96.7%;
-    height: 86%;
+    min-height: 86%;
 }
 
 #mainWin-nav {
@@ -57,11 +57,12 @@ body {
     float: left;
     margin-top: 7%;
     padding-left: 6%;
+    min-height: 100%;
 }
 
 .content {
     width: 84.5%;
-    height: 77%;
+    min-height: 77%;
     float: right;
     background-image: url(../img/3-right-place@2x.png);
     background-repeat: no-repeat;
@@ -181,7 +182,7 @@ body {
 
 .ti1,.ti2,.ti3,.ti4,.ti5,.ti6,.ti7,.ti8,.ti9,.ti10{
     width: 100%;
-    height: 73%;
+    min-height: 73%;
 }
 
 .t1,.t2,.t4,.t5,.t6,.t7,.t8{
@@ -218,16 +219,16 @@ body {
 
 .t10{
     width: 33%;
-    height: 120px;
+    min-height: 110px;
     background-image: url(../img/5-panel-nor@2x.png);
     background-repeat: no-repeat;
     overflow: hidden;
     background-size: 100% 100%;
-    font-size: 18px;
+    font-size: 16px;
     float: left;
     margin-left: 8%;
     padding-top: 2%;
-    line-height: 28px;
+    line-height: 24px;
     padding-left: 2%;
     padding-right: 2%;
 }
@@ -317,7 +318,7 @@ p input{
 
 .line-nav{
     width: 90%;
-    height: 110px;
+    min-height: 100px;
     padding-left: 3%;
     margin-top: 2%;
 }
@@ -339,7 +340,7 @@ p input{
     background-size: 100% 100%;
     float: left;
     width: 80px;
-    height: 80px;
+    min-height: 80px;
     vertical-align: middle;
     display: inline-block;
 }
@@ -349,9 +350,13 @@ ol.steps::-webkit-scrollbar {
     display: none;
 }
 
+ol{
+    width: 100%;
+    min-height: 100%;
+}
+
 ol.steps {
     list-style: none;
-
 }
 
 ol.steps:after, 
@@ -364,13 +369,13 @@ ol.steps li:after {
 ol.steps li {
 
     width: 49px;
-    height: 55px;
+    min-height: 44px;
     position: relative;
 
 }
 
 ol.steps li .step-line {
-    height: 60%;
+    min-height: 60%;
     position: absolute;
     background-color: #fff;
     /* box-shadow: inset 0 1px 1px rgba(0, 0, 0, .2); */
@@ -393,7 +398,7 @@ ol.steps .step-content {
 
 ol.steps li .step-content .step-num {
     display: inline-block;
-    height: 15px;
+    min-height: 15px;
     width: 15px;
     color: #fff;
     background-color: #fff;
@@ -471,6 +476,15 @@ ol.steps li.step-end .step-line {
     background-size: 100% 100%;
     border-radius: 5px;
     padding-top: 2%;
+}
+
+#neirong li{
+    color: #000000;
+    list-style-type: disc;
+    font-size: 18px;
+    line-height: 150%;
+    margin-left: 4%;
+    margin-right: 4%;
 }
 
 #neirong p{
