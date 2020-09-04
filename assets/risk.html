@@ -583,7 +583,6 @@
             //下一题按钮
             $('button:button[id="next"]').click(function() {
                 index++;
-                
                 var namet = ('t'+index);
                 var timu = document.getElementsByName(namet);
                 if (index == 1 || index == 2 || index == 4 || index == 5){
@@ -668,6 +667,11 @@
                         $('#next').show();
                     };
                 }
+                if ($('.ti10').is(':hidden')){
+                    $(".line-nav").css("min-height","100px");
+                }else{
+                    $(".line-nav").css("min-height","80px");
+                }
             });
 
             //上一题按钮
@@ -722,6 +726,11 @@
                         $('#tijiao').hide();
                         $('#next').show();
                     };
+                }
+                if ($('.ti10').is(':hidden')){
+                    $(".line-nav").css("min-height","100px");
+                }else{
+                    $(".line-nav").css("min-height","80px");
                 }
             });
         </script>

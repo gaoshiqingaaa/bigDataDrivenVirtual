@@ -34,7 +34,7 @@ def get_return(ticker):
     df = df.set_index("Date")
     #print(df)
     temp = df['Close'].astype('float64').pct_change().fillna(0.)
-    return temp;
+    return temp
 
 # 程序开始，指定数据集文件，并创建一个空的DataFrame对象
 secIDs = ['000300.ZICN','000905.ZICN','399006.ZICN','SPX.ZIUS','000012.ZICN','000013.ZICN']   
@@ -138,7 +138,7 @@ def get_return(ticker):
     df = df.set_index("Date")
     #print(df)
     temp = df['Close'].astype('float64').pct_change().fillna(0.)
-    return temp;
+    return temp
 
     # 请补全代码
     
