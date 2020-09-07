@@ -42,7 +42,7 @@
 <script>
     var leiji = localStorage.getItem('leiji')
     $('#one').html(leiji)
-    var rate = ((leiji / 100000) / 365) * 365 * 100
+    var rate = ((leiji / 100000) / 125) * 250 * 100
     $('#two').html(rate.toFixed(2) + '%')
     var sharpRate = localStorage.getItem('sharpRate')
     $('#three').html(parseFloat(sharpRate).toFixed(2))
