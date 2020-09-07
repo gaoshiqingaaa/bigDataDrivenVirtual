@@ -509,52 +509,59 @@ function showWenhaoAlert(num) {
     });
 }
 function showUserAlert(num) {
-    confirm_a_css = {
-        'font-size': '27px',
-        'color': 'white'
-    }
-    layer.open({
-        type: 2,
-        area: ['400px', '250px'], 
-        title: false,
-        closeBtn: 1,
-        shadeClose: true,
-        skin: '',
-        content: ['risk_result_alert.html', 'no'],
-        btn: ['确认', '重新测试'],
-        success: function(elem) {
-            $(".layui-layer-setwin .layui-layer-close2").css({
-                'right': '-13px',
-                'top': '-11px',
-                'background-position': '30px -32px'
-            })
-            $('.layui-layer-setwin a').append('X')
-            $('.layui-layer-setwin a').css({
-                'font-size': '27px',
-                'color': 'white'
-            })
-            $('.layui-layer-iframe').css({'border-radius': '20px'})
-            $('iframe').css({'border-radius': '12px'})
-            $('.layui-layer-btn a').css({
-                'height': '40px',
-                'line-height': '40px',
-                'width': '110px',
-                'text-align': 'center',
-                'font-size': '16px',
-                'border-color': '#1E9FFF',
-                'background-color': '#1E9FFF',
-                'color': 'white'
-            })
-            $('.layui-layer-btn').css({
-                'position': 'relative',
-                'bottom': '8%',
-                'text-align': 'center',
-            })
-        },
-        btn2: function () {
-            window.location.href = 'risk.html'
+    if (isTeacher) {
+        layer.alert('<i class="layui-icon layui-iconB" >&#xe69c;</i>请先完成风险评估问卷！', {
+            skin: 'layer-bg',
+            move: false
+        })
+    } else {
+        confirm_a_css = {
+            'font-size': '27px',
+            'color': 'white'
         }
-    });
+        layer.open({
+            type: 2,
+            area: ['400px', '250px'], 
+            title: false,
+            closeBtn: 1,
+            shadeClose: true,
+            skin: '',
+            content: ['risk_result_alert.html', 'no'],
+            btn: ['确认', '重新测试'],
+            success: function(elem) {
+                $(".layui-layer-setwin .layui-layer-close2").css({
+                    'right': '-13px',
+                    'top': '-11px',
+                    'background-position': '30px -32px'
+                })
+                $('.layui-layer-setwin a').append('X')
+                $('.layui-layer-setwin a').css({
+                    'font-size': '27px',
+                    'color': 'white'
+                })
+                $('.layui-layer-iframe').css({'border-radius': '20px'})
+                $('iframe').css({'border-radius': '12px'})
+                $('.layui-layer-btn a').css({
+                    'height': '40px',
+                    'line-height': '40px',
+                    'width': '110px',
+                    'text-align': 'center',
+                    'font-size': '16px',
+                    'border-color': '#1E9FFF',
+                    'background-color': '#1E9FFF',
+                    'color': 'white'
+                })
+                $('.layui-layer-btn').css({
+                    'position': 'relative',
+                    'bottom': '8%',
+                    'text-align': 'center',
+                })
+            },
+            btn2: function () {
+                window.location.href = 'risk.html'
+            }
+        });
+    }
 }
 layer.config({
     extend: 'myskin/style.css'

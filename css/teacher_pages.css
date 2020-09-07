@@ -612,3 +612,9 @@
     /* margin-left: 3%; */
     margin-right: 3%;
 }
+
+.layui-iconB {
+    color: red;
+    font-size: 22px;
+    margin-right: 10px;
+}
