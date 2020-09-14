@@ -338,7 +338,7 @@ $('.run-code').click(function(){
                                 shadeClose: true,
                                 skin: '',
                                 content: '5-run-code.html',
-                                btn: ['知道了'],
+                                btn: btn,
                                 success: function(elem) {
                                     $(".layui-layer-setwin .layui-layer-close2").css({
                                         'right': '3px',
