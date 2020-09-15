@@ -436,7 +436,7 @@ $('.run-code').click(function(){
 function errorAlert(msg) {
     layer.msg(msg, 
         {
-            icon: 5,
+            icon: 2,
             time: 1500
         });
 }
