@@ -204,6 +204,7 @@ function showNineAlert(status) {
         },
         btn1: function () {
             if (status != 'showAdviseBtn') {
+                
                 window.location.href = '../index.html'
             }
             else{
