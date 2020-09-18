@@ -434,9 +434,12 @@ $('.run-code').click(function(){
 })
 
 function errorAlert(msg) {
-    layer.msg(msg, 
-        {
-            icon: 2,
-            time: 1500
+    layer.msg(msg, {
+            time: 100500,
+            success: function() {
+                $('.layui-layer-content').css({
+                    'background-color': 'rgba(51, 51, 51, .9)'
+                })
+            }
         });
 }
