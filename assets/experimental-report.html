@@ -481,7 +481,7 @@ tr td,th{
 .box2 {
     background-image: url(../img/16-bg@2x.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 110%;
     width: 100%;
     height: auto;
     position: relative;
@@ -760,18 +760,28 @@ tr td,th{
                             </tr>
 
                             <tr>
-                                <td class="div13tb3td11 tdfont">`+data.datas[6].name+`<br>(20分)</td>
-                                <td class="div13tb3td21">
+                                <td class="div13tb3td1 tdfont">`+data.datas[6].name+`<br>(10分)</td>
+                                <td class="div13tb3td2">
                                     `+data.datas[6].leiji+`
+                                </td>
+                                <td class="div13tb3td2">-
+                                </td>
+                                <td class="div13tb3td3">`+localStorage.getItem('revenueScore')+`</td>
+                            </tr>
+
+                            <tr>
+                                <td class="div13tb3td11 tdfont">`+"夏普比率"+`<br>(10分)</td>
+                                <td class="div13tb3td21">
+                                    `+"-"+`
                                 </td>
                                 <td class="div13tb3td21">-
                                 </td>
-                                <td class="div13tb3td31">`+"-"+`</td>
+                                <td class="div13tb3td31">`+localStorage.getItem('sharpRateScore')+`</td>
                             </tr>
                         `)
             
               $('.div13tb3').html(html);
-              list1=[data.datas[0].grade,data.datas[1].grade,data.datas[2].grade,data.datas[3].grade,data.datas[4].grade,data.datas[5].grade,a["ti1"],a["ti2"],a["ti3"],a["ti4"],a["ti5"],a["ti6"],a["ti7"],a["ti8"],a["ti9"],a["ti10"],a["ti11"],a["ti12"],a["ti13"],a["ti14"],a["ti15"]]
+              list1=[data.datas[0].grade,data.datas[1].grade,data.datas[2].grade,data.datas[3].grade,data.datas[4].grade,data.datas[5].grade,a["ti1"],a["ti2"],a["ti3"],a["ti4"],a["ti5"],a["ti6"],a["ti7"],a["ti8"],a["ti9"],a["ti10"],a["ti11"],a["ti12"],a["ti13"],a["ti14"],a["ti15"],localStorage.getItem('revenueScore'),localStorage.getItem('sharpRateScore')]
                 var Total_score = sum(list1)
                 localStorage.setItem("Total_score", JSON.stringify(Total_score));
               $("#zongfen").html(String(Total_score));
