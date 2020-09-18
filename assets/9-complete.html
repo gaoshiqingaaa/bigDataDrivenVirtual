@@ -31,7 +31,7 @@
                         <p class="c">夏普比率</p>
                     </div>
                     <div>
-                        <h2>10分</h2>
+                        <h2 id="four"></h2>
                         <p class="c">本模块得分</p>
                     </div>
                 </div>
@@ -43,10 +43,33 @@
     var leiji = localStorage.getItem('leiji')
     $('#one').html(leiji)
     var rate = ((leiji / 100000) / 125) * 250 * 100
-    $('#two').html(rate.toFixed(2) + '%')
+    rate = rate.toFixed(2)
+    $('#two').html(rate + '%')
     var sharpRate = localStorage.getItem('sharpRate')
     $('#three').html(parseFloat(sharpRate).toFixed(2))
-    
+    var revenueScore = 0
+    var sharpRateScore = 0
+    if (rate >= 20) {
+        revenueScore = 10
+    } else if (rate >= 5) {
+        revenueScore = 8
+    } else if (rate >= 0) {
+        revenueScore = 6
+    } else {
+        revenueScore = 4
+    }
+    if (sharpRate >= 50) {
+        sharpRateScore = 10
+    } else if (sharpRate >= 20) {
+        sharpRateScore = 8
+    } else if (sharpRate >= 0) {
+        sharpRateScore = 6
+    } else {
+        sharpRateScore = 4
+    }
+    $('#four').html(revenueScore + sharpRateScore)
+    window.localStorage.setItem('revenueScore', revenueScore)
+    window.localStorage.setItem('sharpRateScore', sharpRateScore)
 </script>
 
 <style>

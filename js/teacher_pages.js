@@ -45,8 +45,7 @@ $('.next').click(function(){
     if (current_page < 9) {
         if (current_page < 7) {
             if (!run_code_clicked[current_page]) {
-                html += '<tr style="text-align: center"><td colspan=7 style="color: red">亲，先运行这一步哦~</td></tr>'
-                $('#result-tbody').html(html)
+                errorAlert('请先运行这一步')
                 return
             }
         }
@@ -205,6 +204,7 @@ function showNineAlert(status) {
         },
         btn1: function () {
             if (status != 'showAdviseBtn') {
+                
                 window.location.href = '../index.html'
             }
             else{

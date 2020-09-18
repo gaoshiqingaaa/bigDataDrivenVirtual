@@ -48,18 +48,18 @@ for secID in secIDs:
 rtn_table.fillna(0,inplace = True)
 
 # 显示前十行数据
-print(rtn_table.head(10))
+rtn_table.head(10)
 `,
     1: `# 请补全代码
-print()
+
 # 结束
 `,
     2: `# 请补全代码
-print()
+
 # 结束
 `,
     3: `# 请补全代码
-print()
+
 # 结束`,
     4: `from cvxopt import matrix,solvers
 
@@ -110,7 +110,7 @@ A = matrix(np.ones(len(exp_rtn)),(1,len(exp_rtn)))
 b = matrix([1.0])
 solvers.options['show_progress'] = False
 sol = solvers.qp(P,q, G, h, A, b)
-print(DataFrame(index=exp_rtn.index,data = np.round(sol['x'],2), columns = ['weight']))  # 权重精确到小数点后两位    
+DataFrame(index=exp_rtn.index,data = np.round(sol['x'],2), columns = ['weight'])  # 权重精确到小数点后两位    
 `
     }
 } else if (window.location.href.indexOf('assets') != -1) {
@@ -268,8 +268,7 @@ function isInputEmpty(code) {
 $('.run-code').click(function(){
     code = code_in.getValue().trim()
     if (isInputEmpty(code)) {
-        html = '<tr style="text-align: center;color: red"><td colspan=7>代码输入不能为空，请先填写代码!</td></tr>'
-        $('#result-tbody').html(html)
+        errorAlert('代码输入不能为空，请先填写代码!')
         return
     } else {
         code += '\n'
@@ -338,7 +337,7 @@ $('.run-code').click(function(){
                                 shadeClose: true,
                                 skin: '',
                                 content: '5-run-code.html',
-                                btn: ['知道了'],
+                                btn: btn,
                                 success: function(elem) {
                                     $(".layui-layer-setwin .layui-layer-close2").css({
                                         'right': '3px',
@@ -425,10 +424,22 @@ $('.run-code').click(function(){
                         });
                     }
                 }
-            } else if (data.iserr == -1) {
-                html += '<tr style="text-align: center;color: red"><td colspan=7>代码输入错误，请重新输入!</td></tr>'
             }
             $('#result-tbody').html(html)
+            if (data.iserr == -1) {
+                errorAlert('代码输入错误，请重新输入!')
+            }
         }   
     })
 })
+
+function errorAlert(msg) {
+    layer.msg(msg, {
+            time: 100500,
+            success: function() {
+                $('.layui-layer-content').css({
+                    'background-color': 'rgba(51, 51, 51, .9)'
+                })
+            }
+        });
+}
