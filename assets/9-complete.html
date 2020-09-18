@@ -58,14 +58,12 @@
     } else {
         revenueScore = 4
     }
-    if (sharpRate >= 50) {
+    if (sharpRate >= 1) {
         sharpRateScore = 10
-    } else if (sharpRate >= 20) {
-        sharpRateScore = 8
     } else if (sharpRate >= 0) {
-        sharpRateScore = 6
-    } else {
-        sharpRateScore = 4
+        sharpRateScore = 5
+    }else {
+        sharpRateScore = 0
     }
     $('#four').html(revenueScore + sharpRateScore)
     window.localStorage.setItem('revenueScore', revenueScore)
