@@ -53,3 +53,14 @@
         /* font-weight: bold; */
     }
 </style>
+
+<script>
+    var flag = localStorage.getItem('my-flag')
+    if (flag == 1) {
+        document.querySelector(".title p").innerText = '查看投资半年以来的收益情况。'
+        localStorage.removeItem('my-flag')
+    } else {
+        document.querySelector(".title p").innerText = '2个月以后，由于资本市场的变化，产生了新的投资策略，请点击“调仓建议”按钮查看详情。'
+        
+    }
+</script>

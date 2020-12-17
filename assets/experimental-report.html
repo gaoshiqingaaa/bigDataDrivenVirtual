@@ -781,8 +781,9 @@ tr td,th{
                         `)
             
               $('.div13tb3').html(html);
-              list1=[data.datas[0].grade,data.datas[1].grade,data.datas[2].grade,data.datas[3].grade,data.datas[4].grade,data.datas[5].grade,a["ti1"],a["ti2"],a["ti3"],a["ti4"],a["ti5"],a["ti6"],a["ti7"],a["ti8"],a["ti9"],a["ti10"],a["ti11"],a["ti12"],a["ti13"],a["ti14"],a["ti15"],localStorage.getItem('revenueScore'),localStorage.getItem('sharpRateScore')]
-                var Total_score = sum(list1)
+              list1=[data.datas[0].grade,data.datas[1].grade,data.datas[2].grade,data.datas[3].grade,data.datas[4].grade,data.datas[5].grade,a["ti1"],a["ti2"],a["ti3"],a["ti4"],a["ti5"],a["ti6"],a["ti7"],a["ti8"],a["ti9"],a["ti10"],a["ti11"],a["ti12"],a["ti13"],a["ti14"],a["ti15"],eval(localStorage.getItem('revenueScore')),eval(localStorage.getItem('sharpRateScore'))]
+              console.log(list1);  
+              var Total_score = sum(list1)
                 localStorage.setItem("Total_score", JSON.stringify(Total_score));
               $("#zongfen").html(String(Total_score));
      },

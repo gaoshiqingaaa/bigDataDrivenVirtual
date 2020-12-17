@@ -20,11 +20,13 @@ window.onload = function(){
     user = JSON.parse(localStorage.getItem('temporary_user'))
     if (user == null) {
         $.ajax({
+        
             type: 'get',
             url: 'http://47.97.205.240:8800/',
             // url: 'http://localhost:5000/',
             success: function(data){
                 user = data.user
+                localStorage.setItem('temporary_user', JSON.stringify(data.user))
             }
         })
     }
@@ -208,6 +210,7 @@ function showNineAlert(status) {
                 window.location.href = '../index.html'
             }
             else{
+                my_count ++
                 getSharpRate(sharpRateStep)
                 advise_click_flag = false
                 nine_next_click_flag = true
@@ -239,6 +242,7 @@ function getWeight(step, risk) {
     })
 }
 var nine_next_click_count = 0
+var my_count = 0
 var total_money = 100000.00
 var nine_next_click_flag = false
 $('.nine-next').click(function(){
@@ -253,9 +257,14 @@ $('.nine-next').click(function(){
         std = total_std / 3
         sharpRate = (expected_rate - 0.0175) / std
         localStorage.setItem('sharpRate', sharpRate)
+        localStorage.setItem('flag', 1)
         showNineAlert('showComplete')
     } else {
         if (advise_click_flag || nine_next_click_count == 0){
+            if (my_count == 2) {
+                localStorage.setItem('my-flag', 1)
+                my_count = 0
+            }
             showNineAlert('showAdviseBtn')
         }
     }
